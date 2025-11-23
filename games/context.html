@@ -3,128 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Syntax Factory - Learning Focused</title>
+    <title>Context Slasher - Sequence</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
     <link rel="manifest" href="../manifest.json">
-    <!-- Firebase SDK -->
+    
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
+    <script src="../data/word_data.js"></script>
+    <script src="../js/app.js"></script>
+
     <style>
         body {
             margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
-            background-color: #0f172a;
+            background-color: #000000;
             font-family: 'Montserrat', sans-serif;
             touch-action: none; user-select: none; -webkit-user-select: none;
+            opacity: 0; transition: opacity 0.5s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+
+        #game-stage {
+            position: absolute; inset: 0;
             display: flex; flex-direction: column;
-            opacity: 0; /* 初期状態は透明 */
-            transition: opacity 0.3s ease-in-out; /* 0.3秒かけて変化 */
-                        
-        }
-        body.loaded {
-        opacity: 1; /* 読み込み完了で不透明に */
-        }
-
-        #bg-grid {
-            position: absolute; inset: 0; z-index: 0;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.5;
-        }
-
-        /* スタート画面 */
-        #start-screen {
-            position: absolute; inset: 0; background: rgba(15, 23, 42, 0.98);
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            z-index: 200; transition: opacity 0.5s;
-        }
-        #start-screen.hidden { opacity: 0; pointer-events: none; }
-
-        /* カード */
-        #container-wrapper {
-            position: absolute; top: 50%; left: 150%; 
-            transform: translate(-50%, -50%);
-            width: 90%; max-width: 600px;
-            transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            align-items: center; justify-content: center;
             z-index: 10;
+            padding-bottom: 120px;
         }
-        
-        .data-card {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            text-align: center;
+
+        /* 文章コンテナ */
+        #sentence-wrapper {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+            max-width: 90%; perspective: 1000px;
             position: relative;
+            line-height: 2.0; 
+        }
+
+        .word-unit {
+            position: relative;
+            font-size: 1.6rem; font-weight: 600; color: #fff;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 0 2px;
+        }
+
+        /* 隠蔽状態 */
+        .word-unit.concealed {
+            color: transparent;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            filter: blur(8px);
+            transform: scale(0.9);
+            background: repeating-linear-gradient(45deg, #111, #111 2px, #222 2px, #222 4px);
+            -webkit-background-clip: text; background-clip: text;
+            opacity: 0.3;
+        }
+
+        /* 解放された状態 */
+        .word-unit.revealed {
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.8);
+            filter: blur(0);
+            transform: scale(1);
+            opacity: 1;
+            animation: glitch-reveal 0.3s ease-out;
+        }
+        @keyframes glitch-reveal {
+            0% { transform: translate(-2px, 0); color: #00f2ff; }
+            100% { transform: translate(0, 0); color: white; }
+        }
+
+        /* ★ターゲット単語（最初から見えている） */
+        .word-unit.target-core {
+            color: #00f2ff;
+            font-weight: 900;
+            text-shadow: 0 0 25px #00f2ff;
+            z-index: 10;
+            opacity: 1;
+            filter: blur(0);
+            transform: scale(1.1);
+        }
+
+        /* 斬撃エフェクト */
+        #slash-effect {
+            position: absolute; top: 50%; left: 50%;
+            width: 200vmax; height: 12px;
+            background: #fff;
+            box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff, 0 0 100px #fff;
+            transform-origin: center;
+            transform: translate(-50%, -50%) scaleX(0);
+            z-index: 50; pointer-events: none; opacity: 0;
+        }
+        .slashing #slash-effect {
+            animation: slash-anim 0.5s ease-out forwards;
+        }
+        @keyframes slash-anim {
+            0% { transform: translate(-50%, -50%) var(--slash-angle) scaleX(0); opacity: 1; }
+            50% { transform: translate(-50%, -50%) var(--slash-angle) scaleX(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) var(--slash-angle) scaleX(1); opacity: 0; }
+        }
+
+        #gauge-container {
+            position: absolute; bottom: 80px; width: 80%; max-width: 400px; height: 40px;
+            background: rgba(0, 20, 40, 0.8);
+            border: 2px solid #334155; border-radius: 20px;
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            z-index: 20;
+            transition: opacity 0.5s;
         }
         
-        .card-text {
-            font-size: 1.4rem; font-weight: 500; color: #f8fafc; line-height: 1.8;
-        }
-        
-        /* 穴埋めスロット */
-        .gap-slot {
-            display: inline-block; min-width: 140px;
-            border-bottom: 2px solid #38bdf8;
-            color: transparent; margin: 0 4px; 
-            vertical-align: baseline; text-align: center;
-            transition: all 0.3s; font-weight: 900;
-        }
-        .gap-slot.filled { 
-            border-bottom-color: transparent; color: #00f2ff;
-            min-width: auto; text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
-            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-
-        /* 日本語訳 */
-        #translation-area {
-            margin-top: 20px; font-family: 'Shippori Mincho', serif;
-            font-size: 1.1rem; color: #94a3b8; height: 1.5em; opacity: 0; transform: translateY(10px);
-            transition: all 0.5s ease-out;
-        }
-        #translation-area.visible { opacity: 1; transform: translateY(0); color: #e2e8f0; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
-
-        #timer {
-            position: absolute; bottom: 0; left: 0; height: 3px; width: 100%;
-            background: #38bdf8; transform-origin: left;
+        #sweet-spot {
+            position: absolute; left: 50%; top: 0; bottom: 0; width: 15%;
+            transform: translateX(-50%);
+            background: rgba(0, 242, 255, 0.2);
+            border-left: 2px solid #00f2ff; border-right: 2px solid #00f2ff;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
         }
 
-        /* ボタン */
-        #controls {
-            position: absolute; bottom: 50px; width: 100%;
-            display: flex; justify-content: center; gap: 40px;
-            pointer-events: auto; z-index: 30;
+        #cursor {
+            position: absolute; top: 0; bottom: 0; width: 4px;
+            background: white;
+            box-shadow: 0 0 10px white;
+            left: 0%;
         }
-        
-        .ctrl-btn {
-            width: 80px; height: 80px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem; transition: transform 0.1s, background 0.3s;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1); color: white;
-        }
-        .ctrl-btn:active { transform: scale(0.9); background: rgba(255,255,255,0.1); }
-        .btn-reject { color: #ef4444; border-color: #ef4444; }
-        .btn-inject { color: #00f2ff; border-color: #00f2ff; width: 100px; height: 100px; font-size: 2rem; background: rgba(0, 242, 255, 0.1); }
 
-        /* アニメーション */
-        .slide-out-left { animation: slideLeft 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1); }
-        .slide-out-bottom { animation: dropDown 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1); }
-        @keyframes slideLeft { to { transform: translate(-150%, -50%); opacity: 0; } }
-        @keyframes dropDown { to { transform: translate(-50%, 100%) rotate(5deg); opacity: 0; } }
+        #instruction {
+            position: absolute; bottom: 130px; width: 100%; text-align: center;
+            color: #666; font-size: 0.8rem; letter-spacing: 0.2em;
+            text-transform: uppercase; pointer-events: none;
+            transition: opacity 0.5s;
+        }
+
+        #translation {
+            margin-top: 40px;
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.2rem; color: #aaa;
+            opacity: 0; transform: translateY(10px);
+            transition: all 1s ease-out;
+        }
+        #translation.visible { opacity: 1; transform: translateY(0); }
+
+        #continue-msg {
+            position: absolute; bottom: 100px; width: 100%; text-align: center;
+            color: #00f2ff; font-size: 1.2rem; letter-spacing: 0.2em; font-weight: bold;
+            opacity: 0; pointer-events: none;
+            animation: blink 1.5s infinite;
+        }
+        #continue-msg.show { opacity: 1; pointer-events: auto; }
+        @keyframes blink { 50% { opacity: 0.3; } }
 
         #result-screen {
-            position: absolute; inset: 0; background: rgba(15, 23, 42, 0.98);
+            position: absolute; inset: 0; background: rgba(0,0,0,0.9);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             z-index: 100; opacity: 0; pointer-events: none; transition: opacity 1.0s;
         }
@@ -133,319 +163,317 @@
 </head>
 <body>
 
-    <!-- BGM再生用のaudio要素 -->
-    <audio id="bgm" loop></audio>
-
-    <div id="bg-grid"></div>
-
-    <div id="start-screen">
-        <h1 class="text-4xl font-light text-white mb-8 tracking-[0.3em]">SYNTAX FACTORY</h1>
-        <button id="start-btn" class="px-12 py-4 border border-cyan-500 text-cyan-400 font-bold rounded-full shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:bg-cyan-500/10 transition tracking-widest">
-            START OPERATION
-        </button>
-        <p class="text-gray-500 mt-4 text-xs tracking-widest">TAP TO INITIALIZE AUDIO SYSTEM</p>
+    <div id="game-stage">
+        <div id="slash-effect"></div>
+        <div id="sentence-wrapper"></div>
+        <div id="translation"></div>
     </div>
 
-    <div id="container-wrapper">
-        <div class="data-card">
-            <div id="card-content" class="card-text"></div>
-            <div id="translation-area"></div>
-            <div id="timer"></div>
-        </div>
-    </div>
+    <div id="instruction">TAP ON CENTER</div>
+    <div id="continue-msg">TAP TO CONTINUE</div>
 
-    <div id="ui-layer" class="absolute top-0 w-full p-6 flex justify-between items-center text-gray-500 text-xs tracking-widest z-10">
-        <div class="flex items-center gap-4">
-            <span>SYNTAX FACTORY</span>
-            <div id="main-target-word-area" class="absolute top-[20vh] left-1/2 -translate-x-1/2 text-center pointer-events-none z-20">
-                <div id="main-target-word" class="text-5xl font-black text-cyan-400 opacity-0 transition-all duration-300" style="text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);">
-                </div>
-            </div>
-        </div>
-        <div id="score-disp">INJECTED: 0/3</div>
-    </div>
-
-    <div id="controls">
-        <button id="btn-reject" class="ctrl-btn btn-reject">✕</button>
-        <button id="btn-inject" class="ctrl-btn btn-inject">◎</button>
+    <div id="gauge-container">
+        <div id="sweet-spot"></div>
+        <div id="cursor"></div>
     </div>
 
     <div id="result-screen">
-        <h2 class="text-3xl font-light text-white mb-2 tracking-[0.3em]">COMPLETE</h2>
-        <p class="text-gray-400 mb-10 text-sm">ALL CONTEXTS SECURED</p>
-        <button onclick="location.reload()" class="px-10 py-3 border border-cyan-500/50 text-cyan-400 rounded-full hover:bg-cyan-500/10 transition tracking-widest">
-            REPLAY
-        </button>
-        <button onclick="goTo('../cockpit.html', wordData.id)" class="mt-4 px-10 py-3 bg-gray-700 text-white font-bold rounded-full shadow-lg active:scale-95 transition">NEXT / BACK</button>
+        <h2 class="text-4xl font-black text-white mb-6 tracking-[0.5em]">DECRYPTED</h2>
+        <div class="flex flex-col items-center gap-4">
+            <button onclick="location.reload()" class="px-10 py-3 border border-white/30 text-white rounded-full hover:bg-white/10 transition tracking-widest">RETRY</button>
+            <button id="back-btn" class="px-10 py-3 bg-cyan-600 text-black font-bold rounded-full shadow-[0_0_20px_rgba(0,242,255,0.5)] transition tracking-widest">NEXT / BACK</button>
+        </div>
     </div>
-    
-<script src="../data/word_data.js"></script>
-<script src="../js/app.js"></script>
 
-<script>
-        // === 1. データの取得と検証 ===
-        const wordData = getCurrentWordData(); // app.jsの関数
-        if (!wordData) {
-            alert("データが見つかりません。リストに戻ります。");
-            window.location.href = "../list.html";
-        }
+    <script>
+        // === 変数 ===
+        let wordData = null;
+        let TARGET_WORD = "";
+        let contextData = null;
 
-        // === 2. データの展開 ===
-        const TARGET_WORD = wordData.word; // データマッピング
+        let currentStage = 0;
+        const MAX_STAGES = 3;
+        let isGameComplete = false;
+        let isWaitingForNext = false; 
+        let isCoolingDown = false;
 
-        // JSONデータでは contexts 配列の中に正解(is_correct: true)と不正解が混ざっているので分ける
-        const VALID_SENTENCES = wordData.contexts.filter(c => c.is_correct); // データマッピング
-        const INVALID_SENTENCES = wordData.contexts.filter(c => !c.is_correct); // データマッピング
+        let cursorPosition = 0;
+        let cursorDirection = 1;
+        let cursorSpeed = 1.8;
 
-        // クリア条件（正解データの数に合わせる）
-        const TARGET_SUCCESSES = 3; // 3回正しい判断をしたらクリア
-        const TIME_LIMIT = 6000;
+        let wrapper, transEl, gaugeContainer, cursorEl, slashEffect;
+        let wordSpans = [];
 
-        let injections = 0; // 現在の注入数
-        let currentData = null;
-        let state = 'idle'; 
-        let timerId = null;
-
-        const wrapper = document.getElementById('container-wrapper');
-        const cardContent = document.getElementById('card-content');
-        const transArea = document.getElementById('translation-area');
-        const timerBar = document.getElementById('timer');
-        const scoreDisp = document.getElementById('score-disp'); // Corrected variable name
-        const mainTargetWord = document.getElementById('main-target-word');
-        let wordToInjectEl = null; // 注入する単語の要素
-        const startScreen = document.getElementById('start-screen');
-
-        // === Audio System ===
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        let audioEnabled = false;
+        let isAudioInitialized = false;
 
-        function playSound(type) {
-            if (!audioEnabled) return;
-            const t = audioCtx.currentTime;
-            const osc = audioCtx.createOscillator();
-            const gain = audioCtx.createGain();
-            const filter = audioCtx.createBiquadFilter();
-            filter.type = 'lowpass';
+        // === ユーティリティ：単語数カウント ===
+        function countWords(str) {
+            if (!str) return 0;
+            return str.trim().split(/\s+/).filter(s => s.length > 0).length;
+        }
 
-            osc.connect(filter); filter.connect(gain); gain.connect(audioCtx.destination);
+        // === 初期化 ===
+        function init() {
+            if (typeof getCurrentWordData !== 'function') { console.error("app.js error"); return; }
+            wordData = getCurrentWordData();
+            if (!wordData) { alert("No Data"); window.location.href = "../list.html"; return; }
 
-            if (type === 'arrive') {
-                // シュゥゥ…カチッ
-                const noiseBufferSize = audioCtx.sampleRate * 0.5;
-                const noiseBuffer = audioCtx.createBuffer(1, noiseBufferSize, audioCtx.sampleRate);
-                const output = noiseBuffer.getChannelData(0);
-                for (let i = 0; i < noiseBufferSize; i++) output[i] = Math.random() * 2 - 1;
-                const noise = audioCtx.createBufferSource();
-                noise.buffer = noiseBuffer;
-                const nGain = audioCtx.createGain();
-                const nFilter = audioCtx.createBiquadFilter();
-                nFilter.type = 'lowpass';
-                noise.connect(nFilter).connect(nGain).connect(audioCtx.destination);
-                nFilter.frequency.setValueAtTime(100, t);
-                nFilter.frequency.linearRampToValueAtTime(800, t + 0.3);
-                nGain.gain.setValueAtTime(0.1, t);
-                nGain.gain.linearRampToValueAtTime(0, t + 0.4);
-                noise.start(t);
+            TARGET_WORD = wordData.word;
 
-                osc.type = 'sine'; osc.frequency.setValueAtTime(150, t + 0.35); osc.frequency.exponentialRampToValueAtTime(50, t + 0.4);
-                filter.frequency.value = 500;
-                gain.gain.setValueAtTime(0, t + 0.35); gain.gain.linearRampToValueAtTime(0.3, t + 0.36); gain.gain.exponentialRampToValueAtTime(0.01, t + 0.45);
-                osc.start(t + 0.35); osc.stop(t + 0.45);
+            // === データの選出ロジック（ここに統合）===
+            // 1. 正解データのみを取得
+            const correctContexts = wordData.contexts ? wordData.contexts.filter(c => c.is_correct) : [];
+            
+            // 2. 「ターゲット以外の単語数が3語以上」のものを抽出（長文フィルタ）
+            const longContexts = correctContexts.filter(c => {
+                const textContent = c.parts.join(" "); 
+                return countWords(textContent) >= 3;
+            });
 
-            } else if (type === 'inject') {
-                // ポーン…
-                const freqs = [261.63, 329.63, 392.00, 493.88, 587.33];
-                freqs.forEach((f, i) => {
-                    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
-                    o.connect(g).connect(audioCtx.destination);
-                    o.type = 'sine'; o.frequency.value = f;
-                    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.05, t + 0.05 + i*0.03); g.gain.exponentialRampToValueAtTime(0.001, t + 2.5);
-                    o.start(t); o.stop(t + 2.5);
-                });
-                const click = audioCtx.createOscillator(); const cGain = audioCtx.createGain();
-                click.connect(cGain).connect(audioCtx.destination);
-                click.frequency.setValueAtTime(800, t); click.frequency.exponentialRampToValueAtTime(100, t+0.05);
-                cGain.gain.setValueAtTime(0.1, t); cGain.gain.exponentialRampToValueAtTime(0.01, t+0.05);
-                click.start(t); click.stop(t+0.05);
+            // 3. 条件に合うものがあればそこから、なければ全正解データからランダムに選ぶ
+            const sourceList = longContexts.length > 0 ? longContexts : correctContexts;
 
-            } else if (type === 'reject') {
-                // フワッ
-                const nBuf = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.3, audioCtx.sampleRate);
-                const d = nBuf.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1;
-                const n = audioCtx.createBufferSource(); n.buffer = nBuf;
-                const nG = audioCtx.createGain(); const nF = audioCtx.createBiquadFilter();
-                nF.type = 'bandpass'; nF.frequency.setValueAtTime(400, t); nF.frequency.linearRampToValueAtTime(100, t+0.3);
-                nG.gain.setValueAtTime(0.15, t); nG.gain.linearRampToValueAtTime(0, t+0.3);
-                n.connect(nF).connect(nG).connect(audioCtx.destination);
-                n.start(t);
+            if (sourceList.length > 0) {
+                contextData = sourceList[Math.floor(Math.random() * sourceList.length)];
+            } else {
+                // データが全くない場合のフォールバック
+                contextData = { full: `The ${TARGET_WORD} is essential.`, jp: "その単語は不可欠だ。" };
+            }
+            // ==========================================
 
-            } else if (type === 'error') {
-                osc.type = 'triangle'; osc.frequency.setValueAtTime(100, t); osc.frequency.exponentialRampToValueAtTime(10, t + 0.3);
-                filter.frequency.value = 200;
-                gain.gain.setValueAtTime(0.4, t); gain.gain.exponentialRampToValueAtTime(0.01, t + 0.3);
-                osc.start(t); osc.stop(t + 0.3);
+            wrapper = document.getElementById('sentence-wrapper');
+            transEl = document.getElementById('translation');
+            gaugeContainer = document.getElementById('gauge-container');
+            cursorEl = document.getElementById('cursor');
+            slashEffect = document.getElementById('slash-effect');
+
+            document.getElementById('back-btn').onclick = () => goTo('../cockpit.html', wordData.id);
+
+            buildSentence();
+            setupEvents();
+            
+            requestAnimationFrame(updateLoop);
+            document.body.classList.add('loaded');
+        }
+
+        function buildSentence() {
+            wrapper.innerHTML = '';
+            wordSpans = [];
+            const words = contextData.full.split(' ');
+            
+            words.forEach(word => {
+                const span = document.createElement('span');
+                
+                // ターゲット単語判定
+                const cleanWord = word.replace(/[^a-zA-Z]/g, '').toUpperCase();
+                const cleanTarget = TARGET_WORD.replace(/[^a-zA-Z]/g, '').toUpperCase();
+                
+                if (cleanWord === cleanTarget) {
+                    // ★ターゲットは最初から見える
+                    span.className = 'word-unit target-core';
+                } else {
+                    // ★他は隠す
+                    span.className = 'word-unit concealed';
+                }
+                span.textContent = word;
+                
+                wrapper.appendChild(span);
+                wordSpans.push(span);
+            });
+            
+            transEl.textContent = contextData.jp;
+        }
+
+        function setupEvents() {
+            const handleTap = (e) => {
+                e.preventDefault();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                isAudioInitialized = true;
+
+                if (isWaitingForNext) {
+                    showResult();
+                    return;
+                }
+                if (isGameComplete || isCoolingDown) return;
+
+                checkTiming();
+            };
+
+            document.body.addEventListener('pointerdown', handleTap);
+            document.body.addEventListener('keydown', (e) => {
+                if(e.code === 'Space') handleTap(e);
+            });
+        }
+
+        function updateLoop() {
+            if (!isGameComplete) {
+                cursorPosition += cursorSpeed * cursorDirection;
+                if (cursorPosition >= 100 || cursorPosition <= 0) cursorDirection *= -1;
+                cursorEl.style.left = `${cursorPosition}%`;
+            }
+            requestAnimationFrame(updateLoop);
+        }
+
+        function checkTiming() {
+            if (cursorPosition > 42.5 && cursorPosition < 57.5) {
+                triggerSlash(true);
+            } else {
+                triggerSlash(false);
+            }
+            isCoolingDown = true;
+            setTimeout(() => { isCoolingDown = false; }, 400);
+        }
+
+        function triggerSlash(isSuccess) {
+            if (isSuccess) {
+                currentStage++;
+                
+                // 斬撃の方向（左→中→右）
+                let slashX, slashAngle;
+                if (currentStage === 1) { slashX = "30%"; slashAngle = "-20deg"; }
+                else if (currentStage === 2) { slashX = "50%"; slashAngle = "0deg"; }
+                else { slashX = "70%"; slashAngle = "20deg"; }
+                
+                // エフェクト適用
+                slashEffect.style.left = slashX;
+                slashEffect.style.top = "50%";
+                document.body.style.setProperty('--slash-angle', `rotate(${slashAngle})`);
+                
+                document.body.classList.remove('slashing');
+                void document.body.offsetWidth; // リフロー強制
+                document.body.classList.add('slashing');
+                
+                playSaberSound('hit');
+                
+                // --- 単語の解放処理 ---
+                const totalWords = wordSpans.length;
+                const chunkSize = Math.ceil(totalWords / MAX_STAGES);
+                const startIndex = (currentStage - 1) * chunkSize;
+                const endIndex = Math.min(startIndex + chunkSize, totalWords);
+
+                for (let i = startIndex; i < endIndex; i++) {
+                    if (wordSpans[i] && !wordSpans[i].classList.contains('target-core')) {
+                        setTimeout(() => {
+                            wordSpans[i].classList.remove('concealed');
+                            wordSpans[i].classList.add('revealed');
+                        }, (i - startIndex) * 50);
+                    }
+                }
+
+                const shakeX = (Math.random() - 0.5) * 10;
+                wrapper.style.transform = `translateX(${shakeX}px)`;
+                setTimeout(() => wrapper.style.transform = 'none', 100);
+
+                cursorSpeed *= 1.2;
+
+                // --- ★修正箇所: 終了判定ロジック ---
+                // 「すべての単語が表示されたか」をチェック
+                // (ターゲット単語は最初から見えているので除外、concealedクラスを持っていないものが全てならOK)
+                const allRevealed = wordSpans.every(span => 
+                    span.classList.contains('target-core') || span.classList.contains('revealed')
+                );
+
+                // もし全部見えたら、MAXステージに達していなくても終了
+                // ただし、アニメーションの遅延(setTimeout)を考慮して、少し待ってから判定したいが、
+                // ここでは「今回の斬撃で全て対象になった」時点で終了フラグを立てる
+                if (endIndex >= totalWords || currentStage >= MAX_STAGES) {
+                    triggerComplete(slashAngle);
+                }
+                // -----------------------------------
+
+            } else {
+                playSaberSound('miss');
+                gaugeContainer.style.borderColor = '#ff0055';
+                setTimeout(() => gaugeContainer.style.borderColor = '#334155', 200);
             }
         }
 
-        // === ロジック ===
-
-        document.getElementById('start-btn').addEventListener('click', () => {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-            audioEnabled = true;
-            startScreen.classList.add('hidden');
+        function triggerComplete() {
+            isGameComplete = true;
+            playSaberSound('break');
             
-            // メインターゲット単語を表示
-            mainTargetWord.textContent = TARGET_WORD;
-            setTimeout(nextCard, 500);
-        });
-
-        function nextCard() {
-            // ★変更点: 注入数が目標に達したらクリア
-            if (injections >= TARGET_SUCCESSES) {
-                gameComplete();
-                return;
-            }
-
-            state = 'arriving';
-            wrapper.className = ''; 
-            wrapper.style.left = '150%'; 
-            transArea.textContent = ' '; // 高さを維持するために半角スペース
-            transArea.classList.remove('visible');
-
-            // ★変更点: 正解カードの出現確率を80%にアップ
-            // これで「なかなか正解が出ない」ストレスを解消
-            const isCorrect = VALID_SENTENCES.length > 0 ? Math.random() < 0.8 : false; 
-            const source = isCorrect ? VALID_SENTENCES : INVALID_SENTENCES;
-            
-            let item;
-            // ★変更点: 例文が2つ以上ある場合、同じ例文が連続しないようにする
-            if (source.length > 1) {
-                do {
-                    item = source[Math.floor(Math.random() * source.length)];
-                } while (currentData && item.full === currentData.full); // 前のカードと同じなら再抽選
-            } else {
-                item = source[0]; // 例文が1つしかない場合はそれを選ぶ
-            }
-            currentData = { ...item, isCorrect };
-
-            // カード内容を設定
-            cardContent.innerHTML = `${currentData.parts[0]} <span class="gap-slot" id="gap"></span> ${currentData.parts[1] || ''}`;
-            
-            setTimeout(() => {
-                wrapper.style.left = '50%'; 
-                playSound('arrive');
-                mainTargetWord.style.transform = 'translateY(-20px)';
-                mainTargetWord.style.opacity = '0';
-
-                setTimeout(() => {
-                    mainTargetWord.style.transform = 'translateY(0)';
-                    mainTargetWord.style.opacity = '1';
-                }, 100);
-            }, 300);
+            gaugeContainer.style.opacity = 0;
+            document.getElementById('instruction').style.opacity = 0;
 
             setTimeout(() => {
-                state = 'locked';
-                startTimer();
+                transEl.classList.add('visible');
+                onGameComplete('context');
+                isWaitingForNext = true;
+                document.getElementById('continue-msg').classList.add('show');
             }, 800);
         }
 
-        function startTimer() {
-            timerBar.style.transition = 'none';
-            timerBar.style.transform = 'scaleX(1)';
-            
-            requestAnimationFrame(() => {
-                timerBar.style.transition = `transform ${TIME_LIMIT}ms linear`;
-                timerBar.style.transform = 'scaleX(0)';
-            });
-
-            clearTimeout(timerId);
-            timerId = setTimeout(() => {
-                if (state === 'locked') handleReject(); 
-            }, TIME_LIMIT);
-        }
-
-        function handleInject() {
-            if (state !== 'locked') return;
-            clearTimeout(timerId);
-            state = 'processing';
-
-            mainTargetWord.style.opacity = '0';
-
-            if (currentData.isCorrect) {
-                // === 正解 ===
-                playSound('inject');
-                injections++;
-                updateScore();
-
-                const gap = document.getElementById('gap');
-                if (gap) {
-                    gap.textContent = TARGET_WORD;
-                    gap.classList.add('filled');
-                }
-                transArea.textContent = currentData.jp;
-                transArea.classList.add('visible');
-
-                setTimeout(() => {
-                    wrapper.classList.add('slide-out-left');
-                    setTimeout(nextCard, 600);
-                }, 2500); 
-
-            } else {
-                // === 不正解文で◎ → エラー ===
-                playSound('error');
-                wrapper.style.transform = "translate(-50%, -50%) rotate(3deg)";
-                setTimeout(() => wrapper.style.transform = "translate(-50%, -50%)", 100);
-                
-                setTimeout(() => {
-                    wrapper.classList.add('slide-out-bottom');
-                    setTimeout(nextCard, 500);
-                }, 300);
-            }
-        }
-
-        function handleReject() {
-            if (state !== 'locked') return;
-            clearTimeout(timerId);
-            state = 'processing';
-            mainTargetWord.style.opacity = '0';
-
-            if (!currentData.isCorrect) {
-                // === 不正解文で✕ → 正解 ===
-                playSound('reject'); // 成功音として流用
-                injections++;
-                updateScore();
-                
-                // 日本語訳を表示せず、すぐに次のカードへ
-                setTimeout(() => {
-                    wrapper.classList.add('slide-out-bottom');
-                    setTimeout(nextCard, 500);
-                }, 300);
-
-            } else {
-                // === 正解文で✕ → エラー ===
-                playSound('error');
-                wrapper.style.transform = "translate(-50%, -50%) rotate(-3deg)";
-                setTimeout(() => wrapper.style.transform = "translate(-50%, -50%)", 100);
-
-                setTimeout(() => {
-                    wrapper.classList.add('slide-out-bottom');
-                    setTimeout(nextCard, 500);
-                }, 300);
-            }
-        }
-
-        document.getElementById('btn-inject').addEventListener('click', handleInject);
-        document.getElementById('btn-reject').addEventListener('click', handleReject);
-
-        function updateScore() {
-            scoreDisp.textContent = `JUDGED: ${injections}/${TARGET_SUCCESSES}`;
-        }
-
-        function gameComplete() {
-            onGameComplete('context');
+        function showResult() {
             document.getElementById('result-screen').classList.add('show');
         }
 
+        function playSaberSound(type) {
+            if (!isAudioInitialized) return;
+            const t = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            
+            if (type === 'hit') {
+                // 重厚なビームサーベル音
+                const osc2 = audioCtx.createOscillator();
+                const filter = audioCtx.createBiquadFilter();
+
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(50, t); 
+                osc.frequency.exponentialRampToValueAtTime(30, t + 0.8);
+
+                osc2.type = 'sine';
+                osc2.frequency.setValueAtTime(60, t);
+                osc2.frequency.exponentialRampToValueAtTime(120, t + 0.1); 
+                osc2.frequency.linearRampToValueAtTime(40, t + 0.8);
+
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(100, t);
+                filter.frequency.exponentialRampToValueAtTime(2500, t + 0.05);
+                filter.frequency.exponentialRampToValueAtTime(100, t + 0.8);
+
+                gain.gain.setValueAtTime(0, t);
+                gain.gain.linearRampToValueAtTime(0.8, t + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.01, t + 0.8);
+
+                osc.connect(filter);
+                osc2.connect(filter);
+                filter.connect(gain).connect(audioCtx.destination);
+
+                osc.start(t); osc.stop(t + 0.8);
+                osc2.start(t); osc2.stop(t + 0.8);
+
+            } else if (type === 'miss') {
+                osc.connect(gain).connect(audioCtx.destination);
+                osc.type = 'square'; osc.frequency.value = 80;
+                g.gain.setValueAtTime(0.3, t); g.gain.exponentialRampToValueAtTime(0.01, t+0.15);
+                osc.start(t); osc.stop(t+0.15);
+
+            } else if (type === 'break') {
+                // クリスタル・チャイム
+                const g = audioCtx.createGain();
+                g.gain.value = 0.15;
+                g.connect(audioCtx.destination);
+
+                const freqs = [1046.50, 1174.66, 1318.51, 1567.98, 1760.00];
+                
+                freqs.forEach((freq, i) => {
+                    const o = audioCtx.createOscillator();
+                    o.type = 'sine';
+                    o.frequency.value = freq;
+                    const nodeGain = audioCtx.createGain();
+                    nodeGain.gain.setValueAtTime(0, t);
+                    nodeGain.gain.linearRampToValueAtTime(0.1, t + i * 0.05); 
+                    nodeGain.gain.exponentialRampToValueAtTime(0.001, t + 2.5 + i * 0.1);
+                    o.connect(nodeGain).connect(g);
+                    o.start(t + i * 0.03);
+                    o.stop(t + 3.0);
+                });
+            }
+        }
+
+        window.onload = init;
     </script>
 </body>
 </html>

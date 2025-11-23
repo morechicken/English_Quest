@@ -128,17 +128,17 @@ function goTo(page, wordId = null) {
 // BGMを再生する関数
 function manageBgm() {
     const bgm = document.getElementById('bgm');
-    const bgmState = localStorage.getItem('eq_bgm_state') || 'off'; // 'off', 'low', 'mid', 'high'
-
     if (!bgm) return;
+
+    const bgmState = localStorage.getItem('eq_bgm_state') || 'off'; 
 
     if (bgmState === 'off') {
         bgm.pause();
     } else {
-        // games/ フォルダ内からの相対パスを考慮
+        // パス解決
         const path = window.location.pathname.includes('/games/') ? '../audio/bgm.mp3' : 'audio/bgm.mp3';
-        if (bgm.currentSrc.indexOf(path) === -1) {
-            bgm.src = path;
+        if (bgm.getAttribute('src') !== path) {
+             bgm.src = path;
         }
 
         // 音量設定
@@ -147,9 +147,20 @@ function manageBgm() {
 
         // 再生試行
         const playPromise = bgm.play();
+
         if (playPromise !== undefined) {
             playPromise.catch(error => {
-                console.log("BGMの自動再生はユーザー操作後に可能になります。");
+                console.log("Autoplay prevented. Waiting for user interaction.");
+                // 自動再生がブロックされた場合、次のクリックで再生するイベントを仕込む
+                const resumeAudio = () => {
+                    bgm.play();
+                    document.removeEventListener('click', resumeAudio);
+                    document.removeEventListener('touchstart', resumeAudio);
+                    document.removeEventListener('keydown', resumeAudio);
+                };
+                document.addEventListener('click', resumeAudio);
+                document.addEventListener('touchstart', resumeAudio);
+                document.addEventListener('keydown', resumeAudio);
             });
         }
     }
@@ -188,18 +199,25 @@ function createVolumeControl() {
     controlContainer.addEventListener('click', () => {
         let newState;
         const currentState = localStorage.getItem('eq_bgm_state') || 'off';
+        
         if (currentState === 'off') {
-            newState = 'mid'; // ONにする時は中音量に
+            newState = 'mid'; 
         } else {
-            newState = 'off'; // OFFにする
+            newState = 'off'; 
         }
+        
         setBgmState(newState);
         updateIcon(newState);
 
-        // クリック時にBGM再生を試みる（ユーザー操作の起点）
+        // クリックイベント内で直接 play() を呼ぶことで、ブラウザに許可させる
         const bgm = document.getElementById('bgm');
-        if (bgm && bgm.paused && newState !== 'off') {
-            bgm.play().catch(e => console.log("BGM再生に失敗:", e));
+        if (bgm) {
+            if (newState !== 'off') {
+                // ユーザー操作直下なので再生が許可される
+                bgm.play().catch(e => console.log(e));
+            } else {
+                bgm.pause();
+            }
         }
     });
 }
