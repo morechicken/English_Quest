@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Rhythm Rider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <script src="../data/word_data.js"></script>
+    <script src="../js/app.js"></script>
+
+    <style>
+        :root {
+            --weak-color: #00f2ff;
+            --strong-color: #bd00ff;
+            --bg-color: #0f172a;
+        }
+
+        body {
+            margin: 0; padding: 0; width: 100vw; height: 100vh; height: 100dvh;
+            overflow: hidden; font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color) !important;
+            background: radial-gradient(circle at 50% 120%, #1e293b, #020617 80%) !important;
+            color: white; touch-action: none; user-select: none;
+            -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+            /* フェードアニメーション */
+            opacity: 0; transition: opacity 0.3s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+
+        #game-container { position: fixed; inset: 0; display: flex; flex-direction: column; z-index: 10; }
+
+        /* 背景：より穏やかな波形 */
+        #waveform-bg {
+            position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+            opacity: 0.1; pointer-events: none; gap: 6px; transform: scaleY(0.5);
+        }
+        .wave-bar {
+            width: 8px; background: var(--weak-color); border-radius: 4px;
+            animation: equalizer 1.5s infinite ease-in-out; 
+        }
+        @keyframes equalizer {
+            0%, 100% { height: 20px; opacity: 0.3; }
+            50% { height: 120px; opacity: 0.8; background: var(--strong-color); }
+        }
+
+        #track-lane {
+            position: absolute; top: 50%; left: 0; width: 100%; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: translateY(-50%);
+        }
+
+        #judge-zone {
+            position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%);
+            width: 90px; height: 90px;
+            border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.05); z-index: 20;
+            transition: transform 0.1s;
+        }
+        #judge-zone.hit { transform: translate(-50%, -50%) scale(1.05); border-color: rgba(255,255,255,0.8); }
+
+        .note {
+            position: absolute; top: 50%; transform: translate(-50%, -50%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 30; will-change: left, transform;
+        }
+        
+        .note-visual {
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; backdrop-filter: blur(4px);
+            box-shadow: 0 0 15px currentColor; border: 2px solid currentColor;
+            background: rgba(0,0,0,0.4); transition: all 0.1s;
+        }
+
+        .note.weak { color: var(--weak-color); }
+        .note.weak .note-visual { width: 50px; height: 50px; border-width: 1px; box-shadow: 0 0 10px var(--weak-color); }
+        
+        .note.strong { color: var(--strong-color); z-index: 35; }
+        .note.strong .note-visual { 
+            width: 90px; height: 90px; border-width: 3px;
+            box-shadow: 0 0 30px var(--strong-color);
+        }
+        
+        .syllable-text {
+            position: absolute; top: -45px; font-size: 1.5rem; letter-spacing: 0.05em;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8); white-space: nowrap; font-weight: 700;
+        }
+
+        #ui-layer { position: absolute; top: 0; width: 100%; padding: 30px; text-align: center; pointer-events: none; z-index: 50; }
+        #feedback {
+            position: absolute; top: 25%; left: 20%; transform: translate(-50%, -50%);
+            font-size: 2.5rem; font-weight: 300; letter-spacing: 0.1em; opacity: 0;
+        }
+
+        .particle { position: fixed; pointer-events: none; border-radius: 50%; z-index: 40; mix-blend-mode: screen; }
+
+        #start-screen, #result-screen {
+            position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; transition: opacity 0.4s;
+        }
+        .hidden { opacity: 0; pointer-events: none; }
+    </style>
+</head>
+<body>
+
+    <div id="waveform-bg"></div>
+
+    <div id="game-container">
+        <div id="ui-layer">
+            <div class="text-cyan-300 tracking-widest text-xs mb-2 opacity-60">RHYTHM & FLOW</div>
+            <div id="target-word-disp" class="text-3xl font-light text-white tracking-wider">LOADING...</div>
+        </div>
+
+        <div id="track-lane"></div>
+        <div id="judge-zone">
+            <div class="absolute inset-0 rounded-full border border-white opacity-10 scale-75"></div>
+        </div>
+        <div id="note-container"></div>
+        <div id="feedback"></div>
+    </div>
+
+    <div id="start-screen">
+        <h1 class="text-5xl font-light text-white mb-4 tracking-[0.2em]">ECHOES</h1>
+        <p class="text-gray-400 mb-10 text-sm tracking-widest">FEEL THE RHYTHM</p>
+        <button id="start-btn" class="px-8 py-3 bg-cyan-500 text-white font-bold rounded-full shadow-lg active:scale-95 transition tracking-wider">START</button>
+    </div>
+
+    <div id="result-screen" class="hidden">
+        <h2 class="text-4xl font-light text-white mb-2 tracking-widest">COMPLETE</h2>
+        <div class="flex gap-4 mt-8">
+            <button onclick="location.reload()" class="px-8 py-3 bg-transparent border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition">
+                RETRY
+            </button>
+            <button id="back-btn" class="px-10 py-3 bg-cyan-600 text-white font-bold rounded-full shadow-lg active:scale-95 transition hover:bg-cyan-500">
+                NEXT / BACK
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // === 1. データ取得 ===
+        const wordData = getCurrentWordData();
+        if (!wordData) {
+            alert("データが見つかりません。リストに戻ります。");
+            window.location.href = "../list.html";
+        }
+
+        // 戻るボタンの設定
+        document.getElementById('back-btn').onclick = () => {
+            goTo('../cockpit.html', wordData.id);
+        };
+
+        // === データ処理 ===
+        function generateLevelData() {
+            // JSONデータから音節情報を取得
+            // もしデータがない場合（古いデータなど）は、単語全体を1つの強拍として扱う
+            const syllables = wordData.syllables || [{ text: wordData.word, type: 'strong' }];
+            
+            const loopCount = 3;
+            const beatDuration = 650; 
+            let gameData = [];
+            let currentTime = 1500; 
+
+            for (let i = 0; i < loopCount; i++) {
+                syllables.forEach((syl) => {
+                    gameData.push({
+                        text: syl.text,
+                        type: syl.type,
+                        time: currentTime,
+                    });
+                    currentTime += beatDuration;
+                });
+                currentTime += beatDuration * 1.5; 
+            }
+            return gameData;
+        }
+
+        // === ゲーム変数 ===
+        let GAME_DATA = [];
+        const SPEED = 0.5; 
+        const JUDGE_X_PERCENT = 0.2;
+        let startTime = 0;
+        let isPlaying = false;
+        let notes = [];
+        let judgeLineX = 0;
+
+        // === サウンドエンジン ===
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playSoftTone(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const t = audioCtx.currentTime;
+            const masterGain = audioCtx.createGain();
+            masterGain.connect(audioCtx.destination);
+
+            const duration = type === 'strong' ? 1.2 : 0.4;
+            const attack = type === 'strong' ? 0.05 : 0.02;
+            
+            masterGain.gain.setValueAtTime(0, t);
+            masterGain.gain.linearRampToValueAtTime(type === 'strong' ? 0.25 : 0.15, t + attack);
+            masterGain.gain.exponentialRampToValueAtTime(0.001, t + duration);
+
+            let freqs = [];
+            
+            if (type === 'strong') {
+                freqs = [261.63, 329.63, 392.00, 493.88, 587.33]; 
+            } else {
+                freqs = [523.25]; 
+            }
+
+            freqs.forEach((freq) => {
+                const osc = audioCtx.createOscillator();
+                osc.type = 'sine'; 
+                const detune = (Math.random() - 0.5) * 8; 
+                osc.frequency.setValueAtTime(freq, t);
+                osc.detune.setValueAtTime(detune, t);
+                osc.connect(masterGain);
+                osc.start(t);
+                osc.stop(t + duration);
+            });
+        }
+
+        function gameComplete() {
+            if (!isPlaying) return;
+            isPlaying = false;
+            // ★進捗保存
+            onGameComplete('rhythm');
+            document.getElementById('result-screen').classList.remove('hidden');
+        }
+
+        // === ゲームエンジン ===
+        function startGame() {
+            document.getElementById('start-screen').classList.add('hidden');
+            
+            // AudioContext再開（念のため）
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+
+            GAME_DATA = generateLevelData();
+            judgeLineX = window.innerWidth * JUDGE_X_PERCENT;
+            
+            const container = document.getElementById('note-container');
+            container.innerHTML = '';
+            
+            notes = GAME_DATA.map(d => {
+                const el = document.createElement('div');
+                el.className = `note ${d.type}`;
+                
+                const visual = document.createElement('div');
+                visual.className = 'note-visual';
+                
+                const text = document.createElement('div');
+                text.className = 'syllable-text';
+                text.textContent = d.text;
+                
+                el.appendChild(text);
+                el.appendChild(visual);
+                container.appendChild(el);
+                
+                return { el, data: d, isHit: false };
+            });
+
+            isPlaying = true;
+            startTime = Date.now();
+            requestAnimationFrame(gameLoop);
+        }
+
+        function gameLoop() {
+            if (!isPlaying) return;
+            const current = Date.now() - startTime;
+            
+            if (GAME_DATA.length > 0) {
+                const lastNoteTime = GAME_DATA[GAME_DATA.length-1].time;
+                if (current > lastNoteTime + 2000) {
+                    gameComplete();
+                    return;
+                }
+            } else { 
+                setTimeout(gameComplete, 2000);
+                return;
+            }
+
+            notes.forEach(note => {
+                if (note.isHit) return;
+                const diff = note.data.time - current;
+                const x = judgeLineX + (diff * SPEED);
+                
+                if (x < -80 && !note.missed) {
+                    note.missed = true;
+                    note.el.style.opacity = 0.2;
+                }
+                note.el.style.left = `${x}px`;
+            });
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // タップイベント
+        const handleInput = (e) => {
+            if (!isPlaying) return;
+            e.preventDefault();
+
+            const zone = document.getElementById('judge-zone');
+            zone.classList.add('hit');
+            setTimeout(() => zone.classList.remove('hit'), 100);
+
+            const current = Date.now() - startTime;
+            const hitWindow = 120;
+            const target = notes.find(n => !n.isHit && Math.abs(n.data.time - current) < hitWindow);
+
+            if (target) {
+                target.isHit = true;
+                target.el.style.display = 'none'; 
+                
+                playSoftTone(target.data.type);
+                
+                const fb = document.getElementById('feedback');
+                fb.textContent = target.data.type === 'strong' ? "Perfect" : "Good";
+                fb.style.color = target.data.type === 'strong' ? '#bd00ff' : '#00f2ff';
+                fb.style.opacity = 1;
+                fb.style.transform = "translate(-50%, -50%) scale(1.2)";
+                requestAnimationFrame(() => {
+                    fb.style.transition = "all 0.4s ease-out";
+                    fb.style.transform = "translate(-50%, -50%) scale(1)";
+                    fb.style.opacity = 0;
+                });
+
+                createParticles(judgeLineX, window.innerHeight/2, target.data.type);
+            }
+        };
+
+        document.addEventListener('pointerdown', handleInput);
+        document.addEventListener('keydown', handleInput); // キーボード対応
+
+        function createParticles(x, y, type) {
+            const color = type === 'strong' ? '#bd00ff' : '#00f2ff';
+            const num = type === 'strong' ? 12 : 6;
+            
+            for(let i=0; i<num; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.width = (Math.random()*6+2)+'px';
+                p.style.height = p.style.width;
+                p.style.background = color;
+                p.style.left = x+'px'; p.style.top = y+'px';
+                document.body.appendChild(p);
+                
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 80 + 20;
+                
+                p.animate([
+                    { transform: 'translate(0,0) scale(1)', opacity: 0.8 },
+                    { transform: `translate(${Math.cos(angle)*speed}px, ${Math.sin(angle)*speed}px) scale(0)`, opacity: 0 }
+                ], { duration: 800, easing: 'ease-out' }).onfinish = () => p.remove();
+            }
+        }
+        
+        function init() {
+            // 単語表示更新
+            document.getElementById('target-word-disp').textContent = wordData.word;
+
+            // スタートボタンイベント
+            document.getElementById('start-btn').onclick = startGame;
+
+            // 背景生成
+            const bg = document.getElementById('waveform-bg');
+            for(let i=0; i<20; i++) {
+                const b = document.createElement('div');
+                b.className = 'wave-bar';
+                b.style.height = (Math.random()*50+20)+'px';
+                b.style.animationDelay = (Math.random()*2)+'s';
+                bg.appendChild(b);
+            }
+        }
+
+        window.onload = init;
+        window.addEventListener('resize', () => judgeLineX = window.innerWidth * JUDGE_X_PERCENT);
+
+    </script>
+</body>
+</html>

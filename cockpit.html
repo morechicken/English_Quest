@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Word Cockpit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <script src="data/word_data.js"></script>
+    <script src="js/app.js"></script>
+
+    <style>
+        body {
+            background-color: #050814;
+            background-image: 
+                radial-gradient(circle at 50% 30%, #1e293b 0%, #050814 70%),
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            height: 100vh; overflow: hidden;
+            touch-action: manipulation;
+            opacity: 0; /* 初期状態は透明 */
+            transition: opacity 0.3s ease-in-out; /* 0.3秒かけて変化 */
+                        
+        }
+        body.loaded {
+        opacity: 1; /* 読み込み完了で不透明に */
+        }    
+        
+        /* 以下、前回のスタイルと同じ（省略なしで記述します） */
+        .core-word { text-align: center; margin-bottom: 40px; animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .word-en { font-size: 2.5rem; font-weight: 900; color: #fff; text-shadow: 0 0 20px rgba(0, 242, 255, 0.6); letter-spacing: 0.05em; }
+        .word-jp { font-family: 'Shippori Mincho', serif; font-size: 1.2rem; color: #94a3b8; margin-top: 5px; letter-spacing: 0.1em; }
+        #module-container { position: relative; width: 320px; height: 320px; margin: 0 auto; }
+        .module-btn {
+            position: absolute; width: 70px; height: 70px;
+            background: rgba(30, 41, 59, 0.8); border: 2px solid rgba(255, 255, 255, 0.1); border-radius: 50%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5); backdrop-filter: blur(5px);
+            transition: all 0.3s; cursor: pointer; z-index: 10;
+        }
+        .module-btn i { font-size: 1.5rem; color: #64748b; transition: color 0.3s; }
+        .module-label { position: absolute; bottom: -25px; font-size: 0.6rem; letter-spacing: 0.1em; color: #64748b; font-weight: 700; }
+        .progress-ring { position: absolute; top: -5px; left: -5px; width: 80px; height: 80px; transform: rotate(-90deg); pointer-events: none; }
+        .progress-ring circle { fill: transparent; stroke-width: 4; stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1s ease-out; }
+        .module-btn.cleared { border-color: #00f2ff; box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
+        .module-btn.cleared i { color: #00f2ff; }
+        .module-btn.cleared .module-label { color: #00f2ff; }
+        .module-btn:active { transform: scale(0.9); background: rgba(255,255,255,0.1); }
+        .connection-line {
+            position: absolute; top: 50%; left: 50%; width: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform-origin: left center; z-index: 0;
+        }
+        .back-btn { position: absolute; top: 20px; left: 20px; font-size: 1.5rem; color: #64748b; background: none; border: none; cursor: pointer; }
+        .total-progress { position: absolute; bottom: 40px; width: 100%; text-align: center; }
+        .total-bar-bg { width: 200px; height: 6px; background: #1e293b; margin: 10px auto; border-radius: 3px; overflow: hidden; }
+        .total-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #00f2ff, #bd00ff); box-shadow: 0 0 10px #00f2ff; transition: width 1s ease-out; }
+    </style>
+</head>
+<body>
+
+    <button class="back-btn" onclick="location.href='list.html'"><i class="fas fa-chevron-left"></i></button>
+
+    <div class="flex flex-col items-center justify-center h-full">
+        
+        <div class="core-word">
+            <div class="text-xs text-cyan-500 tracking-[0.3em] mb-2 opacity-70">TARGET MISSION</div>
+            <div class="word-en" id="disp-word">LOADING...</div>
+            <div class="word-jp" id="disp-meaning">...</div>
+        </div>
+
+        <div id="module-container">
+            </div>
+
+        <div class="total-progress">
+            <div class="text-xs text-gray-400 tracking-widest">SYNCHRONIZATION</div>
+            <div class="total-bar-bg">
+                <div class="total-bar-fill" id="total-fill"></div>
+            </div>
+            <div class="text-sm font-mono text-cyan-300" id="total-percent">0%</div>
+        </div>
+    </div>
+
+    <script>
+        // 1. 現在の単語データを取得
+        const wordData = getCurrentWordData();
+        
+        // データがない場合はリストに戻す（エラーハンドリング）
+        if (!wordData) {
+            alert("データが見つかりません。リストに戻ります。");
+            window.location.href = 'list.html';
+        } else {
+            // 画面表示更新
+            document.getElementById('disp-word').textContent = wordData.word;
+            document.getElementById('disp-meaning').textContent = wordData.meaning_core;
+            
+            // 進捗状況の取得
+            const progress = getProgress(wordData.id);
+
+            // 2. ボタン生成ループ
+            const MODULE_CONFIG = [
+                { id: 'spell',   icon: 'fa-font',          label: 'SPELLING',   color: '#00f2ff' },
+                { id: 'rhythm',  icon: 'fa-music',         label: 'RHYTHM',     color: '#bd00ff' },
+                { id: 'synonym', icon: 'fa-network-wired', label: 'SYNONYMS',   color: '#00f2ff' },
+                { id: 'meaning', icon: 'fa-brain',         label: 'MEANING',    color: '#bd00ff' },
+                { id: 'context', icon: 'fa-align-left',    label: 'CONTEXT',    color: '#00f2ff' },
+            ];
+
+            const container = document.getElementById('module-container');
+            const radius = 130;
+            let clearedCount = 0;
+
+            MODULE_CONFIG.forEach((mod, index) => {
+                const isCleared = progress[mod.id] === true;
+                if (isCleared) clearedCount++;
+
+                const angle = (index * (360 / 5)) - 90;
+                const radian = angle * (Math.PI / 180);
+                const x = radius * Math.cos(radian) + 160 - 35;
+                const y = radius * Math.sin(radian) + 160 - 35;
+
+                // ボタン
+                const btn = document.createElement('div');
+                btn.className = `module-btn ${isCleared ? 'cleared' : ''}`;
+                btn.style.left = `${x}px`;
+                btn.style.top = `${y}px`;
+                
+                // 遷移設定: IDをパラメータとして渡す
+                // 対応するゲームファイル: games/spell.html など
+                btn.onclick = () => {
+                    window.location.href = `games/${mod.id}.html?id=${wordData.id}`;
+                };
+
+                btn.innerHTML = `
+                    <i class="fas ${mod.icon}"></i>
+                    <span class="module-label">${mod.label}</span>
+                    <svg class="progress-ring">
+                        <circle cx="40" cy="40" r="35" stroke="${isCleared ? mod.color : '#334155'}" />
+                    </svg>
+                `;
+
+                // リングアニメーション
+                const circle = btn.querySelector('circle');
+                const circumference = 220;
+                const offset = isCleared ? 0 : 220; // クリアなら満タン(0)、未クリアなら空(220)
+                setTimeout(() => { circle.style.strokeDashoffset = offset; }, 500 + (index * 100));
+
+                // 線
+                const line = document.createElement('div');
+                line.className = 'connection-line';
+                line.style.width = `${radius - 40}px`;
+                line.style.left = `160px`;
+                line.style.top = `160px`;
+                line.style.transform = `rotate(${angle}deg)`;
+                container.appendChild(line);
+                container.appendChild(btn);
+            });
+
+            // 全体進捗バー更新
+            const totalPercent = (clearedCount / 5) * 100;
+            setTimeout(() => {
+                document.getElementById('total-fill').style.width = `${totalPercent}%`;
+                let current = 0;
+                const timer = setInterval(() => {
+                    if(current >= totalPercent) clearInterval(timer);
+                    else {
+                        current++;
+                        document.getElementById('total-percent').textContent = `${current}%`;
+                    }
+                }, 10);
+            }, 200);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Semantic Breaker - Ethereal Audio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <script src="../data/word_data.js"></script>
+    <script src="../js/app.js"></script>
+
+    <style>
+        body {
+            margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
+            background-color: #050814;
+            background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
+            touch-action: none; user-select: none; -webkit-user-select: none;
+            opacity: 0; transition: opacity 0.3s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+
+        canvas { display: block; }
+        
+        #ui-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; padding: 20px; box-sizing: border-box;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .hud-text {
+            color: white; text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+            text-align: center; margin-top: 20px;
+        }
+        
+        #guide-text {
+            position: absolute; bottom: 10%; width: 100%; text-align: center;
+            color: rgba(255,255,255,0.5); font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem; letter-spacing: 0.1em;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+        /* スタート画面 */
+        #start-screen {
+            position: absolute; inset: 0; background: rgba(5, 8, 20, 0.95);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 200; transition: opacity 0.5s;
+        }
+        #start-screen.hidden { opacity: 0; pointer-events: none; }
+
+        /* 結果画面 */
+        #result-screen {
+            position: absolute; inset: 0; background: rgba(5, 8, 20, 0.95);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; opacity: 0; pointer-events: none; transition: opacity 0.5s;
+            backdrop-filter: blur(10px);
+        }
+        #result-screen.show { opacity: 1; pointer-events: auto; }
+        
+        .fusion-card {
+            background: linear-gradient(135deg, rgba(0, 242, 255, 0.1), rgba(189, 0, 255, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px; padding: 40px; text-align: center;
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.2);
+            transform: scale(0.8); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            max-width: 90%;
+        }
+        #result-screen.show .fusion-card { transform: scale(1); }
+    </style>
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="start-screen">
+        <h1 class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-8 tracking-tighter italic">SEMANTIC BREAKER</h1>
+        <button id="start-btn" class="px-12 py-5 bg-white text-black font-bold rounded-full shadow-[0_0_40px_rgba(0,242,255,0.6)] active:scale-95 transition tracking-[0.2em] hover:bg-cyan-50 text-lg">
+            START MISSION
+        </button>
+        <p class="text-gray-500 mt-4 text-xs">SOUND ON</p>
+    </div>
+
+    <div id="ui-layer">
+        <div class="hud-text">
+            <div class="text-xs tracking-widest text-cyan-300 opacity-70 mb-1">SEMANTIC BREAKER</div>
+            <div id="target-count" class="text-xl font-bold">TARGETS: 3</div>
+        </div>
+        <div id="guide-text">TAP TO BRAKE / DRAG TO SHOOT</div>
+    </div>
+
+    <div id="result-screen">
+        <h2 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-white mb-6 tracking-widest italic">MISSION CLEAR</h2>
+        
+        <div class="fusion-card">
+            <div id="result-word-en" class="text-3xl font-black text-white mb-2 font-montserrat tracking-wider drop-shadow-lg"></div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white to-transparent my-4 opacity-50"></div>
+            <div id="result-word-jp" class="text-2xl font-bold text-white font-serif leading-relaxed drop-shadow-md"></div>
+        </div>
+        
+        <div class="flex flex-col items-center mt-12">
+            <button onclick="location.reload()" class="px-12 py-4 bg-white text-black font-bold rounded-full shadow-[0_0_30px_rgba(255,255,255,0.4)] active:scale-95 transition tracking-widest hover:bg-cyan-50">
+                REPLAY
+            </button>
+            <button onclick="goTo('../cockpit.html', wordData.id)" class="mt-4 px-12 py-3 bg-gray-700 text-white font-bold rounded-full shadow-lg active:scale-95 transition">NEXT / BACK</button>
+        </div>
+    </div>
+
+    <script>
+        // === 1. データの取得 ===
+        const wordData = getCurrentWordData();
+        if (!wordData) {
+            alert("データが見つかりません。リストに戻ります。");
+            window.location.href = "../list.html";
+        }
+
+        // === 2. 定数の上書き ===
+        const ENGLISH_WORD = wordData.word;
+        const TARGETS_DATA = wordData.meanings_expanded || [wordData.meaning_core];
+        
+        const COLOR_EN = "#00f2ff"; 
+        const COLOR_JP = "#bd00ff";
+        
+        const DRAG_STRENGTH = 0.22;
+        const MAX_DRAG_DIST = 250;
+        const FRICTION = 0.96; 
+        const BOUNCE = 0.7;
+
+        // === 変数 ===
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, cx, cy;
+
+        let gameMode = 'aiming'; 
+        let isDragging = false;
+        let dragStartPos = { x: 0, y: 0 };
+        let dragCurrentPos = { x: 0, y: 0 };
+
+        let ballEn = { 
+            x: 0, y: 0, vx: 0, vy: 0, radius: 45, 
+            color: COLOR_EN, text: ENGLISH_WORD, 
+            font: "bold 14px Montserrat" 
+        };
+
+        let targets = [];
+        let particles = [];
+        let shakeIntensity = 0;
+
+        // === 3. 初期化関数 ===
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            cx = width / 2;
+            cy = height / 2;
+            // リサイズ時にも位置を再計算
+            if(gameMode === 'aiming' && !isDragging) {
+                 initPositions();
+            }
+        }
+
+        function initPositions() {
+            ballEn.x = width * 0.2;
+            ballEn.y = cy;
+            ballEn.vx = 0; ballEn.vy = 0;
+            // フォントサイズ調整
+            if(ENGLISH_WORD.length > 10) ballEn.font = "bold 12px Montserrat";
+            else ballEn.font = "bold 14px Montserrat";
+
+            targets = [];
+            const startX = width * 0.6;
+            const gapY = 120;
+            
+            // ターゲットを画面内に収めるための計算
+            const totalHeight = (TARGETS_DATA.length - 1) * gapY;
+            const startY = cy - (totalHeight / 2);
+
+            TARGETS_DATA.forEach((text, i) => {
+                const offsetX = (i % 2 === 0) ? 0 : 80;
+                targets.push({
+                    x: startX + offsetX,
+                    y: startY + (i * gapY),
+                    radius: 55,
+                    color: COLOR_JP,
+                    text: text,
+                    font: "bold 24px 'Shippori Mincho', serif",
+                    alive: true
+                });
+            });
+            updateTargetCount();
+        }
+
+        function updateTargetCount() {
+            const count = targets.filter(t => t.alive).length;
+            document.getElementById('target-count').textContent = `TARGETS: ${count}`;
+            if (count === 0 && gameMode !== 'clearing') {
+                handleComplete();
+            }
+        }
+
+        window.addEventListener('resize', resize);
+
+        // === 4. Audio System ===
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let isAudioInitialized = false;
+        let noiseBuffer = null;
+
+        function createNoiseBuffer() {
+            const bufferSize = audioCtx.sampleRate * 2; 
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const data = buffer.getChannelData(0);
+            let lastOut = 0;
+            for (let i = 0; i < bufferSize; i++) {
+                const white = Math.random() * 2 - 1;
+                data[i] = (lastOut + (0.02 * white)) / 1.02;
+                lastOut = data[i];
+                data[i] *= 3.5; 
+            }
+            return buffer;
+        }
+
+        document.getElementById('start-btn').addEventListener('click', () => {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            if (!noiseBuffer) noiseBuffer = createNoiseBuffer();
+            isAudioInitialized = true;
+            document.getElementById('start-screen').classList.add('hidden');
+            playSound('brake'); 
+        });
+
+        let windNodes = null;
+        let humNodes = null;
+
+        function playSound(type, param) {
+            if (!isAudioInitialized) return; 
+            const t = audioCtx.currentTime;
+            
+            if (type === 'tension_update') {
+                if (!windNodes) {
+                    const source = audioCtx.createBufferSource();
+                    source.buffer = noiseBuffer;
+                    source.loop = true;
+                    const filter = audioCtx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.value = 80;
+                    const gain = audioCtx.createGain();
+                    gain.gain.value = 0;
+                    source.connect(filter).connect(gain).connect(audioCtx.destination);
+                    source.start(t);
+                    windNodes = { source, filter, gain };
+                }
+                if (!humNodes) {
+                    const osc = audioCtx.createOscillator();
+                    osc.type = 'sine';
+                    osc.frequency.value = 200; 
+                    const gain = audioCtx.createGain();
+                    gain.gain.value = 0;
+                    osc.connect(gain).connect(audioCtx.destination);
+                    osc.start(t);
+                    humNodes = { osc, gain };
+                }
+                const val = Math.min(param.strength, 1.0);
+                windNodes.filter.frequency.setTargetAtTime(80 + (val * 520), t, 0.1);
+                windNodes.gain.gain.setTargetAtTime(val * 0.25, t, 0.1);
+                humNodes.osc.frequency.setTargetAtTime(200 + (val * 100), t, 0.1);
+                humNodes.gain.gain.setTargetAtTime(val * 0.1, t, 0.1);
+
+            } else if (type === 'tension_end') {
+                if (windNodes) {
+                    windNodes.filter.frequency.exponentialRampToValueAtTime(1000, t + 0.2);
+                    windNodes.gain.gain.setTargetAtTime(0, t, 0.2);
+                    windNodes.source.stop(t + 0.3);
+                    windNodes = null;
+                }
+                if (humNodes) {
+                    humNodes.gain.gain.setTargetAtTime(0, t, 0.1);
+                    humNodes.osc.stop(t + 0.1);
+                    humNodes = null;
+                }
+                const osc = audioCtx.createOscillator();
+                const g = audioCtx.createGain();
+                osc.connect(g).connect(audioCtx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(300, t);
+                osc.frequency.exponentialRampToValueAtTime(50, t + 0.2);
+                g.gain.setValueAtTime(0.3, t);
+                g.gain.exponentialRampToValueAtTime(0.01, t + 0.2);
+                osc.start(t); osc.stop(t + 0.2);
+
+            } else if (type === 'brake') {
+                const osc = audioCtx.createOscillator();
+                const g = audioCtx.createGain();
+                osc.connect(g).connect(audioCtx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(600, t);
+                osc.frequency.exponentialRampToValueAtTime(300, t + 0.1);
+                g.gain.setValueAtTime(0.15, t);
+                g.gain.linearRampToValueAtTime(0, t + 0.1);
+                osc.start(t); osc.stop(t + 0.1);
+
+            } else if (type === 'hit') {
+                const osc1 = audioCtx.createOscillator();
+                const g1 = audioCtx.createGain();
+                osc1.connect(g1).connect(audioCtx.destination);
+                osc1.type = 'triangle'; 
+                osc1.frequency.setValueAtTime(180, t);
+                osc1.frequency.exponentialRampToValueAtTime(100, t + 0.1);
+                g1.gain.setValueAtTime(0.5, t);
+                g1.gain.exponentialRampToValueAtTime(0.001, t + 1.5);
+                osc1.start(t); osc1.stop(t + 1.5);
+
+                const osc2 = audioCtx.createOscillator();
+                const g2 = audioCtx.createGain();
+                osc2.connect(g2).connect(audioCtx.destination);
+                osc2.type = 'sine';
+                osc2.frequency.setValueAtTime(180 * 2.4, t); 
+                g2.gain.setValueAtTime(0.2, t);
+                g2.gain.exponentialRampToValueAtTime(0.001, t + 1.2);
+                osc2.start(t); osc2.stop(t + 1.2);
+
+            } else if (type === 'complete') {
+                [261.63, 329.63, 392.00, 523.25].forEach((f, i) => {
+                    const osc = audioCtx.createOscillator(); const g = audioCtx.createGain();
+                    osc.connect(g).connect(audioCtx.destination);
+                    osc.type = 'sine'; osc.frequency.value = f;
+                    g.gain.setValueAtTime(0, t);
+                    g.gain.linearRampToValueAtTime(0.15, t + 0.1 + i*0.05);
+                    g.gain.exponentialRampToValueAtTime(0.001, t + 4.0);
+                    osc.start(t); osc.stop(t + 4.0);
+                });
+            }
+        }
+
+        // === 5. 操作ロジック ===
+        function handleStart(x, y) {
+            if (gameMode === 'clearing') return;
+
+            if (gameMode === 'flying') {
+                ballEn.vx = 0; ballEn.vy = 0;
+                gameMode = 'aiming';
+                playSound('brake');
+                createRingEffect(ballEn.x, ballEn.y);
+            }
+
+            isDragging = true;
+            dragStartPos = { x: ballEn.x, y: ballEn.y };
+            dragCurrentPos = { x: x, y: y };
+            playSound('tension_update', { strength: 0 });
+        }
+
+        function handleMove(x, y) {
+            if (!isDragging) return;
+            dragCurrentPos = { x: x, y: y };
+            const dx = dragCurrentPos.x - dragStartPos.x;
+            const dy = dragCurrentPos.y - dragStartPos.y;
+            const dist = Math.hypot(dx, dy);
+            playSound('tension_update', { strength: dist / MAX_DRAG_DIST });
+        }
+
+        function handleEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const dx = dragStartPos.x - dragCurrentPos.x;
+            const dy = dragStartPos.y - dragCurrentPos.y;
+            const dist = Math.hypot(dx, dy);
+            
+            if (dist < 20) {
+                if(windNodes) { windNodes.source.stop(); windNodes = null; }
+                if(humNodes) { humNodes.osc.stop(); humNodes = null; }
+                return;
+            }
+
+            playSound('tension_end');
+
+            const power = Math.min(dist, MAX_DRAG_DIST) * DRAG_STRENGTH;
+            const angle = Math.atan2(dy, dx);
+            
+            ballEn.vx = Math.cos(angle) * power;
+            ballEn.vy = Math.sin(angle) * power;
+            gameMode = 'flying';
+        }
+
+        ['mousedown', 'touchstart'].forEach(e => canvas.addEventListener(e, ev => {
+            ev.preventDefault();
+            const p = ev.touches ? ev.touches[0] : ev;
+            handleStart(p.clientX, p.clientY);
+        }));
+        ['mousemove', 'touchmove'].forEach(e => window.addEventListener(e, ev => {
+            ev.preventDefault();
+            const p = ev.touches ? ev.touches[0] : ev;
+            handleMove(p.clientX, p.clientY);
+        }));
+        ['mouseup', 'touchend'].forEach(e => window.addEventListener(e, ev => handleEnd()));
+
+
+        // === 6. メインループ ===
+        function update() {
+            if (gameMode === 'flying') {
+                ballEn.x += ballEn.vx;
+                ballEn.y += ballEn.vy;
+
+                if (ballEn.x < ballEn.radius || ballEn.x > width - ballEn.radius) {
+                    ballEn.vx *= -BOUNCE;
+                    ballEn.x = Math.max(ballEn.radius, Math.min(width-ballEn.radius, ballEn.x));
+                }
+                if (ballEn.y < ballEn.radius || ballEn.y > height - ballEn.radius) {
+                    ballEn.vy *= -BOUNCE;
+                    ballEn.y = Math.max(ballEn.radius, Math.min(height-ballEn.radius, ballEn.y));
+                }
+
+                ballEn.vx *= FRICTION;
+                ballEn.vy *= FRICTION;
+
+                targets.forEach(target => {
+                    if (!target.alive) return;
+                    const dx = target.x - ballEn.x;
+                    const dy = target.y - ballEn.y;
+                    const dist = Math.hypot(dx, dy);
+                    const minDist = ballEn.radius + target.radius;
+
+                    if (dist < minDist) {
+                        target.alive = false;
+                        playSound('hit');
+                        shakeIntensity = 10;
+                        createExplosion(target.x, target.y, target.color);
+                        updateTargetCount();
+                        
+                        const angle = Math.atan2(dy, dx);
+                        const speed = Math.hypot(ballEn.vx, ballEn.vy);
+                        ballEn.vx = -Math.cos(angle) * speed * 0.9;
+                        ballEn.vy = -Math.sin(angle) * speed * 0.9;
+                    }
+                });
+
+                if (Math.abs(ballEn.vx) < 0.5 && Math.abs(ballEn.vy) < 0.5) {
+                     if (targets.some(t => t.alive)) {
+                        gameMode = 'aiming';
+                     }
+                }
+            }
+
+            particles.forEach(p => p.update());
+            particles = particles.filter(p => p.life > 0);
+        }
+
+        function handleComplete() {
+            gameMode = 'clearing';
+            
+            // ★進捗保存
+            onGameComplete('meaning');
+            playSound('complete');
+            
+            document.getElementById('result-word-en').textContent = ENGLISH_WORD;
+            document.getElementById('result-word-jp').innerHTML = TARGETS_DATA.join('<br>');
+
+            setTimeout(() => {
+                document.getElementById('result-screen').classList.add('show');
+                document.getElementById('guide-text').style.display = 'none';
+            }, 500);
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(5, 8, 20, 0.3)';
+            ctx.fillRect(0, 0, width, height);
+
+            ctx.save();
+            if (shakeIntensity > 0) {
+                const dx = (Math.random() - 0.5) * shakeIntensity;
+                const dy = (Math.random() - 0.5) * shakeIntensity;
+                ctx.translate(dx, dy);
+                shakeIntensity *= 0.9;
+            }
+
+            if (isDragging) {
+                ctx.beginPath();
+                ctx.moveTo(ballEn.x, ballEn.y);
+                ctx.lineTo(dragCurrentPos.x, dragCurrentPos.y);
+                ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([5, 5]);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                const dx = ballEn.x - dragCurrentPos.x;
+                const dy = ballEn.y - dragCurrentPos.y;
+                const len = Math.hypot(dx, dy);
+                const scale = Math.min(len, MAX_DRAG_DIST) / len;
+                
+                ctx.beginPath();
+                ctx.moveTo(ballEn.x, ballEn.y);
+                ctx.lineTo(ballEn.x + dx * scale * 2, ballEn.y + dy * scale * 2);
+                ctx.strokeStyle = `rgba(0, 242, 255, ${scale})`;
+                ctx.lineWidth = 4 * scale + 1;
+                ctx.stroke();
+            }
+
+            const drawBall = (ball, isTarget) => {
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = ball.color;
+                ctx.beginPath();
+                ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+                ctx.fillStyle = isTarget ? 'rgba(189, 0, 255, 0.1)' : 'rgba(0, 242, 255, 0.1)';
+                ctx.fill();
+                ctx.strokeStyle = ball.color;
+                ctx.lineWidth = 3;
+                ctx.stroke();
+
+                ctx.fillStyle = "white";
+                ctx.font = ball.font;
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.shadowBlur = 0;
+                ctx.fillText(ball.text, ball.x, ball.y);
+            };
+
+            targets.forEach(t => { if(t.alive) drawBall(t, true); });
+            drawBall(ballEn, false);
+            particles.forEach(p => p.draw(ctx));
+
+            ctx.restore();
+            requestAnimationFrame(loop);
+        }
+
+        function createExplosion(x, y, color) {
+            for (let i = 0; i < 20; i++) {
+                particles.push(new Particle(x, y, color));
+            }
+        }
+        
+        function createRingEffect(x, y) {
+            for(let i=0; i<10; i++) {
+                particles.push(new Particle(x, y, "white", 3.0));
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color, speedScale=1.0) {
+                this.x = x; this.y = y; this.color = color;
+                const a = Math.random() * Math.PI * 2;
+                const s = (Math.random() * 8 + 2) * speedScale;
+                this.vx = Math.cos(a) * s;
+                this.vy = Math.sin(a) * s;
+                this.life = 1.0;
+                this.decay = Math.random() * 0.02 + 0.01;
+            }
+            update() {
+                this.x += this.vx; this.y += this.vy;
+                this.vx *= 0.92; this.vy *= 0.92;
+                this.life -= this.decay;
+            }
+            draw(ctx) {
+                ctx.globalAlpha = Math.max(0, this.life);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, Math.random()*3+2, 0, Math.PI*2);
+                ctx.fill();
+                ctx.globalAlpha = 1.0;
+            }
+        }
+
+        function loop() {
+            update();
+            draw();
+        }
+        
+        // === 7. スタートアップ ===
+        // 初期化はresizeと配置を行う
+        resize();
+        initPositions();
+        loop();
+
+    </script>
+</body>
+</html>

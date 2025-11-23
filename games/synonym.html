@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Synonym Cyclotron</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <script src="../data/word_data.js"></script>
+    <script src="../js/app.js"></script>
+
+    <style>
+        body {
+            margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
+            background-color: #050814;
+            font-family: 'Montserrat', sans-serif;
+            touch-action: none; user-select: none; -webkit-user-select: none;
+            opacity: 0; transition: opacity 0.3s ease-in-out;
+        }
+        body.loaded { opacity: 1; }
+        canvas { display: block; }
+        
+        #ui-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; display: flex; flex-direction: column; justify-content: space-between;
+            padding: 20px; box-sizing: border-box; z-index: 10;
+            transition: opacity 0.3s;
+        }
+        
+        #flash-layer {
+            position: fixed; inset: 0; background: white;
+            opacity: 0; pointer-events: none; z-index: 50; transition: opacity 1.0s ease-out;
+        }
+        
+        .hud-text { color: white; text-shadow: 0 0 10px rgba(0, 242, 255, 0.8); text-align: center; }
+        
+        .touch-zone {
+            position: absolute; top: 0; bottom: 0; width: 50%;
+            pointer-events: auto; opacity: 0; transition: opacity 0.2s;
+            background: rgba(255, 255, 255, 0.05); z-index: 20;
+        }
+        .touch-zone:active { opacity: 1; }
+        #left-zone { left: 0; border-right: 1px solid rgba(255,255,255,0.1); }
+        #right-zone { right: 0; border-left: 1px solid rgba(255,255,255,0.1); }
+
+        #result-screen {
+            position: absolute; inset: 0; background: rgba(5, 8, 20, 0.95);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; opacity: 0; pointer-events: none; transition: opacity 1.0s ease-in;
+        }
+        #result-screen.show { opacity: 1; pointer-events: auto; }
+
+        .word-card {
+            background: rgba(0, 242, 255, 0.05); border: 1px solid rgba(0, 242, 255, 0.3);
+            border-radius: 8px; padding: 8px 12px; margin: 4px; text-align: center; width: 140px;
+            animation: fadeUp 0.5s backwards;
+        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .word-en { font-weight: 700; color: #00f2ff; font-size: 0.9rem; }
+        .word-jp { font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem; color: #aaa; margin-top: 2px; }
+    </style>
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+    <div id="flash-layer"></div>
+
+    <div id="ui-layer">
+        <div class="hud-text">
+            <div class="text-xs tracking-widest text-cyan-300 opacity-70 mb-1">SYNONYM CYCLOTRON</div>
+            <div id="score-disp" class="text-4xl font-bold">LOADING...</div>
+        </div>
+        <div class="hud-text mb-10 opacity-50 text-sm">
+            <span class="mr-4">◀ LEFT</span><span>RIGHT ▶</span>
+        </div>
+    </div>
+
+    <div id="left-zone" class="touch-zone"></div>
+    <div id="right-zone" class="touch-zone"></div>
+
+    <div id="result-screen">
+        <h2 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-white mb-2 tracking-widest italic">SYNC COMPLETE</h2>
+        <p class="text-gray-400 mb-6 text-xs tracking-[0.2em]">DATA ANALYSIS RESULT</p>
+        <div id="word-list" class="flex flex-wrap justify-center content-center max-w-lg gap-2 mb-10 p-4"></div>
+        <div class="flex flex-col items-center gap-4">
+            <button onclick="location.reload()" class="px-12 py-4 bg-white text-black font-bold rounded-full shadow-[0_0_30px_rgba(255,255,255,0.6)] active:scale-95 transition tracking-widest hover:bg-cyan-50">REPLAY</button>
+            <button id="back-btn" class="px-12 py-3 bg-gray-700 text-white font-bold rounded-full shadow-lg active:scale-95 transition">NEXT / BACK</button>
+        </div>
+    </div>
+
+    <script>
+        // === 1. グローバル変数定義 ===
+        let wordData = null;
+        let TARGET_WORD = "";
+        let SYNONYMS = [];
+        let DISTRACTORS = [];
+
+        const COLOR_CORE = "#ffffff";
+        const COLOR_SYNONYM = "#00f2ff"; 
+        const COLOR_DISTRACTOR = "#ff0055";
+        
+        const PLAYER_RADIUS = 100;
+        const WORD_SPEED_MIN = 1.5;
+        const WORD_SPEED_MAX = 3.0;
+        const ROTATION_SPEED = 0.12;
+
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let centerX = width / 2;
+        let centerY = height / 2;
+        
+        let gameMode = 'playing'; 
+        let score = 0;
+        let collectedWords = [];
+        
+        let playerAngle = -Math.PI / 2;
+        let inputState = { left: false, right: false };
+
+        let words = [];
+        let particles = [];
+        let spawnTimer = 0;
+        let spawnInterval = 70;
+        let victoryTimer = 0;
+
+        // === 2. 基本関数定義 (resizeなど) ===
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            centerX = width / 2;
+            centerY = height / 2;
+        }
+        window.addEventListener('resize', resize);
+
+        // === 3. Audio System ===
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const t = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
+            osc.connect(gain); gain.connect(audioCtx.destination);
+
+            if (type === 'catch') {
+                [0, 0.05].forEach((d, i) => {
+                    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
+                    o.connect(g); g.connect(audioCtx.destination);
+                    o.type = 'sine'; o.frequency.value = i==0?880:1108; 
+                    g.gain.setValueAtTime(0.1, t+d); g.gain.exponentialRampToValueAtTime(0.01, t+d+0.2);
+                    o.start(t+d); o.stop(t+d+0.2);
+                });
+            } else if (type === 'damage') {
+                osc.type = 'sawtooth'; osc.frequency.setValueAtTime(100, t); osc.frequency.linearRampToValueAtTime(50, t+0.2);
+                gain.gain.setValueAtTime(0.2, t); gain.gain.linearRampToValueAtTime(0, t+0.2);
+                osc.start(t); osc.stop(t+0.2);
+            } else if (type === 'victory_sequence') {
+                osc.type = 'triangle'; osc.frequency.setValueAtTime(100, t); osc.frequency.exponentialRampToValueAtTime(1200, t + 0.8);
+                gain.gain.setValueAtTime(0.05, t); gain.gain.linearRampToValueAtTime(0.3, t + 0.8); gain.gain.linearRampToValueAtTime(0, t + 0.85);
+                osc.start(t); osc.stop(t + 0.85);
+            } else if (type === 'complete_ambient') {
+                const freqs = [261.63, 329.63, 392.00, 493.88, 523.25];
+                freqs.forEach((freq, i) => {
+                    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
+                    o.connect(g); g.connect(audioCtx.destination);
+                    o.type = 'sine'; o.frequency.value = freq;
+                    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.1, t + 0.1 + (i*0.05)); g.gain.exponentialRampToValueAtTime(0.001, t + 4.0);
+                    o.start(t); o.stop(t + 4.0);
+                });
+            }
+        }
+
+        // === 4. Input Handling ===
+        const handleStart = (side) => { if(gameMode === 'playing') inputState[side] = true; };
+        const handleEnd = (side) => { inputState[side] = false; };
+        const lZone = document.getElementById('left-zone');
+        const rZone = document.getElementById('right-zone');
+
+        ['touchstart', 'mousedown'].forEach(evt => {
+            lZone.addEventListener(evt, (e) => { e.preventDefault(); handleStart('left'); });
+            rZone.addEventListener(evt, (e) => { e.preventDefault(); handleStart('right'); });
+        });
+        ['touchend', 'mouseup', 'mouseleave'].forEach(evt => {
+            lZone.addEventListener(evt, (e) => { e.preventDefault(); handleEnd('left'); });
+            rZone.addEventListener(evt, (e) => { e.preventDefault(); handleEnd('right'); });
+        });
+
+        // === 5. Classes ===
+        class Word {
+            constructor() {
+                const angle = Math.random() * Math.PI * 2;
+                const radius = Math.max(width, height) * 0.7;
+                this.x = centerX + Math.cos(angle) * radius;
+                this.y = centerY + Math.sin(angle) * radius;
+                
+                // synonymsが空の場合のガード
+                const keys = Object.keys(wordData.synonyms || {});
+                const uncollected = keys.filter(s => !collectedWords.includes(s));
+                
+                // 類義語が出る確率は、残っている類義語がある場合に60%
+                if (uncollected.length > 0 && Math.random() < 0.6) {
+                    this.text = uncollected[Math.floor(Math.random() * uncollected.length)];
+                    this.isSynonym = true;
+                    this.color = COLOR_SYNONYM;
+                } else {
+                    // 誤答リストが空の場合のガード
+                    const dists = wordData.distractors || ["ERROR"];
+                    this.text = dists[Math.floor(Math.random() * dists.length)];
+                    this.isSynonym = false;
+                    this.color = COLOR_DISTRACTOR;
+                }
+
+                const angleToCenter = Math.atan2(centerY - this.y, centerX - this.x);
+                const speed = Math.random() * (WORD_SPEED_MAX - WORD_SPEED_MIN) + WORD_SPEED_MIN;
+                this.vx = Math.cos(angleToCenter) * speed;
+                this.vy = Math.sin(angleToCenter) * speed;
+                this.alive = true;
+            }
+            update(isVictory) {
+                if(isVictory) {
+                    const angle = Math.atan2(centerY - this.y, centerX - this.x);
+                    this.x += Math.cos(angle) * 40;
+                    this.y += Math.sin(angle) * 40;
+                } else {
+                    this.x += this.vx; this.y += this.vy;
+                    if (Math.hypot(this.x - centerX, this.y - centerY) < 20) this.alive = false;
+                }
+            }
+            draw(ctx) {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.fillStyle = this.color;
+                ctx.font = "bold 16px Montserrat";
+                ctx.textAlign = "center"; ctx.textBaseline = "middle";
+                ctx.shadowBlur = 10; ctx.shadowColor = this.color;
+                ctx.fillText(this.text, 0, 0);
+                ctx.restore();
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x; this.y = y; this.color = color;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 3 + 1;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.life = 1.0;
+                this.decay = Math.random() * 0.03 + 0.02;
+            }
+            update(isVictory) {
+                if (isVictory) {
+                    this.x += (centerX - this.x) * 0.2;
+                    this.y += (centerY - this.y) * 0.2;
+                    this.life -= 0.05;
+                } else {
+                    this.x += this.vx; this.y += this.vy;
+                    this.life -= this.decay;
+                }
+            }
+            draw(ctx) {
+                ctx.globalAlpha = Math.max(0, this.life);
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = 1.0;
+            }
+        }
+
+        // === 6. 演出・補助関数 ===
+        function createExplosion(x, y, color) {
+            for (let i = 0; i < 15; i++) {
+                particles.push(new Particle(x, y, color));
+            }
+        }
+
+        let shakeDuration = 0;
+        let shakeIntensity = 0;
+        function shakeScreen(intensity) {
+            shakeDuration = 10;
+            shakeIntensity = intensity;
+        }
+
+        function startVictorySequence() {
+            if (gameMode !== 'playing') return;
+            gameMode = 'victory';
+            onGameComplete('synonym');
+            playSound('victory_sequence');
+        }
+
+        function showResult() {
+            const list = document.getElementById('word-list');
+            list.innerHTML = '';
+            let delay = 0;
+            [...new Set(collectedWords)].forEach(word => {
+                const meaning = wordData.synonyms[word] || "";
+                const card = document.createElement('div');
+                card.className = 'word-card';
+                card.style.animationDelay = `${delay}s`;
+                card.innerHTML = `
+                    <div class="word-en">${word}</div>
+                    <div class="word-jp">${meaning || ''}</div>
+                `;
+                list.appendChild(card);
+                delay += 0.1;
+            });
+        }
+
+        // === 7. メインループ ===
+        function update() {
+            if (gameMode === 'playing') {
+                if (inputState.left) playerAngle -= ROTATION_SPEED;
+                if (inputState.right) playerAngle += ROTATION_SPEED;
+                
+                spawnTimer++;
+                if (spawnTimer > spawnInterval) {
+                    words.push(new Word());
+                    spawnTimer = 0;
+                    spawnInterval = Math.max(30, spawnInterval - 0.5);
+                }
+
+                const px = centerX + Math.cos(playerAngle) * PLAYER_RADIUS;
+                const py = centerY + Math.sin(playerAngle) * PLAYER_RADIUS;
+
+                words.forEach(word => {
+                    word.update(false);
+                    const dist = Math.hypot(word.x - px, word.y - py);
+                    if (dist < 40) {
+                        if (word.isSynonym) {
+                            word.alive = false;
+                            collectedWords.push(word.text);
+                            score++;
+                            // 安全策
+                            const goal = Object.keys(wordData.synonyms || {}).length;
+                            const goalText = goal > 0 ? goal : "?";
+                            document.getElementById('score-disp').textContent = `${score} / ${goalText}`;
+                            
+                            playSound('catch');
+                            createExplosion(word.x, word.y, COLOR_SYNONYM);
+                            shakeScreen(5);
+                            if (score >= goal && goal > 0) startVictorySequence();
+                        } else {
+                            word.alive = false;
+                            playSound('damage');
+                            createExplosion(word.x, word.y, COLOR_DISTRACTOR);
+                            shakeScreen(10);
+                        }
+                    }
+                });
+                words = words.filter(w => w.alive);
+                particles.forEach(p => p.update(false));
+                particles = particles.filter(p => p.life > 0);
+
+            } else if (gameMode === 'victory') {
+                victoryTimer++;
+                if (victoryTimer < 50) {
+                    words.forEach(w => w.update(true));
+                    particles.forEach(p => p.update(true));
+                    playerAngle += 0.5;
+                }
+                if (victoryTimer === 50) {
+                    playSound('complete_ambient');
+                    document.getElementById('flash-layer').style.opacity = 1;
+                    document.getElementById('ui-layer').style.opacity = 0;
+                    showResult();
+                    setTimeout(() => {
+                        document.getElementById('flash-layer').style.opacity = 0; 
+                        document.getElementById('result-screen').classList.add('show');
+                    }, 500);
+                }
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(5, 8, 20, 0.4)';
+            ctx.fillRect(0, 0, width, height);
+
+            ctx.save();
+            if (shakeDuration > 0) {
+                const dx = (Math.random() - 0.5) * shakeIntensity;
+                const dy = (Math.random() - 0.5) * shakeIntensity;
+                ctx.translate(dx, dy);
+                shakeDuration--;
+            }
+
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, PLAYER_RADIUS, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // コア（ターゲット単語）の描画
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            let currentScale = 1.0;
+            if (gameMode === 'victory' && victoryTimer < 50) {
+                currentScale = 1.0 - (victoryTimer / 50);
+            }
+            ctx.scale(currentScale, currentScale);
+            
+            ctx.fillStyle = COLOR_CORE;
+            ctx.font = "900 24px Montserrat";
+            ctx.textAlign = "center"; ctx.textBaseline = "middle";
+            ctx.shadowColor = COLOR_SYNONYM;
+            ctx.shadowBlur = 20;
+            if(TARGET_WORD) ctx.fillText(TARGET_WORD, 0, 0);
+            ctx.restore();
+
+            words.forEach(w => w.draw(ctx));
+
+            if (gameMode !== 'victory' || victoryTimer < 50) {
+                const px = centerX + Math.cos(playerAngle) * PLAYER_RADIUS;
+                const py = centerY + Math.sin(playerAngle) * PLAYER_RADIUS;
+                
+                ctx.save();
+                ctx.translate(px, py);
+                ctx.fillStyle = "#fff";
+                ctx.shadowColor = COLOR_SYNONYM; ctx.shadowBlur = 20;
+                ctx.beginPath(); ctx.arc(0, 0, 15, 0, Math.PI*2); ctx.fill();
+                
+                ctx.beginPath();
+                ctx.arc(-centerX + px, -centerY + py, PLAYER_RADIUS, playerAngle - 0.4, playerAngle + 0.4);
+                ctx.strokeStyle = COLOR_SYNONYM; ctx.lineWidth = 4; ctx.stroke();
+                ctx.restore();
+            }
+
+            particles.forEach(p => p.draw(ctx));
+            ctx.restore();
+            
+            requestAnimationFrame(loop);
+        }
+
+        function loop() {
+            update();
+            draw();
+        }
+
+        // === 8. 初期化と起動 ===
+        function init() {
+            // 1. データ取得
+            wordData = getCurrentWordData();
+            if (!wordData) {
+                alert("データが見つかりません。リストに戻ります。");
+                window.location.href = "../list.html";
+                return;
+            }
+
+            // 2. 変数をセット
+            TARGET_WORD = wordData.word;
+            
+            if (wordData.synonyms) {
+                SYNONYMS = Object.keys(wordData.synonyms);
+            } else {
+                SYNONYMS = [];
+                // console.warn("類義語データがありません"); 
+            }
+
+            DISTRACTORS = wordData.distractors || ["ERROR"];
+
+            // リサイズ処理（ここなら関数定義済みなのでOK）
+            resize();
+
+            // スコア表示更新
+            document.getElementById('score-disp').textContent = `0 / ${SYNONYMS.length}`;
+            
+            // 戻るボタンのセット
+            document.getElementById('back-btn').onclick = () => {
+                goTo('../cockpit.html', wordData.id);
+            };
+
+            loop();
+        }
+
+        // ページ読み込み完了時に初期化
+        window.onload = init;
+
+    </script>
+</body>
+</html>

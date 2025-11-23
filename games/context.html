@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Syntax Factory - Learning Focused</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <style>
+        body {
+            margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
+            background-color: #0f172a;
+            font-family: 'Montserrat', sans-serif;
+            touch-action: none; user-select: none; -webkit-user-select: none;
+            display: flex; flex-direction: column;
+            opacity: 0; /* 初期状態は透明 */
+            transition: opacity 0.3s ease-in-out; /* 0.3秒かけて変化 */
+                        
+        }
+        body.loaded {
+        opacity: 1; /* 読み込み完了で不透明に */
+        }
+
+        #bg-grid {
+            position: absolute; inset: 0; z-index: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.5;
+        }
+
+        /* スタート画面 */
+        #start-screen {
+            position: absolute; inset: 0; background: rgba(15, 23, 42, 0.98);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 200; transition: opacity 0.5s;
+        }
+        #start-screen.hidden { opacity: 0; pointer-events: none; }
+
+        /* カード */
+        #container-wrapper {
+            position: absolute; top: 45%; left: 150%; 
+            transform: translate(-50%, -50%);
+            width: 90%; max-width: 600px;
+            transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 10;
+        }
+        
+        .data-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card-text {
+            font-size: 1.4rem; font-weight: 500; color: #f8fafc; line-height: 1.8;
+        }
+        
+        /* 穴埋めスロット */
+        .gap-slot {
+            display: inline-block; min-width: 140px;
+            border-bottom: 2px solid #38bdf8;
+            color: transparent; margin: 0 4px; 
+            vertical-align: baseline; text-align: center;
+            transition: all 0.3s; font-weight: 900;
+        }
+        .gap-slot.filled { 
+            border-bottom-color: transparent; color: #00f2ff;
+            min-width: auto; text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* 日本語訳 */
+        #translation-area {
+            margin-top: 20px; font-family: 'Shippori Mincho', serif;
+            font-size: 1.1rem; color: #94a3b8; height: 1.5em; opacity: 0; transform: translateY(10px);
+            transition: all 0.5s ease-out;
+        }
+        #translation-area.visible { opacity: 1; transform: translateY(0); color: #e2e8f0; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
+
+        #timer {
+            position: absolute; bottom: 0; left: 0; height: 3px; width: 100%;
+            background: #38bdf8; transform-origin: left;
+        }
+
+        /* ボタン */
+        #controls {
+            position: absolute; bottom: 50px; width: 100%;
+            display: flex; justify-content: center; gap: 40px;
+            pointer-events: auto; z-index: 30;
+        }
+        
+        .ctrl-btn {
+            width: 80px; height: 80px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; transition: transform 0.1s, background 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1); color: white;
+        }
+        .ctrl-btn:active { transform: scale(0.9); background: rgba(255,255,255,0.1); }
+        .btn-reject { color: #ef4444; border-color: #ef4444; }
+        .btn-inject { color: #00f2ff; border-color: #00f2ff; width: 100px; height: 100px; font-size: 2rem; background: rgba(0, 242, 255, 0.1); }
+
+        /* アニメーション */
+        .slide-out-left { animation: slideLeft 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+        .slide-out-bottom { animation: dropDown 0.6s forwards cubic-bezier(0.4, 0, 0.2, 1); }
+        @keyframes slideLeft { to { transform: translate(-150%, -50%); opacity: 0; } }
+        @keyframes dropDown { to { transform: translate(-50%, 100%) rotate(5deg); opacity: 0; } }
+
+        #result-screen {
+            position: absolute; inset: 0; background: rgba(15, 23, 42, 0.98);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; opacity: 0; pointer-events: none; transition: opacity 1.0s;
+        }
+        #result-screen.show { opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body>
+
+    <div id="bg-grid"></div>
+
+    <div id="start-screen">
+        <h1 class="text-4xl font-light text-white mb-8 tracking-[0.3em]">SYNTAX FACTORY</h1>
+        <button id="start-btn" class="px-12 py-4 border border-cyan-500 text-cyan-400 font-bold rounded-full shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:bg-cyan-500/10 transition tracking-widest">
+            START OPERATION
+        </button>
+        <p class="text-gray-500 mt-4 text-xs tracking-widest">TAP TO INITIALIZE AUDIO SYSTEM</p>
+    </div>
+
+    <div id="container-wrapper">
+        <div class="data-card">
+            <div id="card-content" class="card-text"></div>
+            <div id="translation-area"></div>
+            <div id="timer"></div>
+        </div>
+    </div>
+
+    <div id="ui-layer" class="absolute top-0 w-full p-6 flex justify-between text-gray-500 text-xs tracking-widest">
+        <div>CONTEXT MODE</div>
+        <div id="score-disp">INJECTED: 0/5</div>
+    </div>
+
+    <div id="controls">
+        <button id="btn-reject" class="ctrl-btn btn-reject">✕</button>
+        <button id="btn-inject" class="ctrl-btn btn-inject">◎</button>
+    </div>
+
+    <div id="result-screen">
+        <h2 class="text-3xl font-light text-white mb-2 tracking-[0.3em]">COMPLETE</h2>
+        <p class="text-gray-400 mb-10 text-sm">ALL CONTEXTS SECURED</p>
+        <button onclick="location.reload()" class="px-10 py-3 border border-cyan-500/50 text-cyan-400 rounded-full hover:bg-cyan-500/10 transition tracking-widest">
+            REPLAY
+        </button>
+        <button onclick="goTo('../cockpit.html', wordData.id)" class="mt-4 px-10 py-3 bg-gray-700 text-white font-bold rounded-full shadow-lg active:scale-95 transition">NEXT / BACK</button>
+    </div>
+    
+<script src="../data/word_data.js"></script>
+<script src="../js/app.js"></script>
+
+<script>
+        // === 1. データの取得と検証 ===
+        const wordData = getCurrentWordData(); // app.jsの関数
+        if (!wordData) {
+            alert("データが見つかりません。リストに戻ります。");
+            window.location.href = "../list.html";
+        }
+
+        // === 2. データの展開 ===
+        const TARGET_WORD = wordData.word; // データマッピング
+
+        // JSONデータでは contexts 配列の中に正解(is_correct: true)と不正解が混ざっているので分ける
+        const VALID_SENTENCES = wordData.contexts.filter(c => c.is_correct); // データマッピング
+        const INVALID_SENTENCES = wordData.contexts.filter(c => !c.is_correct); // データマッピング
+
+        // クリア条件（正解データの数に合わせる）
+        const TARGET_INJECTIONS = VALID_SENTENCES.length; // データマッピング
+        const TIME_LIMIT = 6000;
+
+        let injections = 0; // 現在の注入数
+        let currentData = null;
+        let state = 'idle'; 
+        let timerId = null;
+
+        const wrapper = document.getElementById('container-wrapper');
+        const cardContent = document.getElementById('card-content');
+        const transArea = document.getElementById('translation-area');
+        const timerBar = document.getElementById('timer');
+        const scoreDisp = document.getElementById('score-disp');
+        const startScreen = document.getElementById('start-screen');
+
+        // === Audio System ===
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let audioEnabled = false;
+
+        function playSound(type) {
+            if (!audioEnabled) return;
+            const t = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = 'lowpass';
+
+            osc.connect(filter); filter.connect(gain); gain.connect(audioCtx.destination);
+
+            if (type === 'arrive') {
+                // シュゥゥ…カチッ
+                const noiseBufferSize = audioCtx.sampleRate * 0.5;
+                const noiseBuffer = audioCtx.createBuffer(1, noiseBufferSize, audioCtx.sampleRate);
+                const output = noiseBuffer.getChannelData(0);
+                for (let i = 0; i < noiseBufferSize; i++) output[i] = Math.random() * 2 - 1;
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = noiseBuffer;
+                const nGain = audioCtx.createGain();
+                const nFilter = audioCtx.createBiquadFilter();
+                nFilter.type = 'lowpass';
+                noise.connect(nFilter).connect(nGain).connect(audioCtx.destination);
+                nFilter.frequency.setValueAtTime(100, t);
+                nFilter.frequency.linearRampToValueAtTime(800, t + 0.3);
+                nGain.gain.setValueAtTime(0.1, t);
+                nGain.gain.linearRampToValueAtTime(0, t + 0.4);
+                noise.start(t);
+
+                osc.type = 'sine'; osc.frequency.setValueAtTime(150, t + 0.35); osc.frequency.exponentialRampToValueAtTime(50, t + 0.4);
+                filter.frequency.value = 500;
+                gain.gain.setValueAtTime(0, t + 0.35); gain.gain.linearRampToValueAtTime(0.3, t + 0.36); gain.gain.exponentialRampToValueAtTime(0.01, t + 0.45);
+                osc.start(t + 0.35); osc.stop(t + 0.45);
+
+            } else if (type === 'inject') {
+                // ポーン…
+                const freqs = [261.63, 329.63, 392.00, 493.88, 587.33];
+                freqs.forEach((f, i) => {
+                    const o = audioCtx.createOscillator(); const g = audioCtx.createGain();
+                    o.connect(g).connect(audioCtx.destination);
+                    o.type = 'sine'; o.frequency.value = f;
+                    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.05, t + 0.05 + i*0.03); g.gain.exponentialRampToValueAtTime(0.001, t + 2.5);
+                    o.start(t); o.stop(t + 2.5);
+                });
+                const click = audioCtx.createOscillator(); const cGain = audioCtx.createGain();
+                click.connect(cGain).connect(audioCtx.destination);
+                click.frequency.setValueAtTime(800, t); click.frequency.exponentialRampToValueAtTime(100, t+0.05);
+                cGain.gain.setValueAtTime(0.1, t); cGain.gain.exponentialRampToValueAtTime(0.01, t+0.05);
+                click.start(t); click.stop(t+0.05);
+
+            } else if (type === 'reject') {
+                // フワッ
+                const nBuf = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.3, audioCtx.sampleRate);
+                const d = nBuf.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1;
+                const n = audioCtx.createBufferSource(); n.buffer = nBuf;
+                const nG = audioCtx.createGain(); const nF = audioCtx.createBiquadFilter();
+                nF.type = 'bandpass'; nF.frequency.setValueAtTime(400, t); nF.frequency.linearRampToValueAtTime(100, t+0.3);
+                nG.gain.setValueAtTime(0.15, t); nG.gain.linearRampToValueAtTime(0, t+0.3);
+                n.connect(nF).connect(nG).connect(audioCtx.destination);
+                n.start(t);
+
+            } else if (type === 'error') {
+                osc.type = 'triangle'; osc.frequency.setValueAtTime(100, t); osc.frequency.exponentialRampToValueAtTime(10, t + 0.3);
+                filter.frequency.value = 200;
+                gain.gain.setValueAtTime(0.4, t); gain.gain.exponentialRampToValueAtTime(0.01, t + 0.3);
+                osc.start(t); osc.stop(t + 0.3);
+            }
+        }
+
+        // === ロジック ===
+
+        document.getElementById('start-btn').addEventListener('click', () => {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            audioEnabled = true;
+            startScreen.classList.add('hidden');
+            setTimeout(nextCard, 500);
+        });
+
+        function nextCard() {
+            // ★変更点: 注入数が目標に達したらクリア
+            if (injections >= TARGET_INJECTIONS) {
+                gameComplete();
+                return;
+            }
+
+            state = 'arriving';
+            wrapper.className = ''; 
+            wrapper.style.left = '150%'; 
+            transArea.textContent = '';
+            transArea.classList.remove('visible');
+
+            // ★変更点: 正解カードの出現確率を80%にアップ
+            // これで「なかなか正解が出ない」ストレスを解消
+            const isCorrect = Math.random() < 0.8; 
+            const source = isCorrect ? VALID_SENTENCES : INVALID_SENTENCES;
+            const item = source[Math.floor(Math.random() * source.length)];
+            currentData = { ...item, isCorrect };
+
+            cardContent.innerHTML = `${currentData.parts[0]} <span class="gap-slot" id="gap"></span> ${currentData.parts[1]}`;
+            
+            setTimeout(() => {
+                wrapper.style.left = '50%'; 
+                playSound('arrive');
+            }, 300);
+
+            setTimeout(() => {
+                state = 'locked';
+                startTimer();
+            }, 800);
+        }
+
+        function startTimer() {
+            timerBar.style.transition = 'none';
+            timerBar.style.transform = 'scaleX(1)';
+            
+            requestAnimationFrame(() => {
+                timerBar.style.transition = `transform ${TIME_LIMIT}ms linear`;
+                timerBar.style.transform = 'scaleX(0)';
+            });
+
+            clearTimeout(timerId);
+            timerId = setTimeout(() => {
+                if (state === 'locked') handleReject(); 
+            }, TIME_LIMIT);
+        }
+
+        function handleInject() {
+            if (state !== 'locked') return;
+            clearTimeout(timerId);
+            state = 'processing';
+
+            if (currentData.isCorrect) {
+                // === 正解 ===
+                playSound('inject');
+                const gap = document.getElementById('gap');
+                gap.textContent = TARGET_WORD;
+                gap.classList.add('filled');
+                
+                transArea.textContent = currentData.jp;
+                transArea.classList.add('visible');
+                
+                // ★変更点: 注入数のみをカウント
+                injections++;
+                scoreDisp.textContent = `INJECTED: ${injections}/${TARGET_INJECTIONS}`;
+
+                setTimeout(() => {
+                    wrapper.classList.add('slide-out-left');
+                    setTimeout(nextCard, 600);
+                }, 2500); 
+
+            } else {
+                // === 不正解（エラー） ===
+                playSound('error');
+                wrapper.style.transform = "translate(-50%, -50%) rotate(3deg)";
+                setTimeout(() => wrapper.style.transform = "translate(-50%, -50%)", 100);
+                
+                setTimeout(() => {
+                    wrapper.classList.add('slide-out-bottom');
+                    setTimeout(nextCard, 500);
+                }, 300);
+            }
+        }
+
+        function handleReject() {
+            if (state !== 'locked') return;
+            clearTimeout(timerId);
+            state = 'processing';
+            playSound('reject');
+
+            // リジェクト時はスコア変動なし、淡々と次へ
+            wrapper.classList.add('slide-out-bottom');
+            setTimeout(nextCard, 500);
+        }
+
+        document.getElementById('btn-inject').addEventListener('click', handleInject);
+        document.getElementById('btn-reject').addEventListener('click', handleReject);
+
+                function gameComplete() {
+            onGameComplete('context');
+            document.getElementById('result-screen').classList.add('show');
+        }
+
+    </script>
+</body>
+</html>
