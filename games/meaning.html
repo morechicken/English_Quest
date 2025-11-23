@@ -172,18 +172,18 @@
             else ballEn.font = "bold 14px Montserrat";
 
             targets = [];
-            const startX = width * 0.6;
-            const gapY = 120;
-            
-            // ターゲットを画面内に収めるための計算
-            const totalHeight = (TARGETS_DATA.length - 1) * gapY;
-            const startY = cy - (totalHeight / 2);
+            // ターゲットを配置するエリアを定義
+            const targetArea = {
+                x: width * 0.55,
+                y: height * 0.15,
+                width: width * 0.4,
+                height: height * 0.7
+            };
 
             TARGETS_DATA.forEach((text, i) => {
-                const offsetX = (i % 2 === 0) ? 0 : 80;
                 targets.push({
-                    x: startX + offsetX,
-                    y: startY + (i * gapY),
+                    x: targetArea.x + Math.random() * targetArea.width,
+                    y: targetArea.y + Math.random() * targetArea.height,
                     radius: 55,
                     color: COLOR_JP,
                     text: text,

@@ -150,9 +150,15 @@
         </div>
     </div>
 
-    <div id="ui-layer" class="absolute top-0 w-full p-6 flex justify-between text-gray-500 text-xs tracking-widest">
-        <div>CONTEXT MODE</div>
-        <div id="score-disp">INJECTED: 0/5</div>
+    <div id="ui-layer" class="absolute top-0 w-full p-6 flex justify-between items-center text-gray-500 text-xs tracking-widest z-10">
+        <div class="flex items-center gap-4">
+            <span>CONTEXT MODE</span>
+            <div class="flex items-center gap-2 text-cyan-400">
+                <span class="text-gray-500">TARGET:</span>
+                <span id="target-word-display" class="font-bold text-sm tracking-wider"></span>
+            </div>
+        </div>
+        <div id="score-disp">INJECTED: 0/3</div>
     </div>
 
     <div id="controls">
@@ -201,6 +207,7 @@
         const transArea = document.getElementById('translation-area');
         const timerBar = document.getElementById('timer');
         const scoreDisp = document.getElementById('score-disp');
+        const targetWordDisplay = document.getElementById('target-word-display');
         const startScreen = document.getElementById('start-screen');
 
         // === Audio System ===
@@ -281,6 +288,9 @@
             if (audioCtx.state === 'suspended') audioCtx.resume();
             audioEnabled = true;
             startScreen.classList.add('hidden');
+            
+            // ターゲット単語を表示
+            targetWordDisplay.textContent = TARGET_WORD;
             setTimeout(nextCard, 500);
         });
 
@@ -299,9 +309,18 @@
 
             // ★変更点: 正解カードの出現確率を80%にアップ
             // これで「なかなか正解が出ない」ストレスを解消
-            const isCorrect = Math.random() < 0.8; 
+            const isCorrect = VALID_SENTENCES.length > 0 ? Math.random() < 0.8 : false; 
             const source = isCorrect ? VALID_SENTENCES : INVALID_SENTENCES;
-            const item = source[Math.floor(Math.random() * source.length)];
+            
+            let item;
+            // ★変更点: 例文が2つ以上ある場合、同じ例文が連続しないようにする
+            if (source.length > 1) {
+                do {
+                    item = source[Math.floor(Math.random() * source.length)];
+                } while (currentData && item.full === currentData.full); // 前のカードと同じなら再抽選
+            } else {
+                item = source[0]; // 例文が1つしかない場合はそれを選ぶ
+            }
             currentData = { ...item, isCorrect };
 
             cardContent.innerHTML = `${currentData.parts[0]} <span class="gap-slot" id="gap"></span> ${currentData.parts[1]}`;

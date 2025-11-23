@@ -198,13 +198,10 @@
                 this.x = centerX + Math.cos(angle) * radius;
                 this.y = centerY + Math.sin(angle) * radius;
                 
-                // synonymsが空の場合のガード
-                const keys = Object.keys(wordData.synonyms || {});
-                const uncollected = keys.filter(s => !collectedWords.includes(s));
-                
-                // 類義語が出る確率は、残っている類義語がある場合に60%
-                if (uncollected.length > 0 && Math.random() < 0.6) {
-                    this.text = uncollected[Math.floor(Math.random() * uncollected.length)];
+                // 類義語が出る確率は、類義語データが存在する場合に60%
+                if (SYNONYMS.length > 0 && Math.random() < 0.6) {
+                    // ★修正点1: 全ての類義語からランダムに選ぶことで、再出現を可能にする
+                    this.text = SYNONYMS[Math.floor(Math.random() * SYNONYMS.length)];
                     this.isSynonym = true;
                     this.color = COLOR_SYNONYM;
                 } else {
@@ -298,7 +295,9 @@
             const list = document.getElementById('word-list');
             list.innerHTML = '';
             let delay = 0;
-            [...new Set(collectedWords)].forEach(word => {
+            // ★修正点2: Setを使って重複をなくし、ユニークな単語のみ表示する
+            const uniqueWords = [...new Set(collectedWords)];
+            uniqueWords.forEach(word => {
                 const meaning = wordData.synonyms[word] || "";
                 const card = document.createElement('div');
                 card.className = 'word-card';
