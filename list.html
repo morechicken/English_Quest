@@ -223,53 +223,55 @@
             const nav = document.getElementById('alphabet-nav-vertical');
             const links = Array.from(nav.getElementsByTagName('a'));
             if (links.length === 0) return;
-
+    
             let isDragging = false;
-
-            const applyWaveEffect = (y) => {
-                const navRect = nav.getBoundingClientRect();
-                
+            let activeLink = null;
+    
+            const updateActiveLink = (y) => {
+                let closestLink = null;
+                let minDistance = Infinity;
+    
+                // 最も近いリンクを見つける
                 links.forEach(link => {
                     const linkRect = link.getBoundingClientRect();
-                    const distance = Math.abs(y - (linkRect.top + linkRect.height / 2));
-
-                    // 波の効果を計算
-                    const maxEffectDistance = 80; // 波が影響する最大距離
-                    const scaleFactor = Math.max(0, 1 - distance / maxEffectDistance);
-                    
-                    // 中心が最も大きく、離れるにつれて小さくなる
-                    const scale = 1 + scaleFactor * 1.2; // 最大2.2倍
-                    const colorIntensity = Math.min(1, scaleFactor * 1.5);
-
-                    link.style.transform = `scale(${scale})`;
-                    // 色を動的に変更: slate-400 (94a3b8) から cyan-400 (22d3ee) へ
-                    link.style.color = `rgb(
-                        ${148 + (34 - 148) * colorIntensity},
-                        ${163 + (211 - 163) * colorIntensity},
-                        ${184 + (238 - 184) * colorIntensity}
-                    )`;
+                    const linkCenterY = linkRect.top + linkRect.height / 2;
+                    const distance = Math.abs(y - linkCenterY);
+    
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestLink = link;
+                    }
                 });
-            };
-
-            const resetStyles = () => { links.forEach(link => { link.style.transform = 'scale(1)'; link.style.color = ''; }); };
-
-            // --- マウス操作 ---
-            nav.addEventListener('mousedown', (e) => { isDragging = true; applyWaveEffect(e.clientY); });
-            nav.addEventListener('mousemove', (e) => { applyWaveEffect(e.clientY); });
-            nav.addEventListener('mouseleave', () => {
-                if (!isDragging) resetStyles();
-            });
-            window.addEventListener('mouseup', () => {
-                if (isDragging) {
-                    isDragging = false;
-                    resetStyles();
+    
+                // 以前のアクティブなリンクと違う場合のみスタイルを更新
+                if (activeLink !== closestLink) {
+                    if (activeLink) {
+                        activeLink.style.transform = 'scale(1)';
+                        activeLink.style.color = '';
+                    }
+                    if (closestLink) {
+                        closestLink.style.transform = 'scale(2.2)';
+                        closestLink.style.color = '#22d3ee'; // cyan-400
+                    }
+                    activeLink = closestLink;
                 }
-            });
-
+            };
+    
+            const resetStyles = () => {
+                if (activeLink) {
+                    activeLink.style.transform = 'scale(1)';
+                    activeLink.style.color = '';
+                    activeLink = null;
+                }
+            };
+    
+            // --- マウス操作 ---
+            nav.addEventListener('mousemove', (e) => updateActiveLink(e.clientY));
+            nav.addEventListener('mouseleave', resetStyles);
+    
             // --- タッチ操作 ---
-            nav.addEventListener('touchstart', (e) => { isDragging = true; applyWaveEffect(e.touches[0].clientY); }, { passive: true });
-            nav.addEventListener('touchmove', (e) => { if (isDragging) applyWaveEffect(e.touches[0].clientY); }, { passive: true });
-            nav.addEventListener('touchend', () => { if (isDragging) { isDragging = false; resetStyles(); } });
+            nav.addEventListener('touchmove', (e) => { updateActiveLink(e.touches[0].clientY); }, { passive: true });
+            nav.addEventListener('touchend', resetStyles);
         }
     </script>
 
