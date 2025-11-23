@@ -478,8 +478,8 @@ const WORD_DATABASE = [
           "I cannot",
           "your request."
         ],
-        "full": "I cannot accept your request.",
-        "jp": "あなたの要求を受け入れることはできません。",
+        "full": "She managed to acquire a new skill.",
+        "jp": "彼女は新しいスキルを習得することに成功した。",
         "is_correct": false
       },
       {
@@ -499,65 +499,6 @@ const WORD_DATABASE = [
         "full": "We will ACCOMMODATE your request.",
         "jp": "あなたの要望に対応します。",
         "is_correct": true
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "word": "ACCORDING TO",
-    "meaning_core": "～によれば",
-    "syllables": [
-      {
-        "text": "ac",
-        "type": "weak"
-      },
-      {
-        "text": "CORD",
-        "type": "strong"
-      },
-      {
-        "text": "ing",
-        "type": "weak"
-      },
-      {
-        "text": "to",
-        "type": "weak"
-      }
-    ],
-    "synonyms": {
-      "AS STATED BY": "～が述べたように",
-      "BASED ON": "～に基づいて",
-      "PER": "～につき"
-    },
-    "distractors": [
-      "DESPITE",
-      "UNLIKE",
-      "AGAINST",
-      "INSTEAD OF"
-    ],
-    "meanings_expanded": [
-      "～によれば",
-      "～に従って",
-      "～の言うところでは"
-    ],
-    "contexts": [
-      {
-        "parts": [
-          "It will rain tomorrow,",
-          "the weather forecast."
-        ],
-        "full": "It will rain tomorrow, according to the weather forecast.",
-        "jp": "天気予報によれば、明日は雨になるだろう。",
-        "is_correct": true
-      },
-      {
-        "parts": [
-          "He succeeded",
-          "his efforts."
-        ],
-        "full": "He succeeded because of his efforts.",
-        "jp": "彼は努力のおかげで成功した。",
-        "is_correct": false
       }
     ]
   },

@@ -121,8 +121,11 @@
 
         // === 2. 定数の上書き ===
         const ENGLISH_WORD = wordData.word;
-        const TARGETS_DATA = wordData.meanings_expanded || [wordData.meaning_core];
-        
+        // ★改善点1: ターゲットの数を最大4つに制限する
+        const allTargetsData = wordData.meanings_expanded || [wordData.meaning_core];
+        // 毎回ランダムに4つ選ぶことで、リプレイ性も向上させます
+        const TARGETS_DATA = allTargetsData.sort(() => 0.5 - Math.random()).slice(0, 4);
+
         const COLOR_EN = "#00f2ff"; 
         const COLOR_JP = "#bd00ff";
         
@@ -172,19 +175,21 @@
             else ballEn.font = "bold 14px Montserrat";
 
             targets = [];
-            // ターゲットを配置するエリアを定義
+            // ★改善点2: ターゲットが画面内に収まるように配置エリアを調整
+            const targetRadius = 55; // ターゲットの半径
             const targetArea = {
                 x: width * 0.55,
                 y: height * 0.15,
-                width: width * 0.4,
-                height: height * 0.7
+                width: width * 0.4 - targetRadius * 2, // 半径分を考慮してエリアを狭める
+                height: height * 0.7 - targetRadius * 2
             };
 
             TARGETS_DATA.forEach((text, i) => {
                 targets.push({
-                    x: targetArea.x + Math.random() * targetArea.width,
-                    y: targetArea.y + Math.random() * targetArea.height,
-                    radius: 55,
+                    // エリアの左上を基準に、半径分をオフセットして配置
+                    x: targetArea.x + targetRadius + Math.random() * targetArea.width,
+                    y: targetArea.y + targetRadius + Math.random() * targetArea.height,
+                    radius: targetRadius,
                     color: COLOR_JP,
                     text: text,
                     font: "bold 24px 'Shippori Mincho', serif",
