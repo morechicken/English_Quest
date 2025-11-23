@@ -52,10 +52,10 @@
         .module-btn i { font-size: 1.5rem; color: #64748b; transition: color 0.3s; }
         .module-label { position: absolute; bottom: -25px; font-size: 0.6rem; letter-spacing: 0.1em; color: #64748b; font-weight: 700; }
         .progress-ring { position: absolute; top: -5px; left: -5px; width: 80px; height: 80px; transform: rotate(-90deg); pointer-events: none; }
-        .progress-ring circle { fill: transparent; stroke-width: 4; stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1s ease-out; }
-        .module-btn.cleared { border-color: #00f2ff; box-shadow: 0 0 15px rgba(0, 242, 255, 0.3); }
-        .module-btn.cleared i { color: #00f2ff; }
-        .module-btn.cleared .module-label { color: #00f2ff; }
+        .progress-ring circle { fill: transparent; stroke-width: 4; stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1s ease-out, stroke 1s ease-out; }
+        .module-btn.cleared { border-color: #bd00ff; box-shadow: 0 0 20px rgba(189, 0, 255, 0.4); }
+        .module-btn.cleared i { color: #bd00ff; }
+        .module-btn.cleared .module-label { color: #bd00ff; }
         .module-btn:active { transform: scale(0.9); background: rgba(255,255,255,0.1); }
         .connection-line {
             position: absolute; top: 50%; left: 50%; width: 0; height: 2px;
@@ -119,11 +119,11 @@
 
             // 2. ボタン生成ループ
             const MODULE_CONFIG = [
-                { id: 'spell',   icon: 'fa-font',          label: 'SPELLING',   color: '#00f2ff' },
+                { id: 'spell',   icon: 'fa-font',          label: 'SPELLING',   color: '#bd00ff' },
                 { id: 'rhythm',  icon: 'fa-music',         label: 'RHYTHM',     color: '#bd00ff' },
-                { id: 'synonym', icon: 'fa-network-wired', label: 'SYNONYMS',   color: '#00f2ff' },
+                { id: 'synonym', icon: 'fa-network-wired', label: 'SYNONYMS',   color: '#bd00ff' },
                 { id: 'meaning', icon: 'fa-brain',         label: 'MEANING',    color: '#bd00ff' },
-                { id: 'context', icon: 'fa-align-left',    label: 'CONTEXT',    color: '#00f2ff' },
+                { id: 'context', icon: 'fa-align-left',    label: 'CONTEXT',    color: '#bd00ff' },
             ];
 
             const container = document.getElementById('module-container');
