@@ -53,9 +53,6 @@
         .module-label { position: absolute; bottom: -25px; font-size: 0.6rem; letter-spacing: 0.1em; color: #64748b; font-weight: 700; }
         .progress-ring { position: absolute; top: -5px; left: -5px; width: 80px; height: 80px; transform: rotate(-90deg); pointer-events: none; }
         .progress-ring circle { fill: transparent; stroke-width: 4; stroke-dasharray: 220; stroke-dashoffset: 220; transition: stroke-dashoffset 1s ease-out, stroke 1s ease-out; }
-        .module-btn.cleared { border-color: #bd00ff; box-shadow: 0 0 20px rgba(189, 0, 255, 0.4); }
-        .module-btn.cleared i { color: #bd00ff; }
-        .module-btn.cleared .module-label { color: #bd00ff; }
         .module-btn:active { transform: scale(0.9); background: rgba(255,255,255,0.1); }
         .connection-line {
             position: absolute; top: 50%; left: 50%; width: 0; height: 2px;
@@ -119,11 +116,11 @@
 
             // 2. ボタン生成ループ
             const MODULE_CONFIG = [
-                { id: 'spell',   icon: 'fa-font',          label: 'SPELLING',   color: '#bd00ff' },
-                { id: 'rhythm',  icon: 'fa-music',         label: 'RHYTHM',     color: '#bd00ff' },
-                { id: 'synonym', icon: 'fa-network-wired', label: 'SYNONYMS',   color: '#bd00ff' },
-                { id: 'meaning', icon: 'fa-brain',         label: 'MEANING',    color: '#bd00ff' },
-                { id: 'context', icon: 'fa-align-left',    label: 'CONTEXT',    color: '#bd00ff' },
+                { id: 'spell',   icon: 'fa-font',          label: 'SPELLING',   color: '#00f2ff' }, // シアン
+                { id: 'rhythm',  icon: 'fa-music',         label: 'RHYTHM',     color: '#bd00ff' }, // パープル
+                { id: 'synonym', icon: 'fa-network-wired', label: 'SYNONYMS',   color: '#00ff87' }, // グリーン
+                { id: 'meaning', icon: 'fa-brain',         label: 'MEANING',    color: '#f2ff00' }, // イエロー
+                { id: 'context', icon: 'fa-align-left',    label: 'CONTEXT',    color: '#ff8c00' }, // オレンジ
             ];
 
             const container = document.getElementById('module-container');
@@ -141,7 +138,7 @@
 
                 // ボタン
                 const btn = document.createElement('div');
-                btn.className = `module-btn ${isCleared ? 'cleared' : ''}`;
+                btn.className = 'module-btn';
                 btn.style.left = `${x}px`;
                 btn.style.top = `${y}px`;
                 
@@ -152,12 +149,20 @@
                 };
 
                 btn.innerHTML = `
-                    <i class="fas ${mod.icon}"></i>
-                    <span class="module-label">${mod.label}</span>
+                    <i class="fas ${mod.icon}" style="${isCleared ? `color: ${mod.color};` : ''}"></i>
+                    <span class="module-label" style="${isCleared ? `color: ${mod.color};` : ''}">${mod.label}</span>
                     <svg class="progress-ring">
                         <circle cx="40" cy="40" r="35" stroke="${isCleared ? mod.color : '#334155'}" />
                     </svg>
                 `;
+
+                // クリア済みの場合、スタイルを動的に適用
+                if (isCleared) {
+                    btn.style.borderColor = mod.color;
+                    // RGBAに変換して影の色を設定
+                    const rgb = mod.color.match(/\w\w/g).map(x => parseInt(x, 16));
+                    btn.style.boxShadow = `0 0 20px rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.4)`;
+                }
 
                 // リングアニメーション
                 const circle = btn.querySelector('circle');
