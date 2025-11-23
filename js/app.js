@@ -99,9 +99,12 @@ const GAME_MODES = [
 
 // 7. ゲーム完了時の処理 (各ゲームから呼び出す)
 const onGameComplete = (mode) => {
-    const id = getCurrentWordId();
-    if (id) {
-        saveProgress(id, mode);
+    // ゲームページでのみ実行されるようにガードを追加
+    if (window.location.pathname.includes('/games/')) {
+        const id = getCurrentWordId();
+        if (id) {
+            saveProgress(id, mode);
+        }
     }
 };
 
