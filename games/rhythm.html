@@ -210,9 +210,15 @@
         }
         function speak(text) {
             if (synth.speaking) return;
+            // 英語の音声が見つからない場合に備えて、デフォルトの音声も保持
+            const defaultVoice = voices.find(v => v.lang.startsWith('en-')) || voices[0];
+            // 'Google US English' を優先的に探し、なければ 'en-US' の音声を探す
+            const bestVoice = voices.find(v => v.name === 'Google US English') || voices.find(v => v.lang === 'en-US') || defaultVoice;
+
             const utterThis = new SpeechSynthesisUtterance(text);
-            utterThis.voice = voices.find(v => v.name === 'Google US English') || voices.find(v => v.lang === 'en-US') || voices[0];
-            utterThis.pitch = 1;
+            utterThis.voice = bestVoice;
+            utterThis.lang = 'en-US'; // 言語コードも明示的に指定
+            utterThis.pitch = 1.0;
             utterThis.rate = 0.9;
             synth.speak(utterThis);
         }

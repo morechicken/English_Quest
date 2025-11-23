@@ -160,6 +160,52 @@ function setBgmState(state) { // state: 'off', 'low', 'mid', 'high'
     manageBgm();
 }
 
+function createVolumeControl() {
+    const currentState = localStorage.getItem('eq_bgm_state') || 'off';
+
+    const controlContainer = document.createElement('div');
+    controlContainer.id = 'volume-control';
+    controlContainer.className = 'fixed bottom-5 right-5 z-50 p-2 rounded-full bg-slate-800/80 backdrop-blur-sm shadow-lg cursor-pointer transition-transform hover:scale-110 active:scale-95';
+
+    const icon = document.createElement('i');
+    icon.className = 'fas text-lg text-slate-400 w-6 h-6 flex items-center justify-center';
+
+    const updateIcon = (state) => {
+        if (state === 'off') {
+            icon.classList.remove('fa-volume-up');
+            icon.classList.add('fa-volume-mute');
+        } else {
+            icon.classList.remove('fa-volume-mute');
+            icon.classList.add('fa-volume-up');
+        }
+    };
+
+    controlContainer.appendChild(icon);
+    document.body.appendChild(controlContainer);
+
+    updateIcon(currentState);
+
+    controlContainer.addEventListener('click', () => {
+        let newState;
+        const currentState = localStorage.getItem('eq_bgm_state') || 'off';
+        if (currentState === 'off') {
+            newState = 'mid'; // ONにする時は中音量に
+        } else {
+            newState = 'off'; // OFFにする
+        }
+        setBgmState(newState);
+        updateIcon(newState);
+
+        // クリック時にBGM再生を試みる（ユーザー操作の起点）
+        const bgm = document.getElementById('bgm');
+        if (bgm && bgm.paused && newState !== 'off') {
+            bgm.play().catch(e => console.log("BGM再生に失敗:", e));
+        }
+    });
+}
+
+
+
 
 // 9. ページ読み込み時の処理 (フェードイン)
 window.addEventListener('DOMContentLoaded', () => {
@@ -209,6 +255,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         // BGMの状態をチェックして再生/停止
         manageBgm();
+
+        // フローティング音量コントロールを生成
+        createVolumeControl();
 
         // フェードイン処理
         setTimeout(() => {
