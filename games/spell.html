@@ -151,7 +151,7 @@
 
         .revealed-char {
             /* 画面幅に応じて文字サイズを可変にする (最小2rem, 推奨12vw, 最大6rem) */
-            font-size: clamp(2rem, 12vw, 6rem);
+            font-size: var(--revealed-char-size, clamp(2rem, 12vw, 6rem));
             font-weight: 900;
             white-space: pre; /* 文字間のスペースを維持 */
             color: var(--primary-color);
@@ -505,6 +505,13 @@
             const revealOverlay = document.getElementById('spell-reveal-overlay');
             const revealContent = document.getElementById('spell-reveal-content');
             revealContent.innerHTML = '';
+
+            // 単語の長さに応じて文字サイズを動的に調整
+            const wordLength = LETTERS.length;
+            // 基本のビューポート幅単位(vw)を単語長で割ることで、長い単語ほど文字が小さくなるようにする
+            // 80vwを基準にすることで、大抵のスマホ画面で収まるように調整
+            const fontSizeVw = 80 / wordLength;
+            document.documentElement.style.setProperty('--revealed-char-size', `clamp(1.5rem, ${fontSizeVw}vw, 5rem)`);
 
             LETTERS.forEach((char, index) => {
                 const span = document.createElement('span');
