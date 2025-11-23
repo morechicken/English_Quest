@@ -84,6 +84,16 @@
         }
         @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 
+        /* 注入する単語のスタイル */
+        #word-to-inject {
+            position: absolute;
+            font-weight: 900;
+            color: #00f2ff;
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
+            font-size: 1.4rem;
+            transition: all 0.4s cubic-bezier(0.5, 0, 0.5, 1);
+        }
+
         /* 日本語訳 */
         #translation-area {
             margin-top: 20px; font-family: 'Shippori Mincho', serif;
@@ -208,6 +218,7 @@
         const timerBar = document.getElementById('timer');
         const scoreDisp = document.getElementById('score-disp');
         const targetWordDisplay = document.getElementById('target-word-display');
+        let wordToInjectEl = null; // 注入する単語の要素
         const startScreen = document.getElementById('start-screen');
 
         // === Audio System ===
@@ -323,7 +334,19 @@
             }
             currentData = { ...item, isCorrect };
 
-            cardContent.innerHTML = `${currentData.parts[0]} <span class="gap-slot" id="gap"></span> ${currentData.parts[1]}`;
+            // ★変更点: 注入する単語の表示とスロットのラッパーを追加
+            cardContent.innerHTML = `${currentData.parts[0]} <span class="relative inline-block align-bottom" id="gap-wrapper"></span> ${currentData.parts[1] || ''}`;
+            const gapWrapper = document.getElementById('gap-wrapper');
+            gapWrapper.innerHTML = `
+                <span class="gap-slot" id="gap"></span>
+                <span id="word-to-inject">${TARGET_WORD}</span>
+            `;
+            wordToInjectEl = document.getElementById('word-to-inject');
+            const gapEl = document.getElementById('gap');
+            
+            // 注入する単語をスロットの上に配置
+            wordToInjectEl.style.left = `${gapEl.offsetWidth / 2}px`;
+            wordToInjectEl.style.top = `-${gapEl.offsetHeight + 20}px`;
             
             setTimeout(() => {
                 wrapper.style.left = '50%'; 
@@ -359,10 +382,14 @@
             if (currentData.isCorrect) {
                 // === 正解 ===
                 playSound('inject');
-                const gap = document.getElementById('gap');
-                gap.textContent = TARGET_WORD;
-                gap.classList.add('filled');
                 
+                // ★変更点: 単語がスロットに吸い込まれるアニメーション
+                wordToInjectEl.style.top = '0px';
+                wordToInjectEl.style.left = '50%';
+                wordToInjectEl.style.transform = 'translateX(-50%) scale(0.8)';
+                wordToInjectEl.style.opacity = '0';
+
+                // アニメーション後にスロットを埋める
                 transArea.textContent = currentData.jp;
                 transArea.classList.add('visible');
                 
@@ -371,6 +398,12 @@
                 scoreDisp.textContent = `INJECTED: ${injections}/${TARGET_INJECTIONS}`;
 
                 setTimeout(() => {
+                    const gap = document.getElementById('gap');
+                    if (gap) {
+                        gap.textContent = TARGET_WORD;
+                        gap.classList.add('filled');
+                    }
+
                     wrapper.classList.add('slide-out-left');
                     setTimeout(nextCard, 600);
                 }, 2500); 

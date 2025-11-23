@@ -15,6 +15,7 @@ const db = firebase.firestore();
 
 let currentUser = null;
 let userProgress = {}; // Firestoreから読み込んだ進捗をキャッシュ
+let isBgmPlaying = false; // BGMが再生中かどうかのフラグ
 
 
 // === データ・状態管理とユーティリティ ===
@@ -125,6 +126,20 @@ function goTo(page, wordId = null) {
     }, 300);
 }
 
+// BGMを再生する関数
+function playBgm() {
+    if (isBgmPlaying) return; // すでに再生中なら何もしない
+    const bgm = document.getElementById('bgm');
+    if (bgm) {
+        // games/ フォルダ内からの相対パスを考慮
+        const path = window.location.pathname.includes('/games/') ? '../audio/bgm.mp3' : 'audio/bgm.mp3';
+        bgm.src = path;
+        bgm.volume = 0.2; // 音量を小さめに設定 (0.0 ~ 1.0)
+        bgm.play().then(() => isBgmPlaying = true).catch(e => console.log("BGMの再生にユーザー操作が必要です。"));
+    }
+}
+
+
 // 9. ページ読み込み時の処理 (フェードイン)
 window.addEventListener('DOMContentLoaded', () => {
     // 認証状態を監視
@@ -190,6 +205,7 @@ function updateUserUI(user) {
 // 10. Googleログイン/スタート関数
 const loginWithGoogle = () => {
     // 既にログイン済みの場合は、そのままリストページへ
+    playBgm(); // ユーザー操作があったのでBGM再生を試みる
     if (currentUser) {
         goTo('list.html');
         return;
@@ -209,6 +225,7 @@ const loginWithGoogle = () => {
 
 // 10b. ログインせずに進む関数
 const startWithoutLogin = () => {
+    playBgm(); // ユーザー操作があったのでBGM再生を試みる
     goTo('list.html');
 };
 
