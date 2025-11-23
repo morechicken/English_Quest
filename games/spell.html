@@ -422,37 +422,35 @@
             const tRect = tileData.wrapper.getBoundingClientRect(); // 親の座標取得
             createLaser(pRect.left+32, pRect.top+32, tRect.left+30, tRect.top+30);
 
+            playSound('hit');
+            tileData.isCaptured = true;
+            tileData.wrapper.classList.remove('is-target');
+            createParticles(tileData.x+30, tileData.y+30);
+
+            const slot = slotsContainer.children[currentIndex];
+            const sRect = slot.getBoundingClientRect();
+            const cRect = tileData.wrapper.getBoundingClientRect();
+            
+            const dx = sRect.left - cRect.left;
+            const dy = sRect.top - cRect.top;
+
+            // 吸い込み演出
+            tileData.wrapper.style.transition = 'transform 0.3s ease-in, opacity 0.3s';
+            tileData.wrapper.style.transform = `translate(${tileData.x + dx}px, ${tileData.y + dy}px) scale(0.2)`;
+            tileData.wrapper.style.opacity = 0.2;
+
+            slot.classList.add('filled');
+            slot.classList.remove('active');
+            currentIndex++;
+
             setTimeout(() => {
-                playSound('hit');
-                tileData.isCaptured = true;
-                tileData.wrapper.classList.remove('is-target');
-                createParticles(tileData.x+30, tileData.y+30);
-
-                const slot = slotsContainer.children[currentIndex];
-                const sRect = slot.getBoundingClientRect();
-                const cRect = tileData.wrapper.getBoundingClientRect();
-                
-                const dx = sRect.left - cRect.left;
-                const dy = sRect.top - cRect.top;
-
-                // 吸い込み演出
-                tileData.wrapper.style.transition = 'transform 0.3s ease-in, opacity 0.3s';
-                tileData.wrapper.style.transform = `translate(${tileData.x + dx}px, ${tileData.y + dy}px) scale(0.2)`;
-                tileData.wrapper.style.opacity = 0.2;
-
-                setTimeout(() => {
-                    slot.classList.add('filled');
-                    slot.classList.remove('active');
-                    tileData.wrapper.style.display = 'none';
-                    
-                    currentIndex++;
-                    if (currentIndex >= LETTERS.length) {
-                        gameComplete();
-                    } else {
-                        updateNextTargets();
-                    }
-                }, 300);
-            }, 50);
+                tileData.wrapper.style.display = 'none';
+                if (currentIndex >= LETTERS.length) {
+                    gameComplete();
+                } else {
+                    updateNextTargets();
+                }
+            }, 300); // 吸い込みアニメーションが終わるのを待つ
         }
 
         function fail() {

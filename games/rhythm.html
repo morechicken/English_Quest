@@ -95,7 +95,7 @@
         #ui-layer { position: absolute; top: 0; width: 100%; padding: 30px; text-align: center; pointer-events: none; z-index: 50; }
         #feedback {
             position: absolute; top: 25%; left: 20%; transform: translate(-50%, -50%);
-            font-size: 2.5rem; font-weight: 300; letter-spacing: 0.1em; opacity: 0;
+            font-size: 2.5rem; font-weight: 900; letter-spacing: 0.1em; opacity: 0; pointer-events: none; text-shadow: 0 0 15px rgba(255,215,0,0.7);
         }
 
         .particle { position: fixed; pointer-events: none; border-radius: 50%; z-index: 40; mix-blend-mode: screen; }
@@ -104,6 +104,15 @@
             position: fixed; inset: 0; background: rgba(15, 23, 42, 0.95);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
             z-index: 100; transition: opacity 0.4s;
+        }
+        #start-screen .word-display {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);
+            margin-bottom: 1rem;
+            cursor: pointer;
         }
         .hidden { opacity: 0; pointer-events: none; }
     </style>
@@ -130,9 +139,10 @@
     </div>
 
     <div id="start-screen">
-        <h1 class="text-5xl font-light text-white mb-4 tracking-[0.2em]">ECHOES</h1>
-        <p class="text-gray-400 mb-10 text-sm tracking-widest">FEEL THE RHYTHM</p>
-        <button id="start-btn" class="px-8 py-3 bg-cyan-500 text-white font-bold rounded-full shadow-lg active:scale-95 transition tracking-wider">START</button>
+        <h1 id="start-word-display" class="word-display">LOADING...</h1>
+        <p class="text-gray-400 mb-10 text-sm tracking-widest">TAP WORD TO LISTEN</p>
+        <button id="start-btn" class="px-10 py-4 bg-cyan-500 text-white font-bold rounded-full shadow-lg active:scale-95 transition tracking-wider text-lg">
+            START</button>
     </div>
 
     <div id="result-screen" class="hidden">
@@ -341,28 +351,54 @@
             zone.classList.add('hit');
             setTimeout(() => zone.classList.remove('hit'), 100);
 
-            const current = Date.now() - startTime;
-            const hitWindow = 120;
-            const target = notes.find(n => !n.isHit && Math.abs(n.data.time - current) < hitWindow);
+            const currentTime = Date.now() - startTime;
+            const goodWindow = 80; // ヒット成功とみなす許容範囲 (ms)
+            const perfectWindow = 30; // Perfect判定の許容範囲 (ms)
+            // 判定ラインに最も近い、まだヒットしていないノートを探す
+            let closestNote = null;
+            let minDiff = Infinity;
 
-            if (target) {
-                target.isHit = true;
-                target.el.style.display = 'none'; 
-                
-                playSoftTone(target.data.type);
-                
-                const fb = document.getElementById('feedback');
-                fb.textContent = target.data.type === 'strong' ? "Perfect" : "Good";
-                fb.style.color = target.data.type === 'strong' ? '#bd00ff' : '#00f2ff';
-                fb.style.opacity = 1;
-                fb.style.transform = "translate(-50%, -50%) scale(1.2)";
-                requestAnimationFrame(() => {
-                    fb.style.transition = "all 0.4s ease-out";
-                    fb.style.transform = "translate(-50%, -50%) scale(1)";
+            notes.forEach(note => {
+                if (!note.isHit) {
+                    const diff = Math.abs(note.data.time - currentTime);
+                    if (diff < minDiff) {
+                        minDiff = diff;
+                        closestNote = note;
+                    }
+                }
+            });
+
+            // 最も近いノートがヒット成功の範囲内にあるかチェック
+            if (closestNote && minDiff < goodWindow) {
+                closestNote.isHit = true;
+                closestNote.el.style.display = 'none'; 
+
+                // 音はアクセントの有無で再生
+                playSoftTone(closestNote.data.type);
+
+
+                // Perfect判定の時だけフィードバックを表示
+                if (minDiff < perfectWindow) {
+                    const fb = document.getElementById('feedback');
+                    fb.style.transition = 'none';
                     fb.style.opacity = 0;
-                });
+                    void fb.offsetWidth; // 強制再描画
 
-                createParticles(judgeLineX, window.innerHeight/2, target.data.type);
+                    fb.textContent = "Perfect";
+                    fb.style.color = 'gold';
+
+                    requestAnimationFrame(() => {
+                        fb.style.transition = "opacity 0.4s ease-out, transform 0.4s ease-out";
+                        fb.style.opacity = 1;
+                        fb.style.transform = 'translate(-50%, -50%) scale(1.2)';
+                        setTimeout(() => { fb.style.opacity = 0; }, 150);
+                    });
+                    createParticles(judgeLineX, window.innerHeight / 2, 'strong');
+                } else {
+                    // Perfectではないが成功した場合のパーティクル
+                    createParticles(judgeLineX, window.innerHeight / 2, 'weak');
+                }
+
             }
         };
 
@@ -395,6 +431,12 @@
         function init() {
             // 単語表示更新
             document.getElementById('target-word-disp').textContent = wordData.word;
+
+            // スタート画面の単語表示と音声再生イベント
+            const startWordDisplay = document.getElementById('start-word-display');
+            startWordDisplay.textContent = wordData.word;
+            startWordDisplay.onclick = () => speak(wordData.word);
+
 
             // スタートボタンイベント
             document.getElementById('start-btn').onclick = startGame;
