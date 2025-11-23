@@ -69,6 +69,28 @@
             max-width: 90%;
         }
         #result-screen.show .fusion-card { transform: scale(1); }
+
+        /* 認知ロック用オーバーレイ */
+        #cognitive-lock-overlay {
+            position: fixed; inset: 0;
+            background: rgba(5, 8, 20, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 300;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.2s ease-in-out;
+        }
+        #cognitive-lock-overlay.show { opacity: 1; }
+
+        #cognitive-lock-content {
+            text-align: center; color: white;
+            transform: scale(0.9); opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+        }
+        #cognitive-lock-overlay.show #cognitive-lock-content {
+            transform: scale(1);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -111,6 +133,14 @@
         </div>
     </div>
 
+    <!-- 認知ロック用オーバーレイ -->
+    <div id="cognitive-lock-overlay">
+        <div id="cognitive-lock-content">
+            <div id="cognitive-lock-jp" class="text-3xl md:text-4xl font-bold font-serif mb-4 drop-shadow-lg" style="color: #bd00ff; text-shadow: 0 0 15px #bd00ff;"></div>
+            <div id="cognitive-lock-en" class="text-4xl md:text-5xl font-black font-montserrat tracking-wider drop-shadow-lg" style="color: #00f2ff; text-shadow: 0 0 15px #00f2ff;"></div>
+        </div>
+    </div>
+
 <script src="../data/word_data.js"></script>
 <script src="../js/app.js"></script>
 <script>
@@ -145,6 +175,7 @@
         let particles = [];
         let shakeIntensity = 0;
         let isShooting = false;
+        let cognitiveLockTimer = null;
 
         // === 3. 初期化関数 ===
         function resize() {
@@ -342,6 +373,8 @@
                         shakeIntensity = 10;
                         createExplosion(target.x, target.y, target.color);
                         updateTargetCount();
+                        // ★認知ロックを発動
+                        showCognitiveLock(target.text);
                     }
                 });
 
@@ -369,6 +402,24 @@
             obstacles.forEach(obs => {
                 obs.angle += obs.rotationSpeed;
             });
+        }
+
+        // ★認知ロック表示関数
+        function showCognitiveLock(jpText) {
+            const overlay = document.getElementById('cognitive-lock-overlay');
+            const enEl = document.getElementById('cognitive-lock-en');
+            const jpEl = document.getElementById('cognitive-lock-jp');
+
+            // 既存のタイマーがあればクリア
+            if (cognitiveLockTimer) clearTimeout(cognitiveLockTimer);
+
+            enEl.textContent = ENGLISH_WORD;
+            jpEl.textContent = jpText;
+            overlay.classList.add('show');
+
+            cognitiveLockTimer = setTimeout(() => {
+                overlay.classList.remove('show');
+            }, 1500); // 1.5秒表示
         }
 
         function handleComplete() {

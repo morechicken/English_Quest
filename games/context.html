@@ -46,7 +46,7 @@
 
         /* カード */
         #container-wrapper {
-            position: absolute; top: 45%; left: 150%; 
+            position: absolute; top: 50%; left: 150%; 
             transform: translate(-50%, -50%);
             width: 90%; max-width: 600px;
             transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -83,16 +83,6 @@
             animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         @keyframes popIn { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
-
-        /* 注入する単語のスタイル */
-        #word-to-inject {
-            position: absolute;
-            font-weight: 900;
-            color: #00f2ff;
-            text-shadow: 0 0 15px rgba(0, 242, 255, 0.6);
-            font-size: 1.4rem;
-            transition: all 0.4s cubic-bezier(0.5, 0, 0.5, 1);
-        }
 
         /* 日本語訳 */
         #translation-area {
@@ -165,10 +155,10 @@
 
     <div id="ui-layer" class="absolute top-0 w-full p-6 flex justify-between items-center text-gray-500 text-xs tracking-widest z-10">
         <div class="flex items-center gap-4">
-            <span>CONTEXT MODE</span>
-            <div class="flex items-center gap-2 text-cyan-400">
-                <span class="text-gray-500">TARGET:</span>
-                <span id="target-word-display" class="font-bold text-sm tracking-wider"></span>
+            <span>SYNTAX FACTORY</span>
+            <div id="main-target-word-area" class="absolute top-[20vh] left-1/2 -translate-x-1/2 text-center pointer-events-none z-20">
+                <div id="main-target-word" class="text-5xl font-black text-cyan-400 opacity-0 transition-all duration-300" style="text-shadow: 0 0 20px rgba(0, 242, 255, 0.6);">
+                </div>
             </div>
         </div>
         <div id="score-disp">INJECTED: 0/3</div>
@@ -207,7 +197,7 @@
         const INVALID_SENTENCES = wordData.contexts.filter(c => !c.is_correct); // データマッピング
 
         // クリア条件（正解データの数に合わせる）
-        const TARGET_INJECTIONS = 3; // 最低3回正解でクリアに変更
+        const TARGET_SUCCESSES = 3; // 3回正しい判断をしたらクリア
         const TIME_LIMIT = 6000;
 
         let injections = 0; // 現在の注入数
@@ -219,8 +209,8 @@
         const cardContent = document.getElementById('card-content');
         const transArea = document.getElementById('translation-area');
         const timerBar = document.getElementById('timer');
-        const scoreDisp = document.getElementById('score-disp');
-        const targetWordDisplay = document.getElementById('target-word-display');
+        const scoreDisp = document.getElementById('score-disp'); // Corrected variable name
+        const mainTargetWord = document.getElementById('main-target-word');
         let wordToInjectEl = null; // 注入する単語の要素
         const startScreen = document.getElementById('start-screen');
 
@@ -303,14 +293,14 @@
             audioEnabled = true;
             startScreen.classList.add('hidden');
             
-            // ターゲット単語を表示
-            targetWordDisplay.textContent = TARGET_WORD;
+            // メインターゲット単語を表示
+            mainTargetWord.textContent = TARGET_WORD;
             setTimeout(nextCard, 500);
         });
 
         function nextCard() {
             // ★変更点: 注入数が目標に達したらクリア
-            if (injections >= TARGET_INJECTIONS) {
+            if (injections >= TARGET_SUCCESSES) {
                 gameComplete();
                 return;
             }
@@ -318,7 +308,7 @@
             state = 'arriving';
             wrapper.className = ''; 
             wrapper.style.left = '150%'; 
-            transArea.textContent = '';
+            transArea.textContent = ' '; // 高さを維持するために半角スペース
             transArea.classList.remove('visible');
 
             // ★変更点: 正解カードの出現確率を80%にアップ
@@ -337,23 +327,19 @@
             }
             currentData = { ...item, isCorrect };
 
-            // ★変更点: 注入する単語の表示とスロットのラッパーを追加
-            cardContent.innerHTML = `${currentData.parts[0]} <span class="relative inline-block align-bottom" id="gap-wrapper"></span> ${currentData.parts[1] || ''}`;
-            const gapWrapper = document.getElementById('gap-wrapper');
-            gapWrapper.innerHTML = `
-                <span class="gap-slot" id="gap"></span>
-                <span id="word-to-inject">${TARGET_WORD}</span>
-            `;
-            wordToInjectEl = document.getElementById('word-to-inject');
-            const gapEl = document.getElementById('gap');
-            
-            // 注入する単語をスロットの上に配置
-            wordToInjectEl.style.left = `${gapEl.offsetWidth / 2}px`;
-            wordToInjectEl.style.top = `-${gapEl.offsetHeight + 20}px`;
+            // カード内容を設定
+            cardContent.innerHTML = `${currentData.parts[0]} <span class="gap-slot" id="gap"></span> ${currentData.parts[1] || ''}`;
             
             setTimeout(() => {
                 wrapper.style.left = '50%'; 
                 playSound('arrive');
+                mainTargetWord.style.transform = 'translateY(-20px)';
+                mainTargetWord.style.opacity = '0';
+
+                setTimeout(() => {
+                    mainTargetWord.style.transform = 'translateY(0)';
+                    mainTargetWord.style.opacity = '1';
+                }, 100);
             }, 300);
 
             setTimeout(() => {
@@ -382,37 +368,29 @@
             clearTimeout(timerId);
             state = 'processing';
 
+            mainTargetWord.style.opacity = '0';
+
             if (currentData.isCorrect) {
                 // === 正解 ===
                 playSound('inject');
-                
-                // ★変更点: 単語がスロットに吸い込まれるアニメーション
-                wordToInjectEl.style.top = '0px';
-                wordToInjectEl.style.left = '50%';
-                wordToInjectEl.style.transform = 'translateX(-50%) scale(0.8)';
-                wordToInjectEl.style.opacity = '0';
+                injections++;
+                updateScore();
 
-                // アニメーション後にスロットを埋める
+                const gap = document.getElementById('gap');
+                if (gap) {
+                    gap.textContent = TARGET_WORD;
+                    gap.classList.add('filled');
+                }
                 transArea.textContent = currentData.jp;
                 transArea.classList.add('visible');
-                
-                // ★変更点: 注入数のみをカウント
-                injections++;
-                scoreDisp.textContent = `INJECTED: ${injections}/${TARGET_INJECTIONS}`;
 
                 setTimeout(() => {
-                    const gap = document.getElementById('gap');
-                    if (gap) {
-                        gap.textContent = TARGET_WORD;
-                        gap.classList.add('filled');
-                    }
-
                     wrapper.classList.add('slide-out-left');
                     setTimeout(nextCard, 600);
                 }, 2500); 
 
             } else {
-                // === 不正解（エラー） ===
+                // === 不正解文で◎ → エラー ===
                 playSound('error');
                 wrapper.style.transform = "translate(-50%, -50%) rotate(3deg)";
                 setTimeout(() => wrapper.style.transform = "translate(-50%, -50%)", 100);
@@ -428,17 +406,41 @@
             if (state !== 'locked') return;
             clearTimeout(timerId);
             state = 'processing';
-            playSound('reject');
+            mainTargetWord.style.opacity = '0';
 
-            // リジェクト時はスコア変動なし、淡々と次へ
-            wrapper.classList.add('slide-out-bottom');
-            setTimeout(nextCard, 500);
+            if (!currentData.isCorrect) {
+                // === 不正解文で✕ → 正解 ===
+                playSound('reject'); // 成功音として流用
+                injections++;
+                updateScore();
+                
+                // 日本語訳を表示せず、すぐに次のカードへ
+                setTimeout(() => {
+                    wrapper.classList.add('slide-out-bottom');
+                    setTimeout(nextCard, 500);
+                }, 300);
+
+            } else {
+                // === 正解文で✕ → エラー ===
+                playSound('error');
+                wrapper.style.transform = "translate(-50%, -50%) rotate(-3deg)";
+                setTimeout(() => wrapper.style.transform = "translate(-50%, -50%)", 100);
+
+                setTimeout(() => {
+                    wrapper.classList.add('slide-out-bottom');
+                    setTimeout(nextCard, 500);
+                }, 300);
+            }
         }
 
         document.getElementById('btn-inject').addEventListener('click', handleInject);
         document.getElementById('btn-reject').addEventListener('click', handleReject);
 
-                function gameComplete() {
+        function updateScore() {
+            scoreDisp.textContent = `JUDGED: ${injections}/${TARGET_SUCCESSES}`;
+        }
+
+        function gameComplete() {
             onGameComplete('context');
             document.getElementById('result-screen').classList.add('show');
         }

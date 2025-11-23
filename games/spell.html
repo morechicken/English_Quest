@@ -136,6 +136,29 @@
             z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.5s;
         }
         #result-overlay.show { opacity: 1; pointer-events: auto; }
+
+        /* 綴り表示オーバーレイ */
+        #spell-reveal-overlay {
+            position: fixed; inset: 0; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(8px);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.4s; cursor: pointer;
+        }
+        #spell-reveal-overlay.show { opacity: 1; pointer-events: auto; }
+        #spell-reveal-content { display: flex; gap: 0.5rem; }
+        .revealed-char {
+            font-size: 6rem; font-weight: 900;
+            color: var(--primary-color);
+            text-shadow: 0 0 25px var(--primary-color);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: revealChar 0.5s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        @keyframes revealChar {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -161,6 +184,11 @@
         <div id="final-time" class="text-6xl font-mono text-white font-bold mb-8">0.00</div>
         <button onclick="location.reload()" class="px-8 py-3 bg-cyan-500 text-white font-bold rounded-full shadow-lg active:scale-95 transition">RETRY</button>
         <button id="next-btn" class="mt-4 px-8 py-3 bg-gray-700 text-white font-bold rounded-full shadow-lg active:scale-95 transition">NEXT / BACK</button>
+    </div>
+
+    <!-- 綴り表示用オーバーレイ -->
+    <div id="spell-reveal-overlay">
+        <div id="spell-reveal-content"></div>
     </div>
 
     <script>
@@ -465,7 +493,26 @@
             isGameActive = false;
             stopTimer();
             playSound('complete');
-            setTimeout(() => resultOverlay.classList.add('show'), 600);
+
+            // 綴り表示オーバーレイを表示
+            const revealOverlay = document.getElementById('spell-reveal-overlay');
+            const revealContent = document.getElementById('spell-reveal-content');
+            revealContent.innerHTML = '';
+
+            LETTERS.forEach((char, index) => {
+                const span = document.createElement('span');
+                span.className = 'revealed-char';
+                span.textContent = char;
+                span.style.animationDelay = `${index * 0.1}s`;
+                revealContent.appendChild(span);
+            });
+
+            revealOverlay.classList.add('show');
+            revealOverlay.onclick = () => {
+                revealOverlay.classList.remove('show');
+                revealOverlay.style.pointerEvents = 'none';
+                resultOverlay.classList.add('show');
+            };
         }
 
         window.onload = init;
