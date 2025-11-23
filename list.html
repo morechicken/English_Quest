@@ -61,10 +61,14 @@
         </div>
 
     <script>
-        // エラーハンドリング: データが読み込めていない場合の対策
-        if (typeof WORD_DATABASE === 'undefined') {
-            alert("エラー: word_data.js が正しく読み込まれていません。コンソールを確認してください。");
-        } else {
+        // list.html専用の初期化関数
+        async function initializePage() {
+            // ログインしている場合、UIを更新
+            if (currentUser) {
+                updateUserUI(currentUser);
+            }
+            // 常に最新の進捗を読み込んでからリストを描画
+            await loadAllProgress();
             renderList();
         }
 

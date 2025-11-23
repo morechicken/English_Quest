@@ -133,11 +133,6 @@ window.addEventListener('DOMContentLoaded', () => {
             // ユーザーがログインしている
             currentUser = user;
             console.log("User is logged in:", currentUser.uid);
-            // list.htmlにいる場合のみUIを更新する
-            if (document.getElementById('user-info')) {
-                updateUserUI(user);
-            }
-
             // Firestoreのデータをまず読み込む
             await loadAllProgress(); 
 
@@ -168,6 +163,12 @@ window.addEventListener('DOMContentLoaded', () => {
             // ログイン情報UIを非表示にする
             const userInfoEl = document.getElementById('user-info');
             if (userInfoEl) userInfoEl.classList.add('hidden');
+        }
+
+        // ログイン状態が確定した後に、各ページ固有の初期化処理を呼び出す
+        // これにより、常に最新のユーザー情報と進捗でUIが描画される
+        if (typeof initializePage === 'function') {
+            initializePage();
         }
         // フェードイン処理
         setTimeout(() => {

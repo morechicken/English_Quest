@@ -93,6 +93,13 @@
     </div>
 
     <script>
+        // cockpit.html専用の初期化関数
+        async function initializePage() {
+            // 常に最新の進捗を読み込んでからUIを描画
+            await loadAllProgress();
+            renderCockpit();
+        }
+
         // 1. 現在の単語データを取得
         const wordData = getCurrentWordData();
         
@@ -101,7 +108,9 @@
             alert("データが見つかりません。リストに戻ります。");
             window.location.href = 'list.html';
         } else {
-            // 画面表示更新
+            // 画面表示更新を行う関数
+            function renderCockpit() {
+
             document.getElementById('disp-word').textContent = wordData.word;
             document.getElementById('disp-meaning').textContent = wordData.meaning_core;
             
@@ -180,6 +189,7 @@
                     }
                 }, 10);
             }, 200);
+            }
         }
     </script>
 </body>
