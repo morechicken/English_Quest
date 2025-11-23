@@ -110,6 +110,9 @@
 </head>
 <body>
 
+    <!-- BGM再生用のaudio要素 -->
+    <audio id="bgm" loop></audio>
+
     <div id="waveform-bg"></div>
 
     <div id="game-container">
@@ -193,6 +196,27 @@
 
         // === サウンドエンジン ===
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        // === Web Speech API (TTS) ===
+        const synth = window.speechSynthesis;
+        let voices = [];
+
+        function populateVoiceList() {
+            voices = synth.getVoices().filter(v => v.lang.startsWith('en-'));
+        }
+        populateVoiceList();
+        if (synth.onvoiceschanged !== undefined) {
+            synth.onvoiceschanged = populateVoiceList;
+        }
+        function speak(text) {
+            if (synth.speaking) return;
+            const utterThis = new SpeechSynthesisUtterance(text);
+            // 英語の音声の中から最適なものを探す（なければブラウザのデフォルト）
+            utterThis.voice = voices.find(v => v.name === 'Google US English') || voices.find(v => v.lang === 'en-US') || voices[0];
+            utterThis.pitch = 1;
+            utterThis.rate = 0.9;
+            synth.speak(utterThis);
+        }
 
         function playSoftTone(type) {
             if (audioCtx.state === 'suspended') audioCtx.resume();
@@ -367,6 +391,9 @@
 
             // スタートボタンイベント
             document.getElementById('start-btn').onclick = startGame;
+
+            // 発音再生ボタンイベント
+            document.getElementById('play-pronunciation-btn').onclick = () => speak(wordData.word);
 
             // 背景生成
             const bg = document.getElementById('waveform-bg');

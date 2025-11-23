@@ -15,7 +15,6 @@ const db = firebase.firestore();
 
 let currentUser = null;
 let userProgress = {}; // Firestoreから読み込んだ進捗をキャッシュ
-let isBgmPlaying = false; // BGMが再生中かどうかのフラグ
 
 
 // === データ・状態管理とユーティリティ ===
@@ -127,16 +126,38 @@ function goTo(page, wordId = null) {
 }
 
 // BGMを再生する関数
-function playBgm() {
-    if (isBgmPlaying) return; // すでに再生中なら何もしない
+function manageBgm() {
     const bgm = document.getElementById('bgm');
-    if (bgm) {
+    const bgmState = localStorage.getItem('eq_bgm_state') || 'off'; // 'off', 'low', 'mid', 'high'
+
+    if (!bgm) return;
+
+    if (bgmState === 'off') {
+        bgm.pause();
+    } else {
         // games/ フォルダ内からの相対パスを考慮
         const path = window.location.pathname.includes('/games/') ? '../audio/bgm.mp3' : 'audio/bgm.mp3';
-        bgm.src = path;
-        bgm.volume = 0.2; // 音量を小さめに設定 (0.0 ~ 1.0)
-        bgm.play().then(() => isBgmPlaying = true).catch(e => console.log("BGMの再生にユーザー操作が必要です。"));
+        if (bgm.currentSrc.indexOf(path) === -1) {
+            bgm.src = path;
+        }
+
+        // 音量設定
+        const volumeLevels = { 'low': 0.1, 'mid': 0.2, 'high': 0.4 };
+        bgm.volume = volumeLevels[bgmState] || 0.2;
+
+        // 再生試行
+        const playPromise = bgm.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("BGMの自動再生はユーザー操作後に可能になります。");
+            });
+        }
     }
+}
+
+function setBgmState(state) { // state: 'off', 'low', 'mid', 'high'
+    localStorage.setItem('eq_bgm_state', state);
+    manageBgm();
 }
 
 
@@ -185,6 +206,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (typeof initializePage === 'function') {
             initializePage();
         }
+
+        // BGMの状態をチェックして再生/停止
+        manageBgm();
+
         // フェードイン処理
         setTimeout(() => {
             document.body.classList.add('loaded');
@@ -204,8 +229,8 @@ function updateUserUI(user) {
 
 // 10. Googleログイン/スタート関数
 const loginWithGoogle = () => {
-    // 既にログイン済みの場合は、そのままリストページへ
-    playBgm(); // ユーザー操作があったのでBGM再生を試みる
+    // ユーザー操作があったのでBGMを再生状態にする
+    if (!localStorage.getItem('eq_bgm_state')) setBgmState('mid'); // 初回なら中音量で
     if (currentUser) {
         goTo('list.html');
         return;
@@ -225,7 +250,8 @@ const loginWithGoogle = () => {
 
 // 10b. ログインせずに進む関数
 const startWithoutLogin = () => {
-    playBgm(); // ユーザー操作があったのでBGM再生を試みる
+    // ユーザー操作があったのでBGMを再生状態にする
+    if (!localStorage.getItem('eq_bgm_state')) setBgmState('mid'); // 初回なら中音量で
     goTo('list.html');
 };
 

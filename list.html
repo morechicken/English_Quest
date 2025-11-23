@@ -29,6 +29,10 @@
         
         /* カードのホバーアニメーション */
         .word-card:active { transform: scale(0.98); }
+
+        /* 音量ボタン */
+        .vol-btn { background: #334155; transition: all 0.2s; }
+        .vol-btn.active { background: #00f2ff; box-shadow: 0 0 10px #00f2ff; }
         
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1e293b; }
@@ -36,6 +40,9 @@
     </style>
 </head>
 <body class="p-4 pb-20">
+
+    <!-- BGM再生用のaudio要素 -->
+    <audio id="bgm" loop></audio>
 
     <header class="sticky top-0 bg-[#0f172a]/95 backdrop-blur-md z-20 py-4 mb-4 border-b border-slate-700 flex justify-between items-center">
         <div class="flex items-center gap-4">
@@ -46,14 +53,22 @@
             </button>
             <h2 class="text-xl font-black tracking-widest text-cyan-400">MISSION LIST</h2>
         </div>
-        <div class="text-right">
-            <div id="user-info" class="hidden items-center gap-3 text-xs">
-                <span id="user-email" class="text-gray-400 font-mono"></span>
-                <button onclick="logout()" class="px-2 py-1 border border-red-500/50 text-red-400 rounded hover:bg-red-500/20 transition-colors text-xs tracking-widest">
-                    LOGOUT
-                </button>
+        <div class="flex items-center gap-6">
+            <div class="text-right">
+                <div id="user-info" class="hidden items-center gap-3 text-xs">
+                    <span id="user-email" class="text-gray-400 font-mono"></span>
+                    <button onclick="logout()" class="px-2 py-1 border border-red-500/50 text-red-400 rounded hover:bg-red-500/20 transition-colors text-xs tracking-widest">
+                        LOGOUT
+                    </button>
+                </div>
+                <div class="text-xs text-gray-400 font-mono mt-1" id="total-progress">LOADING...</div>
             </div>
-            <div class="text-xs text-gray-400 font-mono mt-1" id="total-progress">LOADING...</div>
+            <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-volume-up"></i>
+                <button id="vol-0" class="vol-btn p-2 rounded-full"></button>
+                <button id="vol-1" class="vol-btn p-2 rounded-full"></button>
+                <button id="vol-2" class="vol-btn p-2 rounded-full"></button>
+            </div>
         </div>
     </header>
 
@@ -70,6 +85,24 @@
             // 常に最新の進捗を読み込んでからリストを描画
             await loadAllProgress();
             renderList();
+            setupVolumeControls();
+        }
+
+        function setupVolumeControls() {
+            const buttons = {
+                'off': document.getElementById('vol-btn-off'),
+                'low': document.getElementById('vol-btn-low'),
+                'mid': document.getElementById('vol-btn-mid'),
+            };
+
+            Object.entries(buttons).forEach(([state, btn]) => {
+                btn.addEventListener('click', () => setBgmState(state));
+            });
+
+            // 現在の状態をUIに反映
+            const currentState = localStorage.getItem('eq_bgm_state') || 'off';
+            document.querySelectorAll('.vol-btn').forEach(b => b.classList.remove('active'));
+            if (buttons[currentState]) buttons[currentState].classList.add('active');
         }
 
         function renderList() {
