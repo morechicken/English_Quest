@@ -145,13 +145,13 @@
         #translation.visible { opacity: 1; transform: translateY(0); }
 
         #continue-msg {
-            position: absolute; bottom: 100px; width: 100%; text-align: center;
+            /* 修正: 100px -> 200px に変更して上に移動 */
+            position: absolute; bottom: 200px; width: 100%; text-align: center;
             color: #00f2ff; font-size: 1.2rem; letter-spacing: 0.2em; font-weight: bold;
             opacity: 0; pointer-events: none;
             animation: blink 1.5s infinite;
         }
         #continue-msg.show { opacity: 1; pointer-events: auto; }
-        @keyframes blink { 50% { opacity: 0.3; } }
 
         #result-screen {
             position: absolute; inset: 0; background: rgba(0,0,0,0.9);
@@ -199,7 +199,7 @@
 
         let cursorPosition = 0;
         let cursorDirection = 1;
-        let cursorSpeed = 1.8;
+        let cursorSpeed = 1.1;
 
         let wrapper, transEl, gaugeContainer, cursorEl, slashEffect;
         let wordSpans = [];
@@ -247,7 +247,7 @@
             gaugeContainer = document.getElementById('gauge-container');
             cursorEl = document.getElementById('cursor');
             slashEffect = document.getElementById('slash-effect');
-
+            document.getElementById('continue-msg').classList.remove('show');
             document.getElementById('back-btn').onclick = () => goTo('../cockpit.html', wordData.id);
 
             buildSentence();
@@ -365,7 +365,7 @@
                 wrapper.style.transform = `translateX(${shakeX}px)`;
                 setTimeout(() => wrapper.style.transform = 'none', 100);
 
-                cursorSpeed *= 1.2;
+                cursorSpeed *= 1.1;
 
                 // --- ★修正箇所: 終了判定ロジック ---
                 // 「すべての単語が表示されたか」をチェック
