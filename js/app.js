@@ -130,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
             // ユーザーがログインしている
             currentUser = user;
             console.log("User is logged in:", currentUser.uid);
+            updateUserUI(user); // ログイン情報をUIに反映
 
             // Firestoreのデータをまず読み込む
             await loadAllProgress(); 
