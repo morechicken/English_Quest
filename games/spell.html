@@ -145,22 +145,26 @@
             overflow: hidden; /* はみ出しを隠す */
         }
         #spell-reveal-overlay.show { opacity: 1; pointer-events: auto; }
-        
+        /* #spell-reveal-overlay.clickable { pointer-events: auto; cursor: pointer; } */ /* 自動遷移のため不要に */
+
         #spell-reveal-content { display: flex; }
 
         .revealed-char {
-            font-size: 6rem; font-weight: 900;
+            /* 画面幅に応じて文字サイズを可変にする (最小2rem, 推奨12vw, 最大6rem) */
+            font-size: clamp(2rem, 12vw, 6rem);
+            font-weight: 900;
+            white-space: pre; /* 文字間のスペースを維持 */
             color: var(--primary-color);
             text-shadow: 0 0 25px var(--primary-color);
             opacity: 0; /* 初期状態は透明 */
-            position: relative; /* アニメーションのために必要 */
-            animation: revealAndScroll 4s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
+            animation: revealAndScroll 3s forwards cubic-bezier(0.25, 0.1, 0.25, 1);
         }
 
         @keyframes revealAndScroll {
-            0% { transform: translateX(100vw); opacity: 0; }
-            20%, 60% { transform: translateX(0); opacity: 1; }
-            100% { transform: translateX(-100vw); opacity: 0; }
+            0%    { transform: translateX(60vw); opacity: 0; }
+            20%   { transform: translateX(0); opacity: 1; }
+            80%   { transform: translateX(0); opacity: 1; }
+            100%  { transform: translateX(-60vw); opacity: 0; }
         }
     </style>
 </head>
@@ -507,19 +511,24 @@
                 span.className = 'revealed-char';
                 span.textContent = char;
                 // 各文字が順番にアニメーションを開始するように遅延を設定
-                span.style.animationDelay = `${index * 0.2}s`;
+                span.style.animationDelay = `${index * 0.15}s`;
                 revealContent.appendChild(span);
             });
 
             revealOverlay.classList.add('show');
 
+
             // アニメーションが完了した後にクリック可能にする
+            const totalAnimationTime = (LETTERS.length - 1) * 200 + 3000; // (文字数-1 * 遅延) + アニメーション時間
             setTimeout(() => {
-                revealOverlay.onclick = () => {
-                    resultOverlay.classList.add('show');
-                };
-            }, LETTERS.length * 200 + 4000); // (文字数 * 遅延) + アニメーション時間
+                // アニメーション完了後、自動で結果画面に遷移
+                revealOverlay.classList.remove('show');
+                resultOverlay.classList.add('show');
+            }, totalAnimationTime);
         }
+
+
+
 
         window.onload = init;
         window.onresize = () => {};
