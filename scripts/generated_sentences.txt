@@ -1,0 +1,660 @@
+WORD: ABOLISH EN: ___ nuclear weapons. JP: 核兵器を廃止する。 EN: The government must ___ this law. JP: 政府はこの法律を廃止しなければならない。
+WORD: ABOVE EN: The temperature is ___ average. JP: 気温は平均より上だ。 EN: The sign is placed ___ the door. JP: その看板はドアの上に置かれている。
+WORD: ABRIDGED EN: I read the ___ version. JP: 私は要約版を読んだ。 EN: This is an ___ edition of the novel. JP: これは小説の要約版です。
+WORD: ABRUPT EN: There was an ___ change in plans. JP: 計画が突然変更された。 EN: His ___ manner upset her. JP: 彼のぶっきらぼうな態度が彼女を怒らせた。
+WORD: ABRUPTLY EN: The meeting ended ___. JP: 会議は不意に終わった。 EN: The car stopped ___. JP: 車は突然停止した。
+WORD: ABUNDANT EN: Fish is ___ in this region. JP: この地域には魚が豊富だ。 EN: They have an ___ supply of water. JP: 彼らは十分な水の供給がある。
+WORD: ACCOMMODATE EN: This hall can ___ 500 guests. JP: このホールは500人の客を収容できる。 EN: We will ___ your request. JP: あなたの要望に対応します。
+WORD: ACCORDING TO EN: ___ the news, it will rain. JP: ニュースによれば、雨が降るだろう。 EN: You should act ___ the rules. JP: ルールに従って行動すべきだ。
+WORD: ACQUIRE EN: We must ___ new knowledge. JP: 私たちは新しい知識を習得しなければならない。 EN: She will ___ the needed skills. JP: 彼女は必要なスキルを習得するだろう。
+WORD: ACQUISITION EN: Language ___ takes time. JP: 言語の習得には時間がかかる。 EN: It was a profitable ___. JP: それは儲かる買収だった。
+WORD: ACUTE EN: He felt an ___ pain. JP: 彼は鋭い痛みを感じた。 EN: There is an ___ shortage of doctors. JP: 医師が深刻に不足している。
+WORD: ADAMANT EN: She remained ___ about her decision. JP: 彼女は自分の決定について断固とした態度を崩さなかった。 EN: He was ___ that he was right. JP: 彼は自分が正しいと譲らなかった。
+WORD: ADDICTION EN: He overcame his drug ___. JP: 彼は麻薬中毒を克服した。 EN: Internet ___ is a serious issue. JP: インターネット中毒は深刻な問題だ。
+WORD: ADEQUATE EN: The food supply is ___. JP: 食糧供給は十分だ。 EN: She has ___ experience for the job. JP: 彼女はその仕事に十分な経験を持っている。
+WORD: ADEQUATELY EN: You must be paid ___. JP: あなたは十分に支払われなければならない。 EN: The job was not done ___. JP: その仕事は十分には行われなかった。
+WORD: ADMINISTER EN: They ___ the test scores. JP: 彼らはテストの点数を管理する。 EN: A nurse will ___ the medicine. JP: 看護師が薬を投与するだろう。
+WORD: ADOLESCENCE EN: He struggled through ___. JP: 彼は青年期を乗り越えるのに苦労した。 EN: The changes occur in ___. JP: その変化は青年期に起こる。
+WORD: ADOLESCENT EN: She is an ___. JP: 彼女は思春期の若者だ。 EN: ___ behavior is often difficult. JP: 思春期の行動はしばしば難しい。
+WORD: ADVOCATE EN: She is a strong ___ for change. JP: 彼女は変化の強力な支持者だ。 EN: They ___ peace and justice. JP: 彼らは平和と正義を主張する。
+WORD: AFFLUENT EN: They live in an ___ area. JP: 彼らは裕福な地域に住んでいる。 EN: He comes from an ___ family. JP: 彼は裕福な家庭の出身だ。
+WORD: AGAINST EN: We are fighting ___ poverty. JP: 私たちは貧困と闘っている。 EN: The decision was ___ my wishes. JP: その決定は私の望みに反していた。
+WORD: ALIENATE EN: His actions may ___ his friends. JP: 彼の行動は友人を疎遠にするかもしれない。 EN: Policies that ___ voters should be avoided. JP: 有権者を遠ざける政策は避けるべきだ。
+WORD: ALLEGE EN: The report ___ fraud. JP: その報告書は詐欺を主張している。 EN: They ___ that he lied. JP: 彼らは彼が嘘をついたと主張する。
+WORD: ALLEGEDLY EN: He was ___ involved in the crime. JP: 伝えられるところによると、彼はその犯罪に関わっていた。 EN: The company ___ broke the law. JP: 伝えられるところによると、その会社は法律を破った。
+WORD: ALLEGIANCE EN: They swore ___ to the flag. JP: 彼らは国旗に忠誠を誓った。 EN: He questioned their ___. JP: 彼は彼らの忠誠心を疑った。
+WORD: ALLEVIATE EN: This medicine will ___ the pain. JP: この薬は痛みを緩和するだろう。 EN: We need to ___ the traffic problem. JP: 私たちは交通問題を緩和する必要がある。
+WORD: ALLOCATE EN: They will ___ funds for the project. JP: 彼らはプロジェクトに資金を割り当てるだろう。 EN: We need to ___ resources fairly. JP: 私たちは資源を公平に割り当てる必要がある。
+WORD: ALONG WITH EN: I sent the report ___ the data. JP: 私はデータと一緒にレポートを送った。 EN: She arrived ___ her brother. JP: 彼女は兄と一緒に到着した。
+WORD: ALTER EN: The tailor can ___ the suit. JP: 仕立て屋はそのスーツを直せる。 EN: You should ___ your eating habits. JP: あなたは食習慣を変えるべきだ。
+WORD: ALTERNATIVE EN: Is there an ___ solution? JP: 代わりの解決策はありますか。 EN: She found an ___ route home. JP: 彼女は家に帰る別のルートを見つけた。
+WORD: ALTITUDE EN: The plane reached a high ___. JP: 飛行機は高い高度に達した。 EN: We trained at high ___. JP: 私たちは高地で訓練した。
+WORD: AMBIGUITY EN: The contract contains some ___. JP: その契約にはいくつかの曖昧さが含まれている。 EN: We must avoid ___. JP: 私たちは曖昧さを避けなければならない。
+WORD: AMBIGUOUS EN: His answer was somewhat ___. JP: 彼の返事はいくらか曖昧だった。 EN: The sign was too ___ to follow. JP: その標識は曖昧すぎて従えなかった。
+WORD: AMENITIES EN: The hotel offers great ___. JP: そのホテルは素晴らしい設備を提供している。 EN: We enjoyed all the new ___. JP: 私たちは新しい設備すべてを楽しんだ。
+WORD: AMIABLE EN: She has an ___ personality. JP: 彼女は愛想の良い性格をしている。 EN: He is an ___ boss. JP: 彼はいやな顔をしない上司だ。
+WORD: AMONG EN: The children were playing ___ the trees. JP: 子供たちは木々の間で遊んでいた。 EN: Divide the cake ___ yourselves. JP: ケーキをあなたたち自身の間で分けなさい。
+WORD: AMPLIFY EN: We must ___ the sound. JP: 私たちは音を増幅しなければならない。 EN: The speakers will ___ the voices. JP: スピーカーが声を増幅するだろう。
+WORD: ANALYZE EN: Please ___ the survey results. JP: アンケート結果を分析してください。 EN: Scientists will ___ the data. JP: 科学者たちはデータを分析するだろう。
+WORD: ANTIQUE EN: She collects ___ furniture. JP: 彼女は骨董品の家具を集めている。 EN: The clock is a valuable ___. JP: その時計は貴重な骨董品だ。
+WORD: ANXIETY EN: He feels great ___ before tests. JP: 彼は試験の前に大きな不安を感じる。 EN: I suffer from exam ___. JP: 私は試験の不安に苦しんでいる。
+WORD: APPARENT EN: His confusion was ___. JP: 彼の混乱は明白だった。 EN: It is ___ that he won. JP: 彼が勝ったのは明らかだ。
+WORD: APPARENTLY EN: ___, he left early. JP: どうやら、彼は早く出発したらしい。 EN: The car, ___, broke down. JP: どうやら、車が故障したらしい。
+WORD: APPRAISAL EN: She received a positive ___. JP: 彼女は肯定的な評価を受けた。 EN: We need a property ___. JP: 私たちは不動産の評価が必要だ。
+WORD: APPRECIATE EN: I ___ your help very much. JP: あなたの助けにとても感謝します。 EN: We must ___ good health. JP: 私たちは健康に感謝しなければならない。
+WORD: APPREHEND EN: The police will ___ the suspect. JP: 警察は容疑者を逮捕するだろう。 EN: They attempted to ___ the thief. JP: 彼らは泥棒を逮捕しようとした。
+WORD: APPREHENSION EN: He felt growing ___ about the future. JP: 彼は将来に対する不安が募るのを感じた。 EN: The news caused much ___. JP: そのニュースは多くの不安を引き起こした。
+WORD: APPROPRIATE EN: Wear ___ clothes for the party. JP: パーティーには適切な服を着なさい。 EN: Now is the ___ time to act. JP: 今が行動するのに適切な時だ。
+WORD: ARROGANT EN: He is an ___ and rude person. JP: 彼はおごり高ぶっていて失礼な人だ。 EN: Avoid his ___ attitude. JP: 彼の尊大な態度は避けて。
+WORD: ARTIFICIAL EN: The flower is ___. JP: その花は造花だ。 EN: He used ___ flavoring. JP: 彼は人工の香料を使った。
+WORD: ASCERTAIN EN: We must ___ the facts. JP: 私たちは事実を確かめなければならない。 EN: They will ___ his guilt. JP: 彼らは彼の有罪を確かめるだろう。
+WORD: ASPECT EN: Consider every ___ of the problem. JP: 問題のあらゆる側面を考慮しなさい。 EN: This is a key ___ of the plan. JP: これは計画の重要な側面だ。
+WORD: ASPIRE EN: She ___ to be a doctor. JP: 彼女は医者になることを熱望している。 EN: We should ___ to greatness. JP: 私たちは偉大であることを熱望すべきだ。
+WORD: ASSEMBLE EN: Please ___ the product quickly. JP: 製品をすぐに組み立ててください。 EN: We will ___ a team for the task. JP: 私たちはその仕事のためにチームを集めるだろう。
+WORD: ASSERT EN: He needs to ___ his rights. JP: 彼は自分の権利を主張する必要がある。 EN: She dared to ___ her opinion. JP: 彼女はあえて自分の意見を断言した。
+WORD: ASSESS EN: We must ___ the risks first. JP: 私たちはまずリスクを評価しなければならない。 EN: They will ___ his performance. JP: 彼らは彼の業績を評価するだろう。
+WORD: ASSET EN: Knowledge is a valuable ___. JP: 知識は貴重な財産だ。 EN: The company's main ___ is its staff. JP: その会社の主な資産はスタッフだ。
+WORD: ASSIGN EN: I will ___ you a new task. JP: あなたに新しい仕事を割り当てます。 EN: Please ___ the homework by Friday. JP: 宿題を金曜日までに課してください。
+WORD: ASSIMILATE EN: Immigrants often ___ into a new culture. JP: 移民はしばしば新しい文化に同化する。 EN: We need to ___ the new information. JP: 私たちは新しい情報を消化する必要がある。
+WORD: ASSIST EN: Can you ___ me with this box? JP: この箱を持つのを手伝ってくれますか。 EN: I will ___ the new manager. JP: 私は新しいマネージャーを補佐するつもりだ。
+WORD: ASSOCIATE EN: Do not ___ with bad people. JP: 悪い人々と付き合ってはいけない。 EN: I ___ success with hard work. JP: 私は成功を勤勉と関連づけて考える。
+WORD: ASSUME EN: Do not ___ the worst. JP: 最悪の事態を想定してはいけない。 EN: We ___ he is telling the truth. JP: 私たちは彼が真実を話していると仮定する。
+WORD: ASSURE EN: I ___ you I am fine. JP: 大丈夫だとあなたに保証します。 EN: His smile began to ___ her. JP: 彼の笑顔は彼女を安心させ始めた。
+WORD: ASTONISH EN: His skill will ___ the audience. JP: 彼の技術は観客を驚かせるだろう。 EN: She was ___ by the view. JP: 彼女はその眺めに驚いた。
+WORD: ATMOSPHERE EN: The room had a relaxed ___. JP: その部屋はリラックスした雰囲気を持っていた。 EN: Earth's ___ protects us. JP: 地球の大気は私たちを保護している。
+WORD: ATTACH EN: Please ___ the file to your email. JP: ファイルをあなたのメールに添付してください。 EN: She started to ___ importance to his words. JP: 彼女は彼の言葉に重要性を置き始めた。
+WORD: ATTAIN EN: You can ___ your goals. JP: あなたは目標を達成できる。 EN: It is difficult to ___ perfection. JP: 完璧を達成するのは難しい。
+WORD: ATTEMPT EN: I will ___ to finish the task. JP: 私はその仕事を終わらせることを試みるつもりだ。 EN: His first ___ failed completely. JP: 彼の最初の試みは完全に失敗した。
+WORD: ATTEND EN: Will you ___ the conference? JP: あなたはその会議に出席しますか。 EN: She did not ___ the class. JP: 彼女はその授業に出なかった。
+WORD: ATTRIBUTE EN: I ___ my success to luck. JP: 私は自分の成功を運のせいにする。 EN: We ___ this quote to him. JP: 私たちはこの引用句を彼のものだと考える。
+WORD: AUDIBLE EN: Her whisper was barely ___. JP: 彼女のささやきはかろうじて聞こえた。 EN: The sound was loud and ___. JP: その音は大きくて聞き取れた。
+WORD: AUGMENT EN: He needs to ___ his income. JP: 彼は収入を増やす必要がある。 EN: We will ___ the power supply. JP: 私たちは電力供給を増加させるだろう。
+WORD: AUTHENTIC EN: Is the document ___? JP: その文書は本物ですか。 EN: We seek ___ Japanese food. JP: 私たちは本物の日本食を探している。
+WORD: AUTHORITY EN: He has ___ over the staff. JP: 彼にはスタッフに対する権限がある。 EN: The local ___ issued a warning. JP: 地方当局が警告を発した。
+WORD: AUTHORIZE EN: Who will ___ this expense? JP: 誰がこの費用を許可しますか。 EN: We did not ___ the changes. JP: 私たちはその変更を許可しなかった。
+WORD: AUTOMATIC EN: The door is ___. JP: そのドアは自動だ。 EN: This is an ___ payment system. JP: これは自動支払いシステムだ。
+WORD: AUTONOMY EN: The region gained ___. JP: その地域は自治を獲得した。 EN: Workers desire greater ___. JP: 労働者はより大きな自律性を望んでいる。
+WORD: AUXILIARY EN: The ship has an ___ engine. JP: その船には補助エンジンがある。 EN: We hired some ___ staff. JP: 私たちは補助スタッフを数人雇った。
+WORD: AVAIL EN: All efforts were without ___. JP: すべての努力は無駄だった。 EN: His talents will ___ him little. JP: 彼の才能はほとんど役に立たないだろう。
+WORD: AVAILABLE EN: Is this book still ___? JP: この本はまだ利用可能ですか。 EN: The tickets are not ___. JP: チケットは入手できません。
+WORD: AVENUE EN: We drove down the main ___. JP: 私たちはメインストリートを車で下った。 EN: Consider every possible ___. JP: あらゆる可能な手段を検討しなさい。
+WORD: AVERT EN: She managed to ___ a crisis. JP: 彼女は何とか危機を回避した。 EN: He tried to ___ his gaze. JP: 彼は視線をそらそうとした。
+WORD: AVIATION EN: He works in the ___ industry. JP: 彼は航空業界で働いている。 EN: ___ safety is very important. JP: 航空安全は非常に重要だ。
+WORD: AVOID EN: I try to ___ eating meat. JP: 私は肉を食べるのを避けようとしている。 EN: Please ___ making mistakes. JP: 間違いを犯すのを避けてください。
+WORD: AWAIT EN: We ___ the test results anxiously. JP: 私たちはテスト結果を不安に待っている。 EN: Good fortune will ___ you. JP: 幸運があなたを待っているだろう。
+WORD: AWARD EN: She won a prestigious ___. JP: 彼女は権威ある賞を受賞した。 EN: They will ___ the prize next month. JP: 彼らは来月、その賞を授与するだろう。
+WORD: AWARE EN: I was not ___ of the danger. JP: 私は危険に気づいていなかった。 EN: She is fully ___ of her potential. JP: 彼女は自分の可能性を完全に認識している。
+WORD: AWE EN: The mountain inspired ___. JP: その山は畏敬の念を抱かせた。 EN: We looked at the stars in ___. JP: 私たちは星を畏敬の念をもって見上げた。
+WORD: AWKWARD EN: It was an ___ silence. JP: それは気まずい沈黙だった。 EN: She felt ___ standing alone. JP: 彼女は一人で立っていて居心地が悪く感じた。
+WORD: BANISH EN: They will ___ him from the country. JP: 彼らは彼を国から追放するだろう。 EN: We need to ___ all negative thoughts. JP: 私たちはすべてのネガティブな考えを払いのける必要がある。
+WORD: BANKRUPT EN: The company went ___ last year. JP: その会社は昨年破産した。 EN: He was declared ___. JP: 彼は破産宣告を受けた。
+WORD: BARELY EN: I can ___ see the sign. JP: 私はかろうじてその看板が見える。 EN: She ___ finished the race. JP: 彼女はかろうじてレースを終えた。
+WORD: BARGAIN EN: We struck a good ___. JP: 私たちは良い取引をした。 EN: The price was a real ___. JP: その価格は本当にお得だった。
+WORD: BARRIER EN: Language is a major ___. JP: 言葉は大きな障壁だ。 EN: The police set up a road ___. JP: 警察は道路にバリケードを設置した。
+WORD: BASIC EN: Learn the ___ rules first. JP: まず基本的なルールを学びなさい。 EN: Water is a ___ human need. JP: 水は人間にとって基本的な必要性だ。
+WORD: BASIS EN: We met on a daily ___. JP: 私たちは毎日会った。 EN: Trust is the ___ of friendship. JP: 信頼は友情の基礎だ。
+WORD: BEAR EN: I cannot ___ this pain. JP: 私はこの痛みに耐えられない。 EN: The tree did not ___ fruit. JP: その木は実を結ばなかった。
+WORD: BEHAVE EN: Please ___ yourselves in class. JP: 授業中は行儀よくしなさい。 EN: How does your new computer ___? JP: あなたの新しいコンピューターの動作はどうですか。
+WORD: BEHAVIOR EN: His ___ was quite rude. JP: 彼の振る舞いはかなり失礼だった。 EN: They study animal ___. JP: 彼らは動物の行動を研究する。
+WORD: BELIEF EN: He has a strong ___ in justice. JP: 彼は正義を強く信じている。 EN: My ___ is that she is right. JP: 私の信念では、彼女が正しい。
+WORD: COINCIDENCE EN: It was a strange ___. JP: それは奇妙な偶然の一致だった。 EN: By ___, we met again. JP: 偶然、私たちは再会した。
+WORD: COMMENCE EN: The trial will ___ shortly. JP: 裁判はまもなく開始される。 EN: We will ___ the meeting at noon. JP: 私たちは正午に会議を開始する。
+WORD: COMMERCIAL EN: This is a ___ enterprise. JP: これは商業的な事業だ。 EN: They showed a TV ___. JP: 彼らはテレビコマーシャルを流した。
+WORD: COMMIT EN: She chose to ___ to her job. JP: 彼女は自分の仕事に専念することを選んだ。 EN: Who did ___ this awful crime? JP: 誰がこの恐ろしい犯罪を犯したのか。
+WORD: COMPATIBLE EN: Are these two systems ___? JP: この二つのシステムは互換性がありますか。 EN: We are highly ___ friends. JP: 私たちは非常に気の合う友人だ。
+WORD: COMPEL EN: The law will ___ obedience. JP: 法律は服従を強制するだろう。 EN: He felt ___ to confess. JP: 彼は告白せざるを得ないと感じた。
+WORD: COMPENSATE EN: We must ___ him for his loss. JP: 私たちは彼の損失を補償しなければならない。 EN: The pay should ___ for the risk. JP: その給与はリスクに見合うべきだ。
+WORD: COMPLEX EN: It is a ___ problem to solve. JP: それは解決するのが複雑な問題だ。 EN: The machine is very ___. JP: その機械は非常に複雑だ。
+WORD: COMPOSER EN: He is a great French ___. JP: 彼は偉大なフランスの作曲家だ。 EN: Who is the ___ of this music? JP: この曲の作曲家は誰ですか。
+WORD: COMPREHENSIVE EN: The report is very ___. JP: その報告書は非常に包括的だ。 EN: We need a ___ review. JP: 私たちは包括的な見直しが必要だ。
+WORD: COMPULSORY EN: English is a ___ subject. JP: 英語は義務的な科目だ。 EN: School attendance is ___. JP: 学校への出席は義務だ。
+WORD: CONCENTRATE EN: You need to ___ on your work. JP: あなたは仕事に集中する必要がある。 EN: She tried to ___ her efforts. JP: 彼女は努力を集中させようとした。
+WORD: CONCERNED EN: I am very ___ about your health. JP: 私はあなたの健康を非常に心配している。 EN: The police are not ___ yet. JP: 警察はまだ関与していない。
+WORD: CONCISE EN: His summary was clear and ___. JP: 彼の要約は明確で簡潔だった。 EN: Please write a ___ answer. JP: 簡潔な回答を書いてください。
+WORD: CONDEMN EN: We ___ all violence. JP: 私たちはあらゆる暴力を非難する。 EN: The judge will ___ the prisoner. JP: 裁判官は囚人を非難するだろう。
+WORD: CONFIDENCE EN: She lacks ___ in herself. JP: 彼女は自分に自信がない。 EN: We spoke in strict ___. JP: 私たちは厳密な秘密（信頼）のもとに話した。
+WORD: CONFINE EN: They will ___ the patient to bed. JP: 彼らは患者をベッドに閉じ込めるだろう。 EN: Please ___ your comments to the topic. JP: コメントをトピックに限定してください。
+WORD: CONFIRM EN: Can you ___ the appointment? JP: 予約を確認してもらえますか。 EN: His actions ___ my doubts. JP: 彼の行動は私の疑念を裏付けた。
+WORD: CONFIRMATION EN: I need a written ___. JP: 私は書面による確認が必要だ。 EN: The news requires ___. JP: そのニュースは裏付けを必要とする。
+WORD: CONFLICT EN: There was a major ___ of interest. JP: 大きな利害の対立があった。 EN: The two reports ___. JP: その二つの報告は矛盾している。
+WORD: CONFRONT EN: It is time to ___ the issue. JP: その問題に直面する時が来た。 EN: You must ___ your fears. JP: あなたは恐れに立ち向かわなければならない。
+WORD: CONGENIAL EN: The atmosphere was ___. JP: 雰囲気は快適（気の合う）だった。 EN: He found the work ___. JP: 彼はその仕事が自分に合っていると感じた。
+WORD: CONSENSUS EN: We reached a clear ___. JP: 私たちは明確な合意に達した。 EN: There is no ___ on this matter. JP: この問題について合意はない。
+WORD: CONSEQUENTLY EN: He lost the key; ___, he was late. JP: 彼は鍵をなくした。その結果、遅れた。 EN: ___, profits rose sharply. JP: その結果として、利益は急増した。
+WORD: CONSERVE EN: We must ___ our natural resources. JP: 私たちは天然資源を保護しなければならない。 EN: Try to ___ energy daily. JP: 日々、エネルギーを節約するように努めなさい。
+WORD: CONSIDERABLE EN: It requires a ___ amount of effort. JP: それはかなりの量の努力を必要とする。 EN: She saved a ___ sum of money. JP: 彼女はかなりの額のお金を貯めた。
+WORD: CONSIST EN: The team will ___ of ten members. JP: チームは10人のメンバーから成るだろう。 EN: Happiness does not ___ of money. JP: 幸福はお金から成るわけではない。
+WORD: CONSISTENT EN: His story is totally ___. JP: 彼の話は完全に一貫している。 EN: We need to be ___ in our efforts. JP: 私たちは努力において一貫している必要がある。
+WORD: CONSPICUOUS EN: She wore a ___ red hat. JP: 彼女は目立つ赤い帽子をかぶっていた。 EN: His error was ___. JP: 彼の誤りは明白だった。
+WORD: CONSPIRACY EN: They denied the ___. JP: 彼らはその陰謀を否定した。 EN: There is a theory of ___. JP: 陰謀論がある。
+WORD: CONSPIRE EN: The men will ___ against the king. JP: 男たちは王に対して共謀するだろう。 EN: Everything seemed to ___ against me. JP: すべてが私に敵対しているように見えた。
+WORD: CONSTANTLY EN: She is ___ checking her phone. JP: 彼女は絶えず携帯をチェックしている。 EN: The climate is ___ changing. JP: 気候は絶えず変化している。
+WORD: CONSULT EN: You should ___ a doctor immediately. JP: すぐに医者に相談すべきだ。 EN: I need to ___ the manual. JP: 私はマニュアルを参照する必要がある。
+WORD: CONTAGIOUS EN: The disease is highly ___. JP: その病気は非常に伝染性が高い。 EN: Her laughter was ___. JP: 彼女の笑い声は伝染した。
+WORD: CONTEMPORARY EN: He is a ___ artist. JP: 彼は現代の芸術家だ。 EN: The building has a ___ design. JP: その建物は現代的なデザインをしている。
+WORD: CONTENTION EN: This is a point of ___. JP: これは論争の的だ。 EN: That was his main ___. JP: それが彼の主な主張だった。
+WORD: CONTRIBUTE EN: I want to ___ to the team. JP: 私はチームに貢献したい。 EN: Diet can ___ to good health. JP: 食事は健康に貢献することができる。
+WORD: CONTRIBUTION EN: Thank you for your ___. JP: あなたの貢献に感謝します。 EN: He made a huge ___ to science. JP: 彼は科学に多大な貢献をした。
+WORD: CONTROVERSIAL EN: It is a very ___ issue. JP: それは非常に議論を呼ぶ問題だ。 EN: The article was highly ___. JP: その記事は非常に物議をかもした。
+WORD: CONVENIENT EN: The store is very ___. JP: その店はとても便利だ。 EN: Is this a ___ time to talk? JP: 今は話すのに都合の良い時間ですか。
+WORD: CONVENTION EN: They broke with ___. JP: 彼らは慣習を破った。 EN: We attended the national ___. JP: 私たちは全国大会に出席した。
+WORD: CONVENTIONAL EN: He follows ___ wisdom. JP: 彼は従来の知恵に従う。 EN: It was a ___ approach. JP: それは従来の方法だった。
+WORD: CONVERSION EN: We need currency ___. JP: 私たちは通貨の交換が必要だ。 EN: The ___ process is complex. JP: その変換プロセスは複雑だ。
+WORD: CONVINCE EN: I could not ___ her. JP: 私は彼女を納得させることができなかった。 EN: Try to ___ them of your innocence. JP: 彼らにあなたの無実を信じさせなさい。
+WORD: COOPERATE EN: We must ___ to finish this. JP: これを終えるために協力しなければならない。 EN: They refused to ___ with the police. JP: 彼らは警察への協力を拒否した。
+WORD: CORPORATION EN: He works for a big ___. JP: 彼は大企業で働いている。 EN: It is a global ___. JP: それは国際的な企業だ。
+WORD: CRAFT EN: She mastered the ___. JP: 彼女はその技術を習得した。 EN: They sell local ___. JP: 彼らは地元の工芸品を売っている。
+WORD: CREDIBILITY EN: His story lacks ___. JP: 彼の話は信頼性に欠ける。 EN: You must protect your ___. JP: あなたは自分の信用を守らなければならない。
+WORD: CRISIS EN: The country faces an economic ___. JP: その国は経済危機に直面している。 EN: This is a time of ___. JP: 今は危機の時だ。
+WORD: CRITICAL EN: He gave a ___ assessment. JP: 彼は批判的な評価を下した。 EN: Water is ___ for survival. JP: 水は生存にとって極めて重要だ。
+WORD: CRITICISM EN: She ignored the harsh ___. JP: 彼女は厳しい批判を無視した。 EN: The play received much ___. JP: その劇は多くの批判を受けた。
+WORD: CRUCIAL EN: This step is ___. JP: このステップは極めて重要だ。 EN: Timing is ___ in this game. JP: このゲームではタイミングが非常に重要だ。
+WORD: CRUELTY EN: He reported animal ___. JP: 彼は動物虐待を通報した。 EN: We oppose human ___. JP: 私たちは人間の残酷さに反対する。
+WORD: CULPRIT EN: The police caught the ___. JP: 警察は犯人を捕まえた。 EN: Who is the real ___ here? JP: ここでの真犯人は誰ですか。
+WORD: CULTIVATE EN: We must ___ good habits. JP: 私たちは良い習慣を育まなければならない。 EN: Farmers ___ the land. JP: 農家は土地を耕作する。
+WORD: CULTURE EN: We learned about local ___. JP: 私たちは地元の文化について学んだ。 EN: He is interested in Japanese ___. JP: 彼は日本文化に興味がある。
+WORD: CURRENTLY EN: The office is ___ closed. JP: 現在、オフィスは閉まっている。 EN: She is ___ working on a book. JP: 彼女は現在、本を執筆中だ。
+WORD: DEBATE EN: We had a lively ___. JP: 私たちは活発な討論をした。 EN: The topic is open to ___. JP: その話題は議論の余地がある。
+WORD: DEBT EN: The company is deep in ___. JP: その会社は多額の借金を抱えている。 EN: I repaid the entire ___. JP: 私は借金全額を返済した。
+WORD: DECENT EN: He earns a ___ wage. JP: 彼はまともな賃金を稼いでいる。 EN: Show some ___ manners. JP: ある程度の礼儀作法を見せなさい。
+WORD: DECIPHER EN: Can you ___ this old letter? JP: この古い手紙を解読できますか。 EN: Scientists will ___ the code. JP: 科学者たちはその暗号を解読するだろう。
+WORD: DEFECTIVE EN: The goods were ___. JP: その商品は欠陥品だった。 EN: We returned the ___ part. JP: 私たちは欠陥のある部品を返品した。
+WORD: DEFICIT EN: The budget has a large ___. JP: その予算には大きな赤字がある。 EN: They plan to reduce the ___. JP: 彼らは赤字を減らす計画だ。
+WORD: DEFINE EN: How would you ___ success? JP: あなたは成功をどのように定義しますか。 EN: We must ___ the term clearly. JP: 私たちはその用語を明確に定義しなければならない。
+WORD: DEFINITE EN: We need a ___ plan. JP: 私たちは明確な計画が必要だ。 EN: I saw a ___ improvement. JP: 私は明確な改善を見た。
+WORD: DEFINITION EN: The ___ of the word is complex. JP: その単語の定義は複雑だ。 EN: I looked up the ___. JP: 私は定義を調べた。
+WORD: DELIBERATE EN: The jury will now ___. JP: 陪審は今から熟考する。 EN: It was a ___ lie. JP: それは意図的な嘘だった。
+WORD: DEMOCRATIC EN: They held a ___ election. JP: 彼らは民主的な選挙を行った。 EN: We live in a ___ society. JP: 私たちは民主的な社会に住んでいる。
+WORD: DEPICT EN: The painting ___ a battle. JP: その絵画は戦いを描写している。 EN: How does the book ___ the hero? JP: その本はヒーローをどのように描いていますか。
+WORD: DEPOT EN: The bus pulled into the ___. JP: バスは車庫に入った。 EN: We store supplies at the ___. JP: 私たちは貯蔵庫に備蓄品を保管する。
+WORD: DESERTED EN: The streets were completely ___. JP: 通りは完全に人通りの絶えていた。 EN: They found a ___ village. JP: 彼らは無人の村を見つけた。
+WORD: DESERVE EN: You ___ to win this prize. JP: あなたはこの賞に値する。 EN: She did not ___ that treatment. JP: 彼女はそのような扱いを受けるに値しなかった。
+WORD: DESPERATE EN: He made a ___ attempt to escape. JP: 彼は必死の脱出を試みた。 EN: The team is in ___ need of funds. JP: チームは資金を必死に必要としている。
+WORD: DESPITE EN: ___ the rain, we went out. JP: 雨にもかかわらず、私たちは外出しました。 EN: She succeeded ___ the difficulty. JP: 困難にもかかわらず、彼女は成功した。
+WORD: DEVASTATE EN: The flood will ___ the town. JP: 洪水は町を破壊するだろう。 EN: The news would ___ him. JP: そのニュースは彼を打ちのめすだろう。
+WORD: DEXTEROUS EN: She is very ___ with her hands. JP: 彼女は手がとても器用だ。 EN: A good surgeon must be ___. JP: 優秀な外科医は器用でなければならない。
+WORD: DIAGNOSE EN: The doctor will ___ the illness. JP: 医者がその病気を診断するだろう。 EN: It is difficult to ___ the problem. JP: その問題を診断するのは難しい。
+WORD: DICTATE EN: You cannot ___ what I do. JP: あなたは私が何をすべきか指図できない。 EN: The terms of the treaty were ___. JP: 条約の条項が口述された。
+WORD: DILIGENTLY EN: He worked ___ on the project. JP: 彼はそのプロジェクトに勤勉に取り組んだ。 EN: She studied ___ for the exam. JP: 彼女は試験のために熱心に勉強した。
+WORD: DISCOMFORT EN: The heat caused great ___. JP: 暑さは大きな不快感を引き起こした。 EN: He tried to hide his ___. JP: 彼は不快感を隠そうとした。
+WORD: DISCREETLY EN: He left the room ___. JP: 彼は慎重に部屋を去った。 EN: Please handle the matter ___. JP: その問題を慎重に処理してください。
+WORD: DISGUISE EN: He wore a clever ___. JP: 彼は巧妙な変装をしていた。 EN: She tried to ___ her voice. JP: 彼女は声を隠そうとした。
+WORD: DISMISS EN: The court will ___ the case. JP: 裁判所はその訴訟を却下するだろう。 EN: He was ___ from his job. JP: 彼は仕事を解雇された。
+WORD: DISPERSE EN: The crowd began to ___. JP: 群衆は分散し始めた。 EN: Police used tear gas to ___ the mob. JP: 警察は暴徒を追い散らすために催涙ガスを使用した。
+WORD: DISTINCTION EN: There is no clear ___ between them. JP: それらの間に明確な区別はない。 EN: He graduated with high ___. JP: 彼は優秀な成績で卒業した。
+WORD: DISTINGUISH EN: Can you ___ red from green? JP: 赤と緑を区別できますか。 EN: His work will ___ him from others. JP: 彼の仕事は彼を他の人たちと区別するだろう。
+WORD: DISTRIBUTE EN: Please ___ the papers to everyone. JP: みんなにその書類を配ってください。 EN: We need to ___ the wealth fairly. JP: 私たちは富を公平に分配する必要がある。
+WORD: DISTURB EN: Do not ___ the sleeping baby. JP: 眠っている赤ちゃんを邪魔しないでください。 EN: The noise did not ___ me. JP: その騒音は私を邪魔しなかった。
+WORD: DOCILE EN: The horse was gentle and ___. JP: その馬は優しくて従順だった。 EN: She is a quiet and ___ child. JP: 彼女は静かで従順な子供だ。
+WORD: DOWNFALL EN: His arrogance caused his ___. JP: 彼の傲慢さが彼の没落を引き起こした。 EN: The government's ___ was swift. JP: 政府の崩壊は速かった。
+WORD: DOWNSIZE EN: The company decided to ___. JP: その会社は規模を縮小することを決定した。 EN: We need to ___ the car. JP: 私たちは車のサイズを小さくする必要がある。
+WORD: DRAMATIC EN: There was a ___ change in policy. JP: 政策に劇的な変更があった。 EN: He is prone to ___ gestures. JP: 彼は劇的なジェスチャーをしがちだ。
+WORD: DRASTIC EN: We must take ___ action now. JP: 今すぐ思い切った行動をとるべきだ。 EN: The company implemented ___ cuts. JP: 会社は思い切った削減を実施した。
+WORD: DRASTICALLY EN: The rules were changed ___. JP: ルールは劇的に変更された。 EN: Sales have fallen ___. JP: 売上が劇的に減少した。
+WORD: DUBIOUS EN: I have a ___ feeling about this. JP: これについて疑わしい予感がする。 EN: His claims are highly ___. JP: 彼の主張は非常に疑わしい。
+WORD: DUE EN: The rent is ___ next week. JP: 家賃は来週が支払期日だ。 EN: The delay was ___ to the storm. JP: 遅延は嵐が原因だった。
+WORD: DURING EN: She slept ___ the entire film. JP: 彼女は映画全体の間眠っていた。 EN: We met ___ his stay in Tokyo. JP: 私たちは彼が東京に滞在中に会った。
+WORD: ECONOMY EN: The nation's ___ is growing fast. JP: その国の経済は急速に成長している。 EN: He prefers speed and ___. JP: 彼はスピードと経済性を好む。
+WORD: EFFECTIVE EN: This is the most ___ method. JP: これが最も効果的な方法だ。 EN: The law becomes ___ tomorrow. JP: その法律は明日から有効になる。
+WORD: EFFICIENT EN: We need a more ___ process. JP: 私たちにはより効率的なプロセスが必要だ。 EN: She is a very ___ worker. JP: 彼女は非常に効率的な働き手だ。
+WORD: EJECT EN: Security guards will ___ the guest. JP: 警備員がその客を追い出すだろう。 EN: Press this button to ___ the disk. JP: ディスクを取り出すにはこのボタンを押してください。
+WORD: ELASTIC EN: The material is strong and ___. JP: その素材は丈夫で弾力性がある。 EN: This rope is highly ___. JP: このロープは非常に伸縮性がある。
+WORD: ELECT EN: They will ___ a new leader soon. JP: 彼らはすぐに新しいリーダーを選出するだろう。 EN: We need to ___ honest officials. JP: 私たちは正直な公務員を選出する必要がある。
+WORD: ELIMINATE EN: We must ___ all possible errors. JP: 私たちは考えられるすべての誤りを排除しなければならない。 EN: This diet will ___ toxins. JP: この食事療法は毒素を排除するだろう。
+WORD: ELOQUENT EN: She gave an ___ speech. JP: 彼女は雄弁な演説をした。 EN: He is an ___ speaker. JP: 彼は雄弁な話し手だ。
+WORD: ELOQUENTLY EN: He spoke very ___ about his plans. JP: 彼は自分の計画について非常に雄弁に話した。 EN: She argued her point ___. JP: 彼女は自分の論点を雄弁に主張した。
+WORD: EMBODY EN: The structure will ___ modern design. JP: その構造はモダンデザインを体現するだろう。 EN: This act ___ his true feelings. JP: この行為は彼の本当の気持ちを具現化している。
+WORD: EMERGE EN: The sun will ___ from the clouds. JP: 太陽が雲間から現れるだろう。 EN: New facts have begun to ___. JP: 新しい事実が現れ始めた。
+WORD: EMOTION EN: She showed little ___. JP: 彼女はほとんど感情を見せなかった。 EN: Anger is a strong ___. JP: 怒りは強い感情だ。
+WORD: EMPATHETIC EN: A nurse should be ___. JP: 看護師は共感的であるべきだ。 EN: He gave an ___ response. JP: 彼は共感的な反応を示した。
+WORD: EMPHASIZE EN: We must ___ the importance of safety. JP: 私たちは安全の重要性を強調しなければならない。 EN: The report needs to ___ profits. JP: 報告書は利益を強調する必要がある。
+WORD: EMPHATICALLY EN: He stated his opinion ___. JP: 彼は自分の意見を断固として述べた。 EN: She denied the charge ___. JP: 彼女はその告発を断固として否定した。
+WORD: ENCOUNTER EN: I had an unusual ___ today. JP: 私は今日珍しい遭遇をした。 EN: We will ___ strong opposition. JP: 私たちは強い反対に直面するだろう。
+WORD: ENDORSEMENT EN: The product received a celebrity ___. JP: その製品は有名人の支持を受けた。 EN: I need your ___ on this form. JP: このフォームにあなたの承認が必要です。
+WORD: ENERGY EN: We conserve solar ___. JP: 私たちは太陽エネルギーを節約する。 EN: She put a lot of ___ into the work. JP: 彼女はその仕事に多くの活力を注いだ。
+WORD: ENHANCE EN: This will ___ the flavor. JP: これは風味を高めるだろう。 EN: We must ___ security measures. JP: 私たちは安全対策を強化しなければならない。
+WORD: ENLIGHTENED EN: She has an ___ viewpoint. JP: 彼女は啓発された見解を持っている。 EN: We seek an ___ solution. JP: 私たちは啓発された解決策を求めている。
+WORD: ENORMOUS EN: The company made an ___ profit. JP: 会社は莫大な利益を上げた。 EN: We saw an ___ crowd. JP: 私たちは巨大な群衆を見た。
+WORD: ENROLL EN: I plan to ___ in college. JP: 私は大学に入学するつもりだ。 EN: You can ___ online today. JP: 今日オンラインで登録できます。
+WORD: ENTANGLE EN: The rope began to ___ the boat. JP: ロープがボートに絡まり始めた。 EN: Don't ___ yourself in their conflict. JP: 彼らの対立に巻き込まれないで。
+WORD: ENTERPRISE EN: He started a new business ___. JP: 彼は新しい事業を始めた。 EN: This is a government ___. JP: これは政府の事業だ。
+WORD: EQUITY EN: We strive for social ___. JP: 私たちは社会の公平を目指す。 EN: The judge ruled with ___. JP: 裁判官は公平に基づいて裁決した。
+WORD: ERRONEUOUSLY EN: The date was ___ recorded. JP: 日付は誤って記録された。 EN: He was ___ accused of theft. JP: 彼は誤って窃盗で告発された。
+WORD: ESTABLISH EN: We need to ___ a new office. JP: 私たちは新しい事務所を設立する必要がある。 EN: Scientists will ___ the cause. JP: 科学者たちが原因を究明するだろう。
+WORD: ESTIMATE EN: Can you ___ the total cost? JP: 総費用を見積もることができますか。 EN: This is a rough ___. JP: これは概算の見積もりだ。
+WORD: ETHNIC EN: The city has great ___ diversity. JP: その都市には大きな民族の多様性がある。 EN: They discussed ___ conflicts. JP: 彼らは民族紛争について議論した。
+WORD: EVACUATE EN: We must ___ the building now. JP: 私たちは今すぐ建物を避難させなければならない。 EN: Firefighters helped to ___ the area. JP: 消防士は地域の避難を手伝った。
+WORD: EVALUATE EN: The manager will ___ his work. JP: マネージャーが彼の仕事を評価するだろう。 EN: We need to ___ the risks involved. JP: 私たちは関わるリスクを評価する必要がある。
+WORD: EVAPORATE EN: The water will quickly ___ in the heat. JP: 熱で水はすぐに蒸発するだろう。 EN: Our hope began to ___. JP: 私たちの希望は消え始めた。
+WORD: EVASION EN: Tax ___ is a serious crime. JP: 脱税は重大な犯罪だ。 EN: His answer was mere ___. JP: 彼の答えは単なる回避だった。
+WORD: EVENTUALLY EN: We will ___ find a solution. JP: 私たちは最終的に解決策を見つけるだろう。 EN: She ___ confessed the truth. JP: 彼女は最終的に真実を告白した。
+WORD: EVIDENT EN: It was ___ that he lied. JP: 彼が嘘をついたのは明白だった。 EN: The strain on his face was ___. JP: 彼の顔の緊張は明らかだった。
+WORD: EVIDENTLY EN: ___, he is not interested. JP: 明らかに、彼は興味がない。 EN: The plan was ___, a failure. JP: その計画は明らかに失敗だった。
+WORD: EVOLUTION EN: We studied the theory of ___. JP: 私たちは進化論を研究した。 EN: The ___ of the internet is fast. JP: インターネットの進化は速い。
+WORD: EVOLVE EN: Birds ___ from dinosaurs. JP: 鳥は恐竜から進化した。 EN: The process will continue to ___. JP: そのプロセスは進化し続けるだろう。
+WORD: EXAGGERATE EN: Try not to ___ the dangers. JP: 危険を誇張しないようにしなさい。 EN: He tends to ___ his success. JP: 彼は自分の成功を誇張しがちだ。
+WORD: EXCEED EN: Do not ___ the speed limit. JP: 制限速度を超過してはいけない。 EN: Her performance will ___ expectations. JP: 彼女の業績は期待を上回るだろう。
+WORD: EXCEPT EN: Everyone was present ___ John. JP: ジョンを除いて全員が出席していた。 EN: We work every day ___ Sunday. JP: 私たちは日曜日を除いて毎日働く。
+WORD: EXCESSIVE EN: Avoid ___ use of salt. JP: 過度の塩の使用は避けなさい。 EN: He charges ___ fees. JP: 彼は法外な料金を請求する。
+WORD: EXHAUSTION EN: She suffered from mental ___. JP: 彼女は精神的な疲労に苦しんだ。 EN: The hikers collapsed from ___. JP: ハイカーたちは極度の疲労で倒れた。
+WORD: EXPAND EN: The company plans to ___ overseas. JP: 会社は海外に拡大する計画だ。 EN: Hot air will ___. JP: 熱い空気は膨張するだろう。
+WORD: EXPEDITION EN: They organized a research ___. JP: 彼らは調査遠征を組織した。 EN: The jungle ___ was dangerous. JP: ジャングルの探検は危険だった。
+WORD: EXPENDITURE EN: We need to reduce unnecessary ___. JP: 私たちは不必要な支出を減らす必要がある。 EN: The government increased military ___. JP: 政府は軍事支出を増やした。
+WORD: EXPERTISE EN: She has great ___ in coding. JP: 彼女はコーディングに優れた専門知識を持っている。 EN: We rely on his ___. JP: 私たちは彼の専門知識に頼っている。
+WORD: EXPIRE EN: My passport will ___ soon. JP: 私のパスポートは間もなく期限が切れる。 EN: The contract will ___ next month. JP: その契約は来月失効する。
+WORD: EXPLICIT EN: He gave ___ instructions. JP: 彼は明確な指示を与えた。 EN: The warning was quite ___. JP: その警告は非常に露骨だった。
+WORD: EXPLICITLY EN: He was told ___ not to go. JP: 彼は行かないようにと明示的に言われた。 EN: The rules ___ forbid smoking. JP: ルールは喫煙を明示的に禁止している。
+WORD: EXTENSIVE EN: She has ___ knowledge of history. JP: 彼女は歴史について広範な知識を持っている。 EN: The damage was ___. JP: 損害は広範囲にわたった。
+WORD: EXTENSIVELY EN: They traveled ___ in Asia. JP: 彼らはアジアを広範囲に旅行した。 EN: He researched the topic ___. JP: 彼はそのトピックを広範囲に調査した。
+WORD: EXTENT EN: We need to know the full ___. JP: 私たちは全容を知る必要がある。 EN: To some ___, I agree. JP: ある程度は、私も同意する。
+WORD: EXTINCTION EN: The species faces ___. JP: その種は絶滅に直面している。 EN: Human actions cause mass ___. JP: 人間の行動が大量絶滅を引き起こす。
+WORD: EXTREMELY EN: The weather is ___ cold today. JP: 今日の天気は極めて寒い。 EN: She is ___ talented. JP: 彼女は非常に才能がある。
+WORD: FACILITY EN: The school built a new ___. JP: 学校は新しい施設を建設した。 EN: They have a great manufacturing ___. JP: 彼らは素晴らしい製造施設を持っている。
+WORD: FAMINE EN: The country suffered a severe ___. JP: その国は深刻な飢饉に苦しんだ。 EN: Aid was sent to the ___ area. JP: 援助が飢饉地域に送られた。
+WORD: FASCINATION EN: The ocean holds a deep ___. JP: 海は深い魅力を保持している。 EN: She has a lifelong ___ with space. JP: 彼女は宇宙に生涯の魅了を抱いている。
+WORD: FATAL EN: The wound was ___. JP: その傷は致命的だった。 EN: He made a ___ mistake. JP: 彼は致命的な間違いを犯した。
+WORD: FEASIBLE EN: The plan is technically ___. JP: その計画は技術的に実現可能だ。 EN: We seek a ___ solution. JP: 私たちは実行可能な解決策を探している。
+WORD: FEATURE EN: This is a unique ___ of the product. JP: これはその製品のユニークな特徴だ。 EN: The movie will ___ two famous actors. JP: その映画は2人の有名俳優を主演させるだろう。
+WORD: FIRM EN: She stood on ___ ground. JP: 彼女は固い地面に立っていた。 EN: We maintain a ___ position. JP: 私たちは断固とした立場を維持する。
+WORD: FLATTER EN: He tried to ___ his boss. JP: 彼は上司にお世辞を言おうとした。 EN: Her words did not ___ me. JP: 彼女の言葉は私にお世辞を言わなかった。
+WORD: FLEXIBLE EN: We need a ___ working schedule. JP: 私たちは柔軟な勤務スケジュールが必要だ。 EN: The material is strong yet ___. JP: その素材は丈夫だが柔軟性がある。
+WORD: FLOCK EN: A ___ of birds flew over. JP: 鳥の群れが上空を飛んでいった。 EN: Tourists ___ to the city. JP: 観光客がその都市に群がる。
+WORD: FLUCTUATE EN: Stock prices often ___. JP: 株価はしばしば変動する。 EN: Temperature levels can ___. JP: 温度レベルは変動する可能性がある。
+WORD: FORESEE EN: We did not ___ this problem. JP: 私たちはこの問題を予見しなかった。 EN: Can you ___ the consequences? JP: あなたはその結果を予見できますか。
+WORD: FORGE EN: They worked to ___ a new alliance. JP: 彼らは新しい同盟を築き上げるために働いた。 EN: He tried to ___ a signature. JP: 彼は署名を偽造しようとした。
+WORD: FORMIDABLE EN: She is a ___ opponent. JP: 彼女は恐るべき敵だ。 EN: They faced a ___ challenge. JP: 彼らは手ごわい課題に直面した。
+WORD: FORTUNATE EN: I feel ___ to have your help. JP: あなたの助けがあって幸運だと感じる。 EN: You are ___ to be here. JP: あなたはここにいられて幸運だ。
+WORD: FOSTER EN: We try to ___ creativity. JP: 私たちは創造性を育成しようとしている。 EN: She wants to ___ a child. JP: 彼女は子供を里子として育てることを望んでいる。
+WORD: FRACTURE EN: He suffered a slight leg ___. JP: 彼は軽度の脚の骨折を負った。 EN: The bone will easily ___. JP: その骨は簡単に折れるだろう。
+WORD: FRAGILE EN: Handle the glass, it is ___. JP: ガラスを扱ってください、それは壊れやすいです。 EN: The whole agreement is very ___. JP: その合意全体は非常に不安定だ。
+WORD: FRICTION EN: There was a lot of ___ between them. JP: 彼らの間には多くの摩擦があった。 EN: Reducing ___ saves energy. JP: 摩擦を減らすことはエネルギーを節約する。
+WORD: FRUSTRATION EN: She felt deep ___ with the work. JP: 彼女はその仕事に深い欲求不満を感じた。 EN: We shared our sense of ___. JP: 私たちは欲求不満の感覚を共有した。
+WORD: FUND EN: We need to ___ the research. JP: 私たちはその研究に資金提供する必要がある。 EN: The government cut the school ___. JP: 政府は学校の資金を削減した。
+WORD: FUSS EN: Don't make such a big ___ over it. JP: そのことでそんなに大騒ぎしないで。 EN: There was a lot of ___ before the party. JP: パーティーの前に多くの騒ぎがあった。
+WORD: GENDER EN: We strive for ___ equality. JP: 私たちは男女平等をめざす。 EN: Please state your name and ___. JP: あなたの名前と性別を述べてください。
+WORD: GENERATE EN: We need to ___ more ideas. JP: 私たちはもっとアイデアを生み出す必要がある。 EN: This process can ___ electricity. JP: このプロセスは電気を生成できる。
+WORD: GENEROUS EN: He is a very ___ person. JP: 彼​​はとても気前の良い人だ。 EN: She made a ___ donation. JP: 彼女は気前の良い寄付をした。
+WORD: GLORIOUS EN: The victory was ___. JP: その勝利は栄光に満ちていた。 EN: We remember the ___ past. JP: 私たちは栄光ある過去を覚えている。
+WORD: GOVERN EN: Who will ___ the country next? JP: 次に誰がその国を統治するのか。 EN: Rules must ___ your actions. JP: ルールがあなたの行動を支配しなければならない。
+WORD: GRACE EN: She accepted the award with ___. JP: 彼女は優雅に賞を受け取った。 EN: He fell from ___. JP: 彼は失脚した。
+WORD: GRACIOUS EN: He gave a ___ reply. JP: 彼は丁寧な返事をした。 EN: She is a very ___ host. JP: 彼女はとても礼儀正しいホストだ。
+WORD: GRADUALLY EN: The temperature dropped ___. JP: 気温は徐々に下がった。 EN: He will ___ recover his health. JP: 彼は徐々に健康を回復するだろう。
+WORD: GREGARIOUS EN: Lions are ___ animals. JP: ライオンは群居性の動物だ。 EN: He is a very ___ person. JP: 彼は非常に社交的な人だ。
+WORD: GRIEVANCE EN: She filed a formal ___. JP: 彼女は正式な不満を申し立てた。 EN: The workers aired their ___. JP: 労働者たちは不平を表明した。
+WORD: GRIEVE EN: People still ___ the loss. JP: 人々はまだその喪失を悲しんでいる。 EN: She will ___ for her friend. JP: 彼女は友人を悼むだろう。
+WORD: GUILT EN: He felt a strong sense of ___. JP: 彼は強い罪悪感を感じた。 EN: The jury debated his ___. JP: 陪審員は彼の有罪について討論した。
+WORD: HAPHAZARDLY EN: Books were piled ___ on the floor. JP: 本は床にでたらめに積まれていた。 EN: The work was done ___. JP: その作業は無計画に行われた。
+WORD: HARMFUL EN: Smoking is ___ to health. JP: 喫煙は健康に有害だ。 EN: The substance is highly ___. JP: その物質は非常に有害だ。
+WORD: HARSH EN: He gave a ___ judgment. JP: 彼は厳しい判決を下した。 EN: The climate is extremely ___. JP: その気候は極めて厳しい。
+WORD: HARSHLY EN: The critics judged the movie ___. JP: 批評家たちはその映画を激しく批判した。 EN: He spoke to the child ___. JP: 彼はその子供に厳しく話した。
+WORD: HAUNT EN: The ghost is said to ___ the old house. JP: その幽霊は古い家に出没すると言われている。 EN: Old memories still ___ her. JP: 古い記憶がまだ彼女に取り憑いている。
+WORD: HAZARD EN: Smoking is a health ___. JP: 喫煙は健康上の危険要因だ。 EN: Watch out for the traffic ___. JP: 交通の危険に気を付けて。
+WORD: HEED EN: You should ___ her warning. JP: あなたは彼女の警告に注意を払うべきだ。 EN: They failed to ___ the safety advice. JP: 彼らは安全に関する助言に気を付けなかった。
+WORD: HERITAGE EN: We must protect our cultural ___. JP: 私たちは文化遺産を保護しなければならない。 EN: The town's ___ dates back centuries. JP: その町の遺産は何世紀も前に遡る。
+WORD: HILARIOUS EN: The joke was absolutely ___. JP: その冗談はとても面白かった。 EN: She told a ___ story. JP: 彼女は大変陽気な話をした。
+WORD: HOSPITALITY EN: Thank you for your warm ___. JP: 温かいもてなしをありがとう。 EN: They are famous for their ___. JP: 彼らはもてなしで有名だ。
+WORD: HUMILIATE EN: Don't ___ your younger sister. JP: あなたの妹に恥をかかせてはいけない。 EN: The defeat will ___ the team. JP: その敗北はチームに恥をかかせるだろう。
+WORD: HYBRID EN: The car has a ___ engine. JP: その車はハイブリッドエンジンを搭載している。 EN: This plant is a ___. JP: この植物は雑種だ。
+WORD: IDENTIFY EN: Can you ___ the owner? JP: 所有者を特定できますか。 EN: We must ___ the key issues. JP: 私たちは主要な問題を特定しなければならない。
+WORD: IDEOLOGY EN: He follows a specific political ___. JP: 彼は特定の政治的イデオロギーに従っている。 EN: This book discusses communist ___. JP: この本は共産主義のイデオロギーについて論じている。
+WORD: IGNORE EN: Don't ___ the warning signs. JP: 警告のサインを無視してはいけない。 EN: She chose to ___ his calls. JP: 彼女は彼の電話を無視することを選んだ。
+WORD: ILLUSION EN: It was a trick of ___. JP: それは目の錯覚だった。 EN: He suffered from the ___ of greatness. JP: 彼は偉大さの幻想に苦しんだ。
+WORD: ILLUSTRATE EN: This graph will ___ the trend. JP: このグラフはその傾向を例証するだろう。 EN: She used a story to ___ her point. JP: 彼女は自分の論点を説明するために話を使った。
+WORD: IMMEDIATE EN: We need an ___ response. JP: 私たちには即座の対応が必要だ。 EN: He is my ___ supervisor. JP: 彼は私の直属の上司だ。
+WORD: IMPENDING EN: They prepared for the ___ storm. JP: 彼らは差し迫った嵐に備えた。 EN: We feared an ___ disaster. JP: 私たちは差し迫った災害を恐れた。
+WORD: IMPLEMENT EN: We must ___ the new policy. JP: 私たちは新しい政策を実行しなければならない。 EN: They will ___ the plan next year. JP: 彼らは来年その計画を実行するだろう。
+WORD: IMPLICATION EN: What is the political ___? JP: 政治的な言外の意味は何ですか。 EN: The findings have huge ___. JP: その調査結果は大きな影響（言外の意味）を持つ。
+WORD: IMPLICITLY EN: He ___ agreed to the terms. JP: 彼は暗黙のうちにその条件に同意した。 EN: The message was ___ clear. JP: そのメッセージは暗黙のうちに明確だった。
+WORD: IMPOSING EN: It was an ___ sight. JP: それは堂々とした光景だった。 EN: The building looked very ___. JP: その建物は非常に威風堂々として見えた。
+WORD: IMPRACTICAL EN: The idea is totally ___. JP: そのアイデアは完全に非実用的だ。 EN: This plan is too ___ to work. JP: この計画は非実用的すぎて機能しない。
+WORD: IMPRESSIVE EN: She gave an ___ presentation. JP: 彼女は印象的なプレゼンテーションを行った。 EN: The results were quite ___. JP: その結果は非常に感銘を与えるものだった。
+WORD: INCENTIVE EN: The bonus is an extra ___. JP: ボーナスは追加の動機だ。 EN: We offer staff a great ___. JP: 私たちはスタッフに大きな動機付けを提供する。
+WORD: INCESSANTLY EN: The phone rang ___. JP: 電話が絶え間なく鳴った。 EN: He complained ___ about the food. JP: 彼は食事について絶えず不平を言った。
+WORD: INCREASINGLY EN: The work is ___ difficult. JP: その仕事はますます難しくなっている。 EN: It is becoming ___ clear. JP: それはますます明らかになってきている。
+WORD: INDEFINITELY EN: The meeting was postponed ___. JP: 会議は無期限に延期された。 EN: They stopped production ___. JP: 彼らは生産を無期限に停止した。
+WORD: INDIGENOUS EN: This is an ___ plant species. JP: これは原産の植物種だ。 EN: We study the ___ people's culture. JP: 私たちは先住民の文化を研究する。
+WORD: INDIGNANT EN: She was ___ at the unfairness. JP: 彼女はその不公平さに憤慨した。 EN: He gave an ___ reply. JP: 彼は憤慨した返答をした。
+WORD: INDIGNANTLY EN: She replied ___ to the accusation. JP: 彼女はその告発に憤慨して答えた。 EN: He walked out ___. JP: 彼は憤慨して立ち去った。
+WORD: INDISPENSABLE EN: Water is ___ for life. JP: 水は生命にとって不可欠だ。 EN: This tool is absolutely ___. JP: この道具は絶対的に不可欠だ。
+WORD: INDUCE EN: The medicine might ___ sleep. JP: その薬は眠気を誘発するかもしれない。 EN: Fear can ___ panic. JP: 恐怖はパニックを引き起こす可能性がある。
+WORD: INFECTIOUS EN: The disease is highly ___. JP: その病気は非常に感染性が高い。 EN: She has an ___ laugh. JP: 彼女は伝染性の笑い方をする。
+WORD: INFINITELY EN: The possibilities are ___. JP: 可能性は無限だ。 EN: He is ___ better than me. JP: 彼は私より無限に優れている。
+WORD: INFLUENTIAL EN: He is an ___ figure in politics. JP: 彼は政治において影響力のある人物だ。 EN: Her work was highly ___. JP: 彼女の作品は非常に影響力があった。
+WORD: INFRASTRUCTURE EN: The city needs better ___. JP: その都市はより良い社会基盤を必要としている。 EN: We invest in digital ___. JP: 私たちはデジタルインフラに投資する。
+WORD: INHERENT EN: There is an ___ risk in this job. JP: この仕事には本来備わっているリスクがある。 EN: The problem is ___ in the system. JP: その問題はシステムに内在している。
+WORD: INITIATE EN: We will ___ the plan tomorrow. JP: 私たちは明日その計画を開始する。 EN: Who will ___ the discussion? JP: 誰が議論を始めるのか。
+WORD: INITIATIVE EN: She took the ___. JP: 彼女が主導権を握った。 EN: We launched a new sales ___. JP: 私たちは新しい販売戦略（主導権）を開始した。
+WORD: INNATE EN: She has an ___ musical talent. JP: 彼女は生まれつきの音楽の才能を持っている。 EN: Courage is an ___ quality. JP: 勇気は生まれつき備わっている資質だ。
+WORD: INNOVATION EN: We encourage technical ___. JP: 私たちは技術革新を奨励する。 EN: The product shows great ___. JP: その製品は大きな革新を示している。
+WORD: INQUIRY EN: We received an ___ about the job. JP: 私たちはその仕事についての問い合わせを受けた。 EN: The police opened a serious ___. JP: 警察は深刻な調査を開始した。
+WORD: INSIDE EN: Leave your shoes ___ the door. JP: 靴をドアの内側に置いてください。 EN: The secret is hidden deep ___. JP: その秘密は奥深くに隠されている。
+WORD: INSIST EN: She will ___ on a refund. JP: 彼女は払い戻しを強く要求するだろう。 EN: They ___ that he attend. JP: 彼らは彼が出席することを主張する。
+WORD: INSTANTANEOUSLY EN: The light went out ___. JP: 明かりはすぐに消えた。 EN: The signal was sent ___. JP: その信号は瞬時に送信された。
+WORD: INTEGRITY EN: He is known for his ___. JP: 彼は誠実さで知られている。 EN: We doubt the system's ___. JP: 私たちはシステムの完全性を疑う。
+WORD: INTELLECTUAL EN: She has vast ___ potential. JP: 彼女は広大な知的潜在能力を持っている。 EN: The problem is purely ___. JP: その問題は純粋に知的なものだ。
+WORD: INTERFERE EN: Do not ___ with my work. JP: 私の仕事に干渉しないでください。 EN: His illness will ___ with his studies. JP: 彼の病気が彼の勉強を妨げるだろう。
+WORD: INTERVENE EN: The UN decided to ___. JP: 国連は介入することを決定した。 EN: I had to ___ in the argument. JP: 私はその議論に介入しなければならなかった。
+WORD: INTRICATE EN: The design was ___. JP: そのデザインは複雑だった。 EN: She wore an ___ pattern dress. JP: 彼女は複雑な模様のドレスを着ていた。
+WORD: INTRICATELY EN: The parts are ___ connected. JP: 部品は複雑に接続されている。 EN: The story is ___ woven. JP: その物語は複雑に織り込まれている。
+WORD: INTRINSIC EN: The painting has great ___ value. JP: その絵画は大きな本質的価値を持っている。 EN: Joy is an ___ human desire. JP: 喜びは本来備わっている人間の願望だ。
+WORD: INVALID EN: The ticket is now ___. JP: そのチケットはもう無効だ。 EN: His argument was legally ___. JP: 彼の主張は法的に無効だった。
+WORD: INVARIABLY EN: The train is ___ late. JP: その電車はいつも遅れる。 EN: Success ___ requires hard work. JP: 成功は常に勤勉さを必要とする。
+WORD: INVENT EN: Who did ___ the telephone? JP: 誰が電話を発明したのか。 EN: We need to ___ a new solution. JP: 私たちは新しい解決策を発明する必要がある。
+WORD: INVOLVE EN: The job will ___ travel. JP: その仕事は旅行を伴うだろう。 EN: How many people are ___? JP: 何人の人が関わっていますか。
+WORD: IRRITATING EN: The constant noise is ___. JP: 絶え間ない騒音はいらいらさせる。 EN: His constant humming is ___. JP: 彼の絶え間ない鼻歌はいらいらさせる。
+WORD: IRRITATION EN: He expressed his ___. JP: 彼は自分のいらだちを表明した。 EN: The rash caused skin ___. JP: その発疹は皮膚の炎症（いらだち）を引き起こした。
+WORD: ITINERARY EN: We reviewed the travel ___. JP: 私たちは旅行の旅程を確認した。 EN: Send me your detailed ___. JP: あなたの詳細な旅程を送ってください。
+WORD: JUDICIOUSLY EN: Use your time ___. JP: 時間を賢明に使いなさい。 EN: She invested her money ___. JP: 彼女は賢明に自分の資金を投資した。
+WORD: JUSTIFY EN: Nothing can ___ his actions. JP: 何も彼の行動を正当化することはできない。 EN: Can you ___ the expense? JP: その費用を正当化できますか。
+WORD: LANDSCAPE EN: We admired the beautiful ___. JP: 私たちは美しい風景を鑑賞した。 EN: The economic ___ is changing. JP: 経済の状況（風景）は変化している。
+WORD: LAUNCH EN: They will ___ a new product soon. JP: 彼らはまもなく新製品を発売する。 EN: We watched the rocket ___. JP: 私たちはロケットの打ち上げを見た。
+WORD: LEGIBLE EN: Your handwriting is barely ___. JP: あなたの手書き文字はかろうじて判読可能だ。 EN: Ensure the signature is ___. JP: 署名が判読可能であることを確認してください。
+WORD: LEGISLATION EN: New gun control ___ passed. JP: 新しい銃規制法が可決された。 EN: We debated the proposed ___. JP: 私たちは提案された法律制定について討論した。
+WORD: LIABILITY EN: The company has limited ___. JP: その会社は有限責任を負っている。 EN: He admitted his ___. JP: 彼は自分の責任を認めた。
+WORD: LIMITED EN: We have a very ___ budget. JP: 私たちには非常に限られた予算がある。 EN: Space is ___. JP: スペースは限られている。
+WORD: LOITER EN: Do not ___ near the entrance. JP: 入口付近でぶらぶらしてはいけない。 EN: Three men were seen ___ outside. JP: 三人の男性が外でぶらぶらしているのが見られた。
+WORD: LONG-TERM EN: We need a ___ strategy. JP: 私たちには長期的な戦略が必要だ。 EN: This is a ___ investment. JP: これは長期的な投資だ。
+WORD: MAGNET EN: This material acts as a ___. JP: この物質は磁石として機能する。 EN: The city is a ___ for tourists. JP: その都市は観光客にとっての魅力（磁石）だ。
+WORD: MAGNIFY EN: The lens will ___ the image. JP: そのレンズは画像を拡大するだろう。 EN: Don't ___ the problem. JP: 問題を誇張しないで。
+WORD: MAJORITY EN: The ___ of people agreed. JP: 大多数の人が同意した。 EN: She won by a small ___. JP: 彼女はわずかな多数で勝利した。
+WORD: MAMMAL EN: A whale is a large ___. JP: クジラは大きな哺乳類だ。 EN: Humans are also ___. JP: 人間も哺乳類だ。
+WORD: MANUAL EN: The work is completely ___. JP: その作業は完全に手作業だ。 EN: I read the instruction ___. JP: 私は取扱説明書（手引書）を読んだ。
+WORD: MARKET EN: The company entered the foreign ___. JP: その会社は外国市場に参入した。 EN: We will ___ the product next year. JP: 私たちは来年その製品を売り出す。
+WORD: MEADOW EN: We walked across the green ___. JP: 私たちは緑の牧草地を横切って歩いた。 EN: Flowers grew in the ___. JP: 花が牧草地に咲いていた。
+WORD: MEDITATE EN: I try to ___ every morning. JP: 私は毎朝瞑想しようとしている。 EN: She sat down to ___ silently. JP: 彼女は静かに瞑想するために座った。
+WORD: MERELY EN: It was ___ a suggestion. JP: それは単なる提案だった。 EN: He is ___ a child. JP: 彼は単なる子供だ。
+WORD: MIMIC EN: A parrot can ___ human speech. JP: オウムは人間の話し方をまねることができる。 EN: She tried to ___ his voice. JP: 彼女は彼の声をまねようとした。
+WORD: MODERNIZATION EN: The factory needs ___. JP: その工場は近代化が必要だ。 EN: We discussed the progress of ___. JP: 私たちは近代化の進捗について議論した。
+WORD: MODIFY EN: We must ___ the system. JP: 私たちはシステムを修正しなければならない。 EN: You can ___ the settings. JP: 設定を変更できます。
+WORD: MONOPOLY EN: They have a complete ___. JP: 彼らは完全な独占状態にある。 EN: The state maintains a ___. JP: 国家が独占を維持している。
+WORD: MONOTONOUS EN: The work became very ___. JP: その仕事は非常に単調になった。 EN: She listened to the ___ sound. JP: 彼女は単調な音を聞いた。
+WORD: MORAL EN: This story has a clear ___. JP: この物語には明確な教訓（道徳）がある。 EN: They debated the ___ issue. JP: 彼らは道徳的な問題について討論した。
+WORD: MOREOVER EN: It is cold; ___, it is raining. JP: 寒い。さらに、雨が降っている。 EN: She is smart and ___, very kind. JP: 彼女は賢く、その上、とても親切だ。
+WORD: MORTALITY EN: The infant ___ rate dropped. JP: 乳幼児の死亡率が低下した。 EN: They studied the causes of ___. JP: 彼らは死亡の原因を研究した。
+WORD: MUTUAL EN: We have a ___ friend. JP: 私たちには共通の友人がいる。 EN: Respect should be ___. JP: 尊敬は相互のものであるべきだ。
+WORD: MUTUALLY EN: They are ___ beneficial goals. JP: それらは相互に有益な目標だ。 EN: We ___ agreed on the price. JP: 私たちは相互に価格に同意した。
+WORD: NASTY EN: He has a ___ temper. JP: 彼には不快な気性がある。 EN: That bug looks ___. JP: あの虫は不快に見える。
+WORD: NECESSARILY EN: Rich people are not ___ happy. JP: 裕福な人が必ずしも幸せとは限らない。 EN: It does not ___ mean that. JP: それは必ずしもそう意味するわけではない。
+WORD: NEGLIGENCE EN: The accident was due to ___. JP: その事故は過失によるものだった。 EN: He was charged with ___. JP: 彼は過失で告発された。
+WORD: NEGOTIATE EN: We need to ___ the contract terms. JP: 私たちは契約条件を交渉する必要がある。 EN: They refused to ___. JP: 彼らは交渉を拒否した。
+WORD: NOBLE EN: It was a ___ act of sacrifice. JP: それは高潔な犠牲の行為だった。 EN: He came from a ___ family. JP: 彼は高貴な家柄の出身だった。
+WORD: NOMINATE EN: We will ___ her for president. JP: 私たちは彼女を大統領に推薦する。 EN: Who did you ___ for the award? JP: あなたは誰をその賞に指名しましたか。
+WORD: NOR EN: I don't like it, ___ does he. JP: 私はそれが好きではないし、彼も好きではない。 EN: It is neither right ___ wrong. JP: それは正しくもないし、間違ってもいない。
+WORD: NORM EN: This behavior is the ___. JP: この振る舞いが規範だ。 EN: It deviates from the social ___. JP: それは社会規範から逸脱している。
+WORD: NOTION EN: I reject that ___. JP: 私はその概念を拒否する。 EN: It is a strange ___. JP: それは奇妙な考え（概念）だ。
+WORD: NUISANCE EN: The noise is a public ___. JP: その騒音は公共の迷惑だ。 EN: He is a real ___. JP: 彼は本当に厄介な存在だ。
+WORD: NUTRIENT EN: This soil lacks ___. JP: この土壌には栄養素が欠けている。 EN: We need vital ___. JP: 私たちには不可欠な栄養素が必要だ。
+WORD: NUTRITIOUS EN: Vegetables are very ___. JP: 野菜は非常に栄養がある。 EN: Eat a ___ breakfast every day. JP: 毎日栄養のある朝食を食べなさい。
+WORD: OBEDIENT EN: He is an ___ and quiet child. JP: 彼は従順でおとなしい子供だ。 EN: Soldiers must be ___. JP: 兵士は従順でなければならない。
+WORD: OBJECTION EN: We raised a strong ___. JP: 私たちは強い異議を申し立てた。 EN: The lawyer made an ___. JP: 弁護士は異議を唱えた。
+WORD: OBLIGE EN: The law will ___ us to pay. JP: 法律は私たちに支払いを義務付けるだろう。 EN: I feel ___ to help him. JP: 私は彼を助ける義務があると感じる。
+WORD: OBLIVIOUS EN: She was ___ to the danger. JP: 彼女は危険に気づいていなかった。 EN: He remained ___ to her feelings. JP: 彼は彼女の気持ちに気づかないままだった。
+WORD: OBSOLETE EN: This equipment is now ___. JP: この機器はもう廃れている。 EN: That technology is nearly ___. JP: その技術はほぼ時代遅れだ。
+WORD: OBSTACLE EN: Fear is the greatest ___. JP: 恐怖が最大の障害だ。 EN: We faced an unexpected ___. JP: 私たちは予期せぬ障害に直面した。
+WORD: OBTAIN EN: You can ___ a visa easily. JP: あなたは簡単にビザを取得できる。 EN: We must ___ the necessary data. JP: 私たちは必要なデータを手に入れなければならない。
+WORD: OCCASIONAL EN: We see ___ bursts of fire. JP: 私たちは時折炎の噴出を見る。 EN: She makes ___ visits home. JP: 彼女は時々実家を訪れる。
+WORD: OCCUR EN: The change will ___ soon. JP: その変化はすぐに起こるだろう。 EN: When did the accident ___? JP: その事故はいつ起こりましたか。
+WORD: OPERATE EN: Can you ___ this machine? JP: あなたはこの機械を操作できますか。 EN: The hospital will ___ on him. JP: 病院は彼を手術するだろう。
+WORD: OPPOSE EN: I strongly ___ this new plan. JP: 私はこの新しい計画に強く反対する。 EN: They will ___ the merger. JP: 彼らは合併に反対するだろう。
+WORD: OPPOSITE EN: We live on the ___ side. JP: 私たちは反対側に住んでいる。 EN: Black is the ___ of white. JP: 黒は白の反対だ。
+WORD: ORGANISM EN: This is a single-celled ___. JP: これは単細胞生物だ。 EN: We study living ___. JP: 私たちは生きた生物を研究する。
+WORD: OTHERWISE EN: Study hard, ___ you will fail. JP: 熱心に勉強しなさい、さもなければ失敗するだろう。 EN: I believe it, unless proved ___. JP: 反証されない限り、私はそれを信じる。
+WORD: OUTRAGEOUS EN: That price is absolutely ___. JP: その価格は全くもってとんでもない。 EN: He made an ___ remark. JP: 彼​​はとんでもない発言をした。
+WORD: OUTSIDE EN: The dog is waiting ___ the door. JP: 犬はドアの外側で待っている。 EN: We must look ___ the box. JP: 私たちは常識の外側（枠外）を見る必要がある。
+WORD: OUTSTANDING EN: She gave an ___ performance. JP: 彼女は目覚ましい演技をした。 EN: Your bill has an ___ balance. JP: あなたの請求書には未払いの残高がある。
+WORD: OVERLOOK EN: The hotel rooms ___ the sea. JP: ホテルの部屋からは海が見下ろせる。 EN: Please ___ my small mistake. JP: 私の小さな間違いを見逃してください。
+WORD: OVERSEAS EN: He is moving ___ next month. JP: 彼は来月海外へ引っ越す。 EN: They deal with ___ markets. JP: 彼らは海外市場と取引している。
+WORD: OVERWHELMING EN: The response was ___. JP: 反応は圧倒的だった。 EN: She felt an ___ desire to quit. JP: 彼女は辞めたいという圧倒的な願望を感じた。
+WORD: OXYGEN EN: We need fresh ___ in here. JP: 私たちはここに新鮮な酸素が必要だ。 EN: Plants produce ___. JP: 植物は酸素を生成する。
+WORD: PARADIGM EN: This event caused a major ___ shift. JP: この出来事は大きなパラダイムシフトを引き起こした。 EN: We need a new business ___. JP: 私たちには新しいビジネスモデル（パラダイム）が必要だ。
+WORD: PARTICIPATE EN: You should ___ in the meeting. JP: あなたは会議に参加すべきだ。 EN: She chose not to ___ in the race. JP: 彼女はレースに参加しないことを選んだ。
+WORD: PARTICULARLY EN: I ___ enjoyed the ending. JP: 私は特にエンディングを楽しんだ。 EN: The weather is ___ cold today. JP: 今日の天気は特に寒い。
+WORD: PATIENT EN: Be ___ and wait for your turn. JP: 忍耐強くなって、あなたの番を待ちましょう。 EN: The doctor treated the ___ gently. JP: 医者は患者を優しく治療した。
+WORD: PENETRATE EN: The light could not ___ the dark. JP: 光は暗闇を貫通できなかった。 EN: The spies tried to ___ the office. JP: スパイは事務所に侵入しようとした。
+WORD: PERCEPTIBLE EN: The change was barely ___. JP: その変化はかろうじて知覚できた。 EN: The decline was not ___. JP: その衰退は感知できなかった。
+WORD: PERCEPTION EN: He has a deep ___ of art. JP: 彼は芸術に対する深い知覚を持っている。 EN: I suffer from visual ___. JP: 私は視覚の知覚に苦しんでいる。
+WORD: PERILOUS EN: They made a ___ journey. JP: 彼らは危険な旅をした。 EN: The mountain path is ___. JP: その山道は危険だ。
+WORD: PERMANENT EN: She wants a ___ job. JP: 彼女は恒久的な仕事を望んでいる。 EN: The stain left a ___ mark. JP: その染みは永久的な跡を残した。
+WORD: PERMIT EN: The law does not ___ smoking here. JP: 法律はここでの喫煙を許可していない。 EN: Do you have a work ___? JP: あなたは就労許可証を持っていますか。
+WORD: PERPETRATOR EN: Police are searching for the ___. JP: 警察は犯人を捜している。 EN: The ___ of the fraud escaped. JP: その詐欺の実行犯は逃亡した。
+WORD: PERSUADE EN: I could not ___ him to stay. JP: 私は彼を引き留めるよう説得できなかった。 EN: Try to ___ her to change her mind. JP: 彼女に考えを変えるよう説得しなさい。
+WORD: PHENOMENON EN: Global warming is a huge ___. JP: 地球温暖化は巨大な現象だ。 EN: We observed a strange ___. JP: 私たちは奇妙な現象を観察した。
+WORD: PIONEER EN: She was a ___ in medicine. JP: 彼女は医学の開拓者だった。 EN: We need to ___ new technologies. JP: 私たちは新しい技術を開拓する必要がある。
+WORD: PLAUSIBLE EN: His excuse sounds quite ___. JP: 彼の言い訳はかなりもっともらしく聞こえる。 EN: We need a ___ explanation. JP: 私たちにはもっともらしい説明が必要だ。
+WORD: PLAUSIBLY EN: He argued his point ___. JP: 彼は自分の論点をそれらしく主張した。 EN: She could ___ deny the charge. JP: 彼女はもっともらしくその告発を否定できた。
+WORD: PLEA EN: They made a desperate ___ for help. JP: 彼らは助けを求める必死の嘆願をした。 EN: The suspect entered a guilty ___. JP: 容疑者は有罪の答弁をした。
+WORD: PLEASANT EN: We had a very ___ journey. JP: 私たちはとても快適な旅をした。 EN: She has a ___ smile. JP: 彼女は感じの良い笑顔を持っている。
+WORD: PLUMBER EN: Call the ___ for the leak. JP: 水漏れのために配管工を呼びなさい。 EN: The ___ fixed the pipe. JP: 配管工がパイプを修理した。
+WORD: POLICY EN: The new tax ___ is controversial. JP: 新しい税制は物議を醸している。 EN: Our company has a strict refund ___. JP: 私たちの会社は厳格な返金方針がある。
+WORD: POLLUTANT EN: Car exhaust is a major ___. JP: 車の排気ガスは主要な汚染物質だ。 EN: We must reduce water ___. JP: 私たちは水質汚染物質を減らさなければならない。
+WORD: PORTRAY EN: The film will ___ her life. JP: その映画は彼女の人生を描写するだろう。 EN: How does the media ___ politicians? JP: メディアは政治家をどのように描写していますか。
+WORD: POTENTIAL EN: The job has great ___ for growth. JP: その仕事は成長の大きな潜在能力がある。 EN: She is a ___ leader. JP: 彼女は潜在的なリーダーだ。
+WORD: POVERTY EN: We must fight global ___. JP: 私たちは世界の貧困と戦わなければならない。 EN: The family lived in abject ___. JP: その家族は極度の貧困の中で暮らした。
+WORD: PRECEDE EN: The talk will ___ the dinner. JP: その講演は夕食に先行するだろう。 EN: A title should ___ the content. JP: タイトルは内容に先行すべきだ。
+WORD: PRECIOUS EN: Time is a ___ resource. JP: 時間は貴重な資源だ。 EN: She kept the ___ family heirlooms. JP: 彼女は貴重な家宝を保管した。
+WORD: PRECISE EN: Give me a ___ answer. JP: 正確な答えをください。 EN: The measurements must be ___. JP: 測定値は正確でなければならない。
+WORD: PRECISION EN: The machine works with great ___. JP: その機械は高い正確さで動作する。 EN: We need surgical ___. JP: 私たちは外科的な正確さが必要だ。
+WORD: PREJUDICE EN: Avoid racial ___. JP: 人種的偏見を避けなさい。 EN: She fought against sex ___. JP: 彼女は性差別（偏見）と闘った。
+WORD: PRESCRIBE EN: The doctor will ___ medicine. JP: 医者は薬を処方するだろう。 EN: The law ___ severe penalties. JP: 法律は厳しい罰則を規定する。
+WORD: PRESCRIPTION EN: I picked up my ___. JP: 私は処方箋を受け取った。 EN: Do you need a new ___? JP: 新しい処方箋が必要ですか。
+WORD: PRESERVE EN: We must ___ the rainforests. JP: 私たちは熱帯雨林を保護しなければならない。 EN: They work to ___ old customs. JP: 彼らは古い習慣を維持するために働いている。
+WORD: PRESTIGIOUS EN: He won a ___ award. JP: 彼は著名な賞を受賞した。 EN: She works at a ___ university. JP: 彼女は一流の大学で働いている。
+WORD: PRETEXT EN: He called on the ___ of business. JP: 彼はビジネスを口実として電話した。 EN: The argument was a mere ___. JP: その議論は単なる口実だった。
+WORD: PREVAIL EN: Justice will finally ___. JP: 正義は最終的に普及するだろう。 EN: The custom continues to ___. JP: その慣習は引き続き優勢だ。
+WORD: PREVALENT EN: That style is very ___ now. JP: そのスタイルは今とても普及している。 EN: The disease is ___ in this area. JP: その病気はこの地域に蔓延している。
+WORD: PREVIOUSLY EN: I was ___ unaware of the risk. JP: 私は以前そのリスクに気づいていなかった。 EN: She had ___ worked in Tokyo. JP: 彼女は以前、東京で働いていた。
+WORD: PRIMARILY EN: The issue is ___ economic. JP: その問題は主として経済的だ。 EN: We cater ___ to students. JP: 私たちはおもに学生を相手に商売をしている。
+WORD: PRIME EN: This is the ___ example. JP: これが最も重要な例だ。 EN: She is in the ___ of her career. JP: 彼女はキャリアの最盛期にある。
+WORD: PRINCIPAL EN: The ___ reason is the cost. JP: 主要な理由は費用だ。 EN: He is the school ___. JP: 彼は学校の校長だ。
+WORD: PRINCIPLE EN: He stood firm on his ___. JP: 彼は自分の原理を固く守った。 EN: The machine works on a simple ___. JP: その機械は単純な原理で動作する。
+WORD: PRIVILEGE EN: It is a great ___ to meet you. JP: あなたにお会いできて大変光栄だ（特権だ）。 EN: Free speech is a ___. JP: 言論の自由は特権だ。
+WORD: PROBABLE EN: The ___ cause is a short circuit. JP: ありそうな原因はショートだ。 EN: It is highly ___ that he will win. JP: 彼が勝つ可能性は非常に高い。
+WORD: PROCEDURE EN: Follow the correct safety ___. JP: 正しい安全手順に従いなさい。 EN: We have a standard appeal ___. JP: 私たちには標準的な控訴の手順がある。
+WORD: PROFICIENCY EN: He showed great ___ in English. JP: 彼は英語に優れた熟練度を示した。 EN: We test for language ___. JP: 私たちは言語の習熟度をテストする。
+WORD: PROFOUND EN: The book had a ___ effect on me. JP: その本は私に深遠な影響を与えた。 EN: He possesses ___ wisdom. JP: 彼は深遠な知恵を持っている。
+WORD: PROFOUNDLY EN: I was ___ influenced by her. JP: 私は彼女に深く影響された。 EN: The news ___ shocked him. JP: そのニュースは彼を深く驚かせた。
+WORD: PROGRESSIVE EN: She is a ___ thinker. JP: 彼女は進歩的な思想家だ。 EN: The disease is ___. JP: その病気は進行性だ。
+WORD: PROMOTE EN: We need to ___ good health. JP: 私たちは健康を促進する必要がある。 EN: She was ___ to manager. JP: 彼女はマネージャーに昇進した。
+WORD: PROPAGANDA EN: The state spread its ___. JP: 国家はその宣伝を広めた。 EN: He saw through the enemy ___. JP: 彼は敵の宣伝を見抜いた。
+WORD: PROPERLY EN: Do you know how to use it ___? JP: それを適切に使う方法を知っていますか。 EN: The door was not closed ___. JP: ドアは適切に閉まっていなかった。
+WORD: PROPERTY EN: This land is private ___. JP: この土地は私有財産だ。 EN: The house has excellent ___. JP: その家には優れた特性がある。
+WORD: PROPORTION EN: A small ___ of students failed. JP: わずかな割合の学生が不合格だった。 EN: Maintain the correct ___. JP: 正しい比率を保ちなさい。
+WORD: PROPOSE EN: I will ___ a new budget. JP: 私は新しい予算を提案するつもりだ。 EN: He plans to ___ to her soon. JP: 彼はまもなく彼女にプロポーズする計画だ。
+WORD: PROSPECT EN: The job has a good future ___. JP: その仕事には良い将来の見通しがある。 EN: There is little ___ of rain. JP: 雨が降る見込みはほとんどない。
+WORD: PROTOCOL EN: They followed diplomatic ___. JP: 彼らは外交儀礼（議定書）に従った。 EN: We established a new security ___. JP: 私たちは新しいセキュリティ規約を確立した。
+WORD: PROVOKE EN: His words will ___ a reaction. JP: 彼の言葉は反応を引き起こすだろう。 EN: Don't ___ the dog. JP: 犬を刺激しないでください。
+WORD: PRUDENTLY EN: She handled the money ___. JP: 彼女は賢明にそのお金を処理した。 EN: He acted ___ in the crisis. JP: 彼は危機において賢明に行動した。
+WORD: PSYCHOLOGICAL EN: He suffered from ___ stress. JP: 彼は心理的なストレスに苦しんだ。 EN: We study ___ effects. JP: 私たちは心理的な影響を研究する。
+WORD: PURSUE EN: They will ___ the fleeing suspect. JP: 彼らは逃走中の容疑者を追跡するだろう。 EN: I want to ___ a career in art. JP: 私は芸術のキャリアを追求したい。
+WORD: QUARREL EN: They had a bitter ___ over money. JP: 彼らは金銭をめぐって激しい口論をした。 EN: Please do not ___ with him. JP: 彼と口論しないでください。
+WORD: RAMPAGE EN: The animal went on a ___. JP: その動物は暴れ回った。 EN: He went on a drunken ___. JP: 彼は酔っぱらって暴れた。
+WORD: RANGE EN: The prices ___ from $5 to $50. JP: 価格は5ドルから50ドルの範囲だ。 EN: The mountain ___ is very long. JP: その山脈はとても長い。
+WORD: RATIONAL EN: His decision was not ___. JP: 彼の決定は合理的ではなかった。 EN: We need a ___ approach. JP: 私たちには合理的なアプローチが必要だ。
+WORD: RAW EN: Do not eat ___ meat. JP: 生肉を食べてはいけない。 EN: The data is still ___. JP: そのデータはまだ未加工だ。
+WORD: RECESSION EN: The country is in a deep ___. JP: その国は深刻な不況にある。 EN: We are facing a global ___. JP: 私たちは世界的な景気後退に直面している。
+WORD: RECKLESSLY EN: He drove his car ___. JP: 彼は向こう見ずに車を運転した。 EN: Do not act ___. JP: 向こう見ずに行動しないでください。
+WORD: RECONCILIATION EN: They achieved a full ___. JP: 彼らは完全な和解を達成した。 EN: We hope for family ___. JP: 私たちは家族の和解を望んでいる。
+WORD: REFER EN: Please ___ to the manual. JP: マニュアルを参照してください。 EN: The document must ___ to the contract. JP: その文書は契約書に言及しなければならない。
+WORD: REFLECT EN: The water will ___ the sky. JP: 水は空を映すだろう。 EN: His work ___ his values. JP: 彼の仕事は彼の価値観を反映している。
+WORD: REGARD EN: We ___ her as a friend. JP: 私たちは彼女を友達とみなす。 EN: Please give my best ___ to him. JP: 彼によろしくお伝えください。
+WORD: REGULATE EN: The government must ___ the banks. JP: 政府は銀行を規制しなければならない。 EN: This device will ___ the temperature. JP: この装置が温度を調整するだろう。
+WORD: REGULATION EN: We follow strict safety ___. JP: 私たちは厳格な安全規制に従う。 EN: The new ___ takes effect soon. JP: 新しい規制がまもなく施行される。
+WORD: REIGN EN: The Queen's ___ lasted 50 years. JP: 女王の統治は50年間続いた。 EN: Peace will soon ___. JP: 平和はすぐに支配するだろう。
+WORD: RELATE EN: This event might ___ to the crime. JP: この出来事は犯罪に関連するかもしれない。 EN: He finds it hard to ___ to people. JP: 彼は人とうまく付き合う（関連づける）のが難しい。
+WORD: RELATIVE EN: Her income is ___ to her expenses. JP: 彼女の収入は支出に比例している（相対的だ）。 EN: He is a distant ___ of mine. JP: 彼は私の遠い親戚だ。
+WORD: RELATIVELY EN: The task was ___ easy. JP: その作業は比較的簡単だった。 EN: He is ___ unknown here. JP: 彼はここでは比較的無名だ。
+WORD: RELEVANT EN: Is this information ___ to the topic? JP: この情報は話題に関連していますか。 EN: We need to find ___ facts. JP: 私たちには関連性のある事実を見つける必要がある。
+WORD: RELIABLE EN: We need a ___ source of news. JP: 私たちには信頼できるニュース源が必要だ。 EN: The car is old but ___. JP: その車は古いけれど信頼できる。
+WORD: RELIGIOUS EN: She has strong ___ beliefs. JP: 彼女は強い宗教上の信念を持っている。 EN: They practice a strict ___ tradition. JP: 彼らは厳格な宗教的伝統を実践している。
+WORD: RELY EN: You can always ___ on my help. JP: あなたはいつでも私の助けを頼りにできる。 EN: We must ___ on our own skills. JP: 私たちは自分自身のスキルに頼らなければならない。
+WORD: REMARKABLE EN: She made a ___ recovery. JP: 彼女は注目すべき回復をした。 EN: His talent is truly ___. JP: 彼の才能は本当に優れている。
+WORD: REMIND EN: Please ___ me to call him. JP: 彼に電話することを思い出させてください。 EN: The song ___ me of my youth. JP: その歌は私に若かりし頃を思い出させる。
+WORD: REMNANT EN: We found the ___ of an old wall. JP: 私たちは古い壁の残骸を見つけた。 EN: ___ of snow were visible. JP: 雪の残りが見えた。
+WORD: REMOTE EN: The village is in a ___ area. JP: その村は遠隔地にある。 EN: We use a ___ control. JP: 私たちはリモコンを使う。
+WORD: REPERTOIRE EN: He has a wide ___. JP: 彼は幅広いレパートリーを持っている。 EN: The band expanded their ___. JP: そのバンドはレパートリーを広げた。
+WORD: REPLACE EN: Technology will soon ___ the job. JP: テクノロジーはすぐにその仕事に取って代わるだろう。 EN: We must ___ the broken part. JP: 私たちは壊れた部品を交換しなければならない。
+WORD: REPRESENT EN: I will ___ the company at the meeting. JP: 私は会議で会社を代表する。 EN: These figures ___ the total cost. JP: これらの数字が総費用を示している。
+WORD: RESIDE EN: He continues to ___ in London. JP: 彼はロンドンに住み続けている。 EN: The main office ___ in Tokyo. JP: 本社は東京に存在する。
+WORD: RESILIENT EN: The economy proved highly ___. JP: 経済は非常に回復力があると証明された。 EN: She is a ___ young woman. JP: 彼女は立ち直りの早い（回復力のある）若い女性だ。
+WORD: RESOLUTION EN: We passed a clear ___. JP: 私たちは明確な決議（決意）を採択した。 EN: He made a New Year's ___. JP: 彼は新年の抱負（決意）を立てた。
+WORD: RESONATE EN: His words strongly ___ with me. JP: 彼の言葉は私に強く共鳴する。 EN: The sound will ___ in the hall. JP: その音はホールに響き渡るだろう。
+WORD: RESOURCE EN: Time is a valuable ___. JP: 時間は貴重な資源だ。 EN: We need more financial ___. JP: 私たちにはもっと財源が必要だ。
+WORD: RESPONSIBILITY EN: The manager takes full ___. JP: マネージャーが全責任を負う。 EN: It is my ___ to lead. JP: それは私が導くべき責任だ。
+WORD: RESPONSIBLE EN: Who is ___ for this mistake? JP: 誰がこの間違いに責任があるのか。 EN: He is a very ___ worker. JP: 彼は非常に責任感のある労働者だ。
+WORD: RESTRAIN EN: She struggled to ___ her anger. JP: 彼女は怒りを抑えようと苦闘した。 EN: The guards had to ___ the prisoner. JP: 警備員は囚人を抑制しなければならなかった。
+WORD: RETAIN EN: Try to ___ the information. JP: その情報を保持するように努めなさい。 EN: He will ___ control of the company. JP: 彼は会社の支配権を維持するだろう。
+WORD: REVENUE EN: The government collects tax ___. JP: 政府は税収を集めている。 EN: Sales increased the company's ___. JP: 売上が会社の収益を増やした。
+WORD: REVISION EN: We need a major ___ of the plan. JP: 私たちには計画の大幅な改訂が必要だ。 EN: The book is in its third ___. JP: その本は第3版（改訂）だ。
+WORD: RIGID EN: He has very ___ opinions. JP: 彼は非常に厳格な意見を持っている。 EN: The material is not ___. JP: その素材は硬直していない。
+WORD: RIGOROUS EN: They conducted a ___ analysis. JP: 彼らは厳しい分析を行った。 EN: The course is quite ___. JP: その講座はかなり厳しい。
+WORD: RURAL EN: We live in a quiet ___ area. JP: 私たちは静かな田舎の地域に住んでいる。 EN: He prefers ___ life. JP: 彼は田舎の生活を好む。
+WORD: SARCASTIC EN: He made a ___ comment. JP: 彼は皮肉なコメントをした。 EN: Her tone was ___. JP: 彼女の口調は皮肉だった。
+WORD: SATELLITE EN: They launched a new weather ___. JP: 彼らは新しい気象衛星を打ち上げた。 EN: The company uses a communications ___. JP: その会社は通信衛星を使用している。
+WORD: SATISFACTION EN: Customer ___ is our goal. JP: 顧客の満足が私たちの目標だ。 EN: She expressed her deep ___. JP: 彼女は深い満足を表明した。
+WORD: SCALE EN: We need to increase the ___ of production. JP: 私たちは生産の規模を拡大する必要がある。 EN: The map is drawn to ___. JP: その地図は縮尺通りに描かれている。
+WORD: SCARCE EN: Food was becoming ___. JP: 食糧が乏しくなっていた。 EN: Clean water is a ___ commodity. JP: きれいな水は乏しい必需品だ。
+WORD: SCARCELY EN: I could ___ hear the music. JP: 私はかろうじて音楽が聞こえる程度だった。 EN: He had ___ any money left. JP: 彼にはほとんどお金が残っていなかった。
+WORD: SECONDARY EN: This is only a ___ issue. JP: これは単なる第二の問題だ。 EN: She teaches ___ school students. JP: 彼女は中等学校の生徒を教えている。
+WORD: SEEK EN: We must ___ justice for all. JP: 私たちは皆のために正義を追い求めるべきだ。 EN: He came here to ___ his fortune. JP: 彼は財産を求めてここに来た。
+WORD: SEEMINGLY EN: The injury was ___ minor. JP: その怪我は一見すると軽微だった。 EN: He ___ ignored my question. JP: どうやら彼は私の質問を無視したらしい。
+WORD: SENIOR EN: He is three years my ___. JP: 彼は私より3歳年上だ。 EN: The ___ manager handles the case. JP: 上級管理職がその案件を扱う。
+WORD: SENSIBLE EN: That is a very ___ idea. JP: それはとても分別のある考えだ。 EN: She is a very ___ person. JP: 彼女はとても分別のある人だ。
+WORD: SENSITIVE EN: He is very ___ about his weight. JP: 彼は自分の体重について非常に敏感だ。 EN: The skin is ___ to sunlight. JP: 皮膚は日光に敏感だ。
+WORD: SEPARATE EN: They arrived at ___ times. JP: 彼らは別々の時間に到着した。 EN: We need to ___ the white clothes. JP: 私たちは白い服を分ける必要がある。
+WORD: SEQUEL EN: I read the book and the ___. JP: 私はその本とその続編を読んだ。 EN: The film has an awaited ___. JP: その映画には待望の続編がある。
+WORD: SEQUEL EN: The film's ___ was very popular. JP: その映画の続編はとても人気があった。 EN: Is there a book ___ to this? JP: これに続く本の続編はありますか。
+WORD: SERENE EN: The lake was calm and ___. JP: その湖は穏やかで静かだった。 EN: She had a ___ look on her face. JP: 彼女は顔に穏やかな表情を浮かべていた。
+WORD: SERENELY EN: He smiled ___ at the world. JP: 彼は世界に穏やかに微笑んだ。 EN: She walked ___ through the park. JP: 彼女は公園を静かに通り抜けた。
+WORD: SEVERE EN: The damage was quite ___. JP: 損害はかなり厳しかった。 EN: We faced a ___ winter storm. JP: 私たちは厳しい冬の嵐に直面した。
+WORD: SHORT-TERM EN: We need a ___ loan. JP: 私たちには短期的な融資が必要だ。 EN: This is a ___ solution only. JP: これは短期的な解決策にすぎない。
+WORD: SHRED EN: The dog will ___ the paper. JP: 犬は紙を細かくちぎるだろう。 EN: There is not a ___ of evidence. JP: 証拠は微塵もない。
+WORD: SIGNIFICANTLY EN: The price dropped ___. JP: 価格はかなり下落した。 EN: Her health improved ___. JP: 彼女の健康は著しく改善した。
+WORD: SINCERITY EN: We doubt his ___. JP: 私たちは彼の誠実さを疑う。 EN: She spoke with great ___. JP: 彼女は非常に誠実に話した。
+WORD: SKEPTICAL EN: I am ___ about his claims. JP: 私は彼の主張に懐疑的だ。 EN: The audience remained ___. JP: 聴衆は懐疑的なままだった。
+WORD: SLIGHT EN: There was a ___ change in temperature. JP: 気温にわずかな変化があった。 EN: He has a ___ fever. JP: 彼は微熱がある。
+WORD: SLUGGISH EN: The economy remains ___. JP: 経済は依然として不景気だ。 EN: My computer is very ___ today. JP: 私のコンピューターは今日とても動作が遅い。
+WORD: SOCIALIZE EN: I like to ___ with my friends. JP: 私は友達とつきあうのが好きだ。 EN: They rarely ___ outside work. JP: 彼らは仕事以外でめったに人と交流しない。
+WORD: SOOTHE EN: The music will ___ your nerves. JP: その音楽はあなたの神経をなだめるだろう。 EN: Try to ___ the crying baby. JP: 泣いている赤ちゃんをなだめようとしなさい。
+WORD: SOPHISTICATED EN: The system is highly ___. JP: そのシステムは非常に洗練されている。 EN: She has ___ taste in fashion. JP: 彼女はファッションに洗練された趣味を持っている。
+WORD: SPARKLE EN: Her eyes began to ___ with joy. JP: 彼女の目は喜びで輝き始めた。 EN: We saw the diamond ___. JP: 私たちはダイヤモンドが輝くのを見た。
+WORD: SPARSELY EN: The area is ___ populated. JP: その地域はまばらに人が住んでいる。 EN: Trees were ___ distributed. JP: 木々はまばらに分布していた。
+WORD: SPECIES EN: The new ___ of bird was found. JP: 新しい種の鳥が見つかった。 EN: We study endangered ___. JP: 私たちは絶滅危惧種を研究する。
+WORD: SPECIFIC EN: Can you give me a ___ example? JP: 具体的な例を挙げていただけますか。 EN: We need a ___ date. JP: 私たちには特定の（具体的な）日付が必要だ。
+WORD: SPECIFICALLY EN: I came here ___ to see you. JP: 私はあなたに会うために具体的にここに来た。 EN: The law applies ___ to businesses. JP: その法律は特に企業に適用される。
+WORD: SPECULATE EN: We can only ___ about his motives. JP: 私たちは彼の動機について推測することしかできない。 EN: The market began to ___. JP: 市場は投機を始めた。
+WORD: SPONTANEOUS EN: It was a ___ decision. JP: それは自発的な決定だった。 EN: We heard a ___ burst of applause. JP: 私たちは自然発生的な拍手の爆発を聞いた。
+WORD: SPONTANEOUSLY EN: She laughed ___ at the joke. JP: 彼女はジョークに自発的に笑った。 EN: The crowd cheered ___. JP: 群衆は自然に歓声を上げた。
+WORD: STABLE EN: The ladder felt very ___. JP: そのはしごは非常に安定していると感じた。 EN: We hope for a ___ government. JP: 私たちは安定した政府を望んでいる。
+WORD: STARVATION EN: They faced mass ___. JP: 彼らは集団飢餓に直面した。 EN: Aid workers fight ___. JP: 援助隊員は飢餓と闘っている。
+WORD: STEADY EN: Maintain a ___ pace. JP: 着実なペースを保ちなさい。 EN: He has a ___ job. JP: 彼には安定した仕事がある。
+WORD: STERN EN: He gave a ___ warning. JP: 彼は厳格な警告を与えた。 EN: She had a ___ look on her face. JP: 彼女は顔に厳しい表情を浮かべていた。
+WORD: STING EN: The bee will ___ you. JP: その蜂があなたを刺すだろう。 EN: The medicine might ___ a little. JP: その薬は少しヒリヒリするかもしれない。
+WORD: STRAIGHTFORWARD EN: The answer is ___. JP: 答えは率直だ。 EN: He is a very ___ person. JP: 彼​​は非常に正直（率直）な人だ。
+WORD: STRAIN EN: The conflict caused great ___. JP: その対立は大きな負担を引き起こした。 EN: I felt a muscle ___ in my leg. JP: 私は脚に肉離れ（負担）を感じた。
+WORD: STRATEGY EN: We need a new marketing ___. JP: 私たちには新しいマーケティング戦略が必要だ。 EN: His political ___ failed. JP: 彼の政治戦略は失敗した。
+WORD: STROLL EN: We took a leisurely ___ in the park. JP: 私たちは公園をゆっくりと散歩した。 EN: They went for an evening ___. JP: 彼らは夕方の散歩に出かけた。
+WORD: STUN EN: The news will ___ him. JP: そのニュースは彼を唖然とさせるだろう。 EN: I was ___ by the bright light. JP: 私は明るい光に目がくらんだ（唖然とさせられた）。
+WORD: STURDY EN: The chair is very ___. JP: その椅子はとても頑丈だ。 EN: He has a ___ build. JP: 彼はがっしりした体格をしている。
+WORD: SUBLIME EN: The music was truly ___. JP: その音楽は本当に崇高だった。 EN: She felt a ___ happiness. JP: 彼女は至高の（崇高な）幸福を感じた。
+WORD: SUBSIDIES EN: The government cut farm ___. JP: 政府は農業補助金を削減した。 EN: They rely on state ___. JP: 彼らは国の補助金に頼っている。
+WORD: SUBSIDIZE EN: The state will ___ the arts. JP: 国が芸術に助成金を出すだろう。 EN: We need to ___ the public transport. JP: 私たちは公共交通機関に補助金を出す必要がある。
+WORD: SUBTLE EN: I noticed a ___ change in her voice. JP: 私は彼女の声に微妙な変化に気づいた。 EN: The difference is very ___. JP: その違いは非常に微妙だ。
+WORD: SUBTLY EN: He ___ changed the topic. JP: 彼は微妙に話題を変えた。 EN: The flavor was ___ enhanced. JP: 風味は微妙に高められた。
+WORD: SUCCINCT EN: His speech was clear and ___. JP: 彼のスピーチは明確で簡潔だった。 EN: Give a ___ summary. JP: 簡潔な要約を与えなさい。
+WORD: SUCCINCTLY EN: He explained the problem ___. JP: 彼はその問題を簡潔に説明した。 EN: Please state your case ___. JP: あなたの主張を簡潔に述べなさい。
+WORD: SUFFER EN: She will ___ from the cold. JP: 彼女は寒さに苦しむだろう。 EN: The company will ___ losses. JP: その会社は損失を被るだろう。
+WORD: SUFFICIENT EN: We have ___ food for everyone. JP: 私たちは皆のための十分な食糧がある。 EN: Is your salary ___? JP: あなたの給料は十分ですか。
+WORD: SUPPOSE EN: I ___ he is right. JP: 私は彼が正しいと思う。 EN: Let's ___ the worst happens. JP: 最悪の事態が起こると仮定しよう。
+WORD: SUPPRESS EN: The police tried to ___ the riot. JP: 警察は暴動を鎮圧しようとした。 EN: He could not ___ his laughter. JP: 彼は笑いを抑えられなかった。
+WORD: SURPASS EN: His score will ___ all records. JP: 彼の得点はすべての記録を上回るだろう。 EN: We hope to ___ expectations. JP: 私たちは期待を超えることを望んでいる。
+WORD: SURRENDER EN: The enemy decided to ___. JP: 敵は降伏することを決定した。 EN: Never ___ your dreams. JP: あなたの夢を諦めてはいけない。
+WORD: SUSPEND EN: They will ___ his driver's license. JP: 彼らは彼の運転免許証を一時停止するだろう。 EN: The talks were temporarily ___. JP: 会談は一時的に中断された。
+WORD: SYMBOL EN: The dove is a ___ of peace. JP: 鳩は平和の象徴だ。 EN: This flower is the city's ___. JP: この花は市の象徴だ。
+WORD: SYMPATHY EN: I feel deep ___ for her. JP: 私は彼女に深い同情を感じる。 EN: They offered their sincere ___. JP: 彼らは心からの哀悼の意（同情）を表明した。
+WORD: SYMPTOM EN: Fever is a common ___. JP: 発熱は一般的な症状だ。 EN: We monitor his ___. JP: 私たちは彼の症状を監視している。
+WORD: TACITLY EN: The board ___ approved the plan. JP: 取締役会は暗黙のうちに計画を承認した。 EN: They ___ agreed to the terms. JP: 彼らは暗黙のうちに条件に同意した。
+WORD: TACKLE EN: We must ___ this problem now. JP: 私たちは今すぐこの問題に取り組まなければならない。 EN: He tried to ___ the runner. JP: 彼はランナーにタックルしようとした。
+WORD: TACTFULLY EN: He handled the difficult situation ___. JP: 彼はその難しい状況を巧みに処理した。 EN: She spoke ___ about the error. JP: 彼女は間違いについて巧みに話した。
+WORD: TAME EN: The lion was surprisingly ___. JP: そのライオンは驚くほど飼い慣らされていた。 EN: We try to ___ the wild horse. JP: 私たちはその野生の馬を飼い慣らそうとしている。
+WORD: TANGIBLE EN: We seek ___ results now. JP: 私たちは今、明白な結果を求めている。 EN: There is no ___ evidence. JP: 明白な証拠はない。
+WORD: TARIFF EN: The government imposed a new ___. JP: 政府は新しい関税を課した。 EN: They reduced the import ___. JP: 彼らは輸入関税を削減した。
+WORD: TAX EN: We must pay our income ___. JP: 私たちは所得税を支払わなければならない。 EN: The government will ___ luxury goods. JP: 政府は贅沢品に課税するだろう。
+WORD: TECHNOLOGY EN: We rely on advanced ___. JP: 私たちは高度な技術に頼っている。 EN: He teaches information ___. JP: 彼は情報技術を教えている。
+WORD: TEMPER EN: He lost his ___ completely. JP: 彼は完全に平静（気性）を失った。 EN: She has a difficult ___. JP: 彼女は難しい気性を持っている。
+WORD: TEMPORARY EN: This is only a ___ solution. JP: これは一時的な解決策にすぎない。 EN: She has a ___ job. JP: 彼女は一時的な仕事に就いている。
+WORD: TENACIOUS EN: He has a ___ grip on power. JP: 彼は権力を粘り強く握っている。 EN: She is a very ___ athlete. JP: 彼女はとても粘り強い運動選手だ。
+WORD: TEND EN: I ___ to forget names. JP: 私は名前を忘れる傾向がある。 EN: Prices ___ to rise in summer. JP: 価格は夏に上がる傾向がある。
+WORD: TERM EN: He served a three-year ___. JP: 彼は3年間の任期を務めた。 EN: We agreed to the long ___. JP: 私たちは長期契約（期間）に同意した。
+WORD: TESTIMONY EN: The jury heard the expert's ___. JP: 陪審は専門家の証言を聞いた。 EN: His actions serve as a ___ to his courage. JP: 彼の行動は彼の勇気の証拠（証言）となる。
+WORD: THERAPY EN: She needs physical ___. JP: 彼女には理学療法（治療）が必要だ。 EN: He is undergoing drug ___. JP: 彼は薬物療法を受けている。
+WORD: THESIS EN: She is writing her master's ___. JP: 彼女は修士論文を書いている。 EN: The main ___ of the book is simple. JP: その本の主要な論旨は単純だ。
+WORD: THOROUGH EN: We need a ___ inspection. JP: 私たちには徹底的な検査が必要だ。 EN: He is known for his ___ work. JP: 彼は徹底した仕事ぶりで知られている。
+WORD: THOROUGHLY EN: Please wash your hands ___. JP: 手を徹底的に洗いなさい。 EN: The room was cleaned ___. JP: 部屋は徹底的に掃除された。
+WORD: THREAT EN: The storm poses a major ___. JP: その嵐は大きな脅威をもたらす。 EN: He ignored her empty ___. JP: 彼は彼女の空虚な脅しを無視した。
+WORD: THREATEN EN: The company will ___ legal action. JP: 会社は法的措置をちらつかせるだろう。 EN: Clouds ___ rain. JP: 雲が雨を脅かしている（降りそうだ）。
+WORD: THROUGHOUT EN: The sound echoed ___ the hall. JP: その音はホールの至る所に響き渡った。 EN: She traveled ___ the country. JP: 彼女は国の至る所を旅した。
+WORD: THUS EN: She was busy, and ___ could not attend. JP: 彼女は忙しかった。したがって出席できなかった。 EN: The test failed, ___ proving my point. JP: テストは失敗し、したがって私の論点を証明した。
+WORD: TIGHTROPE EN: He walked a dangerous ___. JP: 彼は危険な綱渡りをした。 EN: Negotiations are a delicate ___. JP: 交渉は繊細な綱渡りだ。
+WORD: TOKEN EN: This gift is a ___ of my love. JP: この贈り物は私の愛のしるしだ。 EN: Please accept this ___ of thanks. JP: この感謝のしるしを受け取ってください。
+WORD: TOLERANCE EN: We should show religious ___. JP: 私たちは宗教的寛容を示すべきだ。 EN: He has a low ___ for pain. JP: 彼は痛みの許容度が低い。
+WORD: TOLERATE EN: I cannot ___ this noise. JP: 私はこの騒音を許容できない。 EN: The plants will ___ the cold well. JP: その植物は寒さに十分耐えるだろう。
+WORD: TORMENT EN: Do not ___ the animals. JP: 動物を苦しめてはいけない。 EN: He suffered mental ___. JP: 彼は精神的な苦痛に苦しんだ。
+WORD: TOWARD EN: We walked ___ the beach. JP: 私たちはビーチの方へ歩いた。 EN: She showed kindness ___ the poor. JP: 彼女は貧しい人々に対して親切を示した。
+WORD: TRANSFORMATION EN: The city saw a total ___. JP: その都市は完全な変貌を遂げた。 EN: He achieved personal ___. JP: 彼は個人的な変革を達成した。
+WORD: TRANSMIT EN: The radio tower will ___ the signal. JP: そのラジオ塔が信号を送るだろう。 EN: Mosquitoes can ___ diseases. JP: 蚊は病気を伝染させることができる。
+WORD: TRANSPARENCY EN: The company promises full ___. JP: 会社は完全な透明性を約束する。 EN: We demand greater government ___. JP: 私たちは政府のより大きな透明性を要求する。
+WORD: TREMENDOUS EN: It was a ___ amount of work. JP: それはすさまじい量の仕事だった。 EN: She showed ___ courage. JP: 彼女はとてつもない勇気を示した。
+WORD: TRESPASS EN: Do not ___ on this private land. JP: この私有地に侵入してはいけない。 EN: The law prohibits criminal ___. JP: 法律は犯罪的な侵入を禁じている。
+WORD: TRIGGER EN: The alarm will ___ if the door opens. JP: ドアが開くとアラームが作動する。 EN: The news may ___ a panic. JP: そのニュースはパニックを引き起こすかもしれない。
+WORD: TRIUMPH EN: The victory was a great ___. JP: その勝利は大きな勝利だった。 EN: We celebrate their sporting ___. JP: 私たちは彼らのスポーツでの勝利を祝う。
+WORD: TUITION EN: College ___ is very expensive. JP: 大学の授業料は非常に高価だ。 EN: I paid the annual ___. JP: 私は年間の授業料を支払った。
+WORD: TYPICALLY EN: He ___ eats lunch at noon. JP: 彼は典型的に正午に昼食をとる。 EN: The weather is ___ hot here. JP: ここでは天候は一般的に暑い。
+WORD: UNANIMOUS EN: The jury reached a ___ verdict. JP: 陪審は満場一致の評決に達した。 EN: The vote was ___. JP: 投票は満場一致だった。
+WORD: UNANIMOUSLY EN: The motion was passed ___. JP: その動議は満場一致で可決された。 EN: They ___ supported the new leader. JP: 彼らは満場一致で新しい指導者を支持した。
+WORD: UNAWARE EN: She was ___ of the danger. JP: 彼女は危険に気づかなかった。 EN: He remained completely ___ of his error. JP: 彼は自分の間違いに全く気づかないままだった。
+WORD: UNDERGO EN: She will ___ surgery tomorrow. JP: 彼女は明日手術を受ける（経験する）だろう。 EN: The building will ___ major repairs. JP: その建物は大規模な修理を受けるだろう。
+WORD: UNEXPECTED EN: We faced an ___ delay. JP: 私たちは予期しない遅延に直面した。 EN: The news came as an ___ shock. JP: そのニュースは予期しない衝撃として伝わった。
+WORD: UNIFORM EN: The quality is entirely ___. JP: 品質は完全に均一だ。 EN: Students wear a school ___. JP: 学生は学校の制服を着る。
+WORD: UNIVERSE EN: The ___ is vast and mysterious. JP: 宇宙は広大で神秘的だ。 EN: We study the origin of the ___. JP: 私たちは宇宙の起源を研究する。
+WORD: UNKNOWN EN: The cause of the fire is ___. JP: 火災の原因は不明だ。 EN: He explored the great ___. JP: 彼は偉大な未知の領域を探検した。
+WORD: UNLESS EN: We cannot win ___ we work together. JP: 協力しない限り、私たちは勝てない。 EN: I will go, ___ I hear from you. JP: あなたから連絡がない限り、私は行く。
+WORD: UNLIKELY EN: It is ___ to rain today. JP: 今日は雨が降りそうにない。 EN: He is an ___ candidate for the job. JP: 彼はその仕事の候補者にはなりそうもない。
+WORD: UNPRECEDENTED EN: This is an ___ situation. JP: これは前例のない状況だ。 EN: The crisis reached an ___ level. JP: その危機は前例のないレベルに達した。
+WORD: UNREST EN: There is social ___ in the city. JP: その都市には社会的な不安がある。 EN: The leader calmed the public ___. JP: 指導者は国民の不安を鎮めた。
+WORD: UNUSUAL EN: She showed an ___ degree of skill. JP: 彼女は異常なほどの熟練度を示した。 EN: The animal is quite ___. JP: その動物は非常に珍しい。
+WORD: UPHOLD EN: We must ___ the law. JP: 私たちは法律を支持しなければならない。 EN: The court will ___ the decision. JP: 裁判所はその決定を支持するだろう。
+WORD: URGENT EN: The matter is extremely ___. JP: その件は極めて緊急だ。 EN: I have an ___ message for you. JP: あなたへの緊急のメッセージがある。
+WORD: USELESS EN: The old map is entirely ___. JP: その古い地図は全く役に立たない。 EN: Arguing with him is ___. JP: 彼と議論するのは無駄だ。
+WORD: UTILIZE EN: We should ___ the new software. JP: 私たちは新しいソフトウェアを利用すべきだ。 EN: Try to ___ your time better. JP: あなたの時間をより有効に活用するようにしなさい。
+WORD: VALIDATION EN: We need independent ___. JP: 私たちには独立した検証が必要だ。 EN: She sought professional ___ for her work. JP: 彼女は自分の仕事に対する専門的な検証を求めた。
+WORD: VALUE EN: She seems to ___ his opinion. JP: 彼女は彼の意見を尊重しているようだ。 EN: I do not ___ money highly. JP: 私はお金を高く評価しない。
+WORD: VANDALISM EN: The police reported widespread ___. JP: 警察は広範囲にわたる器物損壊を報告した。 EN: We repaired the damage from ___. JP: 私たちは器物損壊による損害を修理した。
+WORD: VANISH EN: The ship will ___ below the horizon. JP: 船は水平線の下に消えるだろう。 EN: My money began to ___. JP: 私のお金が消え始めた。
+WORD: VAST EN: The desert is a ___ area. JP: 砂漠は広大な地域だ。 EN: They discovered a ___ cave system. JP: 彼らは巨大な洞窟システムを発見した。
+WORD: VEHEMENT EN: He gave a ___ denial. JP: 彼は猛烈な否定をした。 EN: She showed ___ opposition. JP: 彼女は激しい反対を示した。
+WORD: VENTILATE EN: We must ___ the room well. JP: 私たちは部屋をよく換気しなければならない。 EN: This fan helps to ___ the area. JP: この扇風機はその場所の換気を助ける。
+WORD: VENUE EN: The wedding ___ was beautiful. JP: 結婚式の会場は美しかった。 EN: We need to book a new ___. JP: 私たちには新しい会場を予約する必要がある。
+WORD: VERBAL EN: She gave a ___ agreement. JP: 彼女は口頭での合意を与えた。 EN: We need written, not ___ instructions. JP: 私たちには口頭ではなく、書面による指示が必要だ。
+WORD: VIBRANT EN: The city has a ___ nightlife. JP: その都市には活気に満ちた夜の生活がある。 EN: She chose a ___ blue color. JP: 彼女は鮮やかな青色を選んだ。
+WORD: VIRTUALLY EN: The project is ___ complete. JP: そのプロジェクトは事実上完了している。 EN: It is ___ impossible to fail. JP: 失敗することは実質的にあり得ない。
+WORD: VIRTUOUS EN: He is known as a ___ leader. JP: 彼は有徳な指導者として知られている。 EN: We strive to live a ___ life. JP: 私たちは徳のある生活を送るように努める。
+WORD: VISIBLE EN: The moon is clearly ___ tonight. JP: 今夜は月がはっきり目に見える。 EN: There was no ___ damage. JP: 目に見える損傷はなかった。
+WORD: VITAL EN: Water is ___ for human survival. JP: 水は人間の生存に不可欠だ。 EN: We played a ___ role in the talks. JP: 私たちは会談で極めて重要な役割を果たした。
+WORD: VIVID EN: I have a ___ memory of that day. JP: 私はその日の鮮やかな記憶を持っている。 EN: She gave a ___ description. JP: 彼女は鮮明な描写をした。
+WORD: VOCATION EN: Teaching is his true ___. JP: 教えることは彼の真の天職だ。 EN: She found her ___. JP: 彼女は自分の天職を見つけた。
+WORD: VOID EN: The contract is null and ___. JP: その契約は無効である。 EN: He stared into the dark ___. JP: 彼は暗い空間（無効）をじっと見つめた。
+WORD: VOLUNTARY EN: The action was entirely ___. JP: その行動は完全に自発的だった。 EN: They offered ___ service. JP: 彼らは自発的な奉仕を提供した。
+WORD: VULNERABILITY EN: The system has a critical ___. JP: そのシステムには致命的な脆弱性がある。 EN: She shared her feelings of ___. JP: 彼女は自分の脆弱性の感情を共有した。
+WORD: VULNERABLE EN: Children are ___ to illness. JP: 子供は病気にかかりやすい（傷つきやすい）。 EN: The fortress was surprisingly ___. JP: その要塞は驚くほど脆弱だった。
+WORD: WARRANT EN: The police obtained a search ___. JP: 警察は捜索令状を取得した。 EN: Do his actions ___ an arrest? JP: 彼の行動は逮捕を正当化する（令状を保証する）か。
+WORD: WEALTHY EN: He is a very ___ man. JP: 彼は非常に裕福な男性だ。 EN: She married into a ___ family. JP: 彼女は裕福な家庭に嫁いだ。
+WORD: WEARY EN: I feel ___ after the long trip. JP: 長旅の後で疲れたと感じる。 EN: She grew ___ of the constant fighting. JP: 彼女は絶え間ない争いにうんざりした。
+WORD: WHEREAS EN: I like tea, ___ he prefers coffee. JP: 私はお茶が好きである一方、彼はコーヒーを好む。 EN: He is rich, ___ I am poor. JP: 彼は裕福である一方、私は貧しい。
+WORD: WILLING EN: I am ___ to help. JP: 私は喜んで（いとわないで）手伝う。 EN: Are you ___ to take the risk? JP: あなたはリスクを負うことをいとわないですか。
+WORD: WITHDRAW EN: I need to ___ cash from the bank. JP: 私は銀行から現金を下ろす必要がある。 EN: They decided to ___ the troops. JP: 彼らは軍隊を撤退させることを決定した。
+WORD: WITHER EN: The flowers will ___ in the heat. JP: その花は暑さでしぼむだろう。 EN: His enthusiasm began to ___. JP: 彼の熱意は衰え始めた。
+WORD: WITHIN EN: Please reply ___ ten days. JP: 10日以内に返信してください。 EN: The answer is ___ the book. JP: 答えはその本の中にある。
+WORD: WORTH EN: The painting is ___ millions. JP: その絵画は何百万ドルの価値がある。 EN: Is the effort really ___ it? JP: その努力は本当にそれに値するのか。
+WORD: YIELD EN: The farmers had a good crop ___. JP: 農家は良い収穫高を得た。 EN: The soil will ___ a poor harvest. JP: その土壌は貧しい収穫をもたらすだろう。
+WORD: ZEALOUS EN: He is a ___ supporter of the team. JP: 彼はそのチームの熱心な支持者だ。 EN: She is a ___ advocate for peace. JP: 彼女は平和のための熱心な主唱者だ。
+WORD: ZEALOUSLY EN: He worked ___ to achieve the goal. JP: 彼は目標を達成するために熱心に働いた。 EN: She guarded her privacy ___. JP: 彼女は自分のプライバシーを熱心に守った。

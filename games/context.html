@@ -188,7 +188,7 @@
         const INVALID_SENTENCES = wordData.contexts.filter(c => !c.is_correct); // データマッピング
 
         // クリア条件（正解データの数に合わせる）
-        const TARGET_INJECTIONS = VALID_SENTENCES.length; // データマッピング
+        const TARGET_INJECTIONS = 3; // 最低3回正解でクリアに変更
         const TIME_LIMIT = 6000;
 
         let injections = 0; // 現在の注入数

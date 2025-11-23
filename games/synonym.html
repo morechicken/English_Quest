@@ -336,8 +336,9 @@
                             word.alive = false;
                             collectedWords.push(word.text);
                             score++;
-                            // 安全策
-                            const goal = Object.keys(wordData.synonyms || {}).length;
+                            // クリア条件を最低5個に変更
+                            const originalGoal = Object.keys(wordData.synonyms || {}).length;
+                            const goal = Math.max(5, originalGoal);
                             const goalText = goal > 0 ? goal : "?";
                             document.getElementById('score-disp').textContent = `${score} / ${goalText}`;
                             
@@ -467,7 +468,9 @@
             resize();
 
             // スコア表示更新
-            document.getElementById('score-disp').textContent = `0 / ${SYNONYMS.length}`;
+            const originalGoal = SYNONYMS.length;
+            const goal = Math.max(5, originalGoal);
+            document.getElementById('score-disp').textContent = `0 / ${goal}`;
             
             // 戻るボタンのセット
             document.getElementById('back-btn').onclick = () => {
