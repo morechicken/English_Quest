@@ -340,20 +340,34 @@ async function initializePage() {
                     div.className = `word-card relative p-4 rounded-xl border ${borderClass} ${bgClass} cursor-pointer transition-all overflow-hidden group mb-3`;
                     
                     div.onclick = () => goTo('cockpit.html', word.id);
-
+                    const reviewButtonHtml = isMastered ? `
+                        <button onclick="event.stopPropagation(); window.location.href = 'review.html?id=${word.id}'" 
+                                class="p-2 mr-2 text-cyan-400 hover:text-white hover:scale-110 transition rounded-full bg-cyan-900/30 border border-cyan-500/30" 
+                                title="Review Word">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </button>
+                    ` : '';
                     div.innerHTML = `
                         <div class="flex justify-between items-center relative z-10">
-                            <div>
-                                <div class="text-xl font-bold tracking-wide ${textClass}">${word.word}</div>
-                                <div class="text-sm text-gray-400 jp-font mt-1 line-clamp-1">${word.meaning_core}</div>
+                            
+                            <div class="flex-1 min-w-0 pr-2"> <div class="text-xl font-bold tracking-wide truncate ${textClass}">${word.word}</div>
+                                <div class="text-sm text-gray-400 jp-font mt-1 truncate">${word.meaning_core}</div>
                             </div>
-                            <div class="text-right pl-4">
-                                <div class="text-[10px] font-mono text-gray-500 mb-1 tracking-wider">CLEAR</div>
-                                <div class="text-lg font-bold font-mono ${isMastered ? 'text-cyan-400' : 'text-gray-600'}">
-                                    ${clearCount}<span class="text-xs text-gray-600">/5</span>
+
+                            <div class="flex items-center shrink-0">
+                                ${reviewButtonHtml}
+
+                                <div class="text-right pl-2 border-l border-slate-600/50 ml-2">
+                                    <div class="text-[10px] font-mono text-gray-500 mb-1 tracking-wider">CLEAR</div>
+                                    <div class="text-lg font-bold font-mono ${isMastered ? 'text-cyan-400' : 'text-gray-600'}">
+                                        ${clearCount}<span class="text-xs text-gray-600">/5</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-1000" style="width: ${progressPercent}%"></div>
                     `;
                     sectionWrapper.appendChild(div);
@@ -483,24 +497,7 @@ async function startCheckout() {
     }
 }
 
-// ユーザーが課金済みかチェックする関数
-async function checkPremiumStatus(uid) {
-    try {
-        // 'customers' コレクションの中から、自分のIDの 'payments' サブコレクションを見る
-        // status が 'succeeded' (成功) になっているデータがあるか探す
-        const snapshot = await db.collection('customers') // app.jsでdb定義済み前提
-            .doc(uid)
-            .collection('payments')
-            .where('status', '==', 'succeeded')
-            .get();
-        
-        // データが1つでもあれば true (課金済み)、なければ false
-        return !snapshot.empty;
-    } catch (error) {
-        console.error("Premium check error:", error);
-        return false;
-    }
-}
+
 </script>
 
 <div id="unlock-overlay" class="hidden fixed inset-0 z-[100] bg-[#0f172a] h-screen w-screen overflow-hidden transition-opacity duration-1000 flex flex-col items-center justify-center">

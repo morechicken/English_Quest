@@ -386,3 +386,23 @@ const logout = () => {
             console.error('Sign out error', error);
         });
 };
+
+// 15. ユーザーが課金済みかチェックする関数 (共通化)
+async function checkPremiumStatus(uid) {
+    if (!db) return false; // dbが未定義の場合のガード
+    try {
+        // 'customers' コレクションの中から、自分のIDの 'payments' サブコレクションを見る
+        // status が 'succeeded' (成功) になっているデータがあるか探す
+        const snapshot = await db.collection('customers')
+            .doc(uid)
+            .collection('payments')
+            .where('status', '==', 'succeeded')
+            .get();
+        
+        // データが1つでもあれば true (課金済み)、なければ false
+        return !snapshot.empty;
+    } catch (error) {
+        console.error("Premium check error:", error);
+        return false;
+    }
+}

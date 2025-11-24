@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Word Review | VocSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script src="data/word_data.js"></script>
+    <script src="js/app.js"></script> <style>
+        body {
+            background-color: #050814;
+            background-image: 
+                radial-gradient(circle at 50% 30%, #1e293b 0%, #050814 70%),
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+            color: white;
+            height: 100vh; overflow-y: auto; overflow-x: hidden;
+            touch-action: manipulation;
+            opacity: 0; transition: opacity 0.3s ease-in-out;
+        }
+        body.loaded { opacity: 1; }    
+        .word-en { font-size: 2rem; font-weight: 900; color: #fff; text-shadow: 0 0 20px rgba(0, 242, 255, 0.6); letter-spacing: 0.05em; }
+        .word-jp-detail { font-family: 'Shippori Mincho', serif; color: #94a3b8; letter-spacing: 0.1em; }
+        .section-title { position: relative; font-weight: 700; color: #00f2ff; margin-bottom: 12px; padding-left: 15px; }
+        .section-title::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: #bd00ff; border-radius: 2px; }
+        
+        /* カードスタイル (コンパクト & SF) */
+        .word-card { 
+            background: rgba(0, 242, 255, 0.05); 
+            border: 1px solid rgba(0, 242, 255, 0.3); 
+            border-radius: 8px; 
+            padding: 8px 12px; 
+            text-align: center; 
+            width: 140px; 
+            box-shadow: 0 0 5px rgba(0, 242, 255, 0.1), inset 0 0 3px rgba(0, 242, 255, 0.05);
+        }
+        .word-card .word-en { 
+            font-weight: 700; color: #00f2ff; font-size: 0.9rem; font-family: 'Montserrat', sans-serif; text-shadow: none;
+        }
+        .word-card .word-jp-small { 
+            font-size: 0.75rem; color: #aaa; margin-top: 2px; font-family: 'Zen Kaku Gothic New', sans-serif; 
+        }
+    </style>
+</head>
+<body>
+
+    <button class="fixed top-6 left-6 z-50 text-xl text-slate-400 hover:text-white transition" onclick="goTo('list.html')">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <div class="pt-16 pb-32 max-w-2xl mx-auto px-4 sm:px-6">
+        <header class="mb-10 text-center">
+            <h1 class="word-en" id="disp-word">LOADING...</h1>
+            <p class="word-jp-detail text-lg" id="disp-meaning-core"></p>
+            <p class="text-xs text-cyan-400 mt-2 tracking-widest" id="re-challenge-link"></p>
+        </header>
+
+        <section id="review-content" class="space-y-6"></section>
+    </div>
+
+    <script>
+        let wordData;
+        const FREE_LIMIT = 50; 
+
+        // 1. 認証と初期化
+        firebase.auth().onAuthStateChanged(async (user) => { 
+            // ログインチェック
+            if (!user || !user.uid) { 
+                alert("単語レビューにはログインが必要です。");
+                window.location.href = 'list.html';
+                return;
+            }
+
+            // ID取得
+            const urlParams = new URLSearchParams(window.location.search);
+            const wordId = parseInt(urlParams.get('id'));
+            
+            if (isNaN(wordId)) {
+                window.location.href = 'list.html';
+                return;
+            }
+
+            // ★★★ セキュリティチェック (app.jsの関数を使用) ★★★
+            const isPremium = await checkPremiumStatus(user.uid); 
+            const isLockedWord = wordId > FREE_LIMIT;
+
+            if (isLockedWord && !isPremium) {
+                alert("この単語はプレミアムコンテンツです。");
+                window.location.href = 'list.html'; 
+                return;
+            }
+            
+            // データ取得
+            // WORD_DATABASEは word_data.js から読み込まれている
+            wordData = WORD_DATABASE.find(w => w.id === wordId);
+            
+            if (wordData) {
+                renderReviewPage(wordData);
+                document.body.classList.add('loaded');
+            } else {
+                document.getElementById('disp-word').textContent = 'ERROR';
+                document.body.classList.add('loaded');
+            }
+        });
+
+        // 2. レンダリング関数
+        function renderReviewPage(data) {
+            document.getElementById('disp-word').textContent = data.word;
+            document.getElementById('disp-meaning-core').textContent = data.meaning_core;
+
+            const contentContainer = document.getElementById('review-content');
+            contentContainer.innerHTML = ''; 
+
+            // A. 発音と音節 (Rhythm Rider)
+            let syllablesHtml = data.syllables.map(s => `
+                <span class="text-xl font-bold tracking-widest ${s.type === 'strong' ? 'text-yellow-400' : 'text-slate-500'}">
+                    ${s.text}
+                </span>
+            `).join('・');
+            contentContainer.innerHTML += `
+                <div>
+                    <h3 class="section-title">発音と音節 (Rhythm Rider)</h3>
+                    <div class="text-xl font-mono">${syllablesHtml}</div>
+                    <p class="text-xs text-slate-500 mt-1">※強勢部（アクセント）を太字で表示</p>
+                </div>
+            `;
+
+            // B. 意味の深掘り (Semantic Fusion) - カード表示
+            let meaningsHtml = Object.values(data.meanings_expanded).map(m => `
+                <div class="word-card h-full flex items-center justify-center">
+                    <div class="word-jp-small text-sm text-white">${m}</div>
+                </div>
+            `).join('');
+            contentContainer.innerHTML += `
+                <div>
+                    <h3 class="section-title">意味の深掘り (Semantic Fusion)</h3>
+                    <div class="flex flex-wrap gap-2 justify-start">${meaningsHtml}</div>
+                </div>
+            `;
+
+            // C. 運用例文 (Context Slasher)
+            let contextsHtml = data.contexts
+                .filter(c => c.is_correct === true)
+                .map(c => `
+                <div class="border-l-4 border-slate-700 pl-4 py-1">
+                    <p class="text-sm italic text-slate-300 mb-1">${c.full}</p>
+                    <p class="text-xs word-jp-detail">${c.jp}</p>
+                </div>
+            `).join('<hr class="border-slate-800 my-2">');
+            contentContainer.innerHTML += `
+                <div>
+                    <h3 class="section-title">運用例文 (Context Slasher)</h3>
+                    <div class="space-y-2">${contextsHtml}</div>
+                </div>
+            `;
+
+            // D. 類義語ネットワーク (Synonym Cyclotron) - カード表示
+            let synonymsHtml = Object.entries(data.synonyms).map(([en, jp]) => `
+                <div class="word-card">
+                    <div class="word-en">${en}</div>
+                    <div class="word-jp-small">${jp}</div>
+                </div>
+            `).join('');
+            contentContainer.innerHTML += `
+                <div>
+                    <h3 class="section-title">類義語ネットワーク (Synonym Cyclotron)</h3>
+                    <div class="flex flex-wrap gap-2 justify-start">${synonymsHtml}</div>
+                </div>
+            `;
+
+            // 再挑戦リンク
+            document.getElementById('re-challenge-link').innerHTML = `
+                ゲームに再挑戦する ➜ <a href="#" onclick="goTo('cockpit.html', data.id); return false;" class="underline hover:text-white transition">Cockpitへ</a>
+            `;
+        }
+    </script>
+</body>
+</html>
