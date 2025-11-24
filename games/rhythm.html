@@ -150,6 +150,10 @@
             100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; border-width: 0px; }
         }
     </style>
+    <script type="module">
+      import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
+      inject();
+    </script>
 </head>
 <body>
     <header class="fixed w-full top-0 z-50 pointer-events-none p-4 flex justify-end">
