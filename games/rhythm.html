@@ -128,6 +128,27 @@
             cursor: pointer;
         }
         .hidden { opacity: 0; pointer-events: none; }
+
+        /* Perfect判定時の衝撃波エフェクト */
+        .shockwave {
+            position: absolute;
+            top: 50%; left: 20%; /* 判定ラインの位置(judge-zoneと同じ) */
+            transform: translate(-50%, -50%);
+            width: 90px; height: 90px; /* 判定ゾーンのサイズ */
+            border-radius: 50%;
+            border: 4px solid #ffd700; /* ゴールド */
+            box-shadow: 0 0 30px #ffd700, inset 0 0 20px #ffd700; /* 内外に発光 */
+            opacity: 0;
+            pointer-events: none;
+            z-index: 40;
+            /* 爆発するように広がりながら消えるアニメーション */
+            animation: shockwave-anim 0.5s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes shockwave-anim {
+            0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; border-width: 6px; }
+            100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; border-width: 0px; }
+        }
     </style>
 </head>
 <body>
@@ -396,29 +417,17 @@
                 // 音はアクセントの有無で再生
                 playSoftTone(closestNote.data.type);
 
-
-                // Perfect判定の時だけフィードバックを表示
+                // Perfect判定の時だけ特別なフィードバック
                 if (minDiff < perfectWindow) {
-                    const fb = document.getElementById('feedback');
-                    fb.style.transition = 'none';
-                    fb.style.opacity = 0;
-                    void fb.offsetWidth; // 強制再描画
-
-                    fb.textContent = "Perfect";
-                    fb.style.color = 'gold';
-
-                    requestAnimationFrame(() => {
-                        fb.style.transition = "opacity 0.4s ease-out, transform 0.4s ease-out";
-                        fb.style.opacity = 1;
-                        fb.style.transform = 'translate(-50%, -50%) scale(1.2)';
-                        setTimeout(() => { fb.style.opacity = 0; }, 150);
-                    });
+                    // ★★★ 変更箇所: 古い文字表示コードを削除し、これだけにします ★★★
+                    createShockwave(); 
+                    
+                    // パーティクルも強めに
                     createParticles(judgeLineX, window.innerHeight / 2, 'strong');
                 } else {
                     // Perfectではないが成功した場合のパーティクル
                     createParticles(judgeLineX, window.innerHeight / 2, 'weak');
                 }
-
             }
         };
 
@@ -447,7 +456,14 @@
                 ], { duration: 800, easing: 'ease-out' }).onfinish = () => p.remove();
             }
         }
-        
+        function createShockwave() {
+            const el = document.createElement('div');
+            el.className = 'shockwave';
+            document.getElementById('game-container').appendChild(el);
+            
+            // アニメーション終了後に要素を削除（メモリリーク防止）
+            setTimeout(() => el.remove(), 600);
+        }
         function init() {
             // 単語表示更新
             document.getElementById('target-word-disp').textContent = wordData.word;
