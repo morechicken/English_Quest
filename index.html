@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="VocSphere">
+    <meta property="og:title" content="VocSphere | 次世代英単語学習システム">
+    <meta property="og:description" content="単語は暗記するな、融合せよ。大学受験レベルの重要語680語を、つづり・発音・文脈など5つの次元から完全定着させるSF的学習アプリ。">
+    <meta property="og:url" content="https://vocsphere.vercel.app/">
+    <meta property="og:image" content="https://vocsphere.vercel.app/images/ogp_card.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VocSphere | 5次元英単語学習">
+    <meta name="twitter:description" content="最初の50語は無料。あなたの英語脳を覚醒させるミッションを開始せよ。">
+    <meta name="twitter:image" content="https://vocsphere.vercel.app/images/ogp_card.png">
     <title>VocSphere</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -20,7 +35,7 @@
         body {
             background-color: #050814;
             background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #050814 80%);
-            color: white; font-family: 'Montserrat', sans-serif;
+            color: white; font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
             opacity: 0; /* 初期状態は透明 */
             transition: opacity 0.3s ease-in-out; /* 0.3秒かけて変化 */
         }

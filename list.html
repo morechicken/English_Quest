@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -19,16 +23,23 @@
 
     <style>
         body { 
-            background: #0f172a; color: white; font-family: 'Montserrat', sans-serif; 
-            opacity: 0; /* 初期状態は透明 */
+            background: #0f172a; 
+            color: white; 
+            /* 1行にまとめました */
+            font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+            opacity: 0; 
             transition: opacity 0.3s ease-in-out; 
         }
         body.loaded {
-            opacity: 1; /* 読み込み完了で表示 */
+            opacity: 1; 
         }
-        .jp-font { font-family: 'Shippori Mincho', serif; }
+
+        /* 既存のJSコードが .jp-font を使っている場合、このクラス名を維持するのが重要です */
+        .jp-font, .jp-font-serif { 
+            font-family: 'Shippori Mincho', serif; 
+        }
         
-        /* カードのホバーアニメーション */
+        /* カードのホバーアニメーションなど、既存のスタイルはそのまま維持 */
         .word-card:active { transform: scale(0.98); }
 
         /* 音量ボタン */
@@ -155,7 +166,7 @@
     // --- 設定値 ---
     const FREE_LIMIT = 50; // 無料で遊べる単語数
     let isUserPremium = false; // 課金状態（初期値false）
-
+    let unsubscribePaymentListener = null;
     // list.html専用の初期化関数
     async function initializePage() {
         // ログインしている場合、UIを更新
@@ -165,11 +176,57 @@
             // Firestoreを見に行って、本当に課金しているか確認する
             isUserPremium = await checkPremiumStatus(currentUser.uid);
             console.log("User Premium Status:", isUserPremium); // 確認用ログ
+            if (!isUserPremium) {
+                setupRealtimePaymentListener(currentUser.uid);
+            }
         }
         
         // 常に最新の進捗を読み込んでからリストを描画
         await loadAllProgress();
         renderList();
+    }
+    function setupRealtimePaymentListener(uid) {
+        // customers/{uid}/payments コレクションを監視
+        unsubscribePaymentListener = db.collection('customers')
+            .doc(uid)
+            .collection('payments')
+            .where('status', '==', 'succeeded')
+            .onSnapshot((snapshot) => {
+                // 成功データが追加されたら発動
+                if (!snapshot.empty) {
+                    console.log("Payment detected via Stream!");
+                    triggerUnlockSequence(); // 演出開始
+                    
+                    // 監視を終了（もう必要ないので）
+                    if (unsubscribePaymentListener) unsubscribePaymentListener();
+                }
+            });
+    }
+
+    // 【追加】演出とデータ更新を実行する関数
+    function triggerUnlockSequence() {
+        // 1. モーダルを閉じる
+        closePremiumModal();
+
+        // 2. 演出レイヤーを表示
+        const overlay = document.getElementById('unlock-overlay');
+        const bar = document.getElementById('unlock-progress-bar');
+        overlay.classList.remove('hidden');
+
+        // 3. プログレスバーを伸ばす演出
+        setTimeout(() => { bar.style.width = '100%'; }, 100);
+
+        // 4. 数秒後に演出を消して、リストを再描画（ロック解除）
+        setTimeout(() => {
+            isUserPremium = true; // フラグを強制的にON
+            renderList(); // リストを再描画（これで鍵が消える）
+            
+            // 演出終了
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+            
+            // 必要ならここに「BGMを変える」などの処理も追加可能
+        }, 2500); // 2.5秒間演出を見せる
     }
 
     function renderList() {
@@ -436,5 +493,54 @@ async function checkPremiumStatus(uid) {
 }
 </script>
 
+<div id="unlock-overlay" class="hidden fixed inset-0 z-[100] bg-[#0f172a] h-screen w-screen overflow-hidden transition-opacity duration-1000 flex flex-col items-center justify-center">
+        
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-500/40 via-blue-900/20 to-transparent opacity-0 animate-light-explode pointer-events-none"></div>
+        
+        <div class="absolute inset-[-100%] bg-[conic-gradient(from_0deg_at_50%_50%,_transparent_0deg,_rgba(34,211,238,0.1)_30deg,_transparent_60deg,_rgba(34,211,238,0.1)_90deg,_transparent_120deg,_rgba(34,211,238,0.1)_150deg,_transparent_180deg,_rgba(34,211,238,0.1)_210deg,_transparent_240deg,_rgba(34,211,238,0.1)_270deg,_transparent_300deg,_rgba(34,211,238,0.1)_330deg,_transparent_360deg)] animate-slow-spin opacity-50 pointer-events-none"></div>
+
+        <div class="z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-4">
+            
+            <div class="text-cyan-300 font-mono text-sm tracking-[0.8em] mb-8 opacity-0 animate-fade-in-up" style="animation-delay: 0.5s;">SYSTEM AUTHORIZED</div>
+            
+            <h1 class="text-5xl md:text-7xl font-black text-white tracking-tighter opacity-0 animate-holy-reveal whitespace-nowrap"
+                style="text-shadow: 0 0 10px rgba(34,211,238,0.8), 0 0 30px rgba(34,211,238,0.6), 0 0 60px rgba(34,211,238,0.4), 0 0 100px rgba(59,130,246,0.3);">
+                LOCK REMOVED
+            </h1>
+
+            <div class="mt-10 h-1 w-0 mx-auto rounded-full relative overflow-hidden bg-blue-900/30 max-w-xs" id="unlock-progress-container">
+                <div id="unlock-progress-bar" class="absolute inset-0 w-0 bg-gradient-to-r from-cyan-400 via-white to-cyan-400 transition-all duration-1500 ease-out shadow-[0_0_20px_cyan]"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* アニメーション定義（変更なし） */
+        @keyframes light-explode {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(1.5); }
+        }
+        .animate-light-explode { animation: light-explode 3s ease-out forwards; }
+
+        @keyframes slow-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-slow-spin { animation: slow-spin 60s linear infinite; }
+
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up { animation: fade-in-up 1s ease-out forwards; }
+
+        @keyframes holy-reveal {
+            0% { opacity: 0; transform: translateY(40px) scale(0.9); filter: blur(10px); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0px); }
+        }
+        .animate-holy-reveal { animation: holy-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: 0.8s; }
+    </style>
+    
 </body>
 </html>
