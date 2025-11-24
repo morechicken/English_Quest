@@ -99,8 +99,16 @@
 
         #ui-layer { position: absolute; top: 0; width: 100%; padding: 30px; text-align: center; pointer-events: none; z-index: 50; }
         #feedback {
-            position: absolute; top: 25%; left: 20%; transform: translate(-50%, -50%);
-            font-size: 2.5rem; font-weight: 900; letter-spacing: 0.1em; opacity: 0; pointer-events: none; text-shadow: 0 0 15px rgba(255,215,0,0.7);
+            position: absolute; 
+            top: 35%;   /* 判定ライン(50%)より少し上 */
+            left: 50%;  /* ★画面の左右中央に配置 */
+            transform: translate(-50%, -50%); /* ど真ん中に合わせる */
+            
+            font-size: 2.5rem; font-weight: 900; letter-spacing: 0.1em; 
+            opacity: 0; pointer-events: none; 
+            text-shadow: 0 0 15px rgba(255,215,0,0.7);
+            width: 100%; /* 横幅いっぱいにして折り返しを防ぐ */
+            text-align: center; /* 文字自体も中央揃え */
         }
 
         .particle { position: fixed; pointer-events: none; border-radius: 50%; z-index: 40; mix-blend-mode: screen; }
