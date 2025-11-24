@@ -376,6 +376,7 @@ async function startCheckout() {
                 price: 'price_1SWfiz74xjWFgZZzeB2Zm8Xb', 
                 success_url: window.location.href, // 成功したら今のページに戻る
                 cancel_url: window.location.href,
+                mode: 'payment'
             });
 
         // 2. 拡張機能が url を書き込んでくれるのを待つ
