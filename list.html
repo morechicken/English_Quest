@@ -154,23 +154,43 @@
     let isUserPremium = false; // 課金状態（初期値false）
     let unsubscribePaymentListener = null;
     // list.html専用の初期化関数
-    async function initializePage() {
-        // ログインしている場合、UIを更新
-        if (currentUser) {
-            updateUserUI(currentUser);
-            // ★★★ ここを追加・修正 ★★★
-            // Firestoreを見に行って、本当に課金しているか確認する
-            isUserPremium = await checkPremiumStatus(currentUser.uid);
-            console.log("User Premium Status:", isUserPremium); // 確認用ログ
-            if (!isUserPremium) {
-                setupRealtimePaymentListener(currentUser.uid);
-            }
-        }
+    // 修正対象: initializePage 関数全体を以下に置き換え
+async function initializePage() {
+    // 常に最新の進捗を読み込んでから処理を開始
+    await loadAllProgress();
+
+    // ログインしている場合、UIを更新
+    if (currentUser) {
+        updateUserUI(currentUser);
         
-        // 常に最新の進捗を読み込んでからリストを描画
-        await loadAllProgress();
-        renderList();
+        // 1. プレミアムステータスを取得
+        const wasPremium = isUserPremium; // ページロード前の状態（初期値false）
+        isUserPremium = await checkPremiumStatus(currentUser.uid);
+        
+        console.log("User Premium Status:", isUserPremium);
+
+        // 2. Stripeからのリダイレクトフラグを取得
+        const justPaid = sessionStorage.getItem('is_checkout_redirect') === 'true';
+
+        if (isUserPremium && justPaid) {
+            // 【演出トリガー】: 課金が成功し、Stripeから戻ってきた直後
+            
+            // フラグを削除 (二重実行を防ぐ)
+            sessionStorage.removeItem('is_checkout_redirect');
+
+            // 演出を開始し、解除処理は演出に任せる
+            triggerUnlockSequence(); 
+            return; // ★重要: アニメーション中はここで処理を中断
+
+        } else if (!isUserPremium) {
+            // 未課金状態の場合のみ、リアルタイム監視を開始
+            setupRealtimePaymentListener(currentUser.uid);
+        }
     }
+    
+    // 3. 通常時、またはアニメーションが不要な場合はここで描画
+    renderList();
+}
     function setupRealtimePaymentListener(uid) {
         // customers/{uid}/payments コレクションを監視
         unsubscribePaymentListener = db.collection('customers')
@@ -190,7 +210,7 @@
     }
 
     // 【追加】演出とデータ更新を実行する関数
-    function triggerUnlockSequence() {
+    function triggerUnlockSequence() { // ★★★ この関数です ★★★
         // 1. モーダルを閉じる
         closePremiumModal();
 
@@ -212,9 +232,10 @@
             overlay.classList.remove('flex');
             
             // 必要ならここに「BGMを変える」などの処理も追加可能
-        }, 2500); // 2.5秒間演出を見せる
-    }
+        }, 3500); // 👈 この時間を調整しました
 
+    }
+    
     function renderList() {
         const container = document.getElementById('list-container');
         const navContainer = document.getElementById('alphabet-nav-vertical');
@@ -408,6 +429,9 @@
 
     // --- Stripe決済開始処理 ---
 async function startCheckout() {
+    // ★★★ここを追加★★★
+    sessionStorage.setItem('is_checkout_redirect', 'true'); 
+    
     // ログインチェック
     if (!currentUser) {
         alert("Please login first to save your progress.");
