@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About VocSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background: #0f172a; color: white; }
+        .jp-font { font-family: 'Shippori Mincho', serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <header class="fixed w-full top-0 bg-[#0f172a]/90 backdrop-blur z-50 border-b border-slate-700">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <span class="font-bold text-xs text-white">VS</span>
+                </div>
+                <h1 class="font-black text-xl tracking-tighter text-white">VocSphere</h1>
+            </div>
+            <a href="list.html" class="text-xs font-bold text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded hover:bg-cyan-500/10 transition">
+                CLOSE
+            </a>
+        </div>
+    </header>
+
+    <main class="mt-16 px-6 max-w-2xl mx-auto space-y-16">
+
+        <section class="text-center pt-8 animate-fade-in">
+            <h2 class="text-sm font-bold text-cyan-500 tracking-widest mb-2">PROJECT: VOCSPHERE</h2>
+            <p class="text-3xl font-black leading-tight mb-6">
+                単語は、暗記するな。<br>
+                <span class="gradient-text">融合（Fusion）せよ。</span>
+            </p>
+            <p class="jp-font text-slate-400 text-sm leading-7 mb-8">
+                VocSphereは、従来の「単語帳」ではありません。<br>
+                5つの異なる次元から脳を刺激し、<br>
+                記憶を「定着」から「運用」へと昇華させる<br>
+                次世代の語彙インストール・システムです。
+            </p>
+            
+            <div class="relative w-full bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl shadow-cyan-900/50 group">
+                
+                <img src="images/hero_cockpit.png" 
+                     alt="VocSphere Cockpit" 
+                     class="w-full h-auto block opacity-90 group-hover:scale-105 transition duration-700 ease-in-out">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                <div class="absolute inset-0 border border-white/10 rounded-2xl pointer-events-none"></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-1 h-6 bg-cyan-500"></div>
+                <h3 class="text-xl font-bold">The Logic</h3>
+            </div>
+            <p class="jp-font text-slate-300 text-sm leading-relaxed mb-6">
+                「訳」を覚えるだけの学習は、線（1次元）の記憶です。<br>
+                VocSphereは、<span class="text-cyan-400 font-bold">つづり・発音・意味・類義語・文脈</span>の5要素を同時に接続。<br>
+                強固な「面（5次元）」の記憶ネットワークを構築します。
+            </p>
+            <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 flex flex-col items-center justify-center">
+                
+                <div class="relative w-64 h-64">
+                    <div class="absolute inset-0 border border-slate-700/50 rounded-full animate-pulse"></div>
+                    
+                    <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+                        <polygon points="50,10 90,40 75,90 25,90 10,40" 
+                                 fill="rgba(15, 23, 42, 0.8)" 
+                                 stroke="#22d3ee" 
+                                 stroke-width="0.5"
+                                 class="opacity-80" />
+                        
+                        <line x1="50" y1="50" x2="50" y2="10" stroke="#22d3ee" stroke-width="0.2" class="opacity-30" />
+                        <line x1="50" y1="50" x2="90" y2="40" stroke="#22d3ee" stroke-width="0.2" class="opacity-30" />
+                        <line x1="50" y1="50" x2="75" y2="90" stroke="#22d3ee" stroke-width="0.2" class="opacity-30" />
+                        <line x1="50" y1="50" x2="25" y2="90" stroke="#22d3ee" stroke-width="0.2" class="opacity-30" />
+                        <line x1="50" y1="50" x2="10" y2="40" stroke="#22d3ee" stroke-width="0.2" class="opacity-30" />
+
+                        <circle cx="50" cy="50" r="3" fill="#22d3ee" />
+                        <text x="50" y="58" font-size="4" fill="white" text-anchor="middle" font-weight="bold" font-family="Montserrat">CORE</text>
+                        
+                        <circle cx="50" cy="10" r="1.5" fill="#a5b4fc" />
+                        <circle cx="90" cy="40" r="1.5" fill="#a5b4fc" />
+                        <circle cx="75" cy="90" r="1.5" fill="#a5b4fc" />
+                        <circle cx="25" cy="90" r="1.5" fill="#a5b4fc" />
+                        <circle cx="10" cy="40" r="1.5" fill="#a5b4fc" />
+                    </svg>
+
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -mt-2 text-[10px] font-bold text-blue-300 bg-slate-900 px-1 border border-blue-500/30 rounded">SPELLING</div>
+                    <div class="absolute top-[35%] right-0 -mr-2 text-[10px] font-bold text-pink-300 bg-slate-900 px-1 border border-pink-500/30 rounded">SOUND</div>
+                    <div class="absolute bottom-[10%] right-0 mr-2 text-[10px] font-bold text-green-300 bg-slate-900 px-1 border border-green-500/30 rounded">SYNONYM</div>
+                    <div class="absolute bottom-[10%] left-0 ml-2 text-[10px] font-bold text-yellow-300 bg-slate-900 px-1 border border-yellow-500/30 rounded">MEANING</div>
+                    <div class="absolute top-[35%] left-0 -ml-4 text-[10px] font-bold text-red-300 bg-slate-900 px-1 border border-red-500/30 rounded">CONTEXT</div>
+                </div>
+
+                <p class="text-[10px] text-slate-500 mt-6 tracking-widest">5-DIMENSIONAL MEMORY NETWORK</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-6 bg-purple-500"></div>
+                <h3 class="text-xl font-bold">5 Dimensions</h3>
+            </div>
+
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <img src="images/spelling.png" 
+     alt="Spell Weaver Icon" 
+     class="w-16 h-16 bg-blue-900/50 rounded-lg flex-shrink-0 object-contain p-1">
+                    <div>
+                        <h4 class="font-bold text-blue-300">Spell Weaver</h4>
+                        <p class="text-xs text-slate-400 mt-1 jp-font">視覚によるつづり認識。<br>文字を正しい順序で撃ち抜く。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                     <img src="images/rhythm.png" 
+     alt="Rhythm Rider Icon" 
+     class="w-16 h-16 bg-blue-900/50 rounded-lg flex-shrink-0 object-contain p-1">
+                    <div>
+                        <h4 class="font-bold text-pink-300">Rhythm Rider</h4>
+                        <p class="text-xs text-slate-400 mt-1 jp-font">聴覚による音韻ループ。<br>アクセントとリズムを身体で覚える。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <img src="images/synonyms.png" 
+     alt="Synonym Cyclotron Icon" 
+     class="w-16 h-16 bg-blue-900/50 rounded-lg flex-shrink-0 object-contain p-1">
+                    <div>
+                        <h4 class="font-bold text-green-300">Synonym Cyclotron</h4>
+                        <p class="text-xs text-slate-400 mt-1 jp-font">類義語ネットワークの構築。<br>言い換え可能な語彙をキャッチする。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <img src="images/meaning.png" 
+     alt="Semantic Fusion Icon" 
+     class="w-16 h-16 bg-blue-900/50 rounded-lg flex-shrink-0 object-contain p-1">
+                    <div>
+                        <h4 class="font-bold text-yellow-300">Semantic Fusion</h4>
+                        <p class="text-xs text-slate-400 mt-1 jp-font">核となる意味の把握。<br>日本語訳と英単語を直感で融合させる。</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <img src="images/context.png" 
+     alt="Context Slasher Icon" 
+     class="w-16 h-16 bg-blue-900/50 rounded-lg flex-shrink-0 object-contain p-1">
+                    <div>
+                        <h4 class="font-bold text-red-300">Context Slasher</h4>
+                        <p class="text-xs text-slate-400 mt-1 jp-font">文脈の中での運用能力。<br>英文の構造を一瞬で見抜く。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700">
+            <h3 class="text-lg font-bold mb-4 text-center">Target Level</h3>
+            <ul class="space-y-3 text-sm jp-font text-slate-300">
+                <li class="flex items-center gap-2">
+                    <span class="text-cyan-400">✔</span> 大学入試 共通テスト
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-cyan-400">✔</span> GMARCH / 関関同立 レベル
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-cyan-400">✔</span> 英検 2級 〜 準1級
+                </li>
+            </ul>
+            <div class="mt-6 pt-6 border-t border-slate-700 text-center">
+                <p class="text-xs text-slate-400 mb-1">DATA SIZE</p>
+                <p class="text-3xl font-black text-white">680 <span class="text-sm font-normal text-slate-400">WORDS</span></p>
+                <p class="text-[10px] text-slate-500 mt-2">※頻出かつ学習効果の高い語彙を厳選</p>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <div class="inline-block p-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+                <div class="bg-slate-900 rounded-full px-6 py-1">
+                    <span class="text-xs font-bold text-cyan-400 tracking-wider">PRICING MODEL</span>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4">First 50 Words <span class="text-cyan-400">Free.</span></h3>
+            <p class="jp-font text-slate-400 text-sm mb-8 leading-7">
+                VocSphereに「いきなりの課金」は不要です。<br>
+                まずは最初の50語をクリアしてください。<br>
+                <br>
+                このメソッドがあなたに合うと確信できた時、<br>
+                残りの630語を解放してください。
+            </p>
+
+            <div class="bg-slate-800 p-4 rounded-xl border border-slate-600 inline-block w-full max-w-xs">
+                <div class="flex justify-between items-end mb-2">
+                    <span class="text-sm text-slate-400">Premium Unlock</span>
+                    <span class="text-2xl font-bold text-white">¥150</span>
+                </div>
+                <div class="text-[10px] text-slate-500 text-right">One-time payment (買い切り)</div>
+            </div>
+        </section>
+
+        <footer class="text-center text-slate-600 text-xs py-8 border-t border-slate-800">
+            <div class="flex justify-center gap-4 mb-4">
+                <a href="#" class="hover:text-white transition">利用規約</a>
+                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                <a href="#" class="hover:text-white transition">特定商取引法に基づく表記</a>
+            </div>
+            <p>&copy; 2025 VocSphere Project.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
