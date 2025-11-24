@@ -105,63 +105,135 @@
 
     <div id="list-container" class="space-y-3 max-w-2xl mx-auto">
         </div>
+<div id="premium-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center px-4">
+    <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" onclick="closePremiumModal()"></div>
+    
+    <div class="relative bg-slate-800 border border-cyan-500/30 rounded-2xl shadow-[0_0_50px_rgba(6,182,212,0.2)] max-w-sm w-full p-8 text-center overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-purple-600"></div>
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl"></div>
 
+        <div class="mx-auto w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mb-6 border border-slate-600 shadow-inner">
+            <span class="text-3xl">💎</span>
+        </div>
+
+        <h2 class="text-2xl font-black text-white mb-2 tracking-wider">UNLOCK ALL DATA</h2>
+        <p class="text-slate-400 text-sm mb-8 leading-relaxed jp-font">
+            最初の50語を突破した能力者へ。<br>
+            全680語の封印を解除し、<br>
+            完全なボキャブラリーを手に入れろ。
+        </p>
+
+        <button id="checkout-button" onclick="startCheckout()" class="block w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg transform transition active:scale-95 mb-1 tracking-widest">
+    UNLOCK NOW (¥150)
+</button>
+
+<div id="loading-msg" class="hidden text-xs text-cyan-400 animate-pulse mt-2 mb-6">
+    Connecting to Stripe...
+</div>
+
+<button onclick="closePremiumModal()" class="text-slate-500 text-xs hover:text-white transition tracking-widest">
+    CLOSE
+</button>
+    </div>
+</div>
     <script>
-        // list.html専用の初期化関数
-        async function initializePage() {
-            // ログインしている場合、UIを更新
-            if (currentUser) {
-                updateUserUI(currentUser);
-            }
-            // 常に最新の進捗を読み込んでからリストを描画
-            await loadAllProgress();
-            renderList();
+    // --- 設定値 ---
+    const FREE_LIMIT = 50; // 無料で遊べる単語数
+    let isUserPremium = false; // 課金状態（初期値false）
+
+    // list.html専用の初期化関数
+    async function initializePage() {
+        // ログインしている場合、UIを更新
+        if (currentUser) {
+            updateUserUI(currentUser);
+            // ★ここでFirestoreから課金状態を取得する処理が入ります
+            // 今回は仮で currentUser オブジェクトに isPremium があると仮定、なければ false
+            // 将来的には: isUserPremium = await checkPremiumStatus(currentUser.uid);
+            if (currentUser.isPremium) isUserPremium = true;
         }
+        
+        // 常に最新の進捗を読み込んでからリストを描画
+        await loadAllProgress();
+        renderList();
+    }
 
-        function renderList() {
-            const container = document.getElementById('list-container');
-            const navContainer = document.getElementById('alphabet-nav-vertical');
-            container.innerHTML = ''; // コンテナをクリア
-            navContainer.innerHTML = ''; // ナビゲーションをクリア
+    function renderList() {
+        const container = document.getElementById('list-container');
+        const navContainer = document.getElementById('alphabet-nav-vertical');
+        container.innerHTML = ''; // コンテナをクリア
+        navContainer.innerHTML = ''; // ナビゲーションをクリア
 
-            let masteredCount = 0;
-            let currentLetter = '';
+        let masteredCount = 0;
 
-            // アルファベットごとに単語をグループ化
-            const groupedWords = WORD_DATABASE.reduce((acc, word) => {
-                const firstLetter = word.word.charAt(0).toUpperCase();
-                if (!acc[firstLetter]) {
-                    acc[firstLetter] = [];
-                }
-                acc[firstLetter].push(word);
-                return acc;
-            }, {});
+        // アルファベットごとに単語をグループ化
+        const groupedWords = WORD_DATABASE.reduce((acc, word) => {
+            const firstLetter = word.word.charAt(0).toUpperCase();
+            if (!acc[firstLetter]) {
+                acc[firstLetter] = [];
+            }
+            acc[firstLetter].push(word);
+            return acc;
+        }, {});
 
-            // アルファベット順にセクションとカードを描画
-            Object.keys(groupedWords).sort().forEach(letter => {
-                // ナビゲーションリンクを作成
-                const navLink = document.createElement('a');
-                navLink.href = `#section-${letter}`;
-                navLink.textContent = letter.toUpperCase();
-                navLink.className = 'hover:text-cyan-400';
-                navLink.onclick = (e) => {
-                    e.preventDefault();
-                    document.querySelector(navLink.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-                };
-                navContainer.appendChild(navLink);
+        // アルファベット順にセクションとカードを描画
+        Object.keys(groupedWords).sort().forEach(letter => {
+            // ナビゲーションリンクを作成
+            const navLink = document.createElement('a');
+            navLink.href = `#section-${letter}`;
+            navLink.textContent = letter.toUpperCase();
+            navLink.className = 'hover:text-cyan-400';
+            navLink.onclick = (e) => {
+                e.preventDefault();
+                document.querySelector(navLink.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            };
+            navContainer.appendChild(navLink);
 
-                // セクションヘッダーを作成
-                const sectionWrapper = document.createElement('div');
-                sectionWrapper.id = `section-${letter}`;
-                sectionWrapper.className = 'section-anchor'; // スクロール位置調整用のクラス
-                
-                const header = document.createElement('h3');
-                header.className = 'text-2xl font-black text-slate-600 tracking-widest mb-3 ml-1';
-                header.textContent = letter;
-                sectionWrapper.appendChild(header);
-                
-                // 各単語カードを描画
-                groupedWords[letter].forEach(word => {
+            // セクションヘッダーを作成
+            const sectionWrapper = document.createElement('div');
+            sectionWrapper.id = `section-${letter}`;
+            sectionWrapper.className = 'section-anchor';
+            
+            const header = document.createElement('h3');
+            header.className = 'text-2xl font-black text-slate-600 tracking-widest mb-3 ml-1';
+            header.textContent = letter;
+            sectionWrapper.appendChild(header);
+            
+            // 各単語カードを描画
+            groupedWords[letter].forEach(word => {
+                // ★ロック判定
+                const isLocked = (word.id > FREE_LIMIT) && !isUserPremium;
+
+                // --- ロックされている場合の表示 ---
+                if (isLocked) {
+                    const div = document.createElement('div');
+                    // 少し暗く、彩度を落としたスタイル
+                    div.className = `word-card relative p-4 rounded-xl border border-slate-800 bg-slate-900/50 cursor-pointer transition-all overflow-hidden group mb-3 hover:border-purple-500/50`;
+                    
+                    // クリックで課金モーダルへ
+                    div.onclick = () => openPremiumModal();
+
+                    div.innerHTML = `
+                        <div class="flex justify-between items-center relative z-10 opacity-60">
+                            <div class="flex items-center gap-3">
+                                <div class="text-xl text-slate-600">🔒</div>
+                                <div>
+                                    <div class="text-xl font-bold tracking-wide text-slate-500 filter blur-[2px] select-none">LOCKED</div>
+                                    <div class="text-sm text-slate-600 jp-font mt-1">Premium Only</div>
+                                </div>
+                            </div>
+                            <div class="text-right pl-4">
+                                <div class="text-[10px] font-mono text-slate-700 mb-1 tracking-wider">ID</div>
+                                <div class="text-lg font-bold font-mono text-slate-700">
+                                    ${word.id}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    sectionWrapper.appendChild(div);
+
+                // --- 解放されている場合（既存のコード） ---
+                } else {
                     const progress = getProgress(word.id);
                     let clearCount = 0;
                     if (typeof GAME_MODES !== 'undefined') {
@@ -207,73 +279,128 @@
                         <div class="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-1000" style="width: ${progressPercent}%"></div>
                     `;
                     sectionWrapper.appendChild(div);
-                });
-
-                container.appendChild(sectionWrapper);
+                }
             });
 
-            // 全体進捗更新
-            document.getElementById('total-progress').textContent = `${masteredCount} / ${WORD_DATABASE.length} MASTERED`;
+            container.appendChild(sectionWrapper);
+        });
 
-            // --- ここからインタラクティブナビゲーションのロジック ---
-            setupInteractiveNav();
-        }
+        // 全体進捗更新
+        document.getElementById('total-progress').textContent = `${masteredCount} / ${WORD_DATABASE.length} MASTERED`;
 
-        function setupInteractiveNav() {
-            const nav = document.getElementById('alphabet-nav-vertical');
-            const links = Array.from(nav.getElementsByTagName('a'));
-            if (links.length === 0) return;
-    
-            let isDragging = false;
-            let activeLink = null;
-    
-            const updateActiveLink = (y) => {
-                let closestLink = null;
-                let minDistance = Infinity;
-    
-                // 最も近いリンクを見つける
-                links.forEach(link => {
-                    const linkRect = link.getBoundingClientRect();
-                    const linkCenterY = linkRect.top + linkRect.height / 2;
-                    const distance = Math.abs(y - linkCenterY);
-    
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        closestLink = link;
-                    }
-                });
-    
-                // 以前のアクティブなリンクと違う場合のみスタイルを更新
-                if (activeLink !== closestLink) {
-                    if (activeLink) {
-                        activeLink.style.transform = 'scale(1)';
-                        activeLink.style.color = '';
-                    }
-                    if (closestLink) {
-                        closestLink.style.transform = 'scale(2.2)';
-                        closestLink.style.color = '#22d3ee'; // cyan-400
-                    }
-                    activeLink = closestLink;
+        setupInteractiveNav();
+    }
+
+    function setupInteractiveNav() {
+        const nav = document.getElementById('alphabet-nav-vertical');
+        const links = Array.from(nav.getElementsByTagName('a'));
+        if (links.length === 0) return;
+
+        let activeLink = null;
+
+        const updateActiveLink = (y) => {
+            let closestLink = null;
+            let minDistance = Infinity;
+
+            links.forEach(link => {
+                const linkRect = link.getBoundingClientRect();
+                const linkCenterY = linkRect.top + linkRect.height / 2;
+                const distance = Math.abs(y - linkCenterY);
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestLink = link;
                 }
-            };
-    
-            const resetStyles = () => {
+            });
+
+            if (activeLink !== closestLink) {
                 if (activeLink) {
                     activeLink.style.transform = 'scale(1)';
                     activeLink.style.color = '';
-                    activeLink = null;
                 }
-            };
+                if (closestLink) {
+                    closestLink.style.transform = 'scale(2.2)';
+                    closestLink.style.color = '#22d3ee'; 
+                }
+                activeLink = closestLink;
+            }
+        };
+
+        const resetStyles = () => {
+            if (activeLink) {
+                activeLink.style.transform = 'scale(1)';
+                activeLink.style.color = '';
+                activeLink = null;
+            }
+        };
+
+        nav.addEventListener('mousemove', (e) => updateActiveLink(e.clientY));
+        nav.addEventListener('mouseleave', resetStyles);
+        nav.addEventListener('touchmove', (e) => { updateActiveLink(e.touches[0].clientY); }, { passive: true });
+        nav.addEventListener('touchend', resetStyles);
+    }
+
+    // --- モーダル制御 ---
+    function openPremiumModal() {
+        document.getElementById('premium-modal').classList.remove('hidden');
+    }
+
+    function closePremiumModal() {
+        document.getElementById('premium-modal').classList.add('hidden');
+    }
+
+    // --- Stripe決済開始処理 ---
+async function startCheckout() {
+    // ログインチェック
+    if (!currentUser) {
+        alert("Please login first to save your progress.");
+        return;
+    }
+
+    const btn = document.getElementById('checkout-button');
+    const msg = document.getElementById('loading-msg');
     
-            // --- マウス操作 ---
-            nav.addEventListener('mousemove', (e) => updateActiveLink(e.clientY));
-            nav.addEventListener('mouseleave', resetStyles);
-    
-            // --- タッチ操作 ---
-            nav.addEventListener('touchmove', (e) => { updateActiveLink(e.touches[0].clientY); }, { passive: true });
-            nav.addEventListener('touchend', resetStyles);
-        }
-    </script>
+    // ボタンを無効化してロード中表示
+    btn.disabled = true;
+    btn.classList.add('opacity-50', 'cursor-not-allowed');
+    msg.classList.remove('hidden');
+
+    try {
+        // 1. Firestoreに「セッション作成依頼」のドキュメントを作る
+        // 拡張機能がこれを検知して、Stripeの決済URLを発行してくれます
+        const docRef = await db.collection('customers') // app.jsでdbが定義されている前提(firebase.firestore())
+            .doc(currentUser.uid)
+            .collection('checkout_sessions')
+            .add({
+                // ★重要: Stripeの商品ページにある「API ID」をここに貼る
+                price: 'price_1SWfiz74xjWFgZZzeB2Zm8Xb', 
+                success_url: window.location.href, // 成功したら今のページに戻る
+                cancel_url: window.location.href,
+            });
+
+        // 2. 拡張機能が url を書き込んでくれるのを待つ
+        docRef.onSnapshot((snap) => {
+            const { error, url } = snap.data();
+            if (error) {
+                console.error('An error occurred:', error.message);
+                alert('Error: ' + error.message);
+                btn.disabled = false;
+                msg.classList.add('hidden');
+            }
+            if (url) {
+                // 3. URLができたらそこに飛ばす（Stripe決済画面へ）
+                window.location.assign(url);
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        alert("Checkout failed to start: " + e.message);
+        btn.disabled = false;
+        msg.classList.add('hidden');
+    }
+}
+</script>
 
 </body>
 </html>
