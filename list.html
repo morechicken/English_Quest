@@ -444,7 +444,7 @@ async function startCheckout() {
             .collection('checkout_sessions')
             .add({
                 // ★重要: Stripeの商品ページにある「API ID」をここに貼る
-                price: 'price_1SWfiz74xjWFgZZzeB2Zm8Xb', 
+                price: 'price_1SWqmn5cwOK3M0Cgo5iONhSZ', 
                 success_url: window.location.href, // 成功したら今のページに戻る
                 cancel_url: window.location.href,
                 mode: 'payment'
