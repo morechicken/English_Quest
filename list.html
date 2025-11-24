@@ -147,10 +147,10 @@
         // ログインしている場合、UIを更新
         if (currentUser) {
             updateUserUI(currentUser);
-            // ★ここでFirestoreから課金状態を取得する処理が入ります
-            // 今回は仮で currentUser オブジェクトに isPremium があると仮定、なければ false
-            // 将来的には: isUserPremium = await checkPremiumStatus(currentUser.uid);
-            if (currentUser.isPremium) isUserPremium = true;
+            // ★★★ ここを追加・修正 ★★★
+            // Firestoreを見に行って、本当に課金しているか確認する
+            isUserPremium = await checkPremiumStatus(currentUser.uid);
+            console.log("User Premium Status:", isUserPremium); // 確認用ログ
         }
         
         // 常に最新の進捗を読み込んでからリストを描画
@@ -399,6 +399,25 @@ async function startCheckout() {
         alert("Checkout failed to start: " + e.message);
         btn.disabled = false;
         msg.classList.add('hidden');
+    }
+}
+
+// ユーザーが課金済みかチェックする関数
+async function checkPremiumStatus(uid) {
+    try {
+        // 'customers' コレクションの中から、自分のIDの 'payments' サブコレクションを見る
+        // status が 'succeeded' (成功) になっているデータがあるか探す
+        const snapshot = await db.collection('customers') // app.jsでdb定義済み前提
+            .doc(uid)
+            .collection('payments')
+            .where('status', '==', 'succeeded')
+            .get();
+        
+        // データが1つでもあれば true (課金済み)、なければ false
+        return !snapshot.empty;
+    } catch (error) {
+        console.error("Premium check error:", error);
+        return false;
     }
 }
 </script>
