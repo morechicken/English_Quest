@@ -45,15 +45,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "We decided to",
-          "a new building."
-        ],
-        "full": "We decided to construct a new building.",
-        "jp": "私たちは新しい建物を建設することに決めた。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "",
           " nuclear weapons."
         ],
@@ -111,15 +102,6 @@ const WORD_DATABASE = [
         "full": "The plane flew high ABOVE the clouds.",
         "jp": "飛行機は雲の上高くを飛んだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He walked",
-          "the tunnel."
-        ],
-        "full": "He walked through the tunnel.",
-        "jp": "彼はトンネルを通って歩いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -183,15 +165,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "She wore a",
-          "dress."
-        ],
-        "full": "She wore a beautiful dress.",
-        "jp": "彼女は美しいドレスを着ていた。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "I read the ",
           " version."
         ],
@@ -249,15 +222,6 @@ const WORD_DATABASE = [
         "full": "The bus came to an ABRUPT stop.",
         "jp": "バスは突然停止した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "driver."
-        ],
-        "full": "He is a careful driver.",
-        "jp": "彼は慎重な運転手だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -319,18 +283,9 @@ const WORD_DATABASE = [
           "The meeting ended",
           "when the fire alarm rang."
         ],
-        "full": "The meeting ended abruptly when the fire alarm rang.",
+        "full": "The meeting ended ABRUPTLY when the fire alarm rang.",
         "jp": "火災報知器が鳴ると、会議は不意に終了した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She spoke",
-          "to the child."
-        ],
-        "full": "She spoke gently to the child.",
-        "jp": "彼女は子供に優しく話しかけた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -392,18 +347,9 @@ const WORD_DATABASE = [
           "The country has an",
           "supply of oil."
         ],
-        "full": "The country has an abundant supply of oil.",
+        "full": "The country has an ABUNDANT supply of oil.",
         "jp": "その国には豊富な石油の供給がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has a",
-          "amount of debt."
-        ],
-        "full": "He has a small amount of debt.",
-        "jp": "彼は少額の借金を抱えている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -469,18 +415,9 @@ const WORD_DATABASE = [
           "The hotel can",
           "up to 500 guests."
         ],
-        "full": "The hotel can accommodate up to 500 guests.",
+        "full": "The hotel can ACCOMMODATE up to 500 guests.",
         "jp": "そのホテルは最大500人の客を収容できる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I cannot",
-          "your request."
-        ],
-        "full": "She managed to acquire a new skill.",
-        "jp": "彼女は新しいスキルを習得することに成功した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -538,18 +475,9 @@ const WORD_DATABASE = [
           "She managed to",
           "a new skill."
         ],
-        "full": "She managed to acquire a new skill.",
+        "full": "She managed to ACQUIRE a new skill.",
         "jp": "彼女は新しいスキルを習得することに成功した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Did you",
-          "your homework?"
-        ],
-        "full": "Did you finish your homework?",
-        "jp": "宿題は終わりましたか？",
-        "is_correct": false
       },
       {
         "parts": [
@@ -615,18 +543,9 @@ const WORD_DATABASE = [
           "Second language",
           "is a complex process."
         ],
-        "full": "Second language acquisition is a complex process.",
+        "full": "Second language ACQUISITION is a complex process.",
         "jp": "第二言語習得は複雑なプロセスだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "of the sun was beautiful."
-        ],
-        "full": "The setting of the sun was beautiful.",
-        "jp": "日没は美しかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -684,18 +603,9 @@ const WORD_DATABASE = [
           "He felt an",
           "pain in his chest."
         ],
-        "full": "He felt an acute pain in his chest.",
+        "full": "He felt an ACUTE pain in his chest.",
         "jp": "彼は胸に鋭い痛みを感じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "problem."
-        ],
-        "full": "This is a minor problem.",
-        "jp": "これは些細な問題だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -757,18 +667,9 @@ const WORD_DATABASE = [
           "She was",
           "that she would not go."
         ],
-        "full": "She was adamant that she would not go.",
+        "full": "She was ADAMANT that she would not go.",
         "jp": "彼女は行かないと断固として主張した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "about his schedule."
-        ],
-        "full": "He is flexible about his schedule.",
-        "jp": "彼はスケジュールに関して柔軟だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -830,18 +731,9 @@ const WORD_DATABASE = [
           "He is fighting a drug",
           "."
         ],
-        "full": "He is fighting a drug addiction.",
+        "full": "He is fighting a drug ADDICTION.",
         "jp": "彼は薬物中毒と戦っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She has a strong",
-          "to music."
-        ],
-        "full": "She has a strong passion for music.",
-        "jp": "彼女は音楽に強い情熱を持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -903,18 +795,9 @@ const WORD_DATABASE = [
           "We have an",
           "supply of food."
         ],
-        "full": "We have an adequate supply of food.",
+        "full": "We have an ADEQUATE supply of food.",
         "jp": "私たちには十分な食料の蓄えがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The service was",
-          "."
-        ],
-        "full": "The service was terrible.",
-        "jp": "そのサービスはひどかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -979,18 +862,9 @@ const WORD_DATABASE = [
           "Make sure you are",
           "prepared."
         ],
-        "full": "Make sure you are adequately prepared.",
+        "full": "Make sure you are ADEQUATELY prepared.",
         "jp": "十分に準備ができているか確認しなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He played the piano",
-          "."
-        ],
-        "full": "He played the piano beautifully.",
-        "jp": "彼は美しくピアノを弾いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1056,18 +930,9 @@ const WORD_DATABASE = [
           "It takes skill to",
           "a large corporation."
         ],
-        "full": "It takes skill to administer a large corporation.",
+        "full": "It takes skill to ADMINISTER a large corporation.",
         "jp": "大企業を管理するにはスキルが必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the flowers."
-        ],
-        "full": "Please water the flowers.",
-        "jp": "花に水をやってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1133,18 +998,9 @@ const WORD_DATABASE = [
           "He struggled during his",
           "."
         ],
-        "full": "He struggled during his adolescence.",
+        "full": "He struggled during his ADOLESCENCE.",
         "jp": "彼は思春期の間、苦労した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The baby is in",
-          "."
-        ],
-        "full": "The baby is in infancy.",
-        "jp": "その赤ん坊は幼年期にある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1210,18 +1066,9 @@ const WORD_DATABASE = [
           "Typical",
           "behavior includes rebellion."
         ],
-        "full": "Typical adolescent behavior includes rebellion.",
+        "full": "Typical ADOLESCENT behavior includes rebellion.",
         "jp": "典型的な思春期の行動には反抗が含まれる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a retired",
-          "."
-        ],
-        "full": "He is a retired senior.",
-        "jp": "彼は引退した高齢者だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1283,18 +1130,9 @@ const WORD_DATABASE = [
           "They",
           "for human rights."
         ],
-        "full": "They advocate for human rights.",
+        "full": "They ADVOCATE for human rights.",
         "jp": "彼らは人権を主張している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "going to bed late."
-        ],
-        "full": "I dislike going to bed late.",
-        "jp": "私は夜更かしするのが嫌いだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1356,18 +1194,9 @@ const WORD_DATABASE = [
           "He lives in an",
           "neighborhood."
         ],
-        "full": "He lives in an affluent neighborhood.",
+        "full": "He lives in an AFFLUENT neighborhood.",
         "jp": "彼は裕福な地域に住んでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "meal."
-        ],
-        "full": "This is a cheap meal.",
-        "jp": "これは安い食事だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1425,18 +1254,9 @@ const WORD_DATABASE = [
           "I voted",
           "the proposal."
         ],
-        "full": "I voted against the proposal.",
+        "full": "I voted AGAINST the proposal.",
         "jp": "私はその提案に反対票を投じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He walked",
-          "his friend."
-        ],
-        "full": "He walked with his friend.",
-        "jp": "彼は友人と一緒に歩いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1498,18 +1318,9 @@ const WORD_DATABASE = [
           "His rude behavior might",
           "his friends."
         ],
-        "full": "His rude behavior might alienate his friends.",
+        "full": "His rude behavior might ALIENATE his friends.",
         "jp": "彼の無礼な態度は友人を遠ざけるかもしれない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We want to",
-          "new members."
-        ],
-        "full": "We want to welcome new members.",
-        "jp": "私たちは新しいメンバーを歓迎したい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1566,18 +1377,9 @@ const WORD_DATABASE = [
           "Prosecutors",
           "that he stole the money."
         ],
-        "full": "Prosecutors allege that he stole the money.",
+        "full": "Prosecutors ALLEGE that he stole the money.",
         "jp": "検察官は彼がお金を盗んだと主張している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "to tell the truth."
-        ],
-        "full": "I promise to tell the truth.",
-        "jp": "私は真実を話すことを約束する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1638,18 +1440,9 @@ const WORD_DATABASE = [
           "He was",
           "involved in the scandal."
         ],
-        "full": "He was allegedly involved in the scandal.",
+        "full": "He was ALLEGEDLY involved in the scandal.",
         "jp": "伝えられるところでは、彼はそのスキャンダルに関与していた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The sun is",
-          "hot."
-        ],
-        "full": "The sun is definitely hot.",
-        "jp": "太陽は間違いなく熱い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1711,18 +1504,9 @@ const WORD_DATABASE = [
           "They pledged",
           "to the flag."
         ],
-        "full": "They pledged allegiance to the flag.",
+        "full": "They pledged ALLEGIANCE to the flag.",
         "jp": "彼らは国旗への忠誠を誓った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He showed",
-          "to his enemy."
-        ],
-        "full": "He showed hatred to his enemy.",
-        "jp": "彼は敵に対して憎しみを示した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1788,18 +1572,9 @@ const WORD_DATABASE = [
           "This medicine will",
           "the pain."
         ],
-        "full": "This medicine will alleviate the pain.",
+        "full": "This medicine will ALLEVIATE the pain.",
         "jp": "この薬は痛みを緩和するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the problem."
-        ],
-        "full": "Don't ignore the problem.",
-        "jp": "その問題を無視するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1861,18 +1636,9 @@ const WORD_DATABASE = [
           "We need to",
           "funds for research."
         ],
-        "full": "We need to allocate funds for research.",
+        "full": "We need to ALLOCATE funds for research.",
         "jp": "我々は研究のために資金を割り当てる必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the garbage."
-        ],
-        "full": "Please collect the garbage.",
-        "jp": "ゴミを集めてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -1934,18 +1700,9 @@ const WORD_DATABASE = [
           "I ordered coffee",
           "a sandwich."
         ],
-        "full": "I ordered coffee along with a sandwich.",
+        "full": "I ordered coffee ALONG WITH a sandwich.",
         "jp": "私はサンドイッチと一緒にコーヒーを注文した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I went home",
-          "my keys."
-        ],
-        "full": "I went home without my keys.",
-        "jp": "私は鍵を持たずに家に帰った。",
-        "is_correct": false
       }
     ]
   },
@@ -1985,18 +1742,9 @@ const WORD_DATABASE = [
           "We had to",
           "our plans."
         ],
-        "full": "We had to alter our plans.",
+        "full": "We had to ALTER our plans.",
         "jp": "私たちは計画を変更しなければならなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the door open."
-        ],
-        "full": "Please keep the door open.",
-        "jp": "ドアを開けたままにしておいて。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2062,18 +1810,9 @@ const WORD_DATABASE = [
           "We need to find an",
           "energy source."
         ],
-        "full": "We need to find an alternative energy source.",
+        "full": "We need to find an ALTERNATIVE energy source.",
         "jp": "私たちは代替エネルギー源を見つける必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is the",
-          "reason."
-        ],
-        "full": "This is the main reason.",
-        "jp": "これが主な理由だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2135,18 +1874,9 @@ const WORD_DATABASE = [
           "The plane is flying at a high",
           "."
         ],
-        "full": "The plane is flying at a high altitude.",
+        "full": "The plane is flying at a high ALTITUDE.",
         "jp": "飛行機は高い高度を飛んでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The submarine dove to a great",
-          "."
-        ],
-        "full": "The submarine dove to a great depth.",
-        "jp": "潜水艦は深い深度まで潜った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2216,18 +1946,9 @@ const WORD_DATABASE = [
           "There is some",
           "in the contract."
         ],
-        "full": "There is some ambiguity in the contract.",
+        "full": "There is some AMBIGUITY in the contract.",
         "jp": "その契約書にはいくつかの曖昧さがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I like the",
-          "of this water."
-        ],
-        "full": "I like the clarity of this water.",
-        "jp": "私はこの水の透明度が好きだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2293,18 +2014,9 @@ const WORD_DATABASE = [
           "His answer was somewhat",
           "."
         ],
-        "full": "His answer was somewhat ambiguous.",
+        "full": "His answer was somewhat AMBIGUOUS.",
         "jp": "彼の答えはいくぶん曖昧だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The instructions were very",
-          "."
-        ],
-        "full": "The instructions were very clear.",
-        "jp": "指示は非常に明確だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2370,18 +2082,9 @@ const WORD_DATABASE = [
           "The hotel offers many",
           "like a pool."
         ],
-        "full": "The hotel offers many amenities like a pool.",
+        "full": "The hotel offers many AMENITIES like a pool.",
         "jp": "そのホテルはプールなど多くの快適な設備を提供している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Food and water are",
-          "."
-        ],
-        "full": "Food and water are necessities.",
-        "jp": "食料と水は必需品だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2447,18 +2150,9 @@ const WORD_DATABASE = [
           "She is known for her",
           "personality."
         ],
-        "full": "She is known for her amiable personality.",
+        "full": "She is known for her AMIABLE personality.",
         "jp": "彼女は愛想の良い性格で知られている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He gave me a",
-          "look."
-        ],
-        "full": "He gave me a hostile look.",
-        "jp": "彼は私に敵意のある視線を向けた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2516,18 +2210,9 @@ const WORD_DATABASE = [
           "He is very popular",
           "the students."
         ],
-        "full": "He is very popular among the students.",
+        "full": "He is very popular AMONG the students.",
         "jp": "彼は生徒たちの間でとても人気がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She walked",
-          "the river."
-        ],
-        "full": "She walked along the river.",
-        "jp": "彼女は川沿いを歩いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2589,18 +2274,9 @@ const WORD_DATABASE = [
           "This device will",
           "the sound signals."
         ],
-        "full": "This device will amplify the sound signals.",
+        "full": "This device will AMPLIFY the sound signals.",
         "jp": "この装置は音声信号を増幅する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the volume."
-        ],
-        "full": "Please lower the volume.",
-        "jp": "音量を下げてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2662,18 +2338,9 @@ const WORD_DATABASE = [
           "Scientists",
           "the data carefully."
         ],
-        "full": "Scientists analyze the data carefully.",
+        "full": "Scientists ANALYZE the data carefully.",
         "jp": "科学者たちはデータを慎重に分析する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the instructions."
-        ],
-        "full": "Don't ignore the instructions.",
-        "jp": "指示を無視してはいけない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2731,18 +2398,9 @@ const WORD_DATABASE = [
           "This vase is a valuable",
           "."
         ],
-        "full": "This vase is a valuable antique.",
+        "full": "This vase is a valuable ANTIQUE.",
         "jp": "この花瓶は貴重な骨董品だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I bought a brand new",
-          "."
-        ],
-        "full": "I bought a brand new gadget.",
-        "jp": "私は新品のガジェットを買った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2808,18 +2466,9 @@ const WORD_DATABASE = [
           "She suffers from social",
           "."
         ],
-        "full": "She suffers from social anxiety.",
+        "full": "She suffers from social ANXIETY.",
         "jp": "彼女は社交不安に苦しんでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He felt",
-          "after passing the exam."
-        ],
-        "full": "He felt relief after passing the exam.",
-        "jp": "彼は試験に合格して安堵を感じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2881,18 +2530,9 @@ const WORD_DATABASE = [
           "It became",
           "that he was lying."
         ],
-        "full": "It became apparent that he was lying.",
+        "full": "It became APPARENT that he was lying.",
         "jp": "彼が嘘をついていることが明白になった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The answer was",
-          "to everyone."
-        ],
-        "full": "The answer was unknown to everyone.",
-        "jp": "その答えは誰にもわからなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -2957,18 +2597,9 @@ const WORD_DATABASE = [
           "He is",
           "planning to resign."
         ],
-        "full": "He is apparently planning to resign.",
+        "full": "He is APPARENTLY planning to resign.",
         "jp": "彼はどうやら辞職するつもりのようだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "know the answer."
-        ],
-        "full": "I definitely know the answer.",
-        "jp": "私は間違いなく答えを知っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3030,18 +2661,9 @@ const WORD_DATABASE = [
           "He received a positive performance",
           "."
         ],
-        "full": "He received a positive performance appraisal.",
+        "full": "He received a positive performance APPRAISAL.",
         "jp": "彼は肯定的な業績評価を受けた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need an",
-          "for the party."
-        ],
-        "full": "We need an appetizer for the party.",
-        "jp": "パーティーには前菜が必要だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3107,18 +2729,9 @@ const WORD_DATABASE = [
           "I really",
           "your help."
         ],
-        "full": "I really appreciate your help.",
+        "full": "I really APPRECIATE your help.",
         "jp": "あなたの助けに本当に感謝しています。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "rude people."
-        ],
-        "full": "I dislike rude people.",
-        "jp": "私は無礼な人が嫌いだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3180,18 +2793,9 @@ const WORD_DATABASE = [
           "The police managed to",
           "the suspect."
         ],
-        "full": "The police managed to apprehend the suspect.",
+        "full": "The police managed to APPREHEND the suspect.",
         "jp": "警察はどうにか容疑者を逮捕した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the bird."
-        ],
-        "full": "Please release the bird.",
-        "jp": "その鳥を放してあげてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3257,18 +2861,9 @@ const WORD_DATABASE = [
           "He felt a sense of",
           "about the future."
         ],
-        "full": "He felt a sense of apprehension about the future.",
+        "full": "He felt a sense of APPREHENSION about the future.",
         "jp": "彼は将来に対して不安を感じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She waited with",
-          "for the gift."
-        ],
-        "full": "She waited with excitement for the gift.",
-        "jp": "彼女は贈り物を楽しみに待っていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3333,18 +2928,9 @@ const WORD_DATABASE = [
           "Wear clothes",
           "for the occasion."
         ],
-        "full": "Wear clothes appropriate for the occasion.",
+        "full": "Wear clothes APPROPRIATE for the occasion.",
         "jp": "その場にふさわしい服を着なさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is",
-          "to arrive late."
-        ],
-        "full": "It is rude to arrive late.",
-        "jp": "遅刻するのは失礼だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3406,18 +2992,9 @@ const WORD_DATABASE = [
           "His",
           "attitude annoyed everyone."
         ],
-        "full": "His arrogant attitude annoyed everyone.",
+        "full": "His ARROGANT attitude annoyed everyone.",
         "jp": "彼の傲慢な態度は皆をイライラさせた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is very",
-          "and kind."
-        ],
-        "full": "She is very humble and kind.",
-        "jp": "彼女はとても謙虚で親切だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3483,18 +3060,9 @@ const WORD_DATABASE = [
           "This juice contains",
           "flavors."
         ],
-        "full": "This juice contains artificial flavors.",
+        "full": "This juice contains ARTIFICIAL flavors.",
         "jp": "このジュースには人工香料が含まれている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We enjoyed the",
-          "scenery."
-        ],
-        "full": "We enjoyed the natural scenery.",
-        "jp": "私たちは自然の景色を楽しんだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3556,18 +3124,9 @@ const WORD_DATABASE = [
           "We need to",
           "the cause of the fire."
         ],
-        "full": "We need to ascertain the cause of the fire.",
+        "full": "We need to ASCERTAIN the cause of the fire.",
         "jp": "我々は火事の原因を突き止める必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the door."
-        ],
-        "full": "Please close the door.",
-        "jp": "ドアを閉めてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3625,18 +3184,9 @@ const WORD_DATABASE = [
           "Climate change affects every",
           "of our lives."
         ],
-        "full": "Climate change affects every aspect of our lives.",
+        "full": "Climate change affects every ASPECT of our lives.",
         "jp": "気候変動は私たちの生活のあらゆる側面に影響を与える。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He ate the whole",
-          "."
-        ],
-        "full": "He ate the whole cake.",
-        "jp": "彼はケーキを全部食べた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3694,18 +3244,9 @@ const WORD_DATABASE = [
           "Many young people",
           "to be famous."
         ],
-        "full": "Many young people aspire to be famous.",
+        "full": "Many young people ASPIRE to be famous.",
         "jp": "多くの若者が有名になることを熱望している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "eating vegetables."
-        ],
-        "full": "I dislike eating vegetables.",
-        "jp": "私は野菜を食べるのが嫌いだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3767,18 +3308,9 @@ const WORD_DATABASE = [
           "The students began to",
           "in the hall."
         ],
-        "full": "The students began to assemble in the hall.",
+        "full": "The students began to ASSEMBLE in the hall.",
         "jp": "生徒たちはホールに集まり始めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the crowd."
-        ],
-        "full": "Please disperse the crowd.",
-        "jp": "群衆を解散させてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3836,18 +3368,9 @@ const WORD_DATABASE = [
           "He continued to",
           "his innocence."
         ],
-        "full": "He continued to assert his innocence.",
+        "full": "He continued to ASSERT his innocence.",
         "jp": "彼は自分の無実を断言し続けた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "that he is lying."
-        ],
-        "full": "I suspect that he is lying.",
-        "jp": "私は彼が嘘をついていると疑っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3905,18 +3428,9 @@ const WORD_DATABASE = [
           "Experts will",
           "the damage caused by the storm."
         ],
-        "full": "Experts will assess the damage caused by the storm.",
+        "full": "Experts will ASSESS the damage caused by the storm.",
         "jp": "専門家が嵐による被害を評価するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the problem."
-        ],
-        "full": "Don't ignore the problem.",
-        "jp": "その問題を無視してはいけない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -3974,18 +3488,9 @@ const WORD_DATABASE = [
           "Good health is a great",
           "."
         ],
-        "full": "Good health is a great asset.",
+        "full": "Good health is a great ASSET.",
         "jp": "健康は偉大な資産だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His debt is a heavy",
-          "."
-        ],
-        "full": "His debt is a heavy liability.",
-        "jp": "彼の借金は重い負債だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4043,18 +3548,9 @@ const WORD_DATABASE = [
           "The teacher will",
           "homework to the class."
         ],
-        "full": "The teacher will assign homework to the class.",
+        "full": "The teacher will ASSIGN homework to the class.",
         "jp": "先生はクラスに宿題を割り当てるだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "your name here."
-        ],
-        "full": "Please sign your name here.",
-        "jp": "ここに署名してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4120,18 +3616,9 @@ const WORD_DATABASE = [
           "Immigrants often try to",
           "into the new culture."
         ],
-        "full": "Immigrants often try to assimilate into the new culture.",
+        "full": "Immigrants often try to ASSIMILATE into the new culture.",
         "jp": "移民はしばしば新しい文化に同化しようとする。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Water helps to",
-          "plants."
-        ],
-        "full": "Water helps to grow plants.",
-        "jp": "水は植物を育てるのに役立つ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4189,18 +3676,9 @@ const WORD_DATABASE = [
           "The nurse will",
           "the doctor during surgery."
         ],
-        "full": "The nurse will assist the doctor during surgery.",
+        "full": "The nurse will ASSIST the doctor during surgery.",
         "jp": "看護師は手術中に医師を補助する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "me alone."
-        ],
-        "full": "Please leave me alone.",
-        "jp": "私を放っておいてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4266,18 +3744,9 @@ const WORD_DATABASE = [
           "People often",
           "green with nature."
         ],
-        "full": "People often associate green with nature.",
+        "full": "People often ASSOCIATE green with nature.",
         "jp": "人々はしばしば緑を自然と関連づける。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the wires."
-        ],
-        "full": "Don't cut the wires.",
-        "jp": "ワイヤーを切らないで。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4335,18 +3804,9 @@ const WORD_DATABASE = [
           "I",
           "you are tired after the trip."
         ],
-        "full": "I assume you are tired after the trip.",
+        "full": "I ASSUME you are tired after the trip.",
         "jp": "旅行の後で君は疲れているだろうと思う。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "the answer is correct."
-        ],
-        "full": "I know the answer is correct.",
-        "jp": "私はその答えが正しいと知っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4404,18 +3864,9 @@ const WORD_DATABASE = [
           "I can",
           "you that he is safe."
         ],
-        "full": "I can assure you that he is safe.",
+        "full": "I can ASSURE you that he is safe.",
         "jp": "彼が無事であることを君に保証する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the door is locked."
-        ],
-        "full": "Please check if the door is locked.",
-        "jp": "ドアが施錠されているか確認してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4476,18 +3927,9 @@ const WORD_DATABASE = [
           "His magic tricks always",
           "the audience."
         ],
-        "full": "His magic tricks always astonish the audience.",
+        "full": "His magic tricks always ASTONISH the audience.",
         "jp": "彼の手品はいつも観客を驚かせる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The lecture will",
-          "you."
-        ],
-        "full": "The lecture will bore you.",
-        "jp": "その講義は君を退屈させるだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4549,18 +3991,9 @@ const WORD_DATABASE = [
           "The restaurant has a cozy",
           "."
         ],
-        "full": "The restaurant has a cozy atmosphere.",
+        "full": "The restaurant has a cozy ATMOSPHERE.",
         "jp": "そのレストランは居心地の良い雰囲気だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The earth orbits the",
-          "."
-        ],
-        "full": "The earth orbits the sun.",
-        "jp": "地球は太陽の周りを回る。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4618,18 +4051,9 @@ const WORD_DATABASE = [
           "Please",
           "a photo to your application."
         ],
-        "full": "Please attach a photo to your application.",
+        "full": "Please ATTACH a photo to your application.",
         "jp": "申込書に写真を添付してください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "your seatbelt."
-        ],
-        "full": "Please unfasten your seatbelt.",
-        "jp": "シートベルトを外してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4687,18 +4111,9 @@ const WORD_DATABASE = [
           "He worked hard to",
           "his goals."
         ],
-        "full": "He worked hard to attain his goals.",
+        "full": "He worked hard to ATTAIN his goals.",
         "jp": "彼は目標を達成するために懸命に働いた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I hope to",
-          "the bus."
-        ],
-        "full": "I hope to catch the bus.",
-        "jp": "バスに間に合うといいな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4756,18 +4171,9 @@ const WORD_DATABASE = [
           "Don't",
           "to do it alone."
         ],
-        "full": "Don't attempt to do it alone.",
+        "full": "Don't ATTEMPT to do it alone.",
         "jp": "一人でやろうとしないで。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "to eat dinner."
-        ],
-        "full": "I want to eat dinner.",
-        "jp": "私は夕食を食べたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4825,18 +4231,9 @@ const WORD_DATABASE = [
           "I will",
           "the meeting tomorrow."
         ],
-        "full": "I will attend the meeting tomorrow.",
+        "full": "I will ATTEND the meeting tomorrow.",
         "jp": "私は明日の会議に出席するつもりだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "to go home."
-        ],
-        "full": "I want to go home.",
-        "jp": "私は家に帰りたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -4904,15 +4301,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "I",
-          "to the club."
-        ],
-        "full": "I contribute to the club.",
-        "jp": "私はそのクラブに貢献している。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "I ",
           " my success to luck."
         ],
@@ -4970,18 +4358,9 @@ const WORD_DATABASE = [
           "Her voice was barely",
           "above the noise."
         ],
-        "full": "Her voice was barely audible above the noise.",
+        "full": "Her voice was barely AUDIBLE above the noise.",
         "jp": "騒音の中で彼女の声はかろうじて聞こえた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The ghost was",
-          "to the eye."
-        ],
-        "full": "The ghost was invisible to the eye.",
-        "jp": "幽霊は目に見えなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5039,18 +4418,9 @@ const WORD_DATABASE = [
           "He took a second job to",
           "his income."
         ],
-        "full": "He took a second job to augment his income.",
+        "full": "He took a second job to AUGMENT his income.",
         "jp": "彼は収入を増やすために副業をした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the waste."
-        ],
-        "full": "Please reduce the waste.",
-        "jp": "無駄を減らしてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5112,18 +4482,9 @@ const WORD_DATABASE = [
           "This restaurant serves",
           "Italian food."
         ],
-        "full": "This restaurant serves authentic Italian food.",
+        "full": "This restaurant serves AUTHENTIC Italian food.",
         "jp": "このレストランは本場のイタリア料理を出す。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He bought a",
-          "watch."
-        ],
-        "full": "He bought a fake watch.",
-        "jp": "彼は偽物の時計を買った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5189,18 +4550,9 @@ const WORD_DATABASE = [
           "She is an",
           "on ancient history."
         ],
-        "full": "She is an authority on ancient history.",
+        "full": "She is an AUTHORITY on ancient history.",
         "jp": "彼女は古代史の権威だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I have no",
-          "to do that."
-        ],
-        "full": "I have no desire to do that.",
-        "jp": "私にはそれをする願望がない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5261,18 +4613,9 @@ const WORD_DATABASE = [
           "Only the manager can",
           "refunds."
         ],
-        "full": "Only the manager can authorize refunds.",
+        "full": "Only the manager can AUTHORIZE refunds.",
         "jp": "マネージャーだけが返金を許可できる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "smoking here."
-        ],
-        "full": "Please stop smoking here.",
-        "jp": "ここでタバコを吸うのはやめてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5338,18 +4681,9 @@ const WORD_DATABASE = [
           "The doors are",
           "."
         ],
-        "full": "The doors are automatic.",
+        "full": "The doors are AUTOMATIC.",
         "jp": "そのドアは自動だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This car has a",
-          "transmission."
-        ],
-        "full": "This car has a manual transmission.",
-        "jp": "この車はマニュアル車だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5415,18 +4749,9 @@ const WORD_DATABASE = [
           "The region demanded greater",
           "."
         ],
-        "full": "The region demanded greater autonomy.",
+        "full": "The region demanded greater AUTONOMY.",
         "jp": "その地域はより大きな自治権を要求した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Children rely on their parents for",
-          "."
-        ],
-        "full": "Children rely on their parents for protection.",
-        "jp": "子供は保護を求めて親に頼る。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5492,18 +4817,9 @@ const WORD_DATABASE = [
           "The hospital has an",
           "power generator."
         ],
-        "full": "The hospital has an auxiliary power generator.",
+        "full": "The hospital has an AUXILIARY power generator.",
         "jp": "その病院には予備の発電機がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is the",
-          "entrance."
-        ],
-        "full": "This is the main entrance.",
-        "jp": "これが正面玄関だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5561,7 +4877,7 @@ const WORD_DATABASE = [
           "Our efforts were to no",
           "."
         ],
-        "full": "Our efforts were to no avail.",
+        "full": "Our efforts were to no AVAIL.",
         "jp": "私たちの努力は無駄だった。",
         "is_correct": true
       },
@@ -5570,7 +4886,7 @@ const WORD_DATABASE = [
           "I will",
           "myself of this opportunity."
         ],
-        "full": "I will avail myself of this opportunity.",
+        "full": "I will AVAIL myself of this opportunity.",
         "jp": "私はこの機会を利用するつもりだ。",
         "is_correct": true
       },
@@ -5638,18 +4954,9 @@ const WORD_DATABASE = [
           "Is this seat",
           "?"
         ],
-        "full": "Is this seat available?",
+        "full": "Is this seat AVAILABLE?",
         "jp": "この席は空いていますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The doctor is",
-          "right now."
-        ],
-        "full": "The doctor is busy right now.",
-        "jp": "医者は今忙しい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5711,7 +5018,7 @@ const WORD_DATABASE = [
           "We should explore every",
           "to solve the problem."
         ],
-        "full": "We should explore every avenue to solve the problem.",
+        "full": "We should explore every AVENUE to solve the problem.",
         "jp": "問題解決のためにあらゆる手段を模索すべきだ。",
         "is_correct": true
       },
@@ -5720,7 +5027,7 @@ const WORD_DATABASE = [
           "He lives on Fifth",
           "."
         ],
-        "full": "He lives on Fifth Avenue.",
+        "full": "He lives on Fifth AVENUE.",
         "jp": "彼は5番街に住んでいる。",
         "is_correct": true
       },
@@ -5779,7 +5086,7 @@ const WORD_DATABASE = [
           "Diplomats tried to",
           "a war."
         ],
-        "full": "Diplomats tried to avert a war.",
+        "full": "Diplomats tried to AVERT a war.",
         "jp": "外交官たちは戦争を回避しようとした。",
         "is_correct": true
       },
@@ -5788,7 +5095,7 @@ const WORD_DATABASE = [
           "Don't",
           "your eyes."
         ],
-        "full": "Don't avert your eyes.",
+        "full": "Don't AVERT your eyes.",
         "jp": "目をそらすな。",
         "is_correct": true
       },
@@ -5856,18 +5163,9 @@ const WORD_DATABASE = [
           "He works in the",
           "industry."
         ],
-        "full": "He works in the aviation industry.",
+        "full": "He works in the AVIATION industry.",
         "jp": "彼は航空業界で働いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is studying",
-          "engineering."
-        ],
-        "full": "She is studying marine engineering.",
-        "jp": "彼女は海洋工学を学んでいる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -5925,7 +5223,7 @@ const WORD_DATABASE = [
           "You should",
           "making mistakes."
         ],
-        "full": "You should avoid making mistakes.",
+        "full": "You should AVOID making mistakes.",
         "jp": "間違いを犯さないようにすべきだ。",
         "is_correct": true
       },
@@ -5934,7 +5232,7 @@ const WORD_DATABASE = [
           "Try to",
           "the traffic jam."
         ],
-        "full": "Try to avoid the traffic jam.",
+        "full": "Try to AVOID the traffic jam.",
         "jp": "交通渋滞を避けるようにしなさい。",
         "is_correct": true
       },
@@ -5993,7 +5291,7 @@ const WORD_DATABASE = [
           "We",
           "your reply."
         ],
-        "full": "We await your reply.",
+        "full": "We AWAIT your reply.",
         "jp": "お返事をお待ちしております。",
         "is_correct": true
       },
@@ -6062,7 +5360,7 @@ const WORD_DATABASE = [
           "She won an",
           "for her acting."
         ],
-        "full": "She won an award for her acting.",
+        "full": "She won an AWARD for her acting.",
         "jp": "彼女は演技で賞を獲得した。",
         "is_correct": true
       },
@@ -6071,7 +5369,7 @@ const WORD_DATABASE = [
           "The jury will",
           "damages."
         ],
-        "full": "The jury will award damages.",
+        "full": "The jury will AWARD damages.",
         "jp": "陪審員は損害賠償を認めるだろう。",
         "is_correct": true
       },
@@ -6131,18 +5429,9 @@ const WORD_DATABASE = [
           "Are you",
           "of the risks?"
         ],
-        "full": "Are you aware of the risks?",
+        "full": "Are you AWARE of the risks?",
         "jp": "リスクに気づいていますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "of the time."
-        ],
-        "full": "He was unaware of the time.",
-        "jp": "彼は時間に気づいていなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6196,7 +5485,7 @@ const WORD_DATABASE = [
           "We watched in",
           "as the rocket launched."
         ],
-        "full": "We watched in awe as the rocket launched.",
+        "full": "We watched in AWE as the rocket launched.",
         "jp": "ロケットが打ち上がるのを我々は畏敬の念を持って見守った。",
         "is_correct": true
       },
@@ -6205,7 +5494,7 @@ const WORD_DATABASE = [
           "I felt",
           "at the beautiful view."
         ],
-        "full": "I felt awe at the beautiful view.",
+        "full": "I felt AWE at the beautiful view.",
         "jp": "美しい景色に畏敬の念を抱いた。",
         "is_correct": true
       },
@@ -6265,7 +5554,7 @@ const WORD_DATABASE = [
           "There was an",
           "silence."
         ],
-        "full": "There was an awkward silence.",
+        "full": "There was an AWKWARD silence.",
         "jp": "気まずい沈黙があった。",
         "is_correct": true
       },
@@ -6274,7 +5563,7 @@ const WORD_DATABASE = [
           "He is an",
           "dancer."
         ],
-        "full": "He is an awkward dancer.",
+        "full": "He is an AWKWARD dancer.",
         "jp": "彼は不器用なダンサーだ。",
         "is_correct": true
       },
@@ -6334,7 +5623,7 @@ const WORD_DATABASE = [
           "The king decided to",
           "the traitor."
         ],
-        "full": "The king decided to banish the traitor.",
+        "full": "The king decided to BANISH the traitor.",
         "jp": "王は裏切り者を追放することに決めた。",
         "is_correct": true
       },
@@ -6343,7 +5632,7 @@ const WORD_DATABASE = [
           "Try to",
           "negative thoughts."
         ],
-        "full": "Try to banish negative thoughts.",
+        "full": "Try to BANISH negative thoughts.",
         "jp": "ネガティブな考えを追い払うようにしなさい。",
         "is_correct": true
       },
@@ -6403,18 +5692,9 @@ const WORD_DATABASE = [
           "The company went",
           "after the crisis."
         ],
-        "full": "The company went bankrupt after the crisis.",
+        "full": "The company went BANKRUPT after the crisis.",
         "jp": "その会社は危機の後に破産した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "man."
-        ],
-        "full": "He is a wealthy man.",
-        "jp": "彼は裕福な男だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6472,18 +5752,9 @@ const WORD_DATABASE = [
           "I could",
           "hear him speak."
         ],
-        "full": "I could barely hear him speak.",
+        "full": "I could BARELY hear him speak.",
         "jp": "彼が話すのがかろうじて聞こえた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She was",
-          "awake."
-        ],
-        "full": "She was fully awake.",
-        "jp": "彼女は完全に目が覚めていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6541,18 +5812,9 @@ const WORD_DATABASE = [
           "I struck a",
           "with the seller."
         ],
-        "full": "I struck a bargain with the seller.",
+        "full": "I struck a BARGAIN with the seller.",
         "jp": "私は売り手と取引をまとめた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This car was a real",
-          "."
-        ],
-        "full": "This car was a real rip-off.",
-        "jp": "この車は本当にぼったくりだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6614,18 +5876,9 @@ const WORD_DATABASE = [
           "Language can be a",
           "to communication."
         ],
-        "full": "Language can be a barrier to communication.",
+        "full": "Language can be a BARRIER to communication.",
         "jp": "言語はコミュニケーションの障壁になり得る。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We built a",
-          "across the river."
-        ],
-        "full": "We built a bridge across the river.",
-        "jp": "私たちは川に橋を架けた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6683,18 +5936,9 @@ const WORD_DATABASE = [
           "Food and water are",
           "needs."
         ],
-        "full": "Food and water are basic needs.",
+        "full": "Food and water are BASIC needs.",
         "jp": "食料と水は基本的な欲求だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is an",
-          "course."
-        ],
-        "full": "This is an advanced course.",
-        "jp": "これは上級コースだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6752,18 +5996,9 @@ const WORD_DATABASE = [
           "Trust is the",
           "of friendship."
         ],
-        "full": "Trust is the basis of friendship.",
+        "full": "Trust is the BASIS of friendship.",
         "jp": "信頼は友情の基礎だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "What is the",
-          "for your argument?"
-        ],
-        "full": "What is the outcome of your argument?",
-        "jp": "あなたの議論の結果は何ですか？",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6817,18 +6052,9 @@ const WORD_DATABASE = [
           "I cannot",
           "the pain anymore."
         ],
-        "full": "I cannot bear the pain anymore.",
+        "full": "I cannot BEAR the pain anymore.",
         "jp": "私はもう痛みに耐えられない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The tree will",
-          "fruit soon."
-        ],
-        "full": "The tree will drop fruit soon.",
-        "jp": "その木はまもなく実を落とすだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6886,18 +6112,9 @@ const WORD_DATABASE = [
           "Please",
           "yourself at the party."
         ],
-        "full": "Please behave yourself at the party.",
+        "full": "Please BEHAVE yourself at the party.",
         "jp": "パーティーでは行儀よくしなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The children did not",
-          "well."
-        ],
-        "full": "The children did not sleep well.",
-        "jp": "子供たちはよく眠れなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -6959,18 +6176,9 @@ const WORD_DATABASE = [
           "His",
           "was strange yesterday."
         ],
-        "full": "His behavior was strange yesterday.",
+        "full": "His BEHAVIOR was strange yesterday.",
         "jp": "昨日の彼の振る舞いは奇妙だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I don't understand your",
-          "."
-        ],
-        "full": "I don't understand your thoughts.",
-        "jp": "あなたの考えが理解できません。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7028,18 +6236,9 @@ const WORD_DATABASE = [
           "He has a strong",
           "in god."
         ],
-        "full": "He has a strong belief in god.",
+        "full": "He has a strong BELIEF in god.",
         "jp": "彼は神に対して強い信仰を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "There is no",
-          "that he is guilty."
-        ],
-        "full": "There is no doubt that he is guilty.",
-        "jp": "彼が有罪であることに疑いはない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7105,18 +6304,9 @@ const WORD_DATABASE = [
           "It was a mere",
           "that we met."
         ],
-        "full": "It was a mere coincidence that we met.",
+        "full": "It was a mere COINCIDENCE that we met.",
         "jp": "私たちが会ったのは単なる偶然だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "event."
-        ],
-        "full": "This is a planned event.",
-        "jp": "これは計画されたイベントだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7174,18 +6364,9 @@ const WORD_DATABASE = [
           "The ceremony will",
           "at noon."
         ],
-        "full": "The ceremony will commence at noon.",
+        "full": "The ceremony will COMMENCE at noon.",
         "jp": "式典は正午に開始される。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "working immediately."
-        ],
-        "full": "Please stop working immediately.",
-        "jp": "直ちに作業を中止してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7247,18 +6428,9 @@ const WORD_DATABASE = [
           "This area is zoned for",
           "use."
         ],
-        "full": "This area is zoned for commercial use.",
+        "full": "This area is zoned for COMMERCIAL use.",
         "jp": "この地域は商業利用のために区分されている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He works for a",
-          "organization."
-        ],
-        "full": "He works for a nonprofit organization.",
-        "jp": "彼は非営利団体で働いている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7316,7 +6488,7 @@ const WORD_DATABASE = [
           "He decided to",
           "himself to the project."
         ],
-        "full": "He decided to commit himself to the project.",
+        "full": "He decided to COMMIT himself to the project.",
         "jp": "彼はそのプロジェクトに専念することを決めた。",
         "is_correct": true
       },
@@ -7325,7 +6497,7 @@ const WORD_DATABASE = [
           "Did he",
           "a crime?"
         ],
-        "full": "Did he commit a crime?",
+        "full": "Did he COMMIT a crime?",
         "jp": "彼は犯罪を犯しましたか？",
         "is_correct": true
       },
@@ -7393,7 +6565,7 @@ const WORD_DATABASE = [
           "This software is",
           "with Mac."
         ],
-        "full": "This software is compatible with Mac.",
+        "full": "This software is COMPATIBLE with Mac.",
         "jp": "このソフトウェアはMacと互換性がある。",
         "is_correct": true
       },
@@ -7402,7 +6574,7 @@ const WORD_DATABASE = [
           "They are a very",
           "couple."
         ],
-        "full": "They are a very compatible couple.",
+        "full": "They are a very COMPATIBLE couple.",
         "jp": "彼らはとても相性の良いカップルだ。",
         "is_correct": true
       },
@@ -7461,18 +6633,9 @@ const WORD_DATABASE = [
           "Illness might",
           "him to retire."
         ],
-        "full": "Illness might compel him to retire.",
+        "full": "Illness might COMPEL him to retire.",
         "jp": "病気が彼に引退を強いるかもしれない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "me to help you."
-        ],
-        "full": "Please allow me to help you.",
-        "jp": "あなたを助けさせてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7534,18 +6697,9 @@ const WORD_DATABASE = [
           "Nothing can",
           "for the loss."
         ],
-        "full": "Nothing can compensate for the loss.",
+        "full": "Nothing can COMPENSATE for the loss.",
         "jp": "その損失を埋め合わせることは何ものにもできない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He worked hard to",
-          "his skills."
-        ],
-        "full": "He worked hard to improve his skills.",
-        "jp": "彼はスキルを向上させるために一生懸命働いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7603,18 +6757,9 @@ const WORD_DATABASE = [
           "The human brain is incredibly",
           "."
         ],
-        "full": "The human brain is incredibly complex.",
+        "full": "The human brain is incredibly COMPLEX.",
         "jp": "人間の脳は信じられないほど複雑だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "problem."
-        ],
-        "full": "This is a simple problem.",
-        "jp": "これは単純な問題だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7675,18 +6820,9 @@ const WORD_DATABASE = [
           "Beethoven is a famous",
           "."
         ],
-        "full": "Beethoven is a famous composer.",
+        "full": "Beethoven is a famous COMPOSER.",
         "jp": "ベートーヴェンは有名な作曲家だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a talented",
-          "of poems."
-        ],
-        "full": "He is a talented writer of poems.",
-        "jp": "彼は才能ある詩の作家だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7752,18 +6888,9 @@ const WORD_DATABASE = [
           "We need a",
           "plan."
         ],
-        "full": "We need a comprehensive plan.",
+        "full": "We need a COMPREHENSIVE plan.",
         "jp": "私たちには包括的な計画が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "list."
-        ],
-        "full": "This is a partial list.",
-        "jp": "これは部分的なリストだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7829,18 +6956,9 @@ const WORD_DATABASE = [
           "English is a",
           "subject."
         ],
-        "full": "English is a compulsory subject.",
+        "full": "English is a COMPULSORY subject.",
         "jp": "英語は必修科目だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Attendance is",
-          "."
-        ],
-        "full": "Attendance is optional.",
-        "jp": "出席は任意だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7902,18 +7020,9 @@ const WORD_DATABASE = [
           "I need to",
           "on my studies."
         ],
-        "full": "I need to concentrate on my studies.",
+        "full": "I need to CONCENTRATE on my studies.",
         "jp": "私は勉強に集中する必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "while driving."
-        ],
-        "full": "Don't text while driving.",
-        "jp": "運転中にメールをしてはいけない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -7971,7 +7080,7 @@ const WORD_DATABASE = [
           "I am",
           "about his health."
         ],
-        "full": "I am concerned about his health.",
+        "full": "I am CONCERNED about his health.",
         "jp": "私は彼の健康を心配している。",
         "is_correct": true
       },
@@ -8039,18 +7148,9 @@ const WORD_DATABASE = [
           "Please keep your report",
           "."
         ],
-        "full": "Please keep your report concise.",
+        "full": "Please keep your report CONCISE.",
         "jp": "レポートは簡潔にまとめてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His speech was very",
-          "."
-        ],
-        "full": "His speech was very long.",
-        "jp": "彼のスピーチはとても長かった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8108,18 +7208,9 @@ const WORD_DATABASE = [
           "We must",
           "violence."
         ],
-        "full": "We must condemn violence.",
+        "full": "We must CONDEMN violence.",
         "jp": "我々は暴力を非難しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They",
-          "him for his bravery."
-        ],
-        "full": "They praised him for his bravery.",
-        "jp": "彼らは彼の勇敢さを称賛した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8181,7 +7272,7 @@ const WORD_DATABASE = [
           "He lacks",
           "in himself."
         ],
-        "full": "He lacks confidence in himself.",
+        "full": "He lacks CONFIDENCE in himself.",
         "jp": "彼は自分に自信がない。",
         "is_correct": true
       },
@@ -8250,7 +7341,7 @@ const WORD_DATABASE = [
           "Please",
           "your remarks to the topic."
         ],
-        "full": "Please confine your remarks to the topic.",
+        "full": "Please CONFINE your remarks to the topic.",
         "jp": "発言は議題に限定してください。",
         "is_correct": true
       },
@@ -8319,18 +7410,9 @@ const WORD_DATABASE = [
           "Please",
           "your reservation."
         ],
-        "full": "Please confirm your reservation.",
+        "full": "Please CONFIRM your reservation.",
         "jp": "予約を確認してください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I want to",
-          "the flight."
-        ],
-        "full": "I want to cancel the flight.",
-        "jp": "フライトをキャンセルしたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8396,18 +7478,9 @@ const WORD_DATABASE = [
           "We are waiting for",
           "of the news."
         ],
-        "full": "We are waiting for confirmation of the news.",
+        "full": "We are waiting for CONFIRMATION of the news.",
         "jp": "私たちはそのニュースの確認を待っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He received a",
-          "letter."
-        ],
-        "full": "He received a rejection letter.",
-        "jp": "彼は不採用通知を受け取った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8465,18 +7538,9 @@ const WORD_DATABASE = [
           "There is a",
           "of interest."
         ],
-        "full": "There is a conflict of interest.",
+        "full": "There is a CONFLICT of interest.",
         "jp": "利益相反がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They reached an",
-          "."
-        ],
-        "full": "They reached an agreement.",
-        "jp": "彼らは合意に達した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8534,18 +7598,9 @@ const WORD_DATABASE = [
           "You must",
           "your fears."
         ],
-        "full": "You must confront your fears.",
+        "full": "You must CONFRONT your fears.",
         "jp": "君は自分の恐怖に立ち向かわなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the problem."
-        ],
-        "full": "Please ignore the problem.",
-        "jp": "その問題を無視してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8607,18 +7662,9 @@ const WORD_DATABASE = [
           "He is a",
           "colleague."
         ],
-        "full": "He is a congenial colleague.",
+        "full": "He is a CONGENIAL colleague.",
         "jp": "彼は気の合う同僚だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The atmosphere was",
-          "."
-        ],
-        "full": "The atmosphere was tense.",
-        "jp": "雰囲気は張り詰めていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8680,18 +7726,9 @@ const WORD_DATABASE = [
           "We reached a",
           "on the issue."
         ],
-        "full": "We reached a consensus on the issue.",
+        "full": "We reached a CONSENSUS on the issue.",
         "jp": "我々はその問題について合意に達した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "There was a",
-          "among the members."
-        ],
-        "full": "There was a conflict among the members.",
-        "jp": "メンバーの間で対立があった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8757,19 +7794,9 @@ const WORD_DATABASE = [
           ",",
           "the game was canceled."
         ],
-        "full": "It rained heavily; consequently, the game was canceled.",
+        "full": "It rained heavily; CONSEQUENTLY, the game was canceled.",
         "jp": "激しく雨が降った。その結果、試合は中止になった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He studied hard;",
-          ",",
-          "he failed."
-        ],
-        "full": "He studied hard; however, he failed.",
-        "jp": "彼は一生懸命勉強した。しかし、失敗した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8827,18 +7854,9 @@ const WORD_DATABASE = [
           "We must",
           "energy."
         ],
-        "full": "We must conserve energy.",
+        "full": "We must CONSERVE energy.",
         "jp": "私たちはエネルギーを節約しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "water."
-        ],
-        "full": "Don't waste water.",
-        "jp": "水を無駄にするな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -8908,18 +7926,9 @@ const WORD_DATABASE = [
           "He spent a",
           "amount of money."
         ],
-        "full": "He spent a considerable amount of money.",
+        "full": "He spent a CONSIDERABLE amount of money.",
         "jp": "彼はかなりの金額を使った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "change."
-        ],
-        "full": "It was a small change.",
-        "jp": "それは小さな変化だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9049,18 +8058,9 @@ const WORD_DATABASE = [
           "He is a",
           "worker."
         ],
-        "full": "He is a consistent worker.",
+        "full": "He is a CONSISTENT worker.",
         "jp": "彼は着実な働き手だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Her grades are",
-          "."
-        ],
-        "full": "Her grades are erratic.",
-        "jp": "彼女の成績は不安定だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9126,18 +8126,9 @@ const WORD_DATABASE = [
           "She felt",
           "in her bright dress."
         ],
-        "full": "She felt conspicuous in her bright dress.",
+        "full": "She felt CONSPICUOUS in her bright dress.",
         "jp": "彼女は明るいドレスを着て目立っていると感じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He tried to be",
-          "."
-        ],
-        "full": "He tried to be invisible.",
-        "jp": "彼は目立たないようにしようとした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9202,18 +8193,9 @@ const WORD_DATABASE = [
           "They uncovered a",
           "against the government."
         ],
-        "full": "They uncovered a conspiracy against the government.",
+        "full": "They uncovered a CONSPIRACY against the government.",
         "jp": "彼らは政府に対する陰謀を暴いた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a mere",
-          "."
-        ],
-        "full": "It was a mere coincidence.",
-        "jp": "それは単なる偶然だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9280,7 +8262,7 @@ const WORD_DATABASE = [
           "Events seemed to",
           "against him."
         ],
-        "full": "Events seemed to conspire against him.",
+        "full": "Events seemed to CONSPIRE against him.",
         "jp": "事態は彼に不利に作用しているようだった。",
         "is_correct": true
       },
@@ -9344,18 +8326,9 @@ const WORD_DATABASE = [
           "She talks",
           "about her dog."
         ],
-        "full": "She talks constantly about her dog.",
+        "full": "She talks CONSTANTLY about her dog.",
         "jp": "彼女は絶えず自分の犬について話している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He",
-          "eats fast food."
-        ],
-        "full": "He rarely eats fast food.",
-        "jp": "彼はめったにファストフードを食べない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9413,7 +8386,7 @@ const WORD_DATABASE = [
           "You should",
           "a doctor."
         ],
-        "full": "You should consult a doctor.",
+        "full": "You should CONSULT a doctor.",
         "jp": "医者に相談すべきだ。",
         "is_correct": true
       },
@@ -9422,7 +8395,7 @@ const WORD_DATABASE = [
           "Please",
           "the dictionary."
         ],
-        "full": "Please consult the dictionary.",
+        "full": "Please CONSULT the dictionary.",
         "jp": "辞書を引いてください。",
         "is_correct": true
       },
@@ -9485,7 +8458,7 @@ const WORD_DATABASE = [
           "The flu is highly",
           "."
         ],
-        "full": "The flu is highly contagious.",
+        "full": "The flu is highly CONTAGIOUS.",
         "jp": "インフルエンザは非常に感染力が強い。",
         "is_correct": true
       },
@@ -9494,7 +8467,7 @@ const WORD_DATABASE = [
           "Her laughter was",
           "."
         ],
-        "full": "Her laughter was contagious.",
+        "full": "Her laughter was CONTAGIOUS.",
         "jp": "彼女の笑いは周りに伝染した。",
         "is_correct": true
       },
@@ -9565,18 +8538,9 @@ const WORD_DATABASE = [
           "He is interested in",
           "art."
         ],
-        "full": "He is interested in contemporary art.",
+        "full": "He is interested in CONTEMPORARY art.",
         "jp": "彼は現代美術に興味がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I love",
-          "music from the 18th century."
-        ],
-        "full": "I love classical music from the 18th century.",
-        "jp": "私は18世紀のクラシック音楽が大好きだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9638,7 +8602,7 @@ const WORD_DATABASE = [
           "This issue is a bone of",
           "."
         ],
-        "full": "This issue is a bone of contention.",
+        "full": "This issue is a bone of CONTENTION.",
         "jp": "この問題は論争の種だ。",
         "is_correct": true
       },
@@ -9647,7 +8611,7 @@ const WORD_DATABASE = [
           "It is my",
           "that he is innocent."
         ],
-        "full": "It is my contention that he is innocent.",
+        "full": "It is my CONTENTION that he is innocent.",
         "jp": "彼は無実であるというのが私の主張だ。",
         "is_correct": true
       },
@@ -9711,7 +8675,7 @@ const WORD_DATABASE = [
           "Everyone should",
           "to the team."
         ],
-        "full": "Everyone should contribute to the team.",
+        "full": "Everyone should CONTRIBUTE to the team.",
         "jp": "誰もがチームに貢献すべきだ。",
         "is_correct": true
       },
@@ -9720,7 +8684,7 @@ const WORD_DATABASE = [
           "Smoking can",
           "to lung cancer."
         ],
-        "full": "Smoking can contribute to lung cancer.",
+        "full": "Smoking can CONTRIBUTE to lung cancer.",
         "jp": "喫煙は肺がんの一因となり得る。",
         "is_correct": true
       },
@@ -9788,7 +8752,7 @@ const WORD_DATABASE = [
           "He made a significant",
           "to science."
         ],
-        "full": "He made a significant contribution to science.",
+        "full": "He made a significant CONTRIBUTION to science.",
         "jp": "彼は科学に多大な貢献をした。",
         "is_correct": true
       },
@@ -9864,18 +8828,9 @@ const WORD_DATABASE = [
           "The new policy is highly",
           "."
         ],
-        "full": "The new policy is highly controversial.",
+        "full": "The new policy is highly CONTROVERSIAL.",
         "jp": "新しい政策は非常に物議を醸している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is a",
-          "fact."
-        ],
-        "full": "It is a known fact.",
-        "jp": "それは既知の事実だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -9936,7 +8891,7 @@ const WORD_DATABASE = [
           "When is a",
           "time for you?"
         ],
-        "full": "When is a convenient time for you?",
+        "full": "When is a CONVENIENT time for you?",
         "jp": "ご都合の良い時間はいつですか？",
         "is_correct": true
       },
@@ -10009,7 +8964,7 @@ const WORD_DATABASE = [
           "Shaking hands is a social",
           "."
         ],
-        "full": "Shaking hands is a social convention.",
+        "full": "Shaking hands is a social CONVENTION.",
         "jp": "握手は社会的な慣習だ。",
         "is_correct": true
       },
@@ -10018,7 +8973,7 @@ const WORD_DATABASE = [
           "He attended a comic",
           "."
         ],
-        "full": "He attended a comic convention.",
+        "full": "He attended a comic CONVENTION.",
         "jp": "彼はコミックの大会に参加した。",
         "is_correct": true
       },
@@ -10086,18 +9041,9 @@ const WORD_DATABASE = [
           "He prefers",
           "methods."
         ],
-        "full": "He prefers conventional methods.",
+        "full": "He prefers CONVENTIONAL methods.",
         "jp": "彼は従来の方法を好む。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "idea."
-        ],
-        "full": "This is a revolutionary idea.",
-        "jp": "これは革命的なアイデアだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10159,7 +9105,7 @@ const WORD_DATABASE = [
           "The",
           "of water into steam requires heat."
         ],
-        "full": "The conversion of water into steam requires heat.",
+        "full": "The CONVERSION of water into steam requires heat.",
         "jp": "水を蒸気に変換するには熱が必要だ。",
         "is_correct": true
       },
@@ -10168,7 +9114,7 @@ const WORD_DATABASE = [
           "His",
           "to Buddhism surprised us."
         ],
-        "full": "His conversion to Buddhism surprised us.",
+        "full": "His CONVERSION to Buddhism surprised us.",
         "jp": "彼が仏教に改宗したことは私たちを驚かせた。",
         "is_correct": true
       },
@@ -10227,18 +9173,9 @@ const WORD_DATABASE = [
           "I tried to",
           "him of my innocence."
         ],
-        "full": "I tried to convince him of my innocence.",
+        "full": "I tried to CONVINCE him of my innocence.",
         "jp": "私は彼に自分の無実を納得させようとした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't let him",
-          "you."
-        ],
-        "full": "Don't let him deceive you.",
-        "jp": "彼に騙されてはいけない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10303,18 +9240,9 @@ const WORD_DATABASE = [
           "We need to",
           "with each other."
         ],
-        "full": "We need to cooperate with each other.",
+        "full": "We need to COOPERATE with each other.",
         "jp": "私たちはお互いに協力する必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the instructions."
-        ],
-        "full": "Please follow the instructions.",
-        "jp": "指示に従ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10380,18 +9308,9 @@ const WORD_DATABASE = [
           "He works for a large multinational",
           "."
         ],
-        "full": "He works for a large multinational corporation.",
+        "full": "He works for a large multinational CORPORATION.",
         "jp": "彼は巨大な多国籍企業で働いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a small",
-          "."
-        ],
-        "full": "This is a small shop.",
-        "jp": "これは小さなお店だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10525,18 +9444,9 @@ const WORD_DATABASE = [
           "The scandal damaged his",
           "."
         ],
-        "full": "The scandal damaged his credibility.",
+        "full": "The scandal damaged his CREDIBILITY.",
         "jp": "そのスキャンダルは彼の信頼性を傷つけた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I have no",
-          "in him."
-        ],
-        "full": "I have no faith in him.",
-        "jp": "私は彼を信用していない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10593,18 +9503,9 @@ const WORD_DATABASE = [
           "The country is facing an economic",
           "."
         ],
-        "full": "The country is facing an economic crisis.",
+        "full": "The country is facing an economic CRISIS.",
         "jp": "その国は経済危機に直面している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We enjoyed a time of",
-          "."
-        ],
-        "full": "We enjoyed a time of peace.",
-        "jp": "私たちは平和な時を楽しんだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10666,7 +9567,7 @@ const WORD_DATABASE = [
           "It is",
           "to solve this problem now."
         ],
-        "full": "It is critical to solve this problem now.",
+        "full": "It is CRITICAL to solve this problem now.",
         "jp": "今この問題を解決することが極めて重要だ。",
         "is_correct": true
       },
@@ -10675,7 +9576,7 @@ const WORD_DATABASE = [
           "He was very",
           "of the plan."
         ],
-        "full": "He was very critical of the plan.",
+        "full": "He was very CRITICAL of the plan.",
         "jp": "彼はその計画に対して非常に批判的だった。",
         "is_correct": true
       },
@@ -10739,18 +9640,9 @@ const WORD_DATABASE = [
           "He accepted the",
           "gracefully."
         ],
-        "full": "He accepted the criticism gracefully.",
+        "full": "He accepted the CRITICISM gracefully.",
         "jp": "彼は批判を潔く受け入れた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She gave him a",
-          "for his good work."
-        ],
-        "full": "She gave him a compliment for his good work.",
-        "jp": "彼女は彼の良い仕事に対して褒め言葉をかけた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10808,18 +9700,9 @@ const WORD_DATABASE = [
           "Water is",
           "for survival."
         ],
-        "full": "Water is crucial for survival.",
+        "full": "Water is CRUCIAL for survival.",
         "jp": "水は生存にとって極めて重要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "detail."
-        ],
-        "full": "This is a trivial detail.",
-        "jp": "これは些細な詳細だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10881,18 +9764,9 @@ const WORD_DATABASE = [
           "We must stop",
           "to animals."
         ],
-        "full": "We must stop cruelty to animals.",
+        "full": "We must stop CRUELTY to animals.",
         "jp": "私たちは動物への虐待を止めなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She showed",
-          "to the beggar."
-        ],
-        "full": "She showed kindness to the beggar.",
-        "jp": "彼女は物乞いに親切にした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -10950,7 +9824,7 @@ const WORD_DATABASE = [
           "Police caught the",
           "."
         ],
-        "full": "Police caught the culprit.",
+        "full": "Police caught the CULPRIT.",
         "jp": "警察は犯人を捕まえた。",
         "is_correct": true
       },
@@ -10959,7 +9833,7 @@ const WORD_DATABASE = [
           "Sugar is the main",
           "of tooth decay."
         ],
-        "full": "Sugar is the main culprit of tooth decay.",
+        "full": "Sugar is the main CULPRIT of tooth decay.",
         "jp": "砂糖は虫歯の主な原因だ。",
         "is_correct": true
       },
@@ -11023,7 +9897,7 @@ const WORD_DATABASE = [
           "Farmers",
           "the land."
         ],
-        "full": "Farmers cultivate the land.",
+        "full": "Farmers CULTIVATE the land.",
         "jp": "農家は土地を耕す。",
         "is_correct": true
       },
@@ -11032,7 +9906,7 @@ const WORD_DATABASE = [
           "He tries to",
           "friendships."
         ],
-        "full": "He tries to cultivate friendships.",
+        "full": "He tries to CULTIVATE friendships.",
         "jp": "彼は友情を育もうとしている。",
         "is_correct": true
       },
@@ -11092,18 +9966,9 @@ const WORD_DATABASE = [
           "We learned about Japanese",
           "."
         ],
-        "full": "We learned about Japanese culture.",
+        "full": "We learned about Japanese CULTURE.",
         "jp": "私たちは日本文化について学んだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He loves to explore",
-          "."
-        ],
-        "full": "He loves to explore nature.",
-        "jp": "彼は自然を探検するのが好きだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11164,18 +10029,9 @@ const WORD_DATABASE = [
           "He is",
           "working in Tokyo."
         ],
-        "full": "He is currently working in Tokyo.",
+        "full": "He is CURRENTLY working in Tokyo.",
         "jp": "彼は現在東京で働いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She was",
-          "a teacher."
-        ],
-        "full": "She was formerly a teacher.",
-        "jp": "彼女は以前教師だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11233,18 +10089,9 @@ const WORD_DATABASE = [
           "They held a",
           "on politics."
         ],
-        "full": "They held a debate on politics.",
+        "full": "They held a DEBATE on politics.",
         "jp": "彼らは政治について討論を行った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We reached an",
-          "."
-        ],
-        "full": "We reached an agreement.",
-        "jp": "私たちは合意に達した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11298,18 +10145,9 @@ const WORD_DATABASE = [
           "He is deep in",
           "."
         ],
-        "full": "He is deep in debt.",
+        "full": "He is deep in DEBT.",
         "jp": "彼は借金まみれだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Health is a great",
-          "."
-        ],
-        "full": "Health is a great asset.",
-        "jp": "健康は偉大な資産だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11367,18 +10205,9 @@ const WORD_DATABASE = [
           "He earns a",
           "salary."
         ],
-        "full": "He earns a decent salary.",
+        "full": "He earns a DECENT salary.",
         "jp": "彼はかなりの給料を稼いでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "That was a",
-          "thing to do."
-        ],
-        "full": "That was a rude thing to do.",
-        "jp": "それは失礼なことだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11439,18 +10268,9 @@ const WORD_DATABASE = [
           "I couldn't",
           "his handwriting."
         ],
-        "full": "I couldn't decipher his handwriting.",
+        "full": "I couldn't DECIPHER his handwriting.",
         "jp": "彼の筆跡を判読できなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the message."
-        ],
-        "full": "Please encrypt the message.",
-        "jp": "メッセージを暗号化してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11511,18 +10331,9 @@ const WORD_DATABASE = [
           "This machine is",
           "."
         ],
-        "full": "This machine is defective.",
+        "full": "This machine is DEFECTIVE.",
         "jp": "この機械は欠陥がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The diamond was",
-          "."
-        ],
-        "full": "The diamond was flawless.",
-        "jp": "そのダイヤモンドは無傷だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11584,18 +10395,9 @@ const WORD_DATABASE = [
           "The government faces a budget",
           "."
         ],
-        "full": "The government faces a budget deficit.",
+        "full": "The government faces a budget DEFICIT.",
         "jp": "政府は財政赤字に直面している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We have a food",
-          "."
-        ],
-        "full": "We have a food surplus.",
-        "jp": "食料が余っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11653,18 +10455,9 @@ const WORD_DATABASE = [
           "Can you",
           "the word?"
         ],
-        "full": "Can you define the word?",
+        "full": "Can you DEFINE the word?",
         "jp": "その単語を定義できますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the issue."
-        ],
-        "full": "Please confuse the issue.",
-        "jp": "問題を混乱させてください。（不自然）",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11726,18 +10519,9 @@ const WORD_DATABASE = [
           "I need a",
           "answer."
         ],
-        "full": "I need a definite answer.",
+        "full": "I need a DEFINITE answer.",
         "jp": "明確な答えが必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His plans are",
-          "."
-        ],
-        "full": "His plans are vague.",
-        "jp": "彼の計画は曖昧だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -11803,7 +10587,7 @@ const WORD_DATABASE = [
           "Look up the",
           "in the dictionary."
         ],
-        "full": "Look up the definition in the dictionary.",
+        "full": "Look up the DEFINITION in the dictionary.",
         "jp": "辞書で定義を調べなさい。",
         "is_correct": true
       },
@@ -11812,7 +10596,7 @@ const WORD_DATABASE = [
           "This TV has high",
           "."
         ],
-        "full": "This TV has high definition.",
+        "full": "This TV has high DEFINITION.",
         "jp": "このテレビは高解像度だ。",
         "is_correct": true
       },
@@ -11880,7 +10664,7 @@ const WORD_DATABASE = [
           "The jury will",
           "tomorrow."
         ],
-        "full": "The jury will deliberate tomorrow.",
+        "full": "The jury will DELIBERATE tomorrow.",
         "jp": "陪審員は明日審議を行う。",
         "is_correct": true
       },
@@ -11889,7 +10673,7 @@ const WORD_DATABASE = [
           "It was a",
           "act."
         ],
-        "full": "It was a deliberate act.",
+        "full": "It was a DELIBERATE act.",
         "jp": "それは故意の行為だった。",
         "is_correct": true
       },
@@ -11956,18 +10740,9 @@ const WORD_DATABASE = [
           "We live in a",
           "society."
         ],
-        "full": "We live in a democratic society.",
+        "full": "We live in a DEMOCRATIC society.",
         "jp": "私たちは民主主義社会に住んでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The country is under",
-          "rule."
-        ],
-        "full": "The country is under dictatorial rule.",
-        "jp": "その国は独裁支配下にある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12030,15 +10805,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "Words cannot",
-          "my feelings."
-        ],
-        "full": "Words cannot describe my feelings.",
-        "jp": "言葉では私の気持ちを表せない。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "The painting ",
           " a battle."
         ],
@@ -12093,7 +10859,7 @@ const WORD_DATABASE = [
           "The bus",
           "is near here."
         ],
-        "full": "The bus depot is near here.",
+        "full": "The bus DEPOT is near here.",
         "jp": "バスの車庫（発着所）はこの近くだ。",
         "is_correct": true
       },
@@ -12102,7 +10868,7 @@ const WORD_DATABASE = [
           "We store goods in the",
           "."
         ],
-        "full": "We store goods in the depot.",
+        "full": "We store goods in the DEPOT.",
         "jp": "私たちは商品を倉庫に保管する。",
         "is_correct": true
       },
@@ -12166,18 +10932,9 @@ const WORD_DATABASE = [
           "The streets were completely",
           "at night."
         ],
-        "full": "The streets were completely deserted at night.",
+        "full": "The streets were completely DESERTED at night.",
         "jp": "夜、通りは完全に人通りが絶えていた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The mall was",
-          "with shoppers."
-        ],
-        "full": "The mall was crowded with shoppers.",
-        "jp": "ショッピングモールは買い物客で混雑していた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12234,18 +10991,9 @@ const WORD_DATABASE = [
           "You",
           "a break after working so hard."
         ],
-        "full": "You deserve a break after working so hard.",
+        "full": "You DESERVE a break after working so hard.",
         "jp": "そんなに一生懸命働いたのだから、君は休憩するに値する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I don't",
-          "to eat vegetables."
-        ],
-        "full": "I don't like to eat vegetables.",
-        "jp": "私は野菜を食べるのが好きではない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12307,18 +11055,9 @@ const WORD_DATABASE = [
           "He made a",
           "attempt to escape."
         ],
-        "full": "He made a desperate attempt to escape.",
+        "full": "He made a DESPERATE attempt to escape.",
         "jp": "彼は逃げようと必死の試みをした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She felt",
-          "about the future."
-        ],
-        "full": "She felt hopeful about the future.",
-        "jp": "彼女は将来について希望を感じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12374,18 +11113,9 @@ const WORD_DATABASE = [
           "He went out",
           "the heavy rain."
         ],
-        "full": "He went out despite the heavy rain.",
+        "full": "He went out DESPITE the heavy rain.",
         "jp": "大雨にもかかわらず彼は外出した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I stayed home",
-          "the bad weather."
-        ],
-        "full": "I stayed home because of the bad weather.",
-        "jp": "悪天候のため私は家にいた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12447,18 +11177,9 @@ const WORD_DATABASE = [
           "The hurricane will",
           "the coast."
         ],
-        "full": "The hurricane will devastate the coast.",
+        "full": "The hurricane will DEVASTATE the coast.",
         "jp": "ハリケーンは海岸地帯を破壊するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We plan to",
-          "a new bridge."
-        ],
-        "full": "We plan to construct a new bridge.",
-        "jp": "私たちは新しい橋を建設する予定だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12520,18 +11241,9 @@ const WORD_DATABASE = [
           "He is",
           "with his hands."
         ],
-        "full": "He is dexterous with his hands.",
+        "full": "He is DEXTEROUS with his hands.",
         "jp": "彼は手先が器用だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is",
-          "at dancing."
-        ],
-        "full": "She is clumsy at dancing.",
-        "jp": "彼女はダンスが不器用だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12592,18 +11304,9 @@ const WORD_DATABASE = [
           "Doctors couldn't",
           "the disease."
         ],
-        "full": "Doctors couldn't diagnose the disease.",
+        "full": "Doctors couldn't DIAGNOSE the disease.",
         "jp": "医師たちはその病気を診断できなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the patient."
-        ],
-        "full": "Please treat the patient.",
-        "jp": "患者を治療してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12661,18 +11364,9 @@ const WORD_DATABASE = [
           "Don't let others",
           "your life."
         ],
-        "full": "Don't let others dictate your life.",
+        "full": "Don't let others DICTATE your life.",
         "jp": "他人に自分の人生を指図させてはいけない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The secretary will",
-          "the letter."
-        ],
-        "full": "The secretary will type the letter.",
-        "jp": "秘書が手紙をタイプするだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12738,18 +11432,9 @@ const WORD_DATABASE = [
           "She studied",
           "for the exam."
         ],
-        "full": "She studied diligently for the exam.",
+        "full": "She studied DILIGENTLY for the exam.",
         "jp": "彼女は試験のために勤勉に勉強した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He worked",
-          "all day."
-        ],
-        "full": "He worked lazily all day.",
-        "jp": "彼は一日中怠けて働いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12811,18 +11496,9 @@ const WORD_DATABASE = [
           "He felt some",
           "in his stomach."
         ],
-        "full": "He felt some discomfort in his stomach.",
+        "full": "He felt some DISCOMFORT in his stomach.",
         "jp": "彼は胃に少し不快感を感じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I sat in",
-          "on the sofa."
-        ],
-        "full": "I sat in comfort on the sofa.",
-        "jp": "私はソファで快適に座っていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12884,18 +11560,9 @@ const WORD_DATABASE = [
           "He left the room",
           "."
         ],
-        "full": "He left the room discreetly.",
+        "full": "He left the room DISCREETLY.",
         "jp": "彼は慎重に部屋を出た。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She spoke",
-          "about her plans."
-        ],
-        "full": "She spoke openly about her plans.",
-        "jp": "彼女は自分の計画について公然と話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -12953,18 +11620,9 @@ const WORD_DATABASE = [
           "He wore a",
           "to hide his identity."
         ],
-        "full": "He wore a disguise to hide his identity.",
+        "full": "He wore a DISGUISE to hide his identity.",
         "jp": "彼は正体を隠すために変装をした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She told the",
-          "."
-        ],
-        "full": "She told the truth.",
-        "jp": "彼女は真実を話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13022,18 +11680,9 @@ const WORD_DATABASE = [
           "The boss decided to",
           "him."
         ],
-        "full": "The boss decided to dismiss him.",
+        "full": "The boss decided to DISMISS him.",
         "jp": "上司は彼を解雇することに決めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need to",
-          "new staff."
-        ],
-        "full": "We need to hire new staff.",
-        "jp": "私たちは新しいスタッフを雇う必要がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13091,18 +11740,9 @@ const WORD_DATABASE = [
           "The police used tear gas to",
           "the crowd."
         ],
-        "full": "The police used tear gas to disperse the crowd.",
+        "full": "The police used tear gas to DISPERSE the crowd.",
         "jp": "警察は群衆を分散させるために催涙ガスを使用した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the papers."
-        ],
-        "full": "Please collect the papers.",
-        "jp": "書類を集めてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13164,18 +11804,9 @@ const WORD_DATABASE = [
           "It is hard to make a",
           "between the two."
         ],
-        "full": "It is hard to make a distinction between the two.",
+        "full": "It is hard to make a DISTINCTION between the two.",
         "jp": "その二つを区別するのは難しい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "There is a strong",
-          "between them."
-        ],
-        "full": "There is a strong resemblance between them.",
-        "jp": "彼らの間には強い類似性がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13237,18 +11868,9 @@ const WORD_DATABASE = [
           "Can you",
           "between right and wrong?"
         ],
-        "full": "Can you distinguish between right and wrong?",
+        "full": "Can you DISTINGUISH between right and wrong?",
         "jp": "善悪の区別がつきますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the two issues."
-        ],
-        "full": "Don't confuse the two issues.",
-        "jp": "その二つの問題を混同しないで。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13310,18 +11932,9 @@ const WORD_DATABASE = [
           "Volunteers will",
           "food to the homeless."
         ],
-        "full": "Volunteers will distribute food to the homeless.",
+        "full": "Volunteers will DISTRIBUTE food to the homeless.",
         "jp": "ボランティアがホームレスに食料を配布する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need to",
-          "more information."
-        ],
-        "full": "We need to gather more information.",
-        "jp": "私たちはもっと情報を集める必要がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13379,18 +11992,9 @@ const WORD_DATABASE = [
           "Please do not",
           "him while he is working."
         ],
-        "full": "Please do not disturb him while he is working.",
+        "full": "Please do not DISTURB him while he is working.",
         "jp": "仕事中の彼の邪魔をしないでください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Music helps to",
-          "my mind."
-        ],
-        "full": "Music helps to calm my mind.",
-        "jp": "音楽は私の心を落ち着かせるのに役立つ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13448,18 +12052,9 @@ const WORD_DATABASE = [
           "The horse is very",
           "and easy to ride."
         ],
-        "full": "The horse is very docile and easy to ride.",
+        "full": "The horse is very DOCILE and easy to ride.",
         "jp": "その馬はとても従順で乗りやすい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has an",
-          "personality."
-        ],
-        "full": "He has an aggressive personality.",
-        "jp": "彼は攻撃的な性格をしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13517,18 +12112,9 @@ const WORD_DATABASE = [
           "Greed was the cause of his",
           "."
         ],
-        "full": "Greed was the cause of his downfall.",
+        "full": "Greed was the cause of his DOWNFALL.",
         "jp": "強欲が彼の没落の原因だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Hard work led to his",
-          "."
-        ],
-        "full": "Hard work led to his success.",
-        "jp": "勤勉が彼の成功につながった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13585,18 +12171,9 @@ const WORD_DATABASE = [
           "The company plans to",
           "its workforce."
         ],
-        "full": "The company plans to downsize its workforce.",
+        "full": "The company plans to DOWNSIZE its workforce.",
         "jp": "その会社は人員を削減する計画だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They want to",
-          "the business."
-        ],
-        "full": "They want to expand the business.",
-        "jp": "彼らは事業を拡大したいと考えている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13658,18 +12235,9 @@ const WORD_DATABASE = [
           "There was a",
           "change in the weather."
         ],
-        "full": "There was a dramatic change in the weather.",
+        "full": "There was a DRAMATIC change in the weather.",
         "jp": "天候に劇的な変化があった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The movie was",
-          "."
-        ],
-        "full": "The movie was boring.",
-        "jp": "その映画は退屈だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13727,18 +12295,9 @@ const WORD_DATABASE = [
           "We need to take",
           "measures."
         ],
-        "full": "We need to take drastic measures.",
+        "full": "We need to take DRASTIC measures.",
         "jp": "我々は思い切った措置を講じる必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He made a",
-          "change to the plan."
-        ],
-        "full": "He made a slight change to the plan.",
-        "jp": "彼は計画にわずかな変更を加えた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13803,18 +12362,9 @@ const WORD_DATABASE = [
           "Prices have fallen",
           "."
         ],
-        "full": "Prices have fallen drastically.",
+        "full": "Prices have fallen DRASTICALLY.",
         "jp": "価格が劇的に下落した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The temperature rose",
-          "."
-        ],
-        "full": "The temperature rose slightly.",
-        "jp": "気温がわずかに上昇した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13876,18 +12426,9 @@ const WORD_DATABASE = [
           "I am",
           "about his claims."
         ],
-        "full": "I am dubious about his claims.",
+        "full": "I am DUBIOUS about his claims.",
         "jp": "私は彼の主張を疑わしく思っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I am",
-          "of the result."
-        ],
-        "full": "I am certain of the result.",
-        "jp": "私は結果を確信している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -13941,18 +12482,9 @@ const WORD_DATABASE = [
           "The rent is",
           "tomorrow."
         ],
-        "full": "The rent is due tomorrow.",
+        "full": "The rent is DUE tomorrow.",
         "jp": "家賃は明日が支払期日だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The train arrived",
-          "."
-        ],
-        "full": "The train arrived early.",
-        "jp": "電車は早く到着した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14008,18 +12540,9 @@ const WORD_DATABASE = [
           "I fell asleep",
           "the movie."
         ],
-        "full": "I fell asleep during the movie.",
+        "full": "I fell asleep DURING the movie.",
         "jp": "私は映画の間に眠ってしまった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please wash your hands",
-          "eating."
-        ],
-        "full": "Please wash your hands before eating.",
-        "jp": "食事の前に手を洗ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14085,18 +12608,9 @@ const WORD_DATABASE = [
           "The global",
           "is recovering."
         ],
-        "full": "The global economy is recovering.",
+        "full": "The global ECONOMY is recovering.",
         "jp": "世界経済は回復している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He lives in",
-          "."
-        ],
-        "full": "He lives in poverty.",
-        "jp": "彼は貧困の中で暮らしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14158,18 +12672,9 @@ const WORD_DATABASE = [
           "This medicine is very",
           "."
         ],
-        "full": "This medicine is very effective.",
+        "full": "This medicine is very EFFECTIVE.",
         "jp": "この薬はとても効果的だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His plan was",
-          "."
-        ],
-        "full": "His plan was useless.",
-        "jp": "彼の計画は役に立たなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14231,18 +12736,9 @@ const WORD_DATABASE = [
           "This new engine is very",
           "."
         ],
-        "full": "This new engine is very efficient.",
+        "full": "This new engine is very EFFICIENT.",
         "jp": "この新しいエンジンは非常に効率的だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "worker."
-        ],
-        "full": "He is a lazy worker.",
-        "jp": "彼は怠惰な働き手だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14300,18 +12796,9 @@ const WORD_DATABASE = [
           "Press the button to",
           "the CD."
         ],
-        "full": "Press the button to eject the CD.",
+        "full": "Press the button to EJECT the CD.",
         "jp": "ボタンを押してCDを取り出してください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the disk inside."
-        ],
-        "full": "Please keep the disk inside.",
-        "jp": "ディスクを中に入れたままにしてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14373,18 +12860,9 @@ const WORD_DATABASE = [
           "Rubber is an",
           "material."
         ],
-        "full": "Rubber is an elastic material.",
+        "full": "Rubber is an ELASTIC material.",
         "jp": "ゴムは弾力性のある素材だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This metal is very",
-          "."
-        ],
-        "full": "This metal is very rigid.",
-        "jp": "この金属は非常に硬い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14441,18 +12919,9 @@ const WORD_DATABASE = [
           "They voted to",
           "a new president."
         ],
-        "full": "They voted to elect a new president.",
+        "full": "They voted to ELECT a new president.",
         "jp": "彼らは新しい大統領を選出するために投票した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We decided to",
-          "the offer."
-        ],
-        "full": "We decided to reject the offer.",
-        "jp": "私たちはその申し出を断ることにした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14518,18 +12987,9 @@ const WORD_DATABASE = [
           "We must",
           "waste."
         ],
-        "full": "We must eliminate waste.",
+        "full": "We must ELIMINATE waste.",
         "jp": "私たちは無駄を排除しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "more details."
-        ],
-        "full": "Please add more details.",
-        "jp": "もっと詳細を追加してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14590,18 +13050,9 @@ const WORD_DATABASE = [
           "He gave an",
           "speech."
         ],
-        "full": "He gave an eloquent speech.",
+        "full": "He gave an ELOQUENT speech.",
         "jp": "彼は雄弁なスピーチをした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "and quiet."
-        ],
-        "full": "He was shy and quiet.",
-        "jp": "彼は恥ずかしがり屋で静かだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14666,18 +13117,9 @@ const WORD_DATABASE = [
           "She spoke",
           "about human rights."
         ],
-        "full": "She spoke eloquently about human rights.",
+        "full": "She spoke ELOQUENTLY about human rights.",
         "jp": "彼女は人権について雄弁に語った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke",
-          "and stumbled."
-        ],
-        "full": "He spoke poorly and stumbled.",
-        "jp": "彼は下手に話し、つっかえた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14739,18 +13181,9 @@ const WORD_DATABASE = [
           "She seems to",
           "kindness."
         ],
-        "full": "She seems to embody kindness.",
+        "full": "She seems to EMBODY kindness.",
         "jp": "彼女は親切心を体現しているようだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He tries to",
-          "his feelings."
-        ],
-        "full": "He tries to hide his feelings.",
-        "jp": "彼は感情を隠そうとしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14808,18 +13241,9 @@ const WORD_DATABASE = [
           "The sun began to",
           "from the clouds."
         ],
-        "full": "The sun began to emerge from the clouds.",
+        "full": "The sun began to EMERGE from the clouds.",
         "jp": "太陽が雲から現れ始めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The ghost seemed to",
-          "."
-        ],
-        "full": "The ghost seemed to vanish.",
-        "jp": "幽霊は消えてしまったようだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14881,18 +13305,9 @@ const WORD_DATABASE = [
           "He showed no",
           "on his face."
         ],
-        "full": "He showed no emotion on his face.",
+        "full": "He showed no EMOTION on his face.",
         "jp": "彼は顔に感情を表さなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Use your",
-          "to solve the problem."
-        ],
-        "full": "Use your logic to solve the problem.",
-        "jp": "論理を使って問題を解決しなさい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -14957,18 +13372,9 @@ const WORD_DATABASE = [
           "She is very",
           "towards others."
         ],
-        "full": "She is very empathetic towards others.",
+        "full": "She is very EMPATHETIC towards others.",
         "jp": "彼女は他人に対してとても共感的だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "to my suffering."
-        ],
-        "full": "He was indifferent to my suffering.",
-        "jp": "彼は私の苦しみに無関心だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15029,18 +13435,9 @@ const WORD_DATABASE = [
           "I want to",
           "the importance of this rule."
         ],
-        "full": "I want to emphasize the importance of this rule.",
+        "full": "I want to EMPHASIZE the importance of this rule.",
         "jp": "私はこのルールの重要性を強調したい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He tried to",
-          "his mistakes."
-        ],
-        "full": "He tried to hide his mistakes.",
-        "jp": "彼は自分の間違いを隠そうとした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15110,18 +13507,9 @@ const WORD_DATABASE = [
           "He",
           "denied the accusations."
         ],
-        "full": "He emphatically denied the accusations.",
+        "full": "He EMPHATICALLY denied the accusations.",
         "jp": "彼はその告発を断固として否定した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She spoke",
-          "so I couldn't hear."
-        ],
-        "full": "She spoke quietly so I couldn't hear.",
-        "jp": "彼女は静かに話したので聞こえなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15183,18 +13571,9 @@ const WORD_DATABASE = [
           "We might",
           "problems along the way."
         ],
-        "full": "We might encounter problems along the way.",
+        "full": "We might ENCOUNTER problems along the way.",
         "jp": "途中で問題に遭遇するかもしれない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Try to",
-          "traffic."
-        ],
-        "full": "Try to avoid traffic.",
-        "jp": "渋滞を避けるようにしなさい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15256,18 +13635,9 @@ const WORD_DATABASE = [
           "The candidate received the",
           "of the mayor."
         ],
-        "full": "The candidate received the endorsement of the mayor.",
+        "full": "The candidate received the ENDORSEMENT of the mayor.",
         "jp": "その候補者は市長の支持を受けた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He faced strong",
-          "from the public."
-        ],
-        "full": "He faced strong opposition from the public.",
-        "jp": "彼は大衆からの強い反対に直面した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15329,18 +13699,9 @@ const WORD_DATABASE = [
           "Solar power is a renewable",
           "source."
         ],
-        "full": "Solar power is a renewable energy source.",
+        "full": "Solar power is a renewable ENERGY source.",
         "jp": "太陽光は再生可能エネルギー源だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He felt",
-          "after the run."
-        ],
-        "full": "He felt fatigue after the run.",
-        "jp": "彼は走った後、疲労を感じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15398,18 +13759,9 @@ const WORD_DATABASE = [
           "This sauce will",
           "the flavor of the meat."
         ],
-        "full": "This sauce will enhance the flavor of the meat.",
+        "full": "This sauce will ENHANCE the flavor of the meat.",
         "jp": "このソースは肉の風味を引き立てる（高める）だろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the quality."
-        ],
-        "full": "Don't worsen the quality.",
-        "jp": "品質を悪化させないで。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15471,18 +13823,9 @@ const WORD_DATABASE = [
           "He has an",
           "view of education."
         ],
-        "full": "He has an enlightened view of education.",
+        "full": "He has an ENLIGHTENED view of education.",
         "jp": "彼は教育に関して進歩的な考えを持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "about the facts."
-        ],
-        "full": "He is ignorant about the facts.",
-        "jp": "彼は事実について無知だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15543,18 +13886,9 @@ const WORD_DATABASE = [
           "The project requires an",
           "amount of money."
         ],
-        "full": "The project requires an enormous amount of money.",
+        "full": "The project requires an ENORMOUS amount of money.",
         "jp": "そのプロジェクトには莫大な資金が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "mistake."
-        ],
-        "full": "It was a tiny mistake.",
-        "jp": "それは些細な間違いだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15612,18 +13946,9 @@ const WORD_DATABASE = [
           "I decided to",
           "in the art course."
         ],
-        "full": "I decided to enroll in the art course.",
+        "full": "I decided to ENROLL in the art course.",
         "jp": "私はアートコースに登録することに決めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He decided to",
-          "school."
-        ],
-        "full": "He decided to quit school.",
-        "jp": "彼は学校を辞めることに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15690,15 +14015,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "Please",
-          "the knot."
-        ],
-        "full": "Please untangle the knot.",
-        "jp": "結び目を解いてください。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "The rope began to ",
           " the boat."
         ],
@@ -15757,18 +14073,9 @@ const WORD_DATABASE = [
           "This is a risky",
           "."
         ],
-        "full": "This is a risky enterprise.",
+        "full": "This is a risky ENTERPRISE.",
         "jp": "これはリスクのある事業だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He prefers",
-          "over work."
-        ],
-        "full": "He prefers idleness over work.",
-        "jp": "彼は仕事より怠惰を好む。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15830,18 +14137,9 @@ const WORD_DATABASE = [
           "We must ensure",
           "in education."
         ],
-        "full": "We must ensure equity in education.",
+        "full": "We must ensure EQUITY in education.",
         "jp": "教育における公平性を確保しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The judge showed",
-          "."
-        ],
-        "full": "The judge showed bias.",
-        "jp": "裁判官は偏見を示した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -15910,18 +14208,9 @@ const WORD_DATABASE = [
           "The letter was",
           "delivered."
         ],
-        "full": "The letter was erroneously delivered.",
+        "full": "The letter was ERRONEOUSLY delivered.",
         "jp": "その手紙は誤って配達された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He answered the question",
-          "."
-        ],
-        "full": "He answered the question correctly.",
-        "jp": "彼は質問に正しく答えた。",
-        "is_correct": false
       }
     ]
   },
@@ -15965,18 +14254,9 @@ const WORD_DATABASE = [
           "They plan to",
           "a new branch."
         ],
-        "full": "They plan to establish a new branch.",
+        "full": "They plan to ESTABLISH a new branch.",
         "jp": "彼らは新しい支店を設立する計画だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They decided to",
-          "the law."
-        ],
-        "full": "They decided to abolish the law.",
-        "jp": "彼らはその法律を廃止することに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16038,18 +14318,9 @@ const WORD_DATABASE = [
           "Can you",
           "the cost?"
         ],
-        "full": "Can you estimate the cost?",
+        "full": "Can you ESTIMATE the cost?",
         "jp": "費用を見積もれますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I can",
-          "the exact length."
-        ],
-        "full": "I can measure the exact length.",
-        "jp": "私は正確な長さを測ることができる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16106,18 +14377,9 @@ const WORD_DATABASE = [
           "We enjoy",
           "food."
         ],
-        "full": "We enjoy ethnic food.",
+        "full": "We enjoy ETHNIC food.",
         "jp": "私たちはエスニック料理（民族料理）を楽しむ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "problem."
-        ],
-        "full": "This is a global problem.",
-        "jp": "これは地球規模の問題だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16182,18 +14444,9 @@ const WORD_DATABASE = [
           "Residents were told to",
           "the area."
         ],
-        "full": "Residents were told to evacuate the area.",
+        "full": "Residents were told to EVACUATE the area.",
         "jp": "住民はその地域から避難するように言われた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "in the room."
-        ],
-        "full": "Please stay in the room.",
-        "jp": "部屋にとどまってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16258,18 +14511,9 @@ const WORD_DATABASE = [
           "Teachers",
           "student performance."
         ],
-        "full": "Teachers evaluate student performance.",
+        "full": "Teachers EVALUATE student performance.",
         "jp": "教師は生徒の成績を評価する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the details."
-        ],
-        "full": "Don't ignore the details.",
-        "jp": "詳細を無視してはいけない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16334,18 +14578,9 @@ const WORD_DATABASE = [
           "Water will",
           "in the sun."
         ],
-        "full": "Water will evaporate in the sun.",
+        "full": "Water will EVAPORATE in the sun.",
         "jp": "水は太陽の下で蒸発するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Water will",
-          "at zero degrees."
-        ],
-        "full": "Water will freeze at zero degrees.",
-        "jp": "水は0度で凍る。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16406,18 +14641,9 @@ const WORD_DATABASE = [
           "He was charged with tax",
           "."
         ],
-        "full": "He was charged with tax evasion.",
+        "full": "He was charged with tax EVASION.",
         "jp": "彼は脱税で告発された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need a direct",
-          "."
-        ],
-        "full": "We need a direct confrontation.",
-        "jp": "私たちには直接対決が必要だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16486,18 +14712,9 @@ const WORD_DATABASE = [
           "He",
           "became a doctor."
         ],
-        "full": "He eventually became a doctor.",
+        "full": "He EVENTUALLY became a doctor.",
         "jp": "彼は最終的に医者になった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He",
-          "refused the offer."
-        ],
-        "full": "He initially refused the offer.",
-        "jp": "彼は最初、その申し出を断った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16558,18 +14775,9 @@ const WORD_DATABASE = [
           "It was",
           "that she was unhappy."
         ],
-        "full": "It was evident that she was unhappy.",
+        "full": "It was EVIDENT that she was unhappy.",
         "jp": "彼女が不幸であることは明白だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The answer is",
-          "."
-        ],
-        "full": "The answer is unclear.",
-        "jp": "答えは不明瞭だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16634,18 +14842,9 @@ const WORD_DATABASE = [
           "He is",
           "upset about the news."
         ],
-        "full": "He is evidently upset about the news.",
+        "full": "He is EVIDENTLY upset about the news.",
         "jp": "彼はそのニュースに明らかに動揺している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke",
-          "about his plans."
-        ],
-        "full": "He spoke vaguely about his plans.",
-        "jp": "彼は自分の計画について曖昧に話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16711,18 +14910,9 @@ const WORD_DATABASE = [
           "Darwin studied the",
           "of species."
         ],
-        "full": "Darwin studied the evolution of species.",
+        "full": "Darwin studied the EVOLUTION of species.",
         "jp": "ダーウィンは種の進化を研究した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The economy is in",
-          "."
-        ],
-        "full": "The economy is in decline.",
-        "jp": "経済は衰退している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16779,18 +14969,9 @@ const WORD_DATABASE = [
           "Animals must",
           "to survive."
         ],
-        "full": "Animals must evolve to survive.",
+        "full": "Animals must EVOLVE to survive.",
         "jp": "動物は生き残るために進化しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Some traditions never",
-          "."
-        ],
-        "full": "Some traditions never change.",
-        "jp": "いくつかの伝統は決して変わらない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16855,18 +15036,9 @@ const WORD_DATABASE = [
           "Don't",
           "the size of the fish."
         ],
-        "full": "Don't exaggerate the size of the fish.",
+        "full": "Don't EXAGGERATE the size of the fish.",
         "jp": "魚の大きさを誇張してはいけない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the risks."
-        ],
-        "full": "Please minimize the risks.",
-        "jp": "リスクを最小限に抑えてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16924,18 +15096,9 @@ const WORD_DATABASE = [
           "The cost should not",
           "the budget."
         ],
-        "full": "The cost should not exceed the budget.",
+        "full": "The cost should not EXCEED the budget.",
         "jp": "費用は予算を超えてはならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "behind the others."
-        ],
-        "full": "Don't fall behind the others.",
-        "jp": "他の人に遅れをとるな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -16992,18 +15155,9 @@ const WORD_DATABASE = [
           "Everyone went",
           "John."
         ],
-        "full": "Everyone went except John.",
+        "full": "Everyone went EXCEPT John.",
         "jp": "ジョン以外はみんな行った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The price is $10,",
-          "tax."
-        ],
-        "full": "The price is $10, including tax.",
-        "jp": "価格は税込みで10ドルだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17065,18 +15219,9 @@ const WORD_DATABASE = [
           "Avoid",
           "drinking."
         ],
-        "full": "Avoid excessive drinking.",
+        "full": "Avoid EXCESSIVE drinking.",
         "jp": "過度の飲酒は避けなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He drinks a",
-          "amount."
-        ],
-        "full": "He drinks a moderate amount.",
-        "jp": "彼は適量を飲む。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17138,18 +15283,9 @@ const WORD_DATABASE = [
           "He collapsed from",
           "."
         ],
-        "full": "He collapsed from exhaustion.",
+        "full": "He collapsed from EXHAUSTION.",
         "jp": "彼は過労で倒れた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is full of",
-          "."
-        ],
-        "full": "She is full of energy.",
-        "jp": "彼女は活力に満ちている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17207,18 +15343,9 @@ const WORD_DATABASE = [
           "Heat makes metal",
           "."
         ],
-        "full": "Heat makes metal expand.",
+        "full": "Heat makes metal EXPAND.",
         "jp": "熱は金属を膨張させる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Cold makes metal",
-          "."
-        ],
-        "full": "Cold makes metal shrink.",
-        "jp": "冷気は金属を収縮させる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17284,18 +15411,9 @@ const WORD_DATABASE = [
           "They went on an",
           "to the North Pole."
         ],
-        "full": "They went on an expedition to the North Pole.",
+        "full": "They went on an EXPEDITION to the North Pole.",
         "jp": "彼らは北極への遠征に出かけた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We are planning a",
-          "."
-        ],
-        "full": "We are planning a vacation.",
-        "jp": "私たちは休暇を計画している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17361,18 +15479,9 @@ const WORD_DATABASE = [
           "We need to cut",
           "on advertising."
         ],
-        "full": "We need to cut expenditure on advertising.",
+        "full": "We need to cut EXPENDITURE on advertising.",
         "jp": "私たちは広告への支出を削減する必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Our",
-          "has increased."
-        ],
-        "full": "Our income has increased.",
-        "jp": "私たちの収入は増加した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17433,18 +15542,9 @@ const WORD_DATABASE = [
           "We need someone with",
           "in coding."
         ],
-        "full": "We need someone with expertise in coding.",
+        "full": "We need someone with EXPERTISE in coding.",
         "jp": "コーディングの専門知識を持つ人が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He showed",
-          "of the subject."
-        ],
-        "full": "He showed ignorance of the subject.",
-        "jp": "彼はその主題について無知であることを示した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17502,18 +15602,9 @@ const WORD_DATABASE = [
           "My passport will",
           "next month."
         ],
-        "full": "My passport will expire next month.",
+        "full": "My passport will EXPIRE next month.",
         "jp": "私のパスポートは来月期限が切れる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The contract will",
-          "soon."
-        ],
-        "full": "The contract will start soon.",
-        "jp": "契約はまもなく始まる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17575,18 +15666,9 @@ const WORD_DATABASE = [
           "He gave",
           "instructions."
         ],
-        "full": "He gave explicit instructions.",
+        "full": "He gave EXPLICIT instructions.",
         "jp": "彼は明確な指示を与えた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His answer was",
-          "."
-        ],
-        "full": "His answer was vague.",
-        "jp": "彼の答えは曖昧だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17652,18 +15734,9 @@ const WORD_DATABASE = [
           "The rules were",
           "stated."
         ],
-        "full": "The rules were explicitly stated.",
+        "full": "The rules were EXPLICITLY stated.",
         "jp": "ルールは明示的に述べられていた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke",
-          "about his plans."
-        ],
-        "full": "He spoke vaguely about his plans.",
-        "jp": "彼は計画について曖昧に話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17725,18 +15798,9 @@ const WORD_DATABASE = [
           "The fire caused",
           "damage."
         ],
-        "full": "The fire caused extensive damage.",
+        "full": "The fire caused EXTENSIVE damage.",
         "jp": "火事は広範囲にわたる被害をもたらした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has",
-          "knowledge of the topic."
-        ],
-        "full": "He has limited knowledge of the topic.",
-        "jp": "彼はその話題について限られた知識しか持っていない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17801,18 +15865,9 @@ const WORD_DATABASE = [
           "She has traveled",
           "in Europe."
         ],
-        "full": "She has traveled extensively in Europe.",
+        "full": "She has traveled EXTENSIVELY in Europe.",
         "jp": "彼女はヨーロッパを広範囲に旅行した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The topic was discussed",
-          "."
-        ],
-        "full": "The topic was discussed briefly.",
-        "jp": "その話題は手短に議論された。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17870,18 +15925,9 @@ const WORD_DATABASE = [
           "I agree with you to some",
           "."
         ],
-        "full": "I agree with you to some extent.",
+        "full": "I agree with you to some EXTENT.",
         "jp": "ある程度までは君に同意する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "What is the",
-          "of the damage?"
-        ],
-        "full": "What is the cause of the damage?",
-        "jp": "被害の原因は何ですか？",
-        "is_correct": false
       },
       {
         "parts": [
@@ -17943,18 +15989,9 @@ const WORD_DATABASE = [
           "Many species face",
           "due to climate change."
         ],
-        "full": "Many species face extinction due to climate change.",
+        "full": "Many species face EXTINCTION due to climate change.",
         "jp": "多くの種が気候変動により絶滅の危機に瀕している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We celebrate the",
-          "of a new species."
-        ],
-        "full": "We celebrate the discovery of a new species.",
-        "jp": "私たちは新種の発見を祝う。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18016,18 +16053,9 @@ const WORD_DATABASE = [
           "It is",
           "dangerous to swim here."
         ],
-        "full": "It is extremely dangerous to swim here.",
+        "full": "It is EXTREMELY dangerous to swim here.",
         "jp": "ここで泳ぐのは極めて危険だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "tired."
-        ],
-        "full": "He was slightly tired.",
-        "jp": "彼は少し疲れていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18093,7 +16121,7 @@ const WORD_DATABASE = [
           "The new sports",
           "is open."
         ],
-        "full": "The new sports facility is open.",
+        "full": "The new sports FACILITY is open.",
         "jp": "新しいスポーツ施設がオープンした。",
         "is_correct": true
       },
@@ -18162,18 +16190,9 @@ const WORD_DATABASE = [
           "The war caused widespread",
           "."
         ],
-        "full": "The war caused widespread famine.",
+        "full": "The war caused widespread FAMINE.",
         "jp": "戦争は広範囲にわたる飢饉を引き起こした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They celebrated with a",
-          "."
-        ],
-        "full": "They celebrated with a feast.",
-        "jp": "彼らは宴会で祝った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18239,18 +16258,9 @@ const WORD_DATABASE = [
           "She has a",
           "with ancient history."
         ],
-        "full": "She has a fascination with ancient history.",
+        "full": "She has a FASCINATION with ancient history.",
         "jp": "彼女は古代史に魅了されている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I felt",
-          "during the lecture."
-        ],
-        "full": "I felt boredom during the lecture.",
-        "jp": "私は講義中退屈を感じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18308,18 +16318,9 @@ const WORD_DATABASE = [
           "It was a",
           "mistake."
         ],
-        "full": "It was a fatal mistake.",
+        "full": "It was a FATAL mistake.",
         "jp": "それは致命的な間違いだった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He suffered a",
-          "injury."
-        ],
-        "full": "He suffered a minor injury.",
-        "jp": "彼は軽い怪我をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18381,18 +16382,9 @@ const WORD_DATABASE = [
           "The plan seems",
           "."
         ],
-        "full": "The plan seems feasible.",
+        "full": "The plan seems FEASIBLE.",
         "jp": "その計画は実現可能に見える。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is",
-          "to fly to the sun."
-        ],
-        "full": "It is impossible to fly to the sun.",
-        "jp": "太陽まで飛ぶことは不可能だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18450,7 +16442,7 @@ const WORD_DATABASE = [
           "The camera has a zoom",
           "."
         ],
-        "full": "The camera has a zoom feature.",
+        "full": "The camera has a zoom FEATURE.",
         "jp": "そのカメラにはズーム機能がある。",
         "is_correct": true
       },
@@ -18459,7 +16451,7 @@ const WORD_DATABASE = [
           "The magazine will",
           "an interview with him."
         ],
-        "full": "The magazine will feature an interview with him.",
+        "full": "The magazine will FEATURE an interview with him.",
         "jp": "その雑誌は彼のインタビューを特集するだろう。",
         "is_correct": true
       },
@@ -18515,18 +16507,9 @@ const WORD_DATABASE = [
           "He gave me a",
           "handshake."
         ],
-        "full": "He gave me a firm handshake.",
+        "full": "He gave me a FIRM handshake.",
         "jp": "彼は私と固い握手を交わした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The mattress is too",
-          "."
-        ],
-        "full": "The mattress is too soft.",
-        "jp": "そのマットレスは柔らかすぎる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18584,7 +16567,7 @@ const WORD_DATABASE = [
           "Don't try to",
           "me."
         ],
-        "full": "Don't try to flatter me.",
+        "full": "Don't try to FLATTER me.",
         "jp": "私にお世辞を言おうとしないで。",
         "is_correct": true
       },
@@ -18657,18 +16640,9 @@ const WORD_DATABASE = [
           "My schedule is quite",
           "."
         ],
-        "full": "My schedule is quite flexible.",
+        "full": "My schedule is quite FLEXIBLE.",
         "jp": "私のスケジュールはかなり融通が利く。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This material is",
-          "and hard."
-        ],
-        "full": "This material is rigid and hard.",
-        "jp": "この素材は硬くて固い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18722,7 +16696,7 @@ const WORD_DATABASE = [
           "A",
           "of birds flew over the lake."
         ],
-        "full": "A flock of birds flew over the lake.",
+        "full": "A FLOCK of birds flew over the lake.",
         "jp": "鳥の群れが湖の上を飛んでいった。",
         "is_correct": true
       },
@@ -18731,7 +16705,7 @@ const WORD_DATABASE = [
           "People",
           "to the beach in summer."
         ],
-        "full": "People flock to the beach in summer.",
+        "full": "People FLOCK to the beach in summer.",
         "jp": "夏には人々がビーチに押し寄せる。",
         "is_correct": true
       },
@@ -18795,18 +16769,9 @@ const WORD_DATABASE = [
           "Oil prices",
           "daily."
         ],
-        "full": "Oil prices fluctuate daily.",
+        "full": "Oil prices FLUCTUATE daily.",
         "jp": "石油価格は毎日変動する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The temperature remained",
-          "."
-        ],
-        "full": "The temperature remained stable.",
-        "jp": "気温は安定していた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -18863,7 +16828,7 @@ const WORD_DATABASE = [
           "I didn't",
           "any problems."
         ],
-        "full": "I didn't foresee any problems.",
+        "full": "I didn't FORESEE any problems.",
         "jp": "私は何の問題も予見していなかった。",
         "is_correct": true
       },
@@ -18928,7 +16893,7 @@ const WORD_DATABASE = [
           "They managed to",
           "a strong alliance."
         ],
-        "full": "They managed to forge a strong alliance.",
+        "full": "They managed to FORGE a strong alliance.",
         "jp": "彼らは強力な同盟を築き上げることができた。",
         "is_correct": true
       },
@@ -18937,7 +16902,7 @@ const WORD_DATABASE = [
           "Don't",
           "my signature."
         ],
-        "full": "Don't forge my signature.",
+        "full": "Don't FORGE my signature.",
         "jp": "私の署名を偽造しないで。",
         "is_correct": true
       },
@@ -19005,18 +16970,9 @@ const WORD_DATABASE = [
           "He is a",
           "opponent."
         ],
-        "full": "He is a formidable opponent.",
+        "full": "He is a FORMIDABLE opponent.",
         "jp": "彼は手強い相手だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The task was",
-          "easy."
-        ],
-        "full": "The task was surprisingly easy.",
-        "jp": "その仕事は驚くほど簡単だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19077,18 +17033,9 @@ const WORD_DATABASE = [
           "We were",
           "to escape unhurt."
         ],
-        "full": "We were fortunate to escape unhurt.",
+        "full": "We were FORTUNATE to escape unhurt.",
         "jp": "私たちは幸運にも無傷で逃げることができた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "accident."
-        ],
-        "full": "It was a tragic accident.",
-        "jp": "それは悲劇的な事故だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19146,18 +17093,9 @@ const WORD_DATABASE = [
           "We want to",
           "innovation."
         ],
-        "full": "We want to foster innovation.",
+        "full": "We want to FOSTER innovation.",
         "jp": "私たちはイノベーションを育成したい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the growth of weeds."
-        ],
-        "full": "Please stop the growth of weeds.",
-        "jp": "雑草の成長を止めてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19215,18 +17153,9 @@ const WORD_DATABASE = [
           "He suffered a leg",
           "."
         ],
-        "full": "He suffered a leg fracture.",
+        "full": "He suffered a leg FRACTURE.",
         "jp": "彼は足を骨折した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "was healed."
-        ],
-        "full": "The wound was healed.",
-        "jp": "傷は癒えた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19284,18 +17213,9 @@ const WORD_DATABASE = [
           "Handle with care; it is",
           "."
         ],
-        "full": "Handle with care; it is fragile.",
+        "full": "Handle with care; it is FRAGILE.",
         "jp": "取扱注意、それは壊れやすい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This box is",
-          "and heavy."
-        ],
-        "full": "This box is strong and heavy.",
-        "jp": "この箱は丈夫で重い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19353,18 +17273,9 @@ const WORD_DATABASE = [
           "Oil reduces",
           "in the engine."
         ],
-        "full": "Oil reduces friction in the engine.",
+        "full": "Oil reduces FRICTION in the engine.",
         "jp": "油はエンジンの摩擦を減らす。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "There is",
-          "between the two countries."
-        ],
-        "full": "There is peace between the two countries.",
-        "jp": "二国間には平和がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19426,18 +17337,9 @@ const WORD_DATABASE = [
           "He shouted in",
           "."
         ],
-        "full": "He shouted in frustration.",
+        "full": "He shouted in FRUSTRATION.",
         "jp": "彼は欲求不満で叫んだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She smiled with",
-          "."
-        ],
-        "full": "She smiled with satisfaction.",
-        "jp": "彼女は満足げに微笑んだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19491,18 +17393,9 @@ const WORD_DATABASE = [
           "The government will",
           "the project."
         ],
-        "full": "The government will fund the project.",
+        "full": "The government will FUND the project.",
         "jp": "政府はそのプロジェクトに資金を提供するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need to",
-          "money from the bank."
-        ],
-        "full": "We need to borrow money from the bank.",
-        "jp": "私たちは銀行からお金を借りる必要がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19556,18 +17449,9 @@ const WORD_DATABASE = [
           "Don't make a",
           "over nothing."
         ],
-        "full": "Don't make a fuss over nothing.",
+        "full": "Don't make a FUSS over nothing.",
         "jp": "何でもないことで大騒ぎするな。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Enjoy the",
-          "and quiet."
-        ],
-        "full": "Enjoy the peace and quiet.",
-        "jp": "平穏と静寂を楽しんで。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19624,18 +17508,9 @@ const WORD_DATABASE = [
           "Discrimination based on",
           "is illegal."
         ],
-        "full": "Discrimination based on gender is illegal.",
+        "full": "Discrimination based on GENDER is illegal.",
         "jp": "性別に基づく差別は違法だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "What is your",
-          "?"
-        ],
-        "full": "What is your age?",
-        "jp": "あなたの年齢は何歳ですか？",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19697,18 +17572,9 @@ const WORD_DATABASE = [
           "Solar panels",
           "electricity."
         ],
-        "full": "Solar panels generate electricity.",
+        "full": "Solar panels GENERATE electricity.",
         "jp": "ソーラーパネルは電気を生み出す。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Fire can",
-          "wood."
-        ],
-        "full": "Fire can destroy wood.",
-        "jp": "火は木を破壊しうる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19770,18 +17636,9 @@ const WORD_DATABASE = [
           "He made a",
           "donation."
         ],
-        "full": "He made a generous donation.",
+        "full": "He made a GENEROUS donation.",
         "jp": "彼は気前のよい寄付をした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is very",
-          "with his money."
-        ],
-        "full": "He is very stingy with his money.",
-        "jp": "彼はお金にとてもケチだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19843,18 +17700,9 @@ const WORD_DATABASE = [
           "It was a",
           "victory."
         ],
-        "full": "It was a glorious victory.",
+        "full": "It was a GLORIOUS victory.",
         "jp": "それは栄光の勝利だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "defeat."
-        ],
-        "full": "It was a shameful defeat.",
-        "jp": "それは恥ずべき敗北だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19912,18 +17760,9 @@ const WORD_DATABASE = [
           "The president will",
           "the country."
         ],
-        "full": "The president will govern the country.",
+        "full": "The president will GOVERN the country.",
         "jp": "大統領が国を統治するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Citizens must",
-          "the law."
-        ],
-        "full": "Citizens must obey the law.",
-        "jp": "市民は法律に従わなければならない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -19977,18 +17816,9 @@ const WORD_DATABASE = [
           "She danced with",
           "."
         ],
-        "full": "She danced with grace.",
+        "full": "She danced with GRACE.",
         "jp": "彼女は優雅に踊った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He moved with",
-          "."
-        ],
-        "full": "He moved with clumsiness.",
-        "jp": "彼は不器用に動いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20046,18 +17876,9 @@ const WORD_DATABASE = [
           "She was a",
           "host."
         ],
-        "full": "She was a gracious host.",
+        "full": "She was a GRACIOUS host.",
         "jp": "彼女は礼儀正しいホストだった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He made a",
-          "remark."
-        ],
-        "full": "He made a rude remark.",
-        "jp": "彼は失礼な発言をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20122,18 +17943,9 @@ const WORD_DATABASE = [
           "The weather is",
           "getting warmer."
         ],
-        "full": "The weather is gradually getting warmer.",
+        "full": "The weather is GRADUALLY getting warmer.",
         "jp": "天気は徐々に暖かくなっている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The car stopped",
-          "."
-        ],
-        "full": "The car stopped suddenly.",
-        "jp": "車は突然止まった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20198,18 +18010,9 @@ const WORD_DATABASE = [
           "He is a",
           "person who loves parties."
         ],
-        "full": "He is a gregarious person who loves parties.",
+        "full": "He is a GREGARIOUS person who loves parties.",
         "jp": "彼はパーティー好きの社交的な人だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is very",
-          "and quiet."
-        ],
-        "full": "She is very shy and quiet.",
-        "jp": "彼女はとても恥ずかしがり屋で静かだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20267,18 +18070,9 @@ const WORD_DATABASE = [
           "Employees filed a",
           "against the company."
         ],
-        "full": "Employees filed a grievance against the company.",
+        "full": "Employees filed a GRIEVANCE against the company.",
         "jp": "従業員たちは会社に対して苦情を申し立てた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He received",
-          "for his work."
-        ],
-        "full": "He received praise for his work.",
-        "jp": "彼は仕事に対して称賛を受けた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20331,18 +18125,9 @@ const WORD_DATABASE = [
           "We",
           "for the loss of our friend."
         ],
-        "full": "We grieve for the loss of our friend.",
+        "full": "We GRIEVE for the loss of our friend.",
         "jp": "私たちは友人を失ったことを悲しんでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We should",
-          "the victory."
-        ],
-        "full": "We should celebrate the victory.",
-        "jp": "私たちは勝利を祝うべきだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20396,18 +18181,9 @@ const WORD_DATABASE = [
           "He felt",
           "about lying."
         ],
-        "full": "He felt guilt about lying.",
+        "full": "He felt GUILT about lying.",
         "jp": "彼は嘘をついたことに罪悪感を感じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He proved his",
-          "."
-        ],
-        "full": "He proved his innocence.",
-        "jp": "彼は自分の無実を証明した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20473,18 +18249,9 @@ const WORD_DATABASE = [
           "Books were piled",
           "on the floor."
         ],
-        "full": "Books were piled haphazardly on the floor.",
+        "full": "Books were piled HAPHAZARDLY on the floor.",
         "jp": "本が床にでたらめに積み上げられていた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She arranged the flowers",
-          "."
-        ],
-        "full": "She arranged the flowers carefully.",
-        "jp": "彼女は花を丁寧に活けた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20541,18 +18308,9 @@ const WORD_DATABASE = [
           "Smoking is",
           "to your health."
         ],
-        "full": "Smoking is harmful to your health.",
+        "full": "Smoking is HARMFUL to your health.",
         "jp": "喫煙は健康に有害だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Exercise is",
-          "to your body."
-        ],
-        "full": "Exercise is beneficial to your body.",
-        "jp": "運動は体に有益だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20606,18 +18364,9 @@ const WORD_DATABASE = [
           "The punishment was too",
           "."
         ],
-        "full": "The punishment was too harsh.",
+        "full": "The punishment was too HARSH.",
         "jp": "その罰は厳しすぎた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has a",
-          "voice."
-        ],
-        "full": "He has a gentle voice.",
-        "jp": "彼は優しい声をしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20675,18 +18424,9 @@ const WORD_DATABASE = [
           "He was criticized",
           "for his mistake."
         ],
-        "full": "He was criticized harshly for his mistake.",
+        "full": "He was criticized HARSHLY for his mistake.",
         "jp": "彼は間違いを厳しく批判された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She spoke",
-          "to the child."
-        ],
-        "full": "She spoke gently to the child.",
-        "jp": "彼女は子供に優しく話しかけた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20739,18 +18479,9 @@ const WORD_DATABASE = [
           "The memory will",
           "him forever."
         ],
-        "full": "The memory will haunt him forever.",
+        "full": "The memory will HAUNT him forever.",
         "jp": "その記憶は彼に永遠につきまとうだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The music will",
-          "you."
-        ],
-        "full": "The music will comfort you.",
-        "jp": "その音楽はあなたを慰めるだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20808,18 +18539,9 @@ const WORD_DATABASE = [
           "Smoking is a health",
           "."
         ],
-        "full": "Smoking is a health hazard.",
+        "full": "Smoking is a health HAZARD.",
         "jp": "喫煙は健康への危険要因だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He works in",
-          "."
-        ],
-        "full": "He works in safety.",
-        "jp": "彼は安全に働いている。（文脈として不自然だが対比として）",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20872,18 +18594,9 @@ const WORD_DATABASE = [
           "You should",
           "my advice."
         ],
-        "full": "You should heed my advice.",
+        "full": "You should HEED my advice.",
         "jp": "私の忠告を心に留めるべきだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the warning."
-        ],
-        "full": "Don't ignore the warning.",
-        "jp": "警告を無視するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -20945,18 +18658,9 @@ const WORD_DATABASE = [
           "We must preserve our cultural",
           "."
         ],
-        "full": "We must preserve our cultural heritage.",
+        "full": "We must preserve our cultural HERITAGE.",
         "jp": "私たちは文化遺産を保存しなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We look forward to the",
-          "."
-        ],
-        "full": "We look forward to the future.",
-        "jp": "私たちは未来を楽しみにしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21022,18 +18726,9 @@ const WORD_DATABASE = [
           "The movie was absolutely",
           "."
         ],
-        "full": "The movie was absolutely hilarious.",
+        "full": "The movie was absolutely HILARIOUS.",
         "jp": "その映画は最高に面白かった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The news was very",
-          "."
-        ],
-        "full": "The news was very sad.",
-        "jp": "そのニュースはとても悲しかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21103,18 +18798,9 @@ const WORD_DATABASE = [
           "Thank you for your kind",
           "."
         ],
-        "full": "Thank you for your kind hospitality.",
+        "full": "Thank you for your kind HOSPITALITY.",
         "jp": "ご親切なもてなしをありがとう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I sensed",
-          "in his voice."
-        ],
-        "full": "I sensed hostility in his voice.",
-        "jp": "彼の声に敵意を感じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21179,18 +18865,9 @@ const WORD_DATABASE = [
           "He tried to",
           "me in public."
         ],
-        "full": "He tried to humiliate me in public.",
+        "full": "He tried to HUMILIATE me in public.",
         "jp": "彼は人前で私に恥をかかせようとした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The teacher wanted to",
-          "the student."
-        ],
-        "full": "The teacher wanted to praise the student.",
-        "jp": "先生はその生徒を褒めたかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21248,18 +18925,9 @@ const WORD_DATABASE = [
           "This car is a",
           "model."
         ],
-        "full": "This car is a hybrid model.",
+        "full": "This car is a HYBRID model.",
         "jp": "この車はハイブリッドモデルだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He owns a",
-          "dog."
-        ],
-        "full": "He owns a purebred dog.",
-        "jp": "彼は純血種の犬を飼っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21325,18 +18993,9 @@ const WORD_DATABASE = [
           "Can you",
           "the suspect?"
         ],
-        "full": "Can you identify the suspect?",
+        "full": "Can you IDENTIFY the suspect?",
         "jp": "容疑者を特定できますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the mistake."
-        ],
-        "full": "Please ignore the mistake.",
-        "jp": "間違いを無視してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21406,18 +19065,9 @@ const WORD_DATABASE = [
           "Political",
           "can divide people."
         ],
-        "full": "Political ideology can divide people.",
+        "full": "Political IDEOLOGY can divide people.",
         "jp": "政治的イデオロギーは人々を分断しうる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need to rely on",
-          "."
-        ],
-        "full": "We need to rely on facts.",
-        "jp": "私たちは事実に頼る必要がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21474,18 +19124,9 @@ const WORD_DATABASE = [
           "Don't",
           "the warning signs."
         ],
-        "full": "Don't ignore the warning signs.",
+        "full": "Don't IGNORE the warning signs.",
         "jp": "警告のサインを無視するな。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "my advice."
-        ],
-        "full": "Please follow my advice.",
-        "jp": "私のアドバイスに従ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21547,18 +19188,9 @@ const WORD_DATABASE = [
           "The magician created an",
           "."
         ],
-        "full": "The magician created an illusion.",
+        "full": "The magician created an ILLUSION.",
         "jp": "手品師は錯覚を作り出した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We must face",
-          "."
-        ],
-        "full": "We must face reality.",
-        "jp": "私たちは現実に直面しなければならない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21620,18 +19252,9 @@ const WORD_DATABASE = [
           "Let me",
           "this point with a story."
         ],
-        "full": "Let me illustrate this point with a story.",
+        "full": "Let me ILLUSTRATE this point with a story.",
         "jp": "ある話でこの点を説明させてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the text."
-        ],
-        "full": "Please read the text.",
-        "jp": "その文章を読んでください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21697,18 +19320,9 @@ const WORD_DATABASE = [
           "We need an",
           "response."
         ],
-        "full": "We need an immediate response.",
+        "full": "We need an IMMEDIATE response.",
         "jp": "即座の返答が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Take",
-          "action."
-        ],
-        "full": "Take delayed action.",
-        "jp": "遅れた行動を取りなさい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21769,18 +19383,9 @@ const WORD_DATABASE = [
           "They warned of",
           "danger."
         ],
-        "full": "They warned of impending danger.",
+        "full": "They warned of IMPENDING danger.",
         "jp": "彼らは差し迫った危険について警告した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The storm is",
-          "."
-        ],
-        "full": "The storm is far away.",
-        "jp": "嵐は遠くにある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21842,18 +19447,9 @@ const WORD_DATABASE = [
           "We plan to",
           "the new rules soon."
         ],
-        "full": "We plan to implement the new rules soon.",
+        "full": "We plan to IMPLEMENT the new rules soon.",
         "jp": "私たちはまもなく新しいルールを実行する予定だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They decided to",
-          "the project."
-        ],
-        "full": "They decided to cancel the project.",
-        "jp": "彼らはプロジェクトを中止することに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21919,18 +19515,9 @@ const WORD_DATABASE = [
           "What is the",
           "of his statement?"
         ],
-        "full": "What is the implication of his statement?",
+        "full": "What is the IMPLICATION of his statement?",
         "jp": "彼の発言の言外の意味は何ですか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a direct",
-          "."
-        ],
-        "full": "This is a direct statement.",
-        "jp": "これは直接的な発言だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -21995,18 +19582,9 @@ const WORD_DATABASE = [
           "She",
           "agreed to the plan."
         ],
-        "full": "She implicitly agreed to the plan.",
+        "full": "She IMPLICITLY agreed to the plan.",
         "jp": "彼女は暗黙のうちにその計画に同意した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He stated his opinion",
-          "."
-        ],
-        "full": "He stated his opinion explicitly.",
-        "jp": "彼は自分の意見を明確に述べた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -22067,18 +19645,9 @@ const WORD_DATABASE = [
           "The castle is an",
           "structure."
         ],
-        "full": "The castle is an imposing structure.",
+        "full": "The castle is an IMPOSING structure.",
         "jp": "その城は堂々とした建造物だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He lives in a",
-          "house."
-        ],
-        "full": "He lives in a small house.",
-        "jp": "彼は小さな家に住んでいる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -22143,18 +19712,9 @@ const WORD_DATABASE = [
           "Your idea sounds",
           "."
         ],
-        "full": "Your idea sounds impractical.",
+        "full": "Your idea sounds IMPRACTICAL.",
         "jp": "君のアイデアは非実用的に聞こえる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "solution."
-        ],
-        "full": "This is a practical solution.",
-        "jp": "これは実用的な解決策だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -22215,18 +19775,9 @@ const WORD_DATABASE = [
           "She gave an",
           "performance."
         ],
-        "full": "She gave an impressive performance.",
+        "full": "She gave an IMPRESSIVE performance.",
         "jp": "彼女は印象的な演技をした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was an",
-          "day."
-        ],
-        "full": "It was an ordinary day.",
-        "jp": "それは平凡な一日だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -22288,7 +19839,7 @@ const WORD_DATABASE = [
           "Money is a strong",
           "to work."
         ],
-        "full": "Money is a strong incentive to work.",
+        "full": "Money is a strong INCENTIVE to work.",
         "jp": "お金は働くための強い動機となる。",
         "is_correct": true
       },
@@ -22297,7 +19848,7 @@ const WORD_DATABASE = [
           "He lacked the",
           "to study."
         ],
-        "full": "He lacked the incentive to study.",
+        "full": "He lacked the INCENTIVE to study.",
         "jp": "彼には勉強する動機が欠けていた。",
         "is_correct": true
       },
@@ -22364,7 +19915,7 @@ const WORD_DATABASE = [
           "It rained",
           "for three days."
         ],
-        "full": "It rained incessantly for three days.",
+        "full": "It rained INCESSANTLY for three days.",
         "jp": "3日間、絶え間なく雨が降った。",
         "is_correct": true
       },
@@ -22373,7 +19924,7 @@ const WORD_DATABASE = [
           "He talked",
           "during the movie."
         ],
-        "full": "He talked incessantly during the movie.",
+        "full": "He talked INCESSANTLY during the movie.",
         "jp": "彼は映画の間中、ひっきりなしに話していた。",
         "is_correct": true
       },
@@ -22441,7 +19992,7 @@ const WORD_DATABASE = [
           "It is becoming",
           "difficult."
         ],
-        "full": "It is becoming increasingly difficult.",
+        "full": "It is becoming INCREASINGLY difficult.",
         "jp": "それはますます難しくなっている。",
         "is_correct": true
       },
@@ -22450,7 +20001,7 @@ const WORD_DATABASE = [
           "He became",
           "popular."
         ],
-        "full": "He became increasingly popular.",
+        "full": "He became INCREASINGLY popular.",
         "jp": "彼はますます人気が出た。",
         "is_correct": true
       },
@@ -22521,18 +20072,9 @@ const WORD_DATABASE = [
           "The meeting was postponed",
           "."
         ],
-        "full": "The meeting was postponed indefinitely.",
+        "full": "The meeting was postponed INDEFINITELY.",
         "jp": "会議は無期限に延期された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He will stay here",
-          "."
-        ],
-        "full": "He will stay here temporarily.",
-        "jp": "彼は一時的にここに滞在する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -22598,7 +20140,7 @@ const WORD_DATABASE = [
           "These plants are",
           "to this region."
         ],
-        "full": "These plants are indigenous to this region.",
+        "full": "These plants are INDIGENOUS to this region.",
         "jp": "これらの植物はこの地域の原産だ。",
         "is_correct": true
       },
@@ -22607,7 +20149,7 @@ const WORD_DATABASE = [
           "The kangaroo is",
           "to Australia."
         ],
-        "full": "The kangaroo is indigenous to Australia.",
+        "full": "The kangaroo is INDIGENOUS to Australia.",
         "jp": "カンガルーはオーストラリア固有の動物だ。",
         "is_correct": true
       },
@@ -22670,7 +20212,7 @@ const WORD_DATABASE = [
           "She was",
           "about the insult."
         ],
-        "full": "She was indignant about the insult.",
+        "full": "She was INDIGNANT about the insult.",
         "jp": "彼女はその侮辱に憤慨した。",
         "is_correct": true
       },
@@ -22679,7 +20221,7 @@ const WORD_DATABASE = [
           "He gave an",
           "reply."
         ],
-        "full": "He gave an indignant reply.",
+        "full": "He gave an INDIGNANT reply.",
         "jp": "彼は憤然とした返事をした。",
         "is_correct": true
       },
@@ -22745,7 +20287,7 @@ const WORD_DATABASE = [
           "'It's not fair!' she said",
           "."
         ],
-        "full": "'It's not fair!' she said indignantly.",
+        "full": "'It's not fair!' she said INDIGNANTLY.",
         "jp": "「不公平だ！」と彼女は憤慨して言った。",
         "is_correct": true
       },
@@ -22754,7 +20296,7 @@ const WORD_DATABASE = [
           "He shouted",
           "at the referee."
         ],
-        "full": "He shouted indignantly at the referee.",
+        "full": "He shouted INDIGNANTLY at the referee.",
         "jp": "彼は審判に対して憤然と叫んだ。",
         "is_correct": true
       },
@@ -22825,7 +20367,7 @@ const WORD_DATABASE = [
           "Water is",
           "to life."
         ],
-        "full": "Water is indispensable to life.",
+        "full": "Water is INDISPENSABLE to life.",
         "jp": "水は生命にとって不可欠だ。",
         "is_correct": true
       },
@@ -22834,7 +20376,7 @@ const WORD_DATABASE = [
           "His help was",
           "."
         ],
-        "full": "His help was indispensable.",
+        "full": "His help was INDISPENSABLE.",
         "jp": "彼の助けは不可欠だった。",
         "is_correct": true
       },
@@ -22894,7 +20436,7 @@ const WORD_DATABASE = [
           "The drug may",
           "sleep."
         ],
-        "full": "The drug may induce sleep.",
+        "full": "The drug may INDUCE sleep.",
         "jp": "その薬は眠気を誘発するかもしれない。",
         "is_correct": true
       },
@@ -22903,7 +20445,7 @@ const WORD_DATABASE = [
           "Nothing could",
           "him to stay."
         ],
-        "full": "Nothing could induce him to stay.",
+        "full": "Nothing could INDUCE him to stay.",
         "jp": "何があっても彼を引き留めることはできなかった（彼を説得して留まらせることはできなかった）。",
         "is_correct": true
       },
@@ -22966,7 +20508,7 @@ const WORD_DATABASE = [
           "The flu is highly",
           "."
         ],
-        "full": "The flu is highly infectious.",
+        "full": "The flu is highly INFECTIOUS.",
         "jp": "インフルエンザは非常に伝染性が高い。",
         "is_correct": true
       },
@@ -22975,7 +20517,7 @@ const WORD_DATABASE = [
           "His enthusiasm was",
           "."
         ],
-        "full": "His enthusiasm was infectious.",
+        "full": "His enthusiasm was INFECTIOUS.",
         "jp": "彼の熱意は周りに伝染した。",
         "is_correct": true
       },
@@ -23042,7 +20584,7 @@ const WORD_DATABASE = [
           "The universe is",
           "large."
         ],
-        "full": "The universe is infinitely large.",
+        "full": "The universe is INFINITELY large.",
         "jp": "宇宙は無限に大きい。",
         "is_correct": true
       },
@@ -23051,7 +20593,7 @@ const WORD_DATABASE = [
           "This is",
           "better."
         ],
-        "full": "This is infinitely better.",
+        "full": "This is INFINITELY better.",
         "jp": "これのほうがはるかに良い。",
         "is_correct": true
       },
@@ -23118,7 +20660,7 @@ const WORD_DATABASE = [
           "He is an",
           "politician."
         ],
-        "full": "He is an influential politician.",
+        "full": "He is an INFLUENTIAL politician.",
         "jp": "彼は有力な政治家だ。",
         "is_correct": true
       },
@@ -23127,7 +20669,7 @@ const WORD_DATABASE = [
           "She played an",
           "role."
         ],
-        "full": "She played an influential role.",
+        "full": "She played an INFLUENTIAL role.",
         "jp": "彼女は影響力のある役割を果たした。",
         "is_correct": true
       },
@@ -23195,7 +20737,7 @@ const WORD_DATABASE = [
           "The country needs to improve its",
           "."
         ],
-        "full": "The country needs to improve its infrastructure.",
+        "full": "The country needs to improve its INFRASTRUCTURE.",
         "jp": "その国はインフラを改善する必要がある。",
         "is_correct": true
       },
@@ -23204,7 +20746,7 @@ const WORD_DATABASE = [
           "Roads and bridges are part of the",
           "."
         ],
-        "full": "Roads and bridges are part of the infrastructure.",
+        "full": "Roads and bridges are part of the INFRASTRUCTURE.",
         "jp": "道路や橋は社会基盤の一部だ。",
         "is_correct": true
       },
@@ -23268,7 +20810,7 @@ const WORD_DATABASE = [
           "There are risks",
           "in this plan."
         ],
-        "full": "There are risks inherent in this plan.",
+        "full": "There are risks INHERENT in this plan.",
         "jp": "この計画には固有のリスクがある。",
         "is_correct": true
       },
@@ -23277,7 +20819,7 @@ const WORD_DATABASE = [
           "Freedom is an",
           "right."
         ],
-        "full": "Freedom is an inherent right.",
+        "full": "Freedom is an INHERENT right.",
         "jp": "自由は天賦の権利だ。",
         "is_correct": true
       },
@@ -23345,7 +20887,7 @@ const WORD_DATABASE = [
           "They plan to",
           "a new project."
         ],
-        "full": "They plan to initiate a new project.",
+        "full": "They plan to INITIATE a new project.",
         "jp": "彼らは新しいプロジェクトを開始する計画だ。",
         "is_correct": true
       },
@@ -23426,7 +20968,7 @@ const WORD_DATABASE = [
           "He took the",
           "to solve the problem."
         ],
-        "full": "He took the initiative to solve the problem.",
+        "full": "He took the INITIATIVE to solve the problem.",
         "jp": "彼は率先して（主導権を取って）問題を解決した。",
         "is_correct": true
       },
@@ -23435,7 +20977,7 @@ const WORD_DATABASE = [
           "The government launched a new",
           "."
         ],
-        "full": "The government launched a new initiative.",
+        "full": "The government launched a new INITIATIVE.",
         "jp": "政府は新しい取り組みを開始した。",
         "is_correct": true
       },
@@ -23494,7 +21036,7 @@ const WORD_DATABASE = [
           "She has an",
           "talent for music."
         ],
-        "full": "She has an innate talent for music.",
+        "full": "She has an INNATE talent for music.",
         "jp": "彼女には音楽の天賦の才がある。",
         "is_correct": true
       },
@@ -23503,7 +21045,7 @@ const WORD_DATABASE = [
           "Language ability is",
           "."
         ],
-        "full": "Language ability is innate.",
+        "full": "Language ability is INNATE.",
         "jp": "言語能力は生まれつきのものだ（という説がある）。",
         "is_correct": true
       },
@@ -23571,7 +21113,7 @@ const WORD_DATABASE = [
           "Technological",
           "changes our lives."
         ],
-        "full": "Technological innovation changes our lives.",
+        "full": "Technological INNOVATION changes our lives.",
         "jp": "技術革新は私たちの生活を変える。",
         "is_correct": true
       },
@@ -23580,7 +21122,7 @@ const WORD_DATABASE = [
           "We need",
           "in design."
         ],
-        "full": "We need innovation in design.",
+        "full": "We need INNOVATION in design.",
         "jp": "デザインにおける革新が必要だ。",
         "is_correct": true
       },
@@ -23644,7 +21186,7 @@ const WORD_DATABASE = [
           "The police launched an",
           "into the case."
         ],
-        "full": "The police launched an inquiry into the case.",
+        "full": "The police launched an INQUIRY into the case.",
         "jp": "警察はその事件の調査を開始した。",
         "is_correct": true
       },
@@ -23653,7 +21195,7 @@ const WORD_DATABASE = [
           "We received an",
           "about the product."
         ],
-        "full": "We received an inquiry about the product.",
+        "full": "We received an INQUIRY about the product.",
         "jp": "その製品についての問い合わせを受けた。",
         "is_correct": true
       },
@@ -23710,7 +21252,7 @@ const WORD_DATABASE = [
           "He stayed",
           "the house."
         ],
-        "full": "He stayed inside the house.",
+        "full": "He stayed INSIDE the house.",
         "jp": "彼は家の中にいた。",
         "is_correct": true
       },
@@ -23719,7 +21261,7 @@ const WORD_DATABASE = [
           "The toy was",
           "the box."
         ],
-        "full": "The toy was inside the box.",
+        "full": "The toy was INSIDE the box.",
         "jp": "おもちゃは箱の中にあった。",
         "is_correct": true
       },
@@ -23779,7 +21321,7 @@ const WORD_DATABASE = [
           "I",
           "on paying for dinner."
         ],
-        "full": "I insist on paying for dinner.",
+        "full": "I INSIST on paying for dinner.",
         "jp": "夕食代は私が払うと言い張ります。",
         "is_correct": true
       },
@@ -23859,7 +21401,7 @@ const WORD_DATABASE = [
           "The bomb exploded",
           "."
         ],
-        "full": "The bomb exploded instantaneously.",
+        "full": "The bomb exploded INSTANTANEOUSLY.",
         "jp": "爆弾は瞬時に爆発した。",
         "is_correct": true
       },
@@ -23868,7 +21410,7 @@ const WORD_DATABASE = [
           "The message was sent",
           "."
         ],
-        "full": "The message was sent instantaneously.",
+        "full": "The message was sent INSTANTANEOUSLY.",
         "jp": "メッセージは即座に送信された。",
         "is_correct": true
       },
@@ -23936,7 +21478,7 @@ const WORD_DATABASE = [
           "He is a man of",
           "."
         ],
-        "full": "He is a man of integrity.",
+        "full": "He is a man of INTEGRITY.",
         "jp": "彼は誠実な人だ。",
         "is_correct": true
       },
@@ -23945,7 +21487,7 @@ const WORD_DATABASE = [
           "The engineer checked the structural",
           "."
         ],
-        "full": "The engineer checked the structural integrity.",
+        "full": "The engineer checked the structural INTEGRITY.",
         "jp": "技術者は構造の完全性をチェックした。",
         "is_correct": true
       },
@@ -24017,7 +21559,7 @@ const WORD_DATABASE = [
           "She has great",
           "curiosity."
         ],
-        "full": "She has great intellectual curiosity.",
+        "full": "She has great INTELLECTUAL curiosity.",
         "jp": "彼女は旺盛な知的好奇心を持っている。",
         "is_correct": true
       },
@@ -24026,7 +21568,7 @@ const WORD_DATABASE = [
           "Protect your",
           "property."
         ],
-        "full": "Protect your intellectual property.",
+        "full": "Protect your INTELLECTUAL property.",
         "jp": "知的財産を守りなさい。",
         "is_correct": true
       },
@@ -24090,7 +21632,7 @@ const WORD_DATABASE = [
           "Don't",
           "in my business."
         ],
-        "full": "Don't interfere in my business.",
+        "full": "Don't INTERFERE in my business.",
         "jp": "私のことに干渉しないで。",
         "is_correct": true
       },
@@ -24099,7 +21641,7 @@ const WORD_DATABASE = [
           "Noise can",
           "with sleep."
         ],
-        "full": "Noise can interfere with sleep.",
+        "full": "Noise can INTERFERE with sleep.",
         "jp": "騒音は睡眠を妨げることがある。",
         "is_correct": true
       },
@@ -24163,7 +21705,7 @@ const WORD_DATABASE = [
           "The police had to",
           "to stop the fight."
         ],
-        "full": "The police had to intervene to stop the fight.",
+        "full": "The police had to INTERVENE to stop the fight.",
         "jp": "喧嘩を止めるために警察が介入しなければならなかった。",
         "is_correct": true
       },
@@ -24172,7 +21714,7 @@ const WORD_DATABASE = [
           "The government refused to",
           "."
         ],
-        "full": "The government refused to intervene.",
+        "full": "The government refused to INTERVENE.",
         "jp": "政府は介入を拒否した。",
         "is_correct": true
       },
@@ -24236,7 +21778,7 @@ const WORD_DATABASE = [
           "The watch has an",
           "mechanism."
         ],
-        "full": "The watch has an intricate mechanism.",
+        "full": "The watch has an INTRICATE mechanism.",
         "jp": "その時計は複雑な機構を持っている。",
         "is_correct": true
       },
@@ -24245,7 +21787,7 @@ const WORD_DATABASE = [
           "This is an",
           "design."
         ],
-        "full": "This is an intricate design.",
+        "full": "This is an INTRICATE design.",
         "jp": "これは入り組んだデザインだ。",
         "is_correct": true
       },
@@ -24311,7 +21853,7 @@ const WORD_DATABASE = [
           "The rug is",
           "woven."
         ],
-        "full": "The rug is intricately woven.",
+        "full": "The rug is INTRICATELY woven.",
         "jp": "その敷物は複雑に織られている。",
         "is_correct": true
       },
@@ -24320,7 +21862,7 @@ const WORD_DATABASE = [
           "The plot is",
           "constructed."
         ],
-        "full": "The plot is intricately constructed.",
+        "full": "The plot is INTRICATELY constructed.",
         "jp": "その筋書きは複雑に構成されている。",
         "is_correct": true
       },
@@ -24384,18 +21926,9 @@ const WORD_DATABASE = [
           "Gold has",
           "value."
         ],
-        "full": "Gold has intrinsic value.",
+        "full": "Gold has INTRINSIC value.",
         "jp": "金には本質的な価値がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The error was",
-          "."
-        ],
-        "full": "The error was accidental.",
-        "jp": "その誤りは偶然だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24456,18 +21989,9 @@ const WORD_DATABASE = [
           "Your passport is",
           "."
         ],
-        "full": "Your passport is invalid.",
+        "full": "Your passport is INVALID.",
         "jp": "あなたのパスポートは無効だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This ticket is",
-          "for one day."
-        ],
-        "full": "This ticket is valid for one day.",
-        "jp": "このチケットは1日有効だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24537,18 +22061,9 @@ const WORD_DATABASE = [
           "He is",
           "late for meetings."
         ],
-        "full": "He is invariably late for meetings.",
+        "full": "He is INVARIABLY late for meetings.",
         "jp": "彼は決まって（いつも）会議に遅れる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It",
-          "snows here in summer."
-        ],
-        "full": "It never snows here in summer.",
-        "jp": "ここでは夏に雪は決して降らない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24606,18 +22121,9 @@ const WORD_DATABASE = [
           "Edison didn't",
           "the light bulb alone."
         ],
-        "full": "Edison didn't invent the light bulb alone.",
+        "full": "Edison didn't INVENT the light bulb alone.",
         "jp": "エジソンは一人で電球を発明したわけではない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "my work."
-        ],
-        "full": "Don't copy my work.",
-        "jp": "私の作品を真似するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24675,7 +22181,7 @@ const WORD_DATABASE = [
           "The job will",
           "travel."
         ],
-        "full": "The job will involve travel.",
+        "full": "The job will INVOLVE travel.",
         "jp": "その仕事は移動（出張）を伴うだろう。",
         "is_correct": true
       },
@@ -24684,7 +22190,7 @@ const WORD_DATABASE = [
           "Don't",
           "me in your argument."
         ],
-        "full": "Don't involve me in your argument.",
+        "full": "Don't INVOLVE me in your argument.",
         "jp": "私を口論に巻き込まないで。",
         "is_correct": true
       },
@@ -24751,18 +22257,9 @@ const WORD_DATABASE = [
           "He has an",
           "habit."
         ],
-        "full": "He has an irritating habit.",
+        "full": "He has an IRRITATING habit.",
         "jp": "彼にはイライラさせる癖がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The music is very",
-          "."
-        ],
-        "full": "The music is very soothing.",
-        "jp": "その音楽はとても心が安らぐ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24828,7 +22325,7 @@ const WORD_DATABASE = [
           "He couldn't hide his",
           "."
         ],
-        "full": "He couldn't hide his irritation.",
+        "full": "He couldn't hide his IRRITATION.",
         "jp": "彼はいらだちを隠せなかった。",
         "is_correct": true
       },
@@ -24837,7 +22334,7 @@ const WORD_DATABASE = [
           "The cream reduces skin",
           "."
         ],
-        "full": "The cream reduces skin irritation.",
+        "full": "The cream reduces skin IRRITATION.",
         "jp": "そのクリームは肌の炎症を抑える。",
         "is_correct": true
       },
@@ -24908,18 +22405,9 @@ const WORD_DATABASE = [
           "Here is a copy of my",
           "."
         ],
-        "full": "Here is a copy of my itinerary.",
+        "full": "Here is a copy of my ITINERARY.",
         "jp": "これが私の旅程のコピーです。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We reached our",
-          "."
-        ],
-        "full": "We reached our destination.",
-        "jp": "私たちは目的地に到着した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -24984,18 +22472,9 @@ const WORD_DATABASE = [
           "You should spend money",
           "."
         ],
-        "full": "You should spend money judiciously.",
+        "full": "You should spend money JUDICIOUSLY.",
         "jp": "お金は賢明に使うべきだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He acted",
-          "."
-        ],
-        "full": "He acted foolishly.",
-        "jp": "彼は愚かにも行動した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25057,7 +22536,7 @@ const WORD_DATABASE = [
           "You can't",
           "stealing."
         ],
-        "full": "You can't justify stealing.",
+        "full": "You can't JUSTIFY stealing.",
         "jp": "盗みを正当化することはできない。",
         "is_correct": true
       },
@@ -25066,7 +22545,7 @@ const WORD_DATABASE = [
           "The end does not",
           "the means."
         ],
-        "full": "The end does not justify the means.",
+        "full": "The end does not JUSTIFY the means.",
         "jp": "目的は手段を正当化しない。",
         "is_correct": true
       },
@@ -25126,18 +22605,9 @@ const WORD_DATABASE = [
           "The rural",
           "is beautiful."
         ],
-        "full": "The rural landscape is beautiful.",
+        "full": "The rural LANDSCAPE is beautiful.",
         "jp": "田舎の風景は美しい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He painted a",
-          "of his wife."
-        ],
-        "full": "He painted a portrait of his wife.",
-        "jp": "彼は妻の肖像画を描いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25191,7 +22661,7 @@ const WORD_DATABASE = [
           "We will",
           "a new product."
         ],
-        "full": "We will launch a new product.",
+        "full": "We will LAUNCH a new product.",
         "jp": "私たちは新製品を発売（開始）する。",
         "is_correct": true
       },
@@ -25200,7 +22670,7 @@ const WORD_DATABASE = [
           "The rocket will",
           "tomorrow."
         ],
-        "full": "The rocket will launch tomorrow.",
+        "full": "The rocket will LAUNCH tomorrow.",
         "jp": "ロケットは明日打ち上げられる。",
         "is_correct": true
       },
@@ -25263,18 +22733,9 @@ const WORD_DATABASE = [
           "His handwriting is barely",
           "."
         ],
-        "full": "His handwriting is barely legible.",
+        "full": "His handwriting is barely LEGIBLE.",
         "jp": "彼の筆跡はかろうじて判読可能だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The text is",
-          "."
-        ],
-        "full": "The text is illegible.",
-        "jp": "その文字は判読不可能だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25340,18 +22801,9 @@ const WORD_DATABASE = [
           "New",
           "was passed today."
         ],
-        "full": "New legislation was passed today.",
+        "full": "New LEGISLATION was passed today.",
         "jp": "今日、新しい法律が可決された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He committed a",
-          "."
-        ],
-        "full": "He committed a crime.",
-        "jp": "彼は犯罪を犯した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25421,18 +22873,9 @@ const WORD_DATABASE = [
           "The company admitted",
           "for the accident."
         ],
-        "full": "The company admitted liability for the accident.",
+        "full": "The company admitted LIABILITY for the accident.",
         "jp": "会社は事故の法的責任を認めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Good health is an",
-          "."
-        ],
-        "full": "Good health is an asset.",
-        "jp": "健康は資産だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25494,18 +22937,9 @@ const WORD_DATABASE = [
           "Space is",
           "in this room."
         ],
-        "full": "Space is limited in this room.",
+        "full": "Space is LIMITED in this room.",
         "jp": "この部屋のスペースは限られている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The possibilities are",
-          "."
-        ],
-        "full": "The possibilities are unlimited.",
-        "jp": "可能性は無限だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25562,18 +22996,9 @@ const WORD_DATABASE = [
           "Do not",
           "in the lobby."
         ],
-        "full": "Do not loiter in the lobby.",
+        "full": "Do not LOITER in the lobby.",
         "jp": "ロビーでぶらぶらしないでください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "to the gate."
-        ],
-        "full": "Please hurry to the gate.",
-        "jp": "ゲートへ急いでください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25630,18 +23055,9 @@ const WORD_DATABASE = [
           "We need a",
           "plan."
         ],
-        "full": "We need a long-term plan.",
+        "full": "We need a LONG-TERM plan.",
         "jp": "私たちは長期的な計画が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is a",
-          "solution."
-        ],
-        "full": "It is a short-term solution.",
-        "jp": "それは短期的な解決策だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25697,7 +23113,7 @@ const WORD_DATABASE = [
           "The city is a",
           "for tourists."
         ],
-        "full": "The city is a magnet for tourists.",
+        "full": "The city is a MAGNET for tourists.",
         "jp": "その都市は観光客を引きつける場所だ。",
         "is_correct": true
       },
@@ -25706,7 +23122,7 @@ const WORD_DATABASE = [
           "Iron is attracted to a",
           "."
         ],
-        "full": "Iron is attracted to a magnet.",
+        "full": "Iron is attracted to a MAGNET.",
         "jp": "鉄は磁石に引き寄せられる。",
         "is_correct": true
       },
@@ -25769,7 +23185,7 @@ const WORD_DATABASE = [
           "This lens will",
           "the object."
         ],
-        "full": "This lens will magnify the object.",
+        "full": "This lens will MAGNIFY the object.",
         "jp": "このレンズは物体を拡大する。",
         "is_correct": true
       },
@@ -25845,18 +23261,9 @@ const WORD_DATABASE = [
           "The",
           "of people voted yes."
         ],
-        "full": "The majority of people voted yes.",
+        "full": "The MAJORITY of people voted yes.",
         "jp": "大多数の人々が賛成票を投じた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Only a",
-          "agreed."
-        ],
-        "full": "Only a minority agreed.",
-        "jp": "少数の人だけが同意した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25913,18 +23320,9 @@ const WORD_DATABASE = [
           "The whale is a large",
           "."
         ],
-        "full": "The whale is a large mammal.",
+        "full": "The whale is a large MAMMAL.",
         "jp": "クジラは大型の哺乳類だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "A snake is a",
-          "."
-        ],
-        "full": "A snake is a reptile.",
-        "jp": "ヘビは爬虫類だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -25986,18 +23384,9 @@ const WORD_DATABASE = [
           "He does",
           "labor."
         ],
-        "full": "He does manual labor.",
+        "full": "He does MANUAL labor.",
         "jp": "彼は肉体労働（手作業）をしている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This car has an",
-          "transmission."
-        ],
-        "full": "This car has an automatic transmission.",
-        "jp": "この車はオートマチック車だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26055,7 +23444,7 @@ const WORD_DATABASE = [
           "The stock",
           "crashed today."
         ],
-        "full": "The stock market crashed today.",
+        "full": "The stock MARKET crashed today.",
         "jp": "今日、株式市場が暴落した。",
         "is_correct": true
       },
@@ -26064,7 +23453,7 @@ const WORD_DATABASE = [
           "We bought vegetables at the",
           "."
         ],
-        "full": "We bought vegetables at the market.",
+        "full": "We bought vegetables at the MARKET.",
         "jp": "私たちは市場で野菜を買った。",
         "is_correct": true
       },
@@ -26123,18 +23512,9 @@ const WORD_DATABASE = [
           "Cows were grazing in the",
           "."
         ],
-        "full": "Cows were grazing in the meadow.",
+        "full": "Cows were grazing in the MEADOW.",
         "jp": "牛たちが牧草地で草を食べていた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We walked through the dark",
-          "."
-        ],
-        "full": "We walked through the dark forest.",
-        "jp": "私たちは暗い森を歩いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26196,18 +23576,9 @@ const WORD_DATABASE = [
           "I",
           "every morning to relax."
         ],
-        "full": "I meditate every morning to relax.",
+        "full": "I MEDITATE every morning to relax.",
         "jp": "私はリラックスするために毎朝瞑想する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "without thinking."
-        ],
-        "full": "Don't act without thinking.",
-        "jp": "考えずに行動するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26264,18 +23635,9 @@ const WORD_DATABASE = [
           "I was",
           "joking."
         ],
-        "full": "I was merely joking.",
+        "full": "I was MERELY joking.",
         "jp": "私は単に冗談を言っていただけだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "qualified."
-        ],
-        "full": "He is fully qualified.",
-        "jp": "彼は十分な資格を持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26333,18 +23695,9 @@ const WORD_DATABASE = [
           "Parrots can",
           "human speech."
         ],
-        "full": "Parrots can mimic human speech.",
+        "full": "Parrots can MIMIC human speech.",
         "jp": "オウムは人間の言葉をまねることができる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "your own story."
-        ],
-        "full": "Please create your own story.",
-        "jp": "あなた自身の物語を作ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26414,18 +23767,9 @@ const WORD_DATABASE = [
           "The rapid",
           "of the city."
         ],
-        "full": "The rapid modernization of the city.",
+        "full": "The rapid MODERNIZATION of the city.",
         "jp": "その都市の急速な近代化。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We value",
-          "over change."
-        ],
-        "full": "We value tradition over change.",
-        "jp": "私たちは変化よりも伝統を重んじる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26487,18 +23831,9 @@ const WORD_DATABASE = [
           "We need to",
           "the plan."
         ],
-        "full": "We need to modify the plan.",
+        "full": "We need to MODIFY the plan.",
         "jp": "私たちは計画を修正する必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the status quo."
-        ],
-        "full": "Please maintain the status quo.",
-        "jp": "現状を維持してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26564,18 +23899,9 @@ const WORD_DATABASE = [
           "The company has a",
           "on the market."
         ],
-        "full": "The company has a monopoly on the market.",
+        "full": "The company has a MONOPOLY on the market.",
         "jp": "その会社は市場を独占している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We encourage fair",
-          "."
-        ],
-        "full": "We encourage fair competition.",
-        "jp": "私たちは公正な競争を奨励する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26641,18 +23967,9 @@ const WORD_DATABASE = [
           "He has a",
           "voice."
         ],
-        "full": "He has a monotonous voice.",
+        "full": "He has a MONOTONOUS voice.",
         "jp": "彼は一本調子の（単調な）声をしている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The movie was very",
-          "."
-        ],
-        "full": "The movie was very exciting.",
-        "jp": "その映画はとても刺激的だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26710,18 +24027,9 @@ const WORD_DATABASE = [
           "We have a",
           "obligation to help."
         ],
-        "full": "We have a moral obligation to help.",
+        "full": "We have a MORAL obligation to help.",
         "jp": "私たちには助けるという道徳的義務がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Stealing is",
-          "."
-        ],
-        "full": "Stealing is immoral.",
-        "jp": "盗みは不道徳だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26783,19 +24091,9 @@ const WORD_DATABASE = [
           ",",
           "the location is good."
         ],
-        "full": "The rent is cheap; moreover, the location is good.",
+        "full": "The rent is cheap; MOREOVER, the location is good.",
         "jp": "家賃は安い。さらに、立地も良い。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is smart;",
-          ",",
-          "he is lazy."
-        ],
-        "full": "He is smart; however, he is lazy.",
-        "jp": "彼は賢い。しかし、怠け者だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26860,18 +24158,9 @@ const WORD_DATABASE = [
           "The infant",
           "rate has decreased."
         ],
-        "full": "The infant mortality rate has decreased.",
+        "full": "The infant MORTALITY rate has decreased.",
         "jp": "乳幼児死亡率は低下した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We celebrated the",
-          "of the baby."
-        ],
-        "full": "We celebrated the birth of the baby.",
-        "jp": "私たちは赤ちゃんの誕生を祝った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -26932,18 +24221,9 @@ const WORD_DATABASE = [
           "Respect should be",
           "."
         ],
-        "full": "Respect should be mutual.",
+        "full": "Respect should be MUTUAL.",
         "jp": "尊敬は相互のものであるべきだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "decision."
-        ],
-        "full": "It was a one-sided decision.",
-        "jp": "それは一方的な決定だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27007,18 +24287,9 @@ const WORD_DATABASE = [
           "The agreement was",
           "beneficial."
         ],
-        "full": "The agreement was mutually beneficial.",
+        "full": "The agreement was MUTUALLY beneficial.",
         "jp": "その合意は相互に利益があった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They worked",
-          "."
-        ],
-        "full": "They worked separately.",
-        "jp": "彼らは別々に働いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27076,18 +24347,9 @@ const WORD_DATABASE = [
           "He has a",
           "habit of biting his nails."
         ],
-        "full": "He has a nasty habit of biting his nails.",
+        "full": "He has a NASTY habit of biting his nails.",
         "jp": "彼には爪を噛むという不快な癖がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is a very",
-          "person."
-        ],
-        "full": "She is a very nice person.",
-        "jp": "彼女はとても素敵な人だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27155,18 +24417,9 @@ const WORD_DATABASE = [
           "Big doesn't",
           "mean better."
         ],
-        "full": "Big doesn't necessarily mean better.",
+        "full": "Big doesn't NECESSARILY mean better.",
         "jp": "大きいことが必ずしも良いこととは限らない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It will",
-          "rain tomorrow."
-        ],
-        "full": "It will probably rain tomorrow.",
-        "jp": "明日はたぶん雨が降るだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27228,18 +24481,9 @@ const WORD_DATABASE = [
           "The accident was caused by",
           "."
         ],
-        "full": "The accident was caused by negligence.",
+        "full": "The accident was caused by NEGLIGENCE.",
         "jp": "その事故は過失（不注意）によって引き起こされた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Handle with",
-          "."
-        ],
-        "full": "Handle with care.",
-        "jp": "取扱注意。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27305,18 +24549,9 @@ const WORD_DATABASE = [
           "We need to",
           "the price."
         ],
-        "full": "We need to negotiate the price.",
+        "full": "We need to NEGOTIATE the price.",
         "jp": "私たちは価格を交渉する必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "with him."
-        ],
-        "full": "Don't fight with him.",
-        "jp": "彼と喧嘩するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27374,18 +24609,9 @@ const WORD_DATABASE = [
           "It was a",
           "cause."
         ],
-        "full": "It was a noble cause.",
+        "full": "It was a NOBLE cause.",
         "jp": "それは崇高な大義だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He did a",
-          "thing."
-        ],
-        "full": "He did a mean thing.",
-        "jp": "彼は卑劣なことをした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27447,18 +24673,9 @@ const WORD_DATABASE = [
           "I will",
           "him for president."
         ],
-        "full": "I will nominate him for president.",
+        "full": "I will NOMINATE him for president.",
         "jp": "私は彼を社長に推薦するつもりだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They decided to",
-          "him."
-        ],
-        "full": "They decided to fire him.",
-        "jp": "彼らは彼を解雇することに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27508,18 +24725,9 @@ const WORD_DATABASE = [
           "He didn't go,",
           "did I."
         ],
-        "full": "He didn't go, nor did I.",
+        "full": "He didn't go, NOR did I.",
         "jp": "彼は行かなかったし、私も行かなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He went,",
-          "did I."
-        ],
-        "full": "He went, and so did I.",
-        "jp": "彼は行ったし、私も行った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27573,18 +24781,9 @@ const WORD_DATABASE = [
           "Working late is the",
           "here."
         ],
-        "full": "Working late is the norm here.",
+        "full": "Working late is the NORM here.",
         "jp": "ここでは残業が当たり前（標準）だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is an",
-          "to the rule."
-        ],
-        "full": "This is an exception to the rule.",
-        "jp": "これはルールの例外だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27642,18 +24841,9 @@ const WORD_DATABASE = [
           "I have no",
           "what you mean."
         ],
-        "full": "I have no notion what you mean.",
+        "full": "I have no NOTION what you mean.",
         "jp": "君が何を言っているのか全く見当がつかない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a proven",
-          "."
-        ],
-        "full": "This is a proven fact.",
-        "jp": "これは証明された事実だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27711,18 +24901,9 @@ const WORD_DATABASE = [
           "The noise is a real",
           "."
         ],
-        "full": "The noise is a real nuisance.",
+        "full": "The noise is a real NUISANCE.",
         "jp": "その騒音は本当に迷惑だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "to meet you."
-        ],
-        "full": "It was a pleasure to meet you.",
-        "jp": "お会いできて光栄でした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27783,18 +24964,9 @@ const WORD_DATABASE = [
           "Plants need",
           "from the soil."
         ],
-        "full": "Plants need nutrient from the soil.",
+        "full": "Plants need NUTRIENT from the soil.",
         "jp": "植物は土壌からの栄養素を必要とする。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a deadly",
-          "."
-        ],
-        "full": "This is a deadly poison.",
-        "jp": "これは致死性の毒だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27855,18 +25027,9 @@ const WORD_DATABASE = [
           "Vegetables are very",
           "."
         ],
-        "full": "Vegetables are very nutritious.",
+        "full": "Vegetables are very NUTRITIOUS.",
         "jp": "野菜はとても栄養がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Candy is very",
-          "."
-        ],
-        "full": "Candy is very healthy.",
-        "jp": "キャンディはとても健康的だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -27931,18 +25094,9 @@ const WORD_DATABASE = [
           "The dog is very",
           "."
         ],
-        "full": "The dog is very obedient.",
+        "full": "The dog is very OBEDIENT.",
         "jp": "その犬はとても従順だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is an",
-          "child."
-        ],
-        "full": "He is a rebellious child.",
-        "jp": "彼は反抗的な子供だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28004,18 +25158,9 @@ const WORD_DATABASE = [
           "I have no",
           "to the plan."
         ],
-        "full": "I have no objection to the plan.",
+        "full": "I have no OBJECTION to the plan.",
         "jp": "私はその計画に異議はない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He raised an",
-          "."
-        ],
-        "full": "He raised an agreement.",
-        "jp": "彼は同意を提起した（不自然）。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28076,15 +25221,6 @@ const WORD_DATABASE = [
         "full": "The law obliges us to pay taxes.",
         "jp": "法律は私たちに納税を義務付けている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I will",
-          "you to leave."
-        ],
-        "full": "I will allow you to leave.",
-        "jp": "あなたが去ることを許可する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28149,26 +25285,17 @@ const WORD_DATABASE = [
           "He was",
           "to the danger."
         ],
-        "full": "He was oblivious to the danger.",
+        "full": "He was OBLIVIOUS to the danger.",
         "jp": "彼は危険に気づいていなかった。",
         "is_correct": true
       },
       {
         "parts": [
-          "She was",
-          "of the time."
+          "We should not be",
+          "to the lesson."
         ],
-        "full": "She was aware of the time.",
-        "jp": "彼女は時間に気づいていた。",
-        "is_correct": false
-      },
-      {
-        "parts": [
-          "She was ",
-          " to the danger."
-        ],
-        "full": "She was OBLIVIOUS to the danger.",
-        "jp": "彼女は危険に気づいていなかった。",
+        "full": "We should not be OBLIVIOUS to the lesson.",
+        "jp": "私たちはその教訓を忘れてはならない。",
         "is_correct": true
       },
       {
@@ -28222,18 +25349,9 @@ const WORD_DATABASE = [
           "Typewriters are now",
           "."
         ],
-        "full": "Typewriters are now obsolete.",
+        "full": "Typewriters are now OBSOLETE.",
         "jp": "タイプライターは今や廃れている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This computer is",
-          "."
-        ],
-        "full": "This computer is brand new.",
-        "jp": "このコンピュータは新品だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28294,18 +25412,9 @@ const WORD_DATABASE = [
           "Fear is the biggest",
           "to success."
         ],
-        "full": "Fear is the biggest obstacle to success.",
+        "full": "Fear is the biggest OBSTACLE to success.",
         "jp": "恐怖は成功への最大の障害だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Money is an",
-          "."
-        ],
-        "full": "Money is an aid.",
-        "jp": "お金は助けになる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28363,18 +25472,9 @@ const WORD_DATABASE = [
           "Where can I",
           "a map?"
         ],
-        "full": "Where can I obtain a map?",
+        "full": "Where can I OBTAIN a map?",
         "jp": "どこで地図を手に入れられますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I want to",
-          "my keys."
-        ],
-        "full": "I want to lose my keys.",
-        "jp": "私は鍵をなくしたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28439,18 +25539,9 @@ const WORD_DATABASE = [
           "We enjoy an",
           "glass of wine."
         ],
-        "full": "We enjoy an occasional glass of wine.",
+        "full": "We enjoy an OCCASIONAL glass of wine.",
         "jp": "私たちは時々ワインを楽しむ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It rains",
-          "here."
-        ],
-        "full": "It rains constantly here.",
-        "jp": "ここでは絶えず雨が降る。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28508,18 +25599,9 @@ const WORD_DATABASE = [
           "Accidents often",
           "at home."
         ],
-        "full": "Accidents often occur at home.",
+        "full": "Accidents often OCCUR at home.",
         "jp": "事故は家でよく起こる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The meeting will",
-          "tomorrow."
-        ],
-        "full": "The meeting will stop tomorrow.",
-        "jp": "会議は明日中止になる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28581,18 +25663,9 @@ const WORD_DATABASE = [
           "Do not",
           "machinery while drowsy."
         ],
-        "full": "Do not operate machinery while drowsy.",
+        "full": "Do not OPERATE machinery while drowsy.",
         "jp": "眠い時は機械を操作しないでください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The doctor will",
-          "the patient."
-        ],
-        "full": "The doctor will cure the patient.",
-        "jp": "医師は患者を治癒する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28649,18 +25722,9 @@ const WORD_DATABASE = [
           "Many people",
           "the new tax."
         ],
-        "full": "Many people oppose the new tax.",
+        "full": "Many people OPPOSE the new tax.",
         "jp": "多くの人々が新税に反対している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "your opinion."
-        ],
-        "full": "I support your opinion.",
-        "jp": "私はあなたの意見を支持する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28721,18 +25785,9 @@ const WORD_DATABASE = [
           "They sat on",
           "sides of the table."
         ],
-        "full": "They sat on opposite sides of the table.",
+        "full": "They sat on OPPOSITE sides of the table.",
         "jp": "彼らはテーブルの反対側に座った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We have the",
-          "opinion."
-        ],
-        "full": "We have the same opinion.",
-        "jp": "私たちは同じ意見を持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28793,18 +25848,9 @@ const WORD_DATABASE = [
           "A cell is the smallest unit of an",
           "."
         ],
-        "full": "A cell is the smallest unit of an organism.",
+        "full": "A cell is the smallest unit of an ORGANISM.",
         "jp": "細胞は生物の最小単位だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "A stone is a living",
-          "."
-        ],
-        "full": "A stone is a living creature.",
-        "jp": "石は生き物だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28865,18 +25911,9 @@ const WORD_DATABASE = [
           "Hurry up,",
           "you'll be late."
         ],
-        "full": "Hurry up, otherwise you'll be late.",
+        "full": "Hurry up, OTHERWISE you'll be late.",
         "jp": "急ぎなさい、さもなければ遅刻するよ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is smart,",
-          "he is kind."
-        ],
-        "full": "He is smart, also he is kind.",
-        "jp": "彼は賢い、また親切でもある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -28938,18 +25975,9 @@ const WORD_DATABASE = [
           "The price of the ticket was",
           "."
         ],
-        "full": "The price of the ticket was outrageous.",
+        "full": "The price of the ticket was OUTRAGEOUS.",
         "jp": "チケットの値段は法外だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His behavior was",
-          "."
-        ],
-        "full": "His behavior was normal.",
-        "jp": "彼の振る舞いは普通だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29005,18 +26033,9 @@ const WORD_DATABASE = [
           "It is cold",
           "."
         ],
-        "full": "It is cold outside.",
+        "full": "It is cold OUTSIDE.",
         "jp": "外は寒い。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Let's go",
-          "."
-        ],
-        "full": "Let's go inside.",
-        "jp": "中に入ろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29078,7 +26097,7 @@ const WORD_DATABASE = [
           "He did an",
           "job."
         ],
-        "full": "He did an outstanding job.",
+        "full": "He did an OUTSTANDING job.",
         "jp": "彼は素晴らしい仕事をした。",
         "is_correct": true
       },
@@ -29087,7 +26106,7 @@ const WORD_DATABASE = [
           "I have an",
           "bill."
         ],
-        "full": "I have an outstanding bill.",
+        "full": "I have an OUTSTANDING bill.",
         "jp": "私には未払いの請求書がある。",
         "is_correct": true
       },
@@ -29151,7 +26170,7 @@ const WORD_DATABASE = [
           "I will",
           "your mistake this time."
         ],
-        "full": "I will overlook your mistake this time.",
+        "full": "I will OVERLOOK your mistake this time.",
         "jp": "今回だけは君の間違いを大目に見よう。",
         "is_correct": true
       },
@@ -29223,18 +26242,9 @@ const WORD_DATABASE = [
           "He works",
           "."
         ],
-        "full": "He works overseas.",
+        "full": "He works OVERSEAS.",
         "jp": "彼は海外で働いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We promote",
-          "travel."
-        ],
-        "full": "We promote domestic travel.",
-        "jp": "私たちは国内旅行を促進している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29299,7 +26309,7 @@ const WORD_DATABASE = [
           "The evidence was",
           "."
         ],
-        "full": "The evidence was overwhelming.",
+        "full": "The evidence was OVERWHELMING.",
         "jp": "証拠は圧倒的だった。",
         "is_correct": true
       },
@@ -29308,7 +26318,7 @@ const WORD_DATABASE = [
           "He felt an",
           "joy."
         ],
-        "full": "He felt an overwhelming joy.",
+        "full": "He felt an OVERWHELMING joy.",
         "jp": "彼は圧倒的な喜びを感じた。",
         "is_correct": true
       },
@@ -29369,7 +26379,7 @@ const WORD_DATABASE = [
           "Humans need",
           "to breathe."
         ],
-        "full": "Humans need oxygen to breathe.",
+        "full": "Humans need OXYGEN to breathe.",
         "jp": "人間は呼吸するために酸素が必要だ。",
         "is_correct": true
       },
@@ -29378,7 +26388,7 @@ const WORD_DATABASE = [
           "Plants produce",
           "."
         ],
-        "full": "Plants produce oxygen.",
+        "full": "Plants produce OXYGEN.",
         "jp": "植物は酸素を作り出す。",
         "is_correct": true
       },
@@ -29442,7 +26452,7 @@ const WORD_DATABASE = [
           "This is a new",
           "in science."
         ],
-        "full": "This is a new paradigm in science.",
+        "full": "This is a new PARADIGM in science.",
         "jp": "これは科学における新しいパラダイムだ。",
         "is_correct": true
       },
@@ -29451,7 +26461,7 @@ const WORD_DATABASE = [
           "We need to shift the",
           "."
         ],
-        "full": "We need to shift the paradigm.",
+        "full": "We need to shift the PARADIGM.",
         "jp": "私たちはパラダイムを転換する必要がある。",
         "is_correct": true
       },
@@ -29518,18 +26528,9 @@ const WORD_DATABASE = [
           "I want to",
           "in the contest."
         ],
-        "full": "I want to participate in the contest.",
+        "full": "I want to PARTICIPATE in the contest.",
         "jp": "私はコンテストに参加したい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the event."
-        ],
-        "full": "Please watch the event.",
-        "jp": "イベントを見てください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29598,18 +26599,9 @@ const WORD_DATABASE = [
           "I am",
           "interested in art."
         ],
-        "full": "I am particularly interested in art.",
+        "full": "I am PARTICULARLY interested in art.",
         "jp": "私は特に芸術に興味がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "good at math."
-        ],
-        "full": "He is generally good at math.",
-        "jp": "彼は概して数学が得意だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29666,7 +26658,7 @@ const WORD_DATABASE = [
           "You must be",
           "with children."
         ],
-        "full": "You must be patient with children.",
+        "full": "You must be PATIENT with children.",
         "jp": "子供に対しては忍耐強くなければならない。",
         "is_correct": true
       },
@@ -29675,7 +26667,7 @@ const WORD_DATABASE = [
           "The doctor examined the",
           "."
         ],
-        "full": "The doctor examined the patient.",
+        "full": "The doctor examined the PATIENT.",
         "jp": "医師は患者を診察した。",
         "is_correct": true
       },
@@ -29739,7 +26731,7 @@ const WORD_DATABASE = [
           "The bullet failed to",
           "the armor."
         ],
-        "full": "The bullet failed to penetrate the armor.",
+        "full": "The bullet failed to PENETRATE the armor.",
         "jp": "弾丸は装甲を貫通しなかった。",
         "is_correct": true
       },
@@ -29748,7 +26740,7 @@ const WORD_DATABASE = [
           "Sunlight can",
           "deep water."
         ],
-        "full": "Sunlight can penetrate deep water.",
+        "full": "Sunlight can PENETRATE deep water.",
         "jp": "日光は深い水中まで届く（浸透する）。",
         "is_correct": true
       },
@@ -29815,18 +26807,9 @@ const WORD_DATABASE = [
           "There was a",
           "change in temperature."
         ],
-        "full": "There was a perceptible change in temperature.",
+        "full": "There was a PERCEPTIBLE change in temperature.",
         "jp": "気温に知覚できるほどの変化があった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The sound was barely",
-          "."
-        ],
-        "full": "The sound was barely audible.",
-        "jp": "その音はかろうじて聞こえた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -29888,7 +26871,7 @@ const WORD_DATABASE = [
           "His",
           "of reality is distorted."
         ],
-        "full": "His perception of reality is distorted.",
+        "full": "His PERCEPTION of reality is distorted.",
         "jp": "彼の現実認識は歪んでいる。",
         "is_correct": true
       },
@@ -29897,7 +26880,7 @@ const WORD_DATABASE = [
           "Public",
           "has changed."
         ],
-        "full": "Public perception has changed.",
+        "full": "Public PERCEPTION has changed.",
         "jp": "世間の見方は変わった。",
         "is_correct": true
       },
@@ -29960,18 +26943,9 @@ const WORD_DATABASE = [
           "The journey was",
           "."
         ],
-        "full": "The journey was perilous.",
+        "full": "The journey was PERILOUS.",
         "jp": "その旅は危険だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is",
-          "to swim here."
-        ],
-        "full": "It is safe to swim here.",
-        "jp": "ここで泳ぐのは安全だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30033,18 +27007,9 @@ const WORD_DATABASE = [
           "He is looking for a",
           "job."
         ],
-        "full": "He is looking for a permanent job.",
+        "full": "He is looking for a PERMANENT job.",
         "jp": "彼は正社員（永久の職）を探している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "solution."
-        ],
-        "full": "This is a temporary solution.",
-        "jp": "これは一時的な解決策だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30105,15 +27070,6 @@ const WORD_DATABASE = [
         "full": "Smoking is not permitted here.",
         "jp": "ここでは喫煙は許可されていない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "me to enter."
-        ],
-        "full": "Please allow me to enter.",
-        "jp": "中に入るのを許可してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30178,18 +27134,9 @@ const WORD_DATABASE = [
           "Police are looking for the",
           "."
         ],
-        "full": "Police are looking for the perpetrator.",
+        "full": "Police are looking for the PERPETRATOR.",
         "jp": "警察は犯人を探している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "was injured."
-        ],
-        "full": "The victim was injured.",
-        "jp": "被害者は怪我をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30246,18 +27193,9 @@ const WORD_DATABASE = [
           "I tried to",
           "him to go."
         ],
-        "full": "I tried to persuade him to go.",
+        "full": "I tried to PERSUADE him to go.",
         "jp": "私は彼に行くように説得しようとした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I managed to",
-          "him."
-        ],
-        "full": "I managed to convince him.",
-        "jp": "私は彼を納得させることができた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30323,18 +27261,9 @@ const WORD_DATABASE = [
           "Gravity is a natural",
           "."
         ],
-        "full": "Gravity is a natural phenomenon.",
+        "full": "Gravity is a natural PHENOMENON.",
         "jp": "重力は自然現象だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a rare",
-          "."
-        ],
-        "full": "This is a rare event.",
-        "jp": "これは珍しい出来事だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30396,18 +27325,9 @@ const WORD_DATABASE = [
           "He is a",
           "in space travel."
         ],
-        "full": "He is a pioneer in space travel.",
+        "full": "He is a PIONEER in space travel.",
         "jp": "彼は宇宙旅行の先駆者だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is a",
-          "of fashion."
-        ],
-        "full": "She is a follower of fashion.",
-        "jp": "彼女はファッションの追従者だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30468,18 +27388,9 @@ const WORD_DATABASE = [
           "His explanation sounds",
           "."
         ],
-        "full": "His explanation sounds plausible.",
+        "full": "His explanation sounds PLAUSIBLE.",
         "jp": "彼の説明はもっともらしく聞こえる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "That is an",
-          "excuse."
-        ],
-        "full": "That is an unlikely excuse.",
-        "jp": "それはありそうもない言い訳だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30538,18 +27449,9 @@ const WORD_DATABASE = [
           "She argued",
           "that she was innocent."
         ],
-        "full": "She argued plausibly that she was innocent.",
+        "full": "She argued PLAUSIBLY that she was innocent.",
         "jp": "彼女は自分が無実であるともっともらしく主張した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He lied",
-          "."
-        ],
-        "full": "He lied convincingly.",
-        "jp": "彼は説得力を持って嘘をついた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30603,18 +27505,9 @@ const WORD_DATABASE = [
           "He made a",
           "for mercy."
         ],
-        "full": "He made a plea for mercy.",
+        "full": "He made a PLEA for mercy.",
         "jp": "彼は慈悲を求めて嘆願した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The judge rejected his",
-          "."
-        ],
-        "full": "The judge rejected his appeal.",
-        "jp": "裁判官は彼の訴えを却下した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30672,18 +27565,9 @@ const WORD_DATABASE = [
           "We had a",
           "evening."
         ],
-        "full": "We had a pleasant evening.",
+        "full": "We had a PLEASANT evening.",
         "jp": "私たちは楽しい夜を過ごした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The weather is",
-          "."
-        ],
-        "full": "The weather is nice.",
-        "jp": "天気は良い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30738,18 +27622,9 @@ const WORD_DATABASE = [
           "Call a",
           "to fix the leak."
         ],
-        "full": "Call a plumber to fix the leak.",
+        "full": "Call a PLUMBER to fix the leak.",
         "jp": "水漏れを直すために配管工を呼びなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "fixed the lights."
-        ],
-        "full": "The electrician fixed the lights.",
-        "jp": "電気技師が明かりを修理した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30811,18 +27686,9 @@ const WORD_DATABASE = [
           "Honesty is the best",
           "."
         ],
-        "full": "Honesty is the best policy.",
+        "full": "Honesty is the best POLICY.",
         "jp": "正直は最良の策（方針）だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The government announced a new",
-          "."
-        ],
-        "full": "The government announced a new plan.",
-        "jp": "政府は新しい計画を発表した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30883,18 +27749,9 @@ const WORD_DATABASE = [
           "Carbon dioxide is a major",
           "."
         ],
-        "full": "Carbon dioxide is a major pollutant.",
+        "full": "Carbon dioxide is a major POLLUTANT.",
         "jp": "二酸化炭素は主要な汚染物質だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Water acts as a",
-          "."
-        ],
-        "full": "Water acts as a cleaner.",
-        "jp": "水は洗浄剤として作用する。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -30958,15 +27815,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "She",
-          "the main character."
-        ],
-        "full": "She played the main character.",
-        "jp": "彼女は主人公を演じた。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "The film will ",
           " her life."
         ],
@@ -31025,18 +27873,9 @@ const WORD_DATABASE = [
           "He has great",
           "as a pianist."
         ],
-        "full": "He has great potential as a pianist.",
+        "full": "He has great POTENTIAL as a pianist.",
         "jp": "彼はピアニストとして大きな可能性を秘めている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "danger."
-        ],
-        "full": "This is a real danger.",
-        "jp": "これは現実の危険だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31098,18 +27937,9 @@ const WORD_DATABASE = [
           "Many people live in",
           "."
         ],
-        "full": "Many people live in poverty.",
+        "full": "Many people live in POVERTY.",
         "jp": "多くの人々が貧困の中で暮らしている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He enjoys great",
-          "."
-        ],
-        "full": "He enjoys great wealth.",
-        "jp": "彼は莫大な富を享受している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31172,16 +28002,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "B follows A.",
-          "B",
-          "A."
-        ],
-        "full": "B succeeds A.",
-        "jp": "BはAに続く。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "The talk will ",
           " the dinner."
         ],
@@ -31236,18 +28056,9 @@ const WORD_DATABASE = [
           "Time is",
           ", so don't waste it."
         ],
-        "full": "Time is precious, so don't waste it.",
+        "full": "Time is PRECIOUS, so don't waste it.",
         "jp": "時間は貴重だから、無駄にしてはいけない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This garbage is",
-          "."
-        ],
-        "full": "This garbage is precious.",
-        "jp": "このゴミは貴重だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31305,18 +28116,9 @@ const WORD_DATABASE = [
           "Please give me a",
           "answer."
         ],
-        "full": "Please give me a precise answer.",
+        "full": "Please give me a PRECISE answer.",
         "jp": "正確な答えをください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His directions were",
-          "."
-        ],
-        "full": "His directions were vague.",
-        "jp": "彼の道案内は曖昧だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31377,18 +28179,9 @@ const WORD_DATABASE = [
           "The robot works with high",
           "."
         ],
-        "full": "The robot works with high precision.",
+        "full": "The robot works with high PRECISION.",
         "jp": "そのロボットは高い精度で動作する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He guessed with",
-          "."
-        ],
-        "full": "He guessed with confidence.",
-        "jp": "彼は自信を持って推測した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31449,18 +28242,9 @@ const WORD_DATABASE = [
           "We must fight against racial",
           "."
         ],
-        "full": "We must fight against racial prejudice.",
+        "full": "We must fight against racial PREJUDICE.",
         "jp": "私たちは人種的偏見と戦わなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He judged with",
-          "."
-        ],
-        "full": "He judged with fairness.",
-        "jp": "彼は公平に判断した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31516,18 +28300,9 @@ const WORD_DATABASE = [
           "The doctor will",
           "medicine."
         ],
-        "full": "The doctor will prescribe medicine.",
+        "full": "The doctor will PRESCRIBE medicine.",
         "jp": "医師が薬を処方するだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the law."
-        ],
-        "full": "Please break the law.",
-        "jp": "法律を破ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31587,18 +28362,9 @@ const WORD_DATABASE = [
           "You need a",
           "to buy this drug."
         ],
-        "full": "You need a prescription to buy this drug.",
+        "full": "You need a PRESCRIPTION to buy this drug.",
         "jp": "この薬を買うには処方箋が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I lost my",
-          "ticket."
-        ],
-        "full": "I lost my plane ticket.",
-        "jp": "私は航空券をなくした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31656,18 +28422,9 @@ const WORD_DATABASE = [
           "Salt helps to",
           "food."
         ],
-        "full": "Salt helps to preserve food.",
+        "full": "Salt helps to PRESERVE food.",
         "jp": "塩は食品を保存するのに役立つ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We must",
-          "the environment."
-        ],
-        "full": "We must destroy the environment.",
-        "jp": "私たちは環境を破壊しなければならない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31729,18 +28486,9 @@ const WORD_DATABASE = [
           "She attends a",
           "university."
         ],
-        "full": "She attends a prestigious university.",
+        "full": "She attends a PRESTIGIOUS university.",
         "jp": "彼女は名門大学に通っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is a",
-          "award."
-        ],
-        "full": "It is a shameful award.",
-        "jp": "それは恥ずべき賞だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31796,18 +28544,9 @@ const WORD_DATABASE = [
           "He left early on the",
           "of illness."
         ],
-        "full": "He left early on the pretext of illness.",
+        "full": "He left early on the PRETEXT of illness.",
         "jp": "彼は病気を口実に早退した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Tell me the",
-          "."
-        ],
-        "full": "Tell me the truth.",
-        "jp": "真実を教えて。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -31865,7 +28604,7 @@ const WORD_DATABASE = [
           "Justice will",
           "in the end."
         ],
-        "full": "Justice will prevail in the end.",
+        "full": "Justice will PREVAIL in the end.",
         "jp": "最後には正義が勝つ。",
         "is_correct": true
       },
@@ -31937,18 +28676,9 @@ const WORD_DATABASE = [
           "Flu is",
           "in winter."
         ],
-        "full": "Flu is prevalent in winter.",
+        "full": "Flu is PREVALENT in winter.",
         "jp": "インフルエンザは冬に流行する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This disease is",
-          "."
-        ],
-        "full": "This disease is rare.",
-        "jp": "この病気は稀だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32013,18 +28743,9 @@ const WORD_DATABASE = [
           "I have met him",
           "."
         ],
-        "full": "I have met him previously.",
+        "full": "I have met him PREVIOUSLY.",
         "jp": "私は以前彼に会ったことがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I am",
-          "working here."
-        ],
-        "full": "I am currently working here.",
-        "jp": "私は現在ここで働いている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32089,18 +28810,9 @@ const WORD_DATABASE = [
           "The diet consists",
           "of vegetables."
         ],
-        "full": "The diet consists primarily of vegetables.",
+        "full": "The diet consists PRIMARILY of vegetables.",
         "jp": "その食事は主に野菜で構成されている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "interested in money."
-        ],
-        "full": "He is solely interested in money.",
-        "jp": "彼は金にしか興味がない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32154,18 +28866,9 @@ const WORD_DATABASE = [
           "He is the",
           "suspect."
         ],
-        "full": "He is the prime suspect.",
+        "full": "He is the PRIME suspect.",
         "jp": "彼は主要な容疑者だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "example."
-        ],
-        "full": "This is a bad example.",
-        "jp": "これは悪い例だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32227,7 +28930,7 @@ const WORD_DATABASE = [
           "The",
           "reason for his failure was laziness."
         ],
-        "full": "The principal reason for his failure was laziness.",
+        "full": "The PRINCIPAL reason for his failure was laziness.",
         "jp": "彼の失敗の主な理由は怠惰だった。",
         "is_correct": true
       },
@@ -32236,7 +28939,7 @@ const WORD_DATABASE = [
           "He is the school",
           "."
         ],
-        "full": "He is the school principal.",
+        "full": "He is the school PRINCIPAL.",
         "jp": "彼は学校の校長だ。",
         "is_correct": true
       },
@@ -32300,7 +29003,7 @@ const WORD_DATABASE = [
           "It's a matter of",
           "."
         ],
-        "full": "It's a matter of principle.",
+        "full": "It's a matter of PRINCIPLE.",
         "jp": "それは主義の問題だ。",
         "is_correct": true
       },
@@ -32309,7 +29012,7 @@ const WORD_DATABASE = [
           "I agree in",
           "."
         ],
-        "full": "I agree in principle.",
+        "full": "I agree in PRINCIPLE.",
         "jp": "私は原則としては同意する。",
         "is_correct": true
       },
@@ -32372,7 +29075,7 @@ const WORD_DATABASE = [
           "It is a",
           "to meet you."
         ],
-        "full": "It is a privilege to meet you.",
+        "full": "It is a PRIVILEGE to meet you.",
         "jp": "お会いできて光栄（特権）です。",
         "is_correct": true
       },
@@ -32381,7 +29084,7 @@ const WORD_DATABASE = [
           "Education is a",
           ", not a right."
         ],
-        "full": "Education is a privilege, not a right.",
+        "full": "Education is a PRIVILEGE, not a right.",
         "jp": "教育は特権であって、権利ではない（という意見もある）。",
         "is_correct": true
       },
@@ -32444,18 +29147,9 @@ const WORD_DATABASE = [
           "It is",
           "that he will win."
         ],
-        "full": "It is probable that he will win.",
+        "full": "It is PROBABLE that he will win.",
         "jp": "彼が勝つ可能性が高い。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Snow in summer is",
-          "."
-        ],
-        "full": "Snow in summer is improbable.",
-        "jp": "夏の雪はありそうもない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32517,18 +29211,9 @@ const WORD_DATABASE = [
           "Follow the correct",
           "."
         ],
-        "full": "Follow the correct procedure.",
+        "full": "Follow the correct PROCEDURE.",
         "jp": "正しい手順に従いなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "was successful."
-        ],
-        "full": "The operation was successful.",
-        "jp": "手術は成功した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32594,18 +29279,9 @@ const WORD_DATABASE = [
           "He showed high",
           "in English."
         ],
-        "full": "He showed high proficiency in English.",
+        "full": "He showed high PROFICIENCY in English.",
         "jp": "彼は英語で高い熟練度を示した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She lacks",
-          "in math."
-        ],
-        "full": "She lacks skill in math.",
-        "jp": "彼女は数学のスキルが欠けている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32671,18 +29347,9 @@ const WORD_DATABASE = [
           "The business is very",
           "."
         ],
-        "full": "The business is very profitable.",
+        "full": "The business is very PROFITABLE.",
         "jp": "その事業は非常に利益が上がっている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Losing money is",
-          "."
-        ],
-        "full": "Losing money is profitable.",
-        "jp": "お金を失うことは利益になる。",
-        "is_correct": false
       }
     ]
   },
@@ -32722,18 +29389,9 @@ const WORD_DATABASE = [
           "He has a",
           "knowledge of history."
         ],
-        "full": "He has a profound knowledge of history.",
+        "full": "He has a PROFOUND knowledge of history.",
         "jp": "彼は歴史について深遠な知識を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The water was",
-          "."
-        ],
-        "full": "The water was shallow.",
-        "jp": "水は浅かった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32795,18 +29453,9 @@ const WORD_DATABASE = [
           "I was",
           "moved by the movie."
         ],
-        "full": "I was profoundly moved by the movie.",
+        "full": "I was PROFOUNDLY moved by the movie.",
         "jp": "私はその映画に深く感動した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "asleep."
-        ],
-        "full": "He was slightly asleep.",
-        "jp": "彼は少し眠っていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32868,18 +29517,9 @@ const WORD_DATABASE = [
           "This school has a",
           "approach."
         ],
-        "full": "This school has a progressive approach.",
+        "full": "This school has a PROGRESSIVE approach.",
         "jp": "この学校は進歩的なアプローチをとっている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has very",
-          "ideas."
-        ],
-        "full": "He has very conservative ideas.",
-        "jp": "彼は非常に保守的な考えを持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -32937,18 +29577,9 @@ const WORD_DATABASE = [
           "Exercise helps to",
           "good health."
         ],
-        "full": "Exercise helps to promote good health.",
+        "full": "Exercise helps to PROMOTE good health.",
         "jp": "運動は健康を促進するのに役立つ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We want to",
-          "sales."
-        ],
-        "full": "We want to stop sales.",
-        "jp": "私たちは販売を止めたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33013,18 +29644,9 @@ const WORD_DATABASE = [
           "The government used",
           "to influence people."
         ],
-        "full": "The government used propaganda to influence people.",
+        "full": "The government used PROPAGANDA to influence people.",
         "jp": "政府は人々に影響を与えるためにプロパガンダを利用した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This news is pure",
-          "."
-        ],
-        "full": "This news is pure fact.",
-        "jp": "このニュースは純粋な事実だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33086,18 +29708,9 @@ const WORD_DATABASE = [
           "Please behave",
           "."
         ],
-        "full": "Please behave properly.",
+        "full": "Please behave PROPERLY.",
         "jp": "きちんとした振る舞いをしてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The machine is working",
-          "."
-        ],
-        "full": "The machine is working badly.",
-        "jp": "機械の調子が悪い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33159,7 +29772,7 @@ const WORD_DATABASE = [
           "This land is private",
           "."
         ],
-        "full": "This land is private property.",
+        "full": "This land is private PROPERTY.",
         "jp": "この土地は私有財産だ。",
         "is_correct": true
       },
@@ -33168,7 +29781,7 @@ const WORD_DATABASE = [
           "Water has the",
           "of being wet."
         ],
-        "full": "Water has the property of being wet.",
+        "full": "Water has the PROPERTY of being wet.",
         "jp": "水には濡れているという特性がある。",
         "is_correct": true
       },
@@ -33232,7 +29845,7 @@ const WORD_DATABASE = [
           "A large",
           "of the budget is spent on food."
         ],
-        "full": "A large proportion of the budget is spent on food.",
+        "full": "A large PROPORTION of the budget is spent on food.",
         "jp": "予算の大部分が食費に使われる。",
         "is_correct": true
       },
@@ -33241,7 +29854,7 @@ const WORD_DATABASE = [
           "The head is out of",
           "with the body."
         ],
-        "full": "The head is out of proportion with the body.",
+        "full": "The head is out of PROPORTION with the body.",
         "jp": "頭が体と釣り合っていない。",
         "is_correct": true
       },
@@ -33300,7 +29913,7 @@ const WORD_DATABASE = [
           "I",
           "a change in the plan."
         ],
-        "full": "I propose a change in the plan.",
+        "full": "I PROPOSE a change in the plan.",
         "jp": "私は計画の変更を提案する。",
         "is_correct": true
       },
@@ -33309,7 +29922,7 @@ const WORD_DATABASE = [
           "He plans to",
           "to her tonight."
         ],
-        "full": "He plans to propose to her tonight.",
+        "full": "He plans to PROPOSE to her tonight.",
         "jp": "彼は今夜彼女にプロポーズするつもりだ。",
         "is_correct": true
       },
@@ -33369,7 +29982,7 @@ const WORD_DATABASE = [
           "There is little",
           "of success."
         ],
-        "full": "There is little prospect of success.",
+        "full": "There is little PROSPECT of success.",
         "jp": "成功の見込みはほとんどない。",
         "is_correct": true
       },
@@ -33378,7 +29991,7 @@ const WORD_DATABASE = [
           "He is a promising",
           "for the team."
         ],
-        "full": "He is a promising prospect for the team.",
+        "full": "He is a promising PROSPECT for the team.",
         "jp": "彼はチームにとって有望な新人だ。",
         "is_correct": true
       },
@@ -33442,7 +30055,7 @@ const WORD_DATABASE = [
           "You must follow the safety",
           "."
         ],
-        "full": "You must follow the safety protocol.",
+        "full": "You must follow the safety PROTOCOL.",
         "jp": "安全手順（プロトコル）に従わなければならない。",
         "is_correct": true
       },
@@ -33451,7 +30064,7 @@ const WORD_DATABASE = [
           "They signed the Kyoto",
           "."
         ],
-        "full": "They signed the Kyoto Protocol.",
+        "full": "They signed the Kyoto PROTOCOL.",
         "jp": "彼らは京都議定書に署名した。",
         "is_correct": true
       },
@@ -33520,7 +30133,7 @@ const WORD_DATABASE = [
           "Don't",
           "the dog."
         ],
-        "full": "Don't provoke the dog.",
+        "full": "Don't PROVOKE the dog.",
         "jp": "その犬を挑発するな。",
         "is_correct": true
       },
@@ -33583,18 +30196,9 @@ const WORD_DATABASE = [
           "She spent her money",
           "."
         ],
-        "full": "She spent her money prudently.",
+        "full": "She spent her money PRUDENTLY.",
         "jp": "彼女はお金を賢明に使った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He acted",
-          "and got hurt."
-        ],
-        "full": "He acted recklessly and got hurt.",
-        "jp": "彼は無謀に行動して怪我をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33663,7 +30267,7 @@ const WORD_DATABASE = [
           "The problem is",
           ", not physical."
         ],
-        "full": "The problem is psychological, not physical.",
+        "full": "The problem is PSYCHOLOGICAL, not physical.",
         "jp": "その問題は心理的なものであり、身体的なものではない。",
         "is_correct": true
       },
@@ -33672,7 +30276,7 @@ const WORD_DATABASE = [
           "He suffered",
           "damage."
         ],
-        "full": "He suffered psychological damage.",
+        "full": "He suffered PSYCHOLOGICAL damage.",
         "jp": "彼は精神的なダメージを受けた。",
         "is_correct": true
       },
@@ -33732,7 +30336,7 @@ const WORD_DATABASE = [
           "He decided to",
           "a career in music."
         ],
-        "full": "He decided to pursue a career in music.",
+        "full": "He decided to PURSUE a career in music.",
         "jp": "彼は音楽の道を追求することに決めた。",
         "is_correct": true
       },
@@ -33800,18 +30404,9 @@ const WORD_DATABASE = [
           "They had a",
           "about money."
         ],
-        "full": "They had a quarrel about money.",
+        "full": "They had a QUARREL about money.",
         "jp": "彼らはお金について口論した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They reached an",
-          "."
-        ],
-        "full": "They reached an agreement.",
-        "jp": "彼らは合意に達した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33868,18 +30463,9 @@ const WORD_DATABASE = [
           "The elephant went on a",
           "."
         ],
-        "full": "The elephant went on a rampage.",
+        "full": "The elephant went on a RAMPAGE.",
         "jp": "その象は暴れ回った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The crowd was in a",
-          "."
-        ],
-        "full": "The crowd was in a frenzy.",
-        "jp": "群衆は狂乱状態だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -33933,7 +30519,7 @@ const WORD_DATABASE = [
           "The price",
           "is from $10 to $20."
         ],
-        "full": "The price range is from $10 to $20.",
+        "full": "The price RANGE is from $10 to $20.",
         "jp": "価格帯は10ドルから20ドルだ。",
         "is_correct": true
       },
@@ -33942,7 +30528,7 @@ const WORD_DATABASE = [
           "The mountains",
           "from north to south."
         ],
-        "full": "The mountains range from north to south.",
+        "full": "The mountains RANGE from north to south.",
         "jp": "山脈は北から南へと連なっている。",
         "is_correct": true
       },
@@ -34005,18 +30591,9 @@ const WORD_DATABASE = [
           "Let's make a",
           "decision."
         ],
-        "full": "Let's make a rational decision.",
+        "full": "Let's make a RATIONAL decision.",
         "jp": "合理的な決定を下そう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was too",
-          "to think clearly."
-        ],
-        "full": "He was too emotional to think clearly.",
-        "jp": "彼は感情的すぎて明確に考えられなかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34070,7 +30647,7 @@ const WORD_DATABASE = [
           "Sushi is made with",
           "fish."
         ],
-        "full": "Sushi is made with raw fish.",
+        "full": "Sushi is made with RAW fish.",
         "jp": "寿司は生の魚で作られる。",
         "is_correct": true
       },
@@ -34079,7 +30656,7 @@ const WORD_DATABASE = [
           "We export",
           "materials."
         ],
-        "full": "We export raw materials.",
+        "full": "We export RAW materials.",
         "jp": "私たちは原材料を輸出している。",
         "is_correct": true
       },
@@ -34142,18 +30719,9 @@ const WORD_DATABASE = [
           "The economy is in a deep",
           "."
         ],
-        "full": "The economy is in a deep recession.",
+        "full": "The economy is in a deep RECESSION.",
         "jp": "経済は深刻な不況にある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The country is enjoying an economic",
-          "."
-        ],
-        "full": "The country is enjoying an economic boom.",
-        "jp": "その国は経済ブームを享受している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34214,18 +30782,9 @@ const WORD_DATABASE = [
           "He drove",
           "down the highway."
         ],
-        "full": "He drove recklessly down the highway.",
+        "full": "He drove RECKLESSLY down the highway.",
         "jp": "彼は高速道路を無謀に運転した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She handled the glass",
-          "."
-        ],
-        "full": "She handled the glass carefully.",
-        "jp": "彼女はグラスを慎重に扱った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34299,18 +30858,9 @@ const WORD_DATABASE = [
           "They reached a",
           "after the fight."
         ],
-        "full": "They reached a reconciliation after the fight.",
+        "full": "They reached a RECONCILIATION after the fight.",
         "jp": "彼らは喧嘩の後、和解に達した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The war ended in",
-          "."
-        ],
-        "full": "The war ended in peace.",
-        "jp": "戦争は平和に終わった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34368,7 +30918,7 @@ const WORD_DATABASE = [
           "Please",
           "to the manual."
         ],
-        "full": "Please refer to the manual.",
+        "full": "Please REFER to the manual.",
         "jp": "マニュアルを参照してください。",
         "is_correct": true
       },
@@ -34377,7 +30927,7 @@ const WORD_DATABASE = [
           "Don't",
           "to that incident."
         ],
-        "full": "Don't refer to that incident.",
+        "full": "Don't REFER to that incident.",
         "jp": "その事件には言及しないで。",
         "is_correct": true
       },
@@ -34446,7 +30996,7 @@ const WORD_DATABASE = [
           "His grades",
           "his effort."
         ],
-        "full": "His grades reflect his effort.",
+        "full": "His grades REFLECT his effort.",
         "jp": "彼の成績は彼の努力を反映している。",
         "is_correct": true
       },
@@ -34506,18 +31056,9 @@ const WORD_DATABASE = [
           "I",
           "him as a friend."
         ],
-        "full": "I regard him as a friend.",
+        "full": "I REGARD him as a friend.",
         "jp": "私は彼を友人とみなしている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "my advice."
-        ],
-        "full": "Please disregard my advice.",
-        "jp": "私のアドバイスは無視してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34579,7 +31120,7 @@ const WORD_DATABASE = [
           "The law is designed to",
           "trade."
         ],
-        "full": "The law is designed to regulate trade.",
+        "full": "The law is designed to REGULATE trade.",
         "jp": "その法律は貿易を規制するために作られた。",
         "is_correct": true
       },
@@ -34588,7 +31129,7 @@ const WORD_DATABASE = [
           "We need to",
           "the temperature."
         ],
-        "full": "We need to regulate the temperature.",
+        "full": "We need to REGULATE the temperature.",
         "jp": "私たちは温度を調整する必要がある。",
         "is_correct": true
       },
@@ -34656,18 +31197,9 @@ const WORD_DATABASE = [
           "We must follow the safety",
           "."
         ],
-        "full": "We must follow the safety regulation.",
+        "full": "We must follow the safety REGULATION.",
         "jp": "私たちは安全規則に従わなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "of the sun is hot."
-        ],
-        "full": "The light of the sun is hot.",
-        "jp": "太陽の光は熱い。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34721,18 +31253,9 @@ const WORD_DATABASE = [
           "The queen's",
           "lasted for 50 years."
         ],
-        "full": "The queen's reign lasted for 50 years.",
+        "full": "The queen's REIGN lasted for 50 years.",
         "jp": "女王の治世は50年続いた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He took a",
-          "in the park."
-        ],
-        "full": "He took a walk in the park.",
-        "jp": "彼は公園を散歩した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34790,18 +31313,9 @@ const WORD_DATABASE = [
           "It is difficult to",
           "theory to practice."
         ],
-        "full": "It is difficult to relate theory to practice.",
+        "full": "It is difficult to RELATE theory to practice.",
         "jp": "理論を実践に関連づけるのは難しい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the door."
-        ],
-        "full": "Please open the door.",
-        "jp": "ドアを開けてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34861,18 +31375,9 @@ const WORD_DATABASE = [
           "The",
           "merits of the two plans."
         ],
-        "full": "The relative merits of the two plans.",
+        "full": "The RELATIVE merits of the two plans.",
         "jp": "その2つの計画の相対的なメリット。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is the",
-          "truth."
-        ],
-        "full": "This is the absolute truth.",
-        "jp": "これは絶対的な真実だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -34937,18 +31442,9 @@ const WORD_DATABASE = [
           "The test was",
           "easy."
         ],
-        "full": "The test was relatively easy.",
+        "full": "The test was RELATIVELY easy.",
         "jp": "そのテストは比較的簡単だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "sure."
-        ],
-        "full": "He is absolutely sure.",
-        "jp": "彼は絶対的な自信を持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35010,18 +31506,9 @@ const WORD_DATABASE = [
           "Please provide",
           "documents."
         ],
-        "full": "Please provide relevant documents.",
+        "full": "Please provide RELEVANT documents.",
         "jp": "関連書類を提出してください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His comment was",
-          "to the topic."
-        ],
-        "full": "His comment was irrelevant to the topic.",
-        "jp": "彼のコメントは話題と無関係だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35087,18 +31574,9 @@ const WORD_DATABASE = [
           "He is a",
           "source of information."
         ],
-        "full": "He is a reliable source of information.",
+        "full": "He is a RELIABLE source of information.",
         "jp": "彼は信頼できる情報源だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This car is very",
-          "."
-        ],
-        "full": "This car is very unreliable.",
-        "jp": "この車はとても信頼できない（よく故障する）。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35159,7 +31637,7 @@ const WORD_DATABASE = [
           "Freedom of",
           "belief is important."
         ],
-        "full": "Freedom of religious belief is important.",
+        "full": "Freedom of RELIGIOUS belief is important.",
         "jp": "宗教的信条の自由は重要だ。",
         "is_correct": true
       },
@@ -35168,7 +31646,7 @@ const WORD_DATABASE = [
           "He is not very",
           "."
         ],
-        "full": "He is not very religious.",
+        "full": "He is not very RELIGIOUS.",
         "jp": "彼はあまり信心深くない。",
         "is_correct": true
       },
@@ -35227,18 +31705,9 @@ const WORD_DATABASE = [
           "You can",
           "on me."
         ],
-        "full": "You can rely on me.",
+        "full": "You can RELY on me.",
         "jp": "私を頼りにしていいよ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "to eat lunch."
-        ],
-        "full": "I want to eat lunch.",
-        "jp": "私は昼食を食べたい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35304,18 +31773,9 @@ const WORD_DATABASE = [
           "She has a",
           "talent."
         ],
-        "full": "She has a remarkable talent.",
+        "full": "She has a REMARKABLE talent.",
         "jp": "彼女は驚くべき才能を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was an",
-          "day."
-        ],
-        "full": "It was an ordinary day.",
-        "jp": "それは平凡な一日だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35372,18 +31832,9 @@ const WORD_DATABASE = [
           "Please",
           "me to call him."
         ],
-        "full": "Please remind me to call him.",
+        "full": "Please REMIND me to call him.",
         "jp": "彼に電話するのを思い出させてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "my keys."
-        ],
-        "full": "I forgot my keys.",
-        "jp": "私は鍵を忘れた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35441,18 +31892,9 @@ const WORD_DATABASE = [
           "The",
           "of an ancient city."
         ],
-        "full": "The remnant of an ancient city.",
+        "full": "The REMNANT of an ancient city.",
         "jp": "古代都市の遺跡（残り）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He ate the",
-          "cake."
-        ],
-        "full": "He ate the whole cake.",
-        "jp": "彼はケーキを全部食べた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35510,18 +31952,9 @@ const WORD_DATABASE = [
           "He lives in a",
           "village."
         ],
-        "full": "He lives in a remote village.",
+        "full": "He lives in a REMOTE village.",
         "jp": "彼はへんぴな村に住んでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The store is",
-          "here."
-        ],
-        "full": "The store is near here.",
-        "jp": "店はこの近くだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35583,18 +32016,9 @@ const WORD_DATABASE = [
           "The pianist has a wide",
           "."
         ],
-        "full": "The pianist has a wide repertoire.",
+        "full": "The pianist has a wide REPERTOIRE.",
         "jp": "そのピアニストは広いレパートリーを持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has a",
-          "of money."
-        ],
-        "full": "He has a shortage of money.",
-        "jp": "彼はお金が不足している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35652,18 +32076,9 @@ const WORD_DATABASE = [
           "Robots may",
           "human workers."
         ],
-        "full": "Robots may replace human workers.",
+        "full": "Robots may REPLACE human workers.",
         "jp": "ロボットが人間の労働者に取って代わるかもしれない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "your seat."
-        ],
-        "full": "Please keep your seat.",
-        "jp": "席を立たないでください（席を保ってください）。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35725,18 +32140,9 @@ const WORD_DATABASE = [
           "The stars",
           "the states."
         ],
-        "full": "The stars represent the states.",
+        "full": "The stars REPRESENT the states.",
         "jp": "星は州を象徴している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the facts."
-        ],
-        "full": "Please hide the facts.",
-        "jp": "事実を隠してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35799,15 +32205,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "We plan to",
-          "Paris."
-        ],
-        "full": "We plan to visit Paris.",
-        "jp": "私たちはパリを訪れる予定だ。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "He continues to ",
           " in London."
         ],
@@ -35866,18 +32263,9 @@ const WORD_DATABASE = [
           "Children are remarkably",
           "."
         ],
-        "full": "Children are remarkably resilient.",
+        "full": "Children are remarkably RESILIENT.",
         "jp": "子供たちは驚くほど回復力がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The glass is",
-          "."
-        ],
-        "full": "The glass is fragile.",
-        "jp": "そのガラスは壊れやすい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -35943,7 +32331,7 @@ const WORD_DATABASE = [
           "She made a New Year's",
           "."
         ],
-        "full": "She made a New Year's resolution.",
+        "full": "She made a New Year's RESOLUTION.",
         "jp": "彼女は新年の抱負（決意）を立てた。",
         "is_correct": true
       },
@@ -36022,15 +32410,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "The sound",
-          "quickly."
-        ],
-        "full": "The sound faded quickly.",
-        "jp": "音はすぐに消えた。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "His words strongly ",
           " with me."
         ],
@@ -36085,18 +32464,9 @@ const WORD_DATABASE = [
           "Water is a vital",
           "."
         ],
-        "full": "Water is a vital resource.",
+        "full": "Water is a vital RESOURCE.",
         "jp": "水は不可欠な資源だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We have a",
-          "of food."
-        ],
-        "full": "We have a lack of food.",
-        "jp": "私たちには食料が不足している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36169,7 +32539,7 @@ const WORD_DATABASE = [
           "It is your",
           "to finish the work."
         ],
-        "full": "It is your responsibility to finish the work.",
+        "full": "It is your RESPONSIBILITY to finish the work.",
         "jp": "仕事を終わらせるのは君の責任だ。",
         "is_correct": true
       },
@@ -36245,18 +32615,9 @@ const WORD_DATABASE = [
           "Who is",
           "for this mess?"
         ],
-        "full": "Who is responsible for this mess?",
+        "full": "Who is RESPONSIBLE for this mess?",
         "jp": "この散らかりの責任は誰にあるのか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is an",
-          "person."
-        ],
-        "full": "He is an irresponsible person.",
-        "jp": "彼は無責任な人だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36314,18 +32675,9 @@ const WORD_DATABASE = [
           "He could barely",
           "his anger."
         ],
-        "full": "He could barely restrain his anger.",
+        "full": "He could barely RESTRAIN his anger.",
         "jp": "彼は怒りをかろうじて抑えた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the bird."
-        ],
-        "full": "Please release the bird.",
-        "jp": "その鳥を放してあげてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36389,15 +32741,6 @@ const WORD_DATABASE = [
       },
       {
         "parts": [
-          "I",
-          "my keys yesterday."
-        ],
-        "full": "I lost my keys yesterday.",
-        "jp": "私は昨日鍵をなくした。",
-        "is_correct": false
-      },
-      {
-        "parts": [
           "Try to ",
           " the information."
         ],
@@ -36456,18 +32799,9 @@ const WORD_DATABASE = [
           "The company's",
           "increased significantly."
         ],
-        "full": "The company's revenue increased significantly.",
+        "full": "The company's REVENUE increased significantly.",
         "jp": "会社の収益は大幅に増加した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need to cut",
-          "."
-        ],
-        "full": "We need to cut expenses.",
-        "jp": "私たちは経費を削減する必要がある。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36529,18 +32863,9 @@ const WORD_DATABASE = [
           "The book needs a",
           "."
         ],
-        "full": "The book needs a revision.",
+        "full": "The book needs a REVISION.",
         "jp": "その本は改訂が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He made a new",
-          "."
-        ],
-        "full": "He made a new creation.",
-        "jp": "彼は新しい作品を作った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36598,18 +32923,9 @@ const WORD_DATABASE = [
           "The rules are very",
           "."
         ],
-        "full": "The rules are very rigid.",
+        "full": "The rules are very RIGID.",
         "jp": "そのルールは非常に厳格だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Rubber is",
-          "."
-        ],
-        "full": "Rubber is flexible.",
-        "jp": "ゴムは柔軟だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36671,18 +32987,9 @@ const WORD_DATABASE = [
           "The training was",
           "."
         ],
-        "full": "The training was rigorous.",
+        "full": "The training was RIGOROUS.",
         "jp": "その訓練は厳しかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "with his time."
-        ],
-        "full": "He is careless with his time.",
-        "jp": "彼は時間にルーズだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36739,18 +33046,9 @@ const WORD_DATABASE = [
           "He lives in a",
           "area."
         ],
-        "full": "He lives in a rural area.",
+        "full": "He lives in a RURAL area.",
         "jp": "彼は田舎の地域に住んでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Tokyo is an",
-          "city."
-        ],
-        "full": "Tokyo is an urban city.",
-        "jp": "東京は都会の都市だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36811,18 +33109,9 @@ const WORD_DATABASE = [
           "He made a",
           "remark."
         ],
-        "full": "He made a sarcastic remark.",
+        "full": "He made a SARCASTIC remark.",
         "jp": "彼は皮肉な発言をした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She gave a",
-          "apology."
-        ],
-        "full": "She gave a sincere apology.",
-        "jp": "彼女は心からの謝罪をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36882,18 +33171,9 @@ const WORD_DATABASE = [
           "The moon is a",
           "of the Earth."
         ],
-        "full": "The moon is a satellite of the Earth.",
+        "full": "The moon is a SATELLITE of the Earth.",
         "jp": "月は地球の衛星だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Mars is a",
-          "."
-        ],
-        "full": "Mars is a planet.",
-        "jp": "火星は惑星だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -36958,18 +33238,9 @@ const WORD_DATABASE = [
           "Customer",
           "is our goal."
         ],
-        "full": "Customer satisfaction is our goal.",
+        "full": "Customer SATISFACTION is our goal.",
         "jp": "顧客満足が私たちの目標だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He expressed his",
-          "with the service."
-        ],
-        "full": "He expressed his dissatisfaction with the service.",
-        "jp": "彼はサービスに対する不満を表明した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37023,7 +33294,7 @@ const WORD_DATABASE = [
           "This map is drawn to",
           "."
         ],
-        "full": "This map is drawn to scale.",
+        "full": "This map is drawn to SCALE.",
         "jp": "この地図は縮尺通りに描かれている。",
         "is_correct": true
       },
@@ -37032,7 +33303,7 @@ const WORD_DATABASE = [
           "The",
           "of the disaster was huge."
         ],
-        "full": "The scale of the disaster was huge.",
+        "full": "The SCALE of the disaster was huge.",
         "jp": "災害の規模は甚大だった。",
         "is_correct": true
       },
@@ -37088,18 +33359,9 @@ const WORD_DATABASE = [
           "Food was",
           "during the war."
         ],
-        "full": "Food was scarce during the war.",
+        "full": "Food was SCARCE during the war.",
         "jp": "戦時中は食料が乏しかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Water is",
-          "here."
-        ],
-        "full": "Water is abundant here.",
-        "jp": "ここでは水が豊富だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37156,18 +33418,9 @@ const WORD_DATABASE = [
           "I could",
           "believe my eyes."
         ],
-        "full": "I could scarcely believe my eyes.",
+        "full": "I could SCARCELY believe my eyes.",
         "jp": "私は自分の目をほとんど信じられなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He",
-          "visits us."
-        ],
-        "full": "He often visits us.",
-        "jp": "彼はよく私たちを訪ねてくる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37233,18 +33486,9 @@ const WORD_DATABASE = [
           "Money is of",
           "importance."
         ],
-        "full": "Money is of secondary importance.",
+        "full": "Money is of SECONDARY importance.",
         "jp": "お金は二の次（二次的な重要性）だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Safety is our",
-          "concern."
-        ],
-        "full": "Safety is our primary concern.",
-        "jp": "安全は私たちの最大の関心事だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37297,7 +33541,7 @@ const WORD_DATABASE = [
           "They",
           "shelter from the rain."
         ],
-        "full": "They seek shelter from the rain.",
+        "full": "They SEEK shelter from the rain.",
         "jp": "彼らは雨宿りする場所を探し求めている。",
         "is_correct": true
       },
@@ -37306,7 +33550,7 @@ const WORD_DATABASE = [
           "Don't",
           "trouble."
         ],
-        "full": "Don't seek trouble.",
+        "full": "Don't SEEK trouble.",
         "jp": "トラブルを自ら招くな（探し求めるな）。",
         "is_correct": true
       },
@@ -37369,18 +33613,9 @@ const WORD_DATABASE = [
           "It was a",
           "impossible task."
         ],
-        "full": "It was a seemingly impossible task.",
+        "full": "It was a SEEMINGLY impossible task.",
         "jp": "それは一見不可能に思える仕事だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "happy."
-        ],
-        "full": "He is truly happy.",
-        "jp": "彼は本当に幸せだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37438,18 +33673,9 @@ const WORD_DATABASE = [
           "He is",
           "to me by two years."
         ],
-        "full": "He is senior to me by two years.",
+        "full": "He is SENIOR to me by two years.",
         "jp": "彼は私より2歳年上だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She is a",
-          "member of the team."
-        ],
-        "full": "She is a junior member of the team.",
-        "jp": "彼女はチームの若手メンバーだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37511,18 +33737,9 @@ const WORD_DATABASE = [
           "That was a",
           "decision."
         ],
-        "full": "That was a sensible decision.",
+        "full": "That was a SENSIBLE decision.",
         "jp": "それは賢明な判断だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It would be",
-          "to quit now."
-        ],
-        "full": "It would be foolish to quit now.",
-        "jp": "今やめるのは愚かだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37584,7 +33801,7 @@ const WORD_DATABASE = [
           "She is very",
           "to criticism."
         ],
-        "full": "She is very sensitive to criticism.",
+        "full": "She is very SENSITIVE to criticism.",
         "jp": "彼女は批判に対してとても敏感だ。",
         "is_correct": true
       },
@@ -37593,7 +33810,7 @@ const WORD_DATABASE = [
           "My teeth are",
           "to cold."
         ],
-        "full": "My teeth are sensitive to cold.",
+        "full": "My teeth are SENSITIVE to cold.",
         "jp": "私の歯は冷たいものにしみる（敏感だ）。",
         "is_correct": true
       },
@@ -37657,18 +33874,9 @@ const WORD_DATABASE = [
           "We have",
           "rooms."
         ],
-        "full": "We have separate rooms.",
+        "full": "We have SEPARATE rooms.",
         "jp": "私たちは別々の部屋を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The two issues are",
-          "."
-        ],
-        "full": "The two issues are connected.",
-        "jp": "その2つの問題は関連している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37726,18 +33934,9 @@ const WORD_DATABASE = [
           "The movie",
           "was disappointing."
         ],
-        "full": "The movie sequel was disappointing.",
+        "full": "The movie SEQUEL was disappointing.",
         "jp": "映画の続編は期待外れだった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is the",
-          "story."
-        ],
-        "full": "This is the original story.",
-        "jp": "これが原作の物語だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37792,18 +33991,9 @@ const WORD_DATABASE = [
           "I am writing a",
           "to my book."
         ],
-        "full": "I am writing a sequel to my book.",
+        "full": "I am writing a SEQUEL to my book.",
         "jp": "私は自分の本の続編を書いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "came before the first movie."
-        ],
-        "full": "The prequel came before the first movie.",
-        "jp": "前日譚は最初の映画より前の話だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37861,18 +34051,9 @@ const WORD_DATABASE = [
           "The lake looked",
           "in the moonlight."
         ],
-        "full": "The lake looked serene in the moonlight.",
+        "full": "The lake looked SERENE in the moonlight.",
         "jp": "月光の中で湖は穏やかに見えた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The ocean was",
-          "and rough."
-        ],
-        "full": "The ocean was stormy and rough.",
-        "jp": "海は嵐で荒れていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -37932,18 +34113,9 @@ const WORD_DATABASE = [
           "She smiled",
           "."
         ],
-        "full": "She smiled serenely.",
+        "full": "She smiled SERENELY.",
         "jp": "彼女は穏やかに微笑んだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He shouted",
-          "."
-        ],
-        "full": "He shouted angrily.",
-        "jp": "彼は怒って叫んだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38001,18 +34173,9 @@ const WORD_DATABASE = [
           "He suffered",
           "injuries."
         ],
-        "full": "He suffered severe injuries.",
+        "full": "He suffered SEVERE injuries.",
         "jp": "彼は重傷（深刻な怪我）を負った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I have a",
-          "headache."
-        ],
-        "full": "I have a slight headache.",
-        "jp": "軽い頭痛がする。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38069,18 +34232,9 @@ const WORD_DATABASE = [
           "This is a",
           "solution."
         ],
-        "full": "This is a short-term solution.",
+        "full": "This is a SHORT-TERM solution.",
         "jp": "これは短期的な解決策だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need a",
-          "plan."
-        ],
-        "full": "We need a long-term plan.",
-        "jp": "私たちは長期的な計画が必要だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38134,7 +34288,7 @@ const WORD_DATABASE = [
           "Please",
           "these documents."
         ],
-        "full": "Please shred these documents.",
+        "full": "Please SHRED these documents.",
         "jp": "これらの書類をシュレッダーにかけて（細断して）ください。",
         "is_correct": true
       },
@@ -38143,7 +34297,7 @@ const WORD_DATABASE = [
           "There is not a",
           "of evidence."
         ],
-        "full": "There is not a shred of evidence.",
+        "full": "There is not a SHRED of evidence.",
         "jp": "証拠のかけらもない。",
         "is_correct": true
       },
@@ -38215,18 +34369,9 @@ const WORD_DATABASE = [
           "Sales have increased",
           "."
         ],
-        "full": "Sales have increased significantly.",
+        "full": "Sales have increased SIGNIFICANTLY.",
         "jp": "売上がかなり増加した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He changed",
-          "."
-        ],
-        "full": "He changed slightly.",
-        "jp": "彼はわずかに変わった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38292,18 +34437,9 @@ const WORD_DATABASE = [
           "I doubt his",
           "."
         ],
-        "full": "I doubt his sincerity.",
+        "full": "I doubt his SINCERITY.",
         "jp": "私は彼の誠実さを疑っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke with",
-          "lies."
-        ],
-        "full": "He spoke with obvious lies.",
-        "jp": "彼は明らかな嘘をついた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38364,18 +34500,9 @@ const WORD_DATABASE = [
           "I am",
           "about the plan."
         ],
-        "full": "I am skeptical about the plan.",
+        "full": "I am SKEPTICAL about the plan.",
         "jp": "私はその計画に懐疑的だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "that he will win."
-        ],
-        "full": "He is certain that he will win.",
-        "jp": "彼は勝つと確信している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38429,18 +34556,9 @@ const WORD_DATABASE = [
           "There is a",
           "chance of rain."
         ],
-        "full": "There is a slight chance of rain.",
+        "full": "There is a SLIGHT chance of rain.",
         "jp": "雨の可能性がわずかにある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "mistake."
-        ],
-        "full": "It was a huge mistake.",
-        "jp": "それは大きな間違いだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38498,18 +34616,9 @@ const WORD_DATABASE = [
           "The economy is",
           "."
         ],
-        "full": "The economy is sluggish.",
+        "full": "The economy is SLUGGISH.",
         "jp": "経済は停滞している（不景気だ）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "runner."
-        ],
-        "full": "He is a fast runner.",
-        "jp": "彼は速いランナーだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38571,18 +34680,9 @@ const WORD_DATABASE = [
           "He likes to",
           "with his colleagues."
         ],
-        "full": "He likes to socialize with his colleagues.",
+        "full": "He likes to SOCIALIZE with his colleagues.",
         "jp": "彼は同僚と付き合う（交流する）のが好きだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She prefers to",
-          "herself."
-        ],
-        "full": "She prefers to isolate herself.",
-        "jp": "彼女は孤立することを好む。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38636,18 +34736,9 @@ const WORD_DATABASE = [
           "Music can",
           "the mind."
         ],
-        "full": "Music can soothe the mind.",
+        "full": "Music can SOOTHE the mind.",
         "jp": "音楽は心をなだめることができる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "the angry dog."
-        ],
-        "full": "Don't provoke the angry dog.",
-        "jp": "怒っている犬を挑発するな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38717,18 +34808,9 @@ const WORD_DATABASE = [
           "This is a",
           "machine."
         ],
-        "full": "This is a sophisticated machine.",
+        "full": "This is a SOPHISTICATED machine.",
         "jp": "これは精巧な（洗練された）機械だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He uses",
-          "tools."
-        ],
-        "full": "He uses simple tools.",
-        "jp": "彼は単純な道具を使う。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38786,18 +34868,9 @@ const WORD_DATABASE = [
           "Her eyes",
           "with joy."
         ],
-        "full": "Her eyes sparkle with joy.",
+        "full": "Her eyes SPARKLE with joy.",
         "jp": "彼女の目は喜びで輝いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The light began to",
-          "."
-        ],
-        "full": "The light began to fade.",
-        "jp": "光は消え始めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38853,18 +34926,9 @@ const WORD_DATABASE = [
           "The area is",
           "populated."
         ],
-        "full": "The area is sparsely populated.",
+        "full": "The area is SPARSELY populated.",
         "jp": "その地域は人口がまばらだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The forest is",
-          "wooded."
-        ],
-        "full": "The forest is densely wooded.",
-        "jp": "その森は木が密集している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38921,18 +34985,9 @@ const WORD_DATABASE = [
           "This",
           "is endangered."
         ],
-        "full": "This species is endangered.",
+        "full": "This SPECIES is endangered.",
         "jp": "この種は絶滅の危機に瀕している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "A stone is a living",
-          "."
-        ],
-        "full": "A stone is a living creature.",
-        "jp": "石は生き物だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -38994,18 +35049,9 @@ const WORD_DATABASE = [
           "Can you be more",
           "?"
         ],
-        "full": "Can you be more specific?",
+        "full": "Can you be more SPECIFIC?",
         "jp": "もっと具体的にお願いできますか？",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I have a",
-          "idea."
-        ],
-        "full": "I have a vague idea.",
-        "jp": "私は漠然とした考えを持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39075,18 +35121,9 @@ const WORD_DATABASE = [
           "I bought this",
           "for you."
         ],
-        "full": "I bought this specifically for you.",
+        "full": "I bought this SPECIFICALLY for you.",
         "jp": "私はこれを特にあなたのために買った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Generally speaking, but",
-          "."
-        ],
-        "full": "Generally speaking, but vaguely.",
-        "jp": "一般的に言って、しかし漠然と。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39148,18 +35185,9 @@ const WORD_DATABASE = [
           "We can only",
           "about the future."
         ],
-        "full": "We can only speculate about the future.",
+        "full": "We can only SPECULATE about the future.",
         "jp": "私たちは未来について推測することしかできない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "the answer is correct."
-        ],
-        "full": "I know the answer is correct.",
-        "jp": "私はその答えが正しいと知っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39225,18 +35253,9 @@ const WORD_DATABASE = [
           "The crowd burst into",
           "applause."
         ],
-        "full": "The crowd burst into spontaneous applause.",
+        "full": "The crowd burst into SPONTANEOUS applause.",
         "jp": "群衆から自発的な拍手が沸き起こった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "decision."
-        ],
-        "full": "It was a planned decision.",
-        "jp": "それは計画された決定だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39304,18 +35323,9 @@ const WORD_DATABASE = [
           "They started dancing",
           "."
         ],
-        "full": "They started dancing spontaneously.",
+        "full": "They started dancing SPONTANEOUSLY.",
         "jp": "彼らは自然と踊り始めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He acted",
-          "to hurt her."
-        ],
-        "full": "He acted deliberately to hurt her.",
-        "jp": "彼は彼女を傷つけるために故意に行動した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39373,18 +35383,9 @@ const WORD_DATABASE = [
           "The patient is in",
           "condition."
         ],
-        "full": "The patient is in stable condition.",
+        "full": "The patient is in STABLE condition.",
         "jp": "患者の容体は安定している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The economy is very",
-          "."
-        ],
-        "full": "The economy is very unstable.",
-        "jp": "経済は非常に不安定だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39444,18 +35445,9 @@ const WORD_DATABASE = [
           "Many people died of",
           "."
         ],
-        "full": "Many people died of starvation.",
+        "full": "Many people died of STARVATION.",
         "jp": "多くの人々が餓死した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They enjoyed a",
-          "."
-        ],
-        "full": "They enjoyed a feast.",
-        "jp": "彼らはご馳走を楽しんだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39513,18 +35505,9 @@ const WORD_DATABASE = [
           "Slow and",
           "wins the race."
         ],
-        "full": "Slow and steady wins the race.",
+        "full": "Slow and STEADY wins the race.",
         "jp": "急がば回れ（ゆっくり着実なのがレースに勝つ）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His hands were",
-          "."
-        ],
-        "full": "His hands were shaking.",
-        "jp": "彼の手は震えていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39578,18 +35561,9 @@ const WORD_DATABASE = [
           "He gave me a",
           "look."
         ],
-        "full": "He gave me a stern look.",
+        "full": "He gave me a STERN look.",
         "jp": "彼は私に厳しい視線を向けた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She has a",
-          "voice."
-        ],
-        "full": "She has a gentle voice.",
-        "jp": "彼女は優しい声をしている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39643,18 +35617,9 @@ const WORD_DATABASE = [
           "Bees can",
           "you."
         ],
-        "full": "Bees can sting you.",
+        "full": "Bees can STING you.",
         "jp": "蜂は君を刺すことがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The medicine will",
-          "the pain."
-        ],
-        "full": "The medicine will soothe the pain.",
-        "jp": "その薬は痛みを和らげるだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39716,18 +35681,9 @@ const WORD_DATABASE = [
           "It was a",
           "answer."
         ],
-        "full": "It was a straightforward answer.",
+        "full": "It was a STRAIGHTFORWARD answer.",
         "jp": "それは率直な答えだった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The problem is",
-          "."
-        ],
-        "full": "The problem is complicated.",
-        "jp": "その問題は複雑だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39781,18 +35737,9 @@ const WORD_DATABASE = [
           "He is under a lot of",
           "."
         ],
-        "full": "He is under a lot of strain.",
+        "full": "He is under a lot of STRAIN.",
         "jp": "彼は多くの負担（重圧）を感じている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She felt total",
-          "."
-        ],
-        "full": "She felt total relaxation.",
-        "jp": "彼女は完全にリラックスしていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39853,18 +35800,9 @@ const WORD_DATABASE = [
           "We need a marketing",
           "."
         ],
-        "full": "We need a marketing strategy.",
+        "full": "We need a marketing STRATEGY.",
         "jp": "私たちにはマーケティング戦略が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was pure",
-          "."
-        ],
-        "full": "It was pure luck.",
-        "jp": "それは単なる運だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39917,18 +35855,9 @@ const WORD_DATABASE = [
           "Let's",
           "in the park."
         ],
-        "full": "Let's stroll in the park.",
+        "full": "Let's STROLL in the park.",
         "jp": "公園をぶらぶら歩こう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We must",
-          "to catch the bus."
-        ],
-        "full": "We must run to catch the bus.",
-        "jp": "バスに間に合うように走らなければならない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -39981,18 +35910,9 @@ const WORD_DATABASE = [
           "The news will",
           "everyone."
         ],
-        "full": "The news will stun everyone.",
+        "full": "The news will STUN everyone.",
         "jp": "そのニュースは皆を唖然とさせるだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The lecture will",
-          "you."
-        ],
-        "full": "The lecture will bore you.",
-        "jp": "その講義は君を退屈させるだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40050,18 +35970,9 @@ const WORD_DATABASE = [
           "This table is very",
           "."
         ],
-        "full": "This table is very sturdy.",
+        "full": "This table is very STURDY.",
         "jp": "このテーブルはとても頑丈だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The glass is",
-          "."
-        ],
-        "full": "The glass is fragile.",
-        "jp": "そのガラスは壊れやすい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40119,18 +36030,9 @@ const WORD_DATABASE = [
           "The view was",
           "."
         ],
-        "full": "The view was sublime.",
+        "full": "The view was SUBLIME.",
         "jp": "その景色は崇高（壮大）だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was an",
-          "day."
-        ],
-        "full": "It was an ordinary day.",
-        "jp": "それは平凡な一日だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40191,18 +36093,9 @@ const WORD_DATABASE = [
           "Farmers receive government",
           "."
         ],
-        "full": "Farmers receive government subsidies.",
+        "full": "Farmers receive government SUBSIDIES.",
         "jp": "農家は政府の補助金を受け取っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They have to pay",
-          "."
-        ],
-        "full": "They have to pay taxes.",
-        "jp": "彼らは税金を払わなければならない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40263,18 +36156,9 @@ const WORD_DATABASE = [
           "The state will",
           "housing."
         ],
-        "full": "The state will subsidize housing.",
+        "full": "The state will SUBSIDIZE housing.",
         "jp": "州は住宅に助成金を出す予定だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We will",
-          "you for the service."
-        ],
-        "full": "We will charge you for the service.",
-        "jp": "サービス料を請求します。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40332,18 +36216,9 @@ const WORD_DATABASE = [
           "There is a",
           "difference."
         ],
-        "full": "There is a subtle difference.",
+        "full": "There is a SUBTLE difference.",
         "jp": "微妙な違いがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The answer is",
-          "."
-        ],
-        "full": "The answer is obvious.",
-        "jp": "答えは明白だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40399,18 +36274,9 @@ const WORD_DATABASE = [
           "The flavor changed",
           "."
         ],
-        "full": "The flavor changed subtly.",
+        "full": "The flavor changed SUBTLY.",
         "jp": "味が微妙に変わった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke",
-          "."
-        ],
-        "full": "He spoke loudly.",
-        "jp": "彼は大声で話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40467,18 +36333,9 @@ const WORD_DATABASE = [
           "Give a",
           "summary."
         ],
-        "full": "Give a succinct summary.",
+        "full": "Give a SUCCINCT summary.",
         "jp": "簡潔な要約を出しなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His speech was",
-          "."
-        ],
-        "full": "His speech was wordy.",
-        "jp": "彼のスピーチは冗長だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40538,18 +36395,9 @@ const WORD_DATABASE = [
           "Please state your point",
           "."
         ],
-        "full": "Please state your point succinctly.",
+        "full": "Please state your point SUCCINCTLY.",
         "jp": "要点を簡潔に述べてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He explained it",
-          "."
-        ],
-        "full": "He explained it at length.",
-        "jp": "彼はそれを長々と説明した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40606,18 +36454,9 @@ const WORD_DATABASE = [
           "Many people",
           "from allergies."
         ],
-        "full": "Many people suffer from allergies.",
+        "full": "Many people SUFFER from allergies.",
         "jp": "多くの人がアレルギーに苦しんでいる。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We",
-          "the holiday."
-        ],
-        "full": "We enjoyed the holiday.",
-        "jp": "私たちは休日を楽しんだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40678,18 +36517,9 @@ const WORD_DATABASE = [
           "We have",
           "food."
         ],
-        "full": "We have sufficient food.",
+        "full": "We have SUFFICIENT food.",
         "jp": "私たちには十分な食料がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Funds are",
-          "."
-        ],
-        "full": "Funds are insufficient.",
-        "jp": "資金が不足している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40747,18 +36577,9 @@ const WORD_DATABASE = [
           "I",
           "he is right."
         ],
-        "full": "I suppose he is right.",
+        "full": "I SUPPOSE he is right.",
         "jp": "彼は正しいと思う。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "the answer."
-        ],
-        "full": "I know the answer.",
-        "jp": "私は答えを知っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40816,18 +36637,9 @@ const WORD_DATABASE = [
           "The army was sent to",
           "the rebellion."
         ],
-        "full": "The army was sent to suppress the rebellion.",
+        "full": "The army was sent to SUPPRESS the rebellion.",
         "jp": "軍隊は反乱を鎮圧するために派遣された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "You should",
-          "your feelings."
-        ],
-        "full": "You should express your feelings.",
-        "jp": "あなたは自分の感情を表現すべきだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40885,18 +36697,9 @@ const WORD_DATABASE = [
           "Sales will",
           "expectations."
         ],
-        "full": "Sales will surpass expectations.",
+        "full": "Sales will SURPASS expectations.",
         "jp": "売上は予想を上回るだろう。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He will",
-          "the race."
-        ],
-        "full": "He will lose the race.",
-        "jp": "彼はレースに負けるだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -40958,18 +36761,9 @@ const WORD_DATABASE = [
           "The enemy was forced to",
           "."
         ],
-        "full": "The enemy was forced to surrender.",
+        "full": "The enemy was forced to SURRENDER.",
         "jp": "敵は降伏を余儀なくされた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They decided to",
-          "back."
-        ],
-        "full": "They decided to fight back.",
-        "jp": "彼らは反撃することに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41027,18 +36821,9 @@ const WORD_DATABASE = [
           "They agreed to",
           "the talks."
         ],
-        "full": "They agreed to suspend the talks.",
+        "full": "They agreed to SUSPEND the talks.",
         "jp": "彼らは会談を一時中断することに合意した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "working."
-        ],
-        "full": "Please continue working.",
-        "jp": "作業を続けてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41096,18 +36881,9 @@ const WORD_DATABASE = [
           "The dove is a",
           "of peace."
         ],
-        "full": "The dove is a symbol of peace.",
+        "full": "The dove is a SYMBOL of peace.",
         "jp": "鳩は平和の象徴だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a red",
-          "."
-        ],
-        "full": "This is a red object.",
-        "jp": "これは赤い物体だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41169,18 +36945,9 @@ const WORD_DATABASE = [
           "I have deep",
           "for the victims."
         ],
-        "full": "I have deep sympathy for the victims.",
+        "full": "I have deep SYMPATHY for the victims.",
         "jp": "私は被害者に深い同情を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He showed total",
-          "."
-        ],
-        "full": "He showed total indifference.",
-        "jp": "彼は完全な無関心を示した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41238,18 +37005,9 @@ const WORD_DATABASE = [
           "Fever is a common",
           "of the flu."
         ],
-        "full": "Fever is a common symptom of the flu.",
+        "full": "Fever is a common SYMPTOM of the flu.",
         "jp": "発熱はインフルエンザの一般的な症状だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Rest is the best",
-          "."
-        ],
-        "full": "Rest is the best cure.",
-        "jp": "休息は最良の治療法だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41309,18 +37067,9 @@ const WORD_DATABASE = [
           "They",
           "agreed to the deal."
         ],
-        "full": "They tacitly agreed to the deal.",
+        "full": "They TACITLY agreed to the deal.",
         "jp": "彼らは暗黙のうちにその取引に合意した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He stated his views",
-          "."
-        ],
-        "full": "He stated his views explicitly.",
-        "jp": "彼は自分の見解を明確に述べた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41378,18 +37127,9 @@ const WORD_DATABASE = [
           "We need to",
           "the problem immediately."
         ],
-        "full": "We need to tackle the problem immediately.",
+        "full": "We need to TACKLE the problem immediately.",
         "jp": "私たちは直ちにその問題に取り組む必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Try to",
-          "stress."
-        ],
-        "full": "Try to avoid stress.",
-        "jp": "ストレスを避けるようにしなさい。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41451,18 +37191,9 @@ const WORD_DATABASE = [
           "She handled the situation",
           "."
         ],
-        "full": "She handled the situation tactfully.",
+        "full": "She handled the situation TACTFULLY.",
         "jp": "彼女はその状況を巧みに処理した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He spoke",
-          "to the guest."
-        ],
-        "full": "He spoke rudely to the guest.",
-        "jp": "彼は客に対して失礼に話した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41516,18 +37247,9 @@ const WORD_DATABASE = [
           "The lion was quite",
           "."
         ],
-        "full": "The lion was quite tame.",
+        "full": "The lion was quite TAME.",
         "jp": "そのライオンはかなり飼い慣らされていた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Wolves are",
-          "animals."
-        ],
-        "full": "Wolves are wild animals.",
-        "jp": "狼は野生動物だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41589,18 +37311,9 @@ const WORD_DATABASE = [
           "We need",
           "evidence."
         ],
-        "full": "We need tangible evidence.",
+        "full": "We need TANGIBLE evidence.",
         "jp": "私たちには明白な（形のある）証拠が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Love is an",
-          "feeling."
-        ],
-        "full": "Love is an intangible feeling.",
-        "jp": "愛は形のない感情だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41657,18 +37370,9 @@ const WORD_DATABASE = [
           "The government imposed a",
           "on imports."
         ],
-        "full": "The government imposed a tariff on imports.",
+        "full": "The government imposed a TARIFF on imports.",
         "jp": "政府は輸入品に関税を課した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Farmers received a",
-          "."
-        ],
-        "full": "Farmers received a subsidy.",
-        "jp": "農家は補助金を受け取った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41721,18 +37425,9 @@ const WORD_DATABASE = [
           "We have to pay",
           "on our income."
         ],
-        "full": "We have to pay tax on our income.",
+        "full": "We have to pay TAX on our income.",
         "jp": "私たちは所得に対して税金を払わなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He received a",
-          "from the government."
-        ],
-        "full": "He received a grant from the government.",
-        "jp": "彼は政府から助成金を受け取った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41797,18 +37492,9 @@ const WORD_DATABASE = [
           "Modern",
           "has changed our lives."
         ],
-        "full": "Modern technology has changed our lives.",
+        "full": "Modern TECHNOLOGY has changed our lives.",
         "jp": "現代の科学技術は私たちの生活を変えた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He studies ancient",
-          "."
-        ],
-        "full": "He studies ancient history.",
-        "jp": "彼は古代史を研究している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -41866,7 +37552,7 @@ const WORD_DATABASE = [
           "He has a short",
           "."
         ],
-        "full": "He has a short temper.",
+        "full": "He has a short TEMPER.",
         "jp": "彼は短気だ（気性が短い）。",
         "is_correct": true
       },
@@ -41875,7 +37561,7 @@ const WORD_DATABASE = [
           "She lost her",
           "."
         ],
-        "full": "She lost her temper.",
+        "full": "She lost her TEMPER.",
         "jp": "彼女は腹を立てた（落ち着きを失った）。",
         "is_correct": true
       },
@@ -41942,18 +37628,9 @@ const WORD_DATABASE = [
           "This is a",
           "solution."
         ],
-        "full": "This is a temporary solution.",
+        "full": "This is a TEMPORARY solution.",
         "jp": "これは一時的な解決策だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We need a",
-          "fix."
-        ],
-        "full": "We need a permanent fix.",
-        "jp": "私たちは恒久的な修理が必要だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42015,18 +37692,9 @@ const WORD_DATABASE = [
           "She is a",
           "negotiator."
         ],
-        "full": "She is a tenacious negotiator.",
+        "full": "She is a TENACIOUS negotiator.",
         "jp": "彼女は粘り強い交渉人だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He gave a",
-          "effort."
-        ],
-        "full": "He gave a weak effort.",
-        "jp": "彼の努力は弱々しかった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42079,7 +37747,7 @@ const WORD_DATABASE = [
           "Prices",
           "to rise in summer."
         ],
-        "full": "Prices tend to rise in summer.",
+        "full": "Prices TEND to rise in summer.",
         "jp": "夏には価格が上がる傾向がある。",
         "is_correct": true
       },
@@ -42145,7 +37813,7 @@ const WORD_DATABASE = [
           "The President serves a four-year",
           "."
         ],
-        "full": "The President serves a four-year term.",
+        "full": "The President serves a four-year TERM.",
         "jp": "大統領の任期は4年だ。",
         "is_correct": true
       },
@@ -42154,7 +37822,7 @@ const WORD_DATABASE = [
           "This is a technical",
           "."
         ],
-        "full": "This is a technical term.",
+        "full": "This is a technical TERM.",
         "jp": "これは専門用語だ。",
         "is_correct": true
       },
@@ -42221,7 +37889,7 @@ const WORD_DATABASE = [
           "His",
           "convinced the jury."
         ],
-        "full": "His testimony convinced the jury.",
+        "full": "His TESTIMONY convinced the jury.",
         "jp": "彼の証言は陪審員を納得させた。",
         "is_correct": true
       },
@@ -42230,7 +37898,7 @@ const WORD_DATABASE = [
           "She refused to give",
           "."
         ],
-        "full": "She refused to give testimony.",
+        "full": "She refused to give TESTIMONY.",
         "jp": "彼女は証言を拒否した。",
         "is_correct": true
       },
@@ -42293,18 +37961,9 @@ const WORD_DATABASE = [
           "He is undergoing physical",
           "."
         ],
-        "full": "He is undergoing physical therapy.",
+        "full": "He is undergoing physical THERAPY.",
         "jp": "彼は理学療法を受けている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "caused more pain."
-        ],
-        "full": "The injury caused more pain.",
-        "jp": "その怪我はさらなる痛みを引き起こした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42362,18 +38021,9 @@ const WORD_DATABASE = [
           "She is writing her master's",
           "."
         ],
-        "full": "She is writing her master's thesis.",
+        "full": "She is writing her master's THESIS.",
         "jp": "彼女は修士論文を書いている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a proven",
-          "."
-        ],
-        "full": "This is a proven fact.",
-        "jp": "これは証明された事実だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42431,18 +38081,9 @@ const WORD_DATABASE = [
           "The police conducted a",
           "search."
         ],
-        "full": "The police conducted a thorough search.",
+        "full": "The police conducted a THOROUGH search.",
         "jp": "警察は徹底的な捜索を行った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He did a",
-          "job."
-        ],
-        "full": "He did a careless job.",
-        "jp": "彼はいい加減な仕事をした。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42503,18 +38144,9 @@ const WORD_DATABASE = [
           "I",
           "enjoyed the show."
         ],
-        "full": "I thoroughly enjoyed the show.",
+        "full": "I THOROUGHLY enjoyed the show.",
         "jp": "私はショーを心から（徹底的に）楽しんだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "confused."
-        ],
-        "full": "He was slightly confused.",
-        "jp": "彼は少し混乱していた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42568,18 +38200,9 @@ const WORD_DATABASE = [
           "Pollution is a",
           "to the environment."
         ],
-        "full": "Pollution is a threat to the environment.",
+        "full": "Pollution is a THREAT to the environment.",
         "jp": "汚染は環境への脅威だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This area offers",
-          "."
-        ],
-        "full": "This area offers safety.",
-        "jp": "この地域は安全を提供している。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42637,7 +38260,7 @@ const WORD_DATABASE = [
           "Don't",
           "me."
         ],
-        "full": "Don't threaten me.",
+        "full": "Don't THREATEN me.",
         "jp": "私を脅さないで。",
         "is_correct": true
       },
@@ -42646,7 +38269,7 @@ const WORD_DATABASE = [
           "Dark clouds",
           "rain."
         ],
-        "full": "Dark clouds threaten rain.",
+        "full": "Dark clouds THREATEN rain.",
         "jp": "暗い雲は雨の恐れがある（雨を予兆させる）。",
         "is_correct": true
       },
@@ -42703,7 +38326,7 @@ const WORD_DATABASE = [
           "He traveled",
           "Europe."
         ],
-        "full": "He traveled throughout Europe.",
+        "full": "He traveled THROUGHOUT Europe.",
         "jp": "彼はヨーロッパ中を旅行した。",
         "is_correct": true
       },
@@ -42712,7 +38335,7 @@ const WORD_DATABASE = [
           "She slept",
           "the movie."
         ],
-        "full": "She slept throughout the movie.",
+        "full": "She slept THROUGHOUT the movie.",
         "jp": "彼女は映画の間ずっと眠っていた。",
         "is_correct": true
       },
@@ -42768,19 +38391,9 @@ const WORD_DATABASE = [
           ",",
           "he failed."
         ],
-        "full": "He didn't study; thus, he failed.",
+        "full": "He didn't study; THUS, he failed.",
         "jp": "彼は勉強しなかった。したがって、彼は落ちた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was raining;",
-          ",",
-          "we went out."
-        ],
-        "full": "It was raining; however, we went out.",
-        "jp": "雨が降っていたが、私たちは外出した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42835,18 +38448,9 @@ const WORD_DATABASE = [
           "The acrobat walked the",
           "."
         ],
-        "full": "The acrobat walked the tightrope.",
+        "full": "The acrobat walked the TIGHTROPE.",
         "jp": "アクロバットは綱渡りをした。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He walked on the",
-          "."
-        ],
-        "full": "He walked on the ground.",
-        "jp": "彼は地面を歩いた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -42904,7 +38508,7 @@ const WORD_DATABASE = [
           "Please accept this gift as a",
           "of my gratitude."
         ],
-        "full": "Please accept this gift as a token of my gratitude.",
+        "full": "Please accept this gift as a TOKEN of my gratitude.",
         "jp": "感謝のしるしとしてこの贈り物を受け取ってください。",
         "is_correct": true
       },
@@ -42913,7 +38517,7 @@ const WORD_DATABASE = [
           "This coin is a bus",
           "."
         ],
-        "full": "This coin is a bus token.",
+        "full": "This coin is a bus TOKEN.",
         "jp": "このコインはバスの代用貨幣だ。",
         "is_correct": true
       },
@@ -42977,7 +38581,7 @@ const WORD_DATABASE = [
           "We need more",
           "for others."
         ],
-        "full": "We need more tolerance for others.",
+        "full": "We need more TOLERANCE for others.",
         "jp": "私たちは他人に対してもっと寛容である必要がある。",
         "is_correct": true
       },
@@ -42986,7 +38590,7 @@ const WORD_DATABASE = [
           "He has a low",
           "for alcohol."
         ],
-        "full": "He has a low tolerance for alcohol.",
+        "full": "He has a low TOLERANCE for alcohol.",
         "jp": "彼はアルコールへの耐性が低い（お酒に弱い）。",
         "is_correct": true
       },
@@ -43050,18 +38654,9 @@ const WORD_DATABASE = [
           "I cannot",
           "such behavior."
         ],
-        "full": "I cannot tolerate such behavior.",
+        "full": "I cannot TOLERATE such behavior.",
         "jp": "そのような振る舞いは許容できない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "smoking."
-        ],
-        "full": "Please stop smoking.",
-        "jp": "喫煙をやめてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43119,18 +38714,9 @@ const WORD_DATABASE = [
           "Guilt continued to",
           "him."
         ],
-        "full": "Guilt continued to torment him.",
+        "full": "Guilt continued to TORMENT him.",
         "jp": "罪悪感が彼を苦しめ続けた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Music will",
-          "you."
-        ],
-        "full": "Music will soothe you.",
-        "jp": "音楽はあなたを癒やすだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43185,18 +38771,9 @@ const WORD_DATABASE = [
           "He walked",
           "the door."
         ],
-        "full": "He walked toward the door.",
+        "full": "He walked TOWARD the door.",
         "jp": "彼はドアの方へ歩いた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He ran",
-          "the fire."
-        ],
-        "full": "He ran away from the fire.",
-        "jp": "彼は火事から逃げた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43262,18 +38839,9 @@ const WORD_DATABASE = [
           "The",
           "from caterpillar to butterfly."
         ],
-        "full": "The transformation from caterpillar to butterfly.",
+        "full": "The TRANSFORMATION from caterpillar to butterfly.",
         "jp": "芋虫から蝶への変身。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The",
-          "of the building remains."
-        ],
-        "full": "The structure of the building remains.",
-        "jp": "建物の構造は残っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43331,18 +38899,9 @@ const WORD_DATABASE = [
           "Mosquitoes can",
           "diseases."
         ],
-        "full": "Mosquitoes can transmit diseases.",
+        "full": "Mosquitoes can TRANSMIT diseases.",
         "jp": "蚊は病気を媒介する（送る）ことがある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the message."
-        ],
-        "full": "Please receive the message.",
-        "jp": "メッセージを受け取ってください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43407,18 +38966,9 @@ const WORD_DATABASE = [
           "We need more",
           "in government."
         ],
-        "full": "We need more transparency in government.",
+        "full": "We need more TRANSPARENCY in government.",
         "jp": "政府にはもっと透明性が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The window lacks",
-          "."
-        ],
-        "full": "The window lacks opacity.",
-        "jp": "その窓は不透明さに欠ける（透けている）。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43480,18 +39030,9 @@ const WORD_DATABASE = [
           "It was a",
           "success."
         ],
-        "full": "It was a tremendous success.",
+        "full": "It was a TREMENDOUS success.",
         "jp": "それはものすごい成功だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "change."
-        ],
-        "full": "It was a small change.",
-        "jp": "それは小さな変化だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43548,18 +39089,9 @@ const WORD_DATABASE = [
           "Do not",
           "on private property."
         ],
-        "full": "Do not trespass on private property.",
+        "full": "Do not TRESPASS on private property.",
         "jp": "私有地に不法侵入してはいけない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the room."
-        ],
-        "full": "Please leave the room.",
-        "jp": "部屋を出てください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43617,7 +39149,7 @@ const WORD_DATABASE = [
           "Smoke can",
           "the alarm."
         ],
-        "full": "Smoke can trigger the alarm.",
+        "full": "Smoke can TRIGGER the alarm.",
         "jp": "煙は警報を作動させる（引き起こす）可能性がある。",
         "is_correct": true
       },
@@ -43626,7 +39158,7 @@ const WORD_DATABASE = [
           "The police pulled the",
           "."
         ],
-        "full": "The police pulled the trigger.",
+        "full": "The police pulled the TRIGGER.",
         "jp": "警察は引き金を引いた。",
         "is_correct": true
       },
@@ -43686,18 +39218,9 @@ const WORD_DATABASE = [
           "It was a great",
           "for our team."
         ],
-        "full": "It was a great triumph for our team.",
+        "full": "It was a great TRIUMPH for our team.",
         "jp": "それは私たちのチームにとって大勝利だった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We suffered a bitter",
-          "."
-        ],
-        "full": "We suffered a bitter defeat.",
-        "jp": "私たちは苦い敗北を喫した。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43758,18 +39281,9 @@ const WORD_DATABASE = [
           "College",
           "is very expensive."
         ],
-        "full": "College tuition is very expensive.",
+        "full": "College TUITION is very expensive.",
         "jp": "大学の授業料はとても高い。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He receives a monthly",
-          "."
-        ],
-        "full": "He receives a monthly salary.",
-        "jp": "彼は月給を受け取っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43835,18 +39349,9 @@ const WORD_DATABASE = [
           "He",
           "arrives at 9 a.m."
         ],
-        "full": "He typically arrives at 9 a.m.",
+        "full": "He TYPICALLY arrives at 9 a.m.",
         "jp": "彼は概して（典型的には）午前9時に到着する。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It never rains",
-          "."
-        ],
-        "full": "It never rains typically.",
-        "jp": "決して雨は降らない。（文脈が不自然）",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43911,18 +39416,9 @@ const WORD_DATABASE = [
           "The jury reached a",
           "verdict."
         ],
-        "full": "The jury reached a unanimous verdict.",
+        "full": "The jury reached a UNANIMOUS verdict.",
         "jp": "陪審員は満場一致の評決に達した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We had a",
-          "opinion."
-        ],
-        "full": "We had a split opinion.",
-        "jp": "私たちの意見は分かれた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -43989,18 +39485,9 @@ const WORD_DATABASE = [
           "They voted",
           "to pass the law."
         ],
-        "full": "They voted unanimously to pass the law.",
+        "full": "They voted UNANIMOUSLY to pass the law.",
         "jp": "彼らは満場一致でその法律を可決した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "They voted",
-          "against it."
-        ],
-        "full": "They voted separately against it.",
-        "jp": "彼らは別々に反対票を投じた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44061,18 +39548,9 @@ const WORD_DATABASE = [
           "He was",
           "of the danger."
         ],
-        "full": "He was unaware of the danger.",
+        "full": "He was UNAWARE of the danger.",
         "jp": "彼は危険に気づいていなかった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She was fully",
-          "of the facts."
-        ],
-        "full": "She was fully aware of the facts.",
-        "jp": "彼女は事実を完全に知っていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44133,18 +39611,9 @@ const WORD_DATABASE = [
           "He must",
           "surgery."
         ],
-        "full": "He must undergo surgery.",
+        "full": "He must UNDERGO surgery.",
         "jp": "彼は手術を受けなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "We will",
-          "the party."
-        ],
-        "full": "We will enjoy the party.",
-        "jp": "私たちはパーティーを楽しむだろう。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44209,18 +39678,9 @@ const WORD_DATABASE = [
           "The news was completely",
           "."
         ],
-        "full": "The news was completely unexpected.",
+        "full": "The news was completely UNEXPECTED.",
         "jp": "そのニュースは完全に予期しないものだった。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The result was",
-          "."
-        ],
-        "full": "The result was expected.",
-        "jp": "結果は予想通りだった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44282,18 +39742,9 @@ const WORD_DATABASE = [
           "The temperature should be",
           "."
         ],
-        "full": "The temperature should be uniform.",
+        "full": "The temperature should be UNIFORM.",
         "jp": "温度は均一でなければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The colors are",
-          "."
-        ],
-        "full": "The colors are varied.",
-        "jp": "色は様々だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44354,18 +39805,9 @@ const WORD_DATABASE = [
           "The",
           "is expanding."
         ],
-        "full": "The universe is expanding.",
+        "full": "The UNIVERSE is expanding.",
         "jp": "宇宙は膨張している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He lives on",
-          "."
-        ],
-        "full": "He lives on Earth.",
-        "jp": "彼は地球に住んでいる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44423,18 +39865,9 @@ const WORD_DATABASE = [
           "The cause of the fire is",
           "."
         ],
-        "full": "The cause of the fire is unknown.",
+        "full": "The cause of the fire is UNKNOWN.",
         "jp": "火事の原因は不明（未知）だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "singer."
-        ],
-        "full": "He is a famous singer.",
-        "jp": "彼は有名な歌手だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44488,18 +39921,9 @@ const WORD_DATABASE = [
           "I won't go",
           "you go."
         ],
-        "full": "I won't go unless you go.",
+        "full": "I won't go UNLESS you go.",
         "jp": "君が行かないなら私も行かない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I will go",
-          "it rains."
-        ],
-        "full": "I will go if it rains.",
-        "jp": "雨が降れば私は行く。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44559,18 +39983,9 @@ const WORD_DATABASE = [
           "It is",
           "to rain today."
         ],
-        "full": "It is unlikely to rain today.",
+        "full": "It is UNLIKELY to rain today.",
         "jp": "今日は雨が降りそうにない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "to succeed."
-        ],
-        "full": "He is likely to succeed.",
-        "jp": "彼は成功しそうだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44639,18 +40054,9 @@ const WORD_DATABASE = [
           "This is an",
           "event."
         ],
-        "full": "This is an unprecedented event.",
+        "full": "This is an UNPRECEDENTED event.",
         "jp": "これは前例のない出来事だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was a",
-          "occurrence."
-        ],
-        "full": "It was a common occurrence.",
-        "jp": "それはよくある出来事だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44708,18 +40114,9 @@ const WORD_DATABASE = [
           "Political",
           "is growing."
         ],
-        "full": "Political unrest is growing.",
+        "full": "Political UNREST is growing.",
         "jp": "政治的不安が高まっている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The city is at",
-          "."
-        ],
-        "full": "The city is at peace.",
-        "jp": "その都市は平和だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44785,18 +40182,9 @@ const WORD_DATABASE = [
           "It is",
           "for him to be late."
         ],
-        "full": "It is unusual for him to be late.",
+        "full": "It is UNUSUAL for him to be late.",
         "jp": "彼が遅刻するのは珍しい（普通ではない）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is",
-          "to see birds here."
-        ],
-        "full": "It is common to see birds here.",
-        "jp": "ここで鳥を見るのは一般的だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44854,18 +40242,9 @@ const WORD_DATABASE = [
           "We must",
           "the law."
         ],
-        "full": "We must uphold the law.",
+        "full": "We must UPHOLD the law.",
         "jp": "私たちは法律を守ら（支持し）なければならない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He decided to",
-          "the proposal."
-        ],
-        "full": "He decided to reject the proposal.",
-        "jp": "彼は提案を拒否することに決めた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44922,18 +40301,9 @@ const WORD_DATABASE = [
           "I have an",
           "message."
         ],
-        "full": "I have an urgent message.",
+        "full": "I have an URGENT message.",
         "jp": "緊急のメッセージがあります。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "matter."
-        ],
-        "full": "This is a trivial matter.",
-        "jp": "これは些細な問題だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -44990,18 +40360,9 @@ const WORD_DATABASE = [
           "This tool is broken and",
           "."
         ],
-        "full": "This tool is broken and useless.",
+        "full": "This tool is broken and USELESS.",
         "jp": "この道具は壊れていて役に立たない。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "His advice was very",
-          "."
-        ],
-        "full": "His advice was very useful.",
-        "jp": "彼のアドバイスはとても役に立った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45062,18 +40423,9 @@ const WORD_DATABASE = [
           "We should",
           "solar energy."
         ],
-        "full": "We should utilize solar energy.",
+        "full": "We should UTILIZE solar energy.",
         "jp": "私たちは太陽エネルギーを利用すべきだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Don't",
-          "your time."
-        ],
-        "full": "Don't waste your time.",
-        "jp": "時間を無駄にするな。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45139,18 +40491,9 @@ const WORD_DATABASE = [
           "The results require",
           "."
         ],
-        "full": "The results require validation.",
+        "full": "The results require VALIDATION.",
         "jp": "結果には検証が必要だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He received a letter of",
-          "."
-        ],
-        "full": "He received a letter of rejection.",
-        "jp": "彼は拒絶の手紙を受け取った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45208,18 +40551,9 @@ const WORD_DATABASE = [
           "I",
           "your friendship."
         ],
-        "full": "I value your friendship.",
+        "full": "I VALUE your friendship.",
         "jp": "私はあなたの友情を尊重している。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I",
-          "his rudeness."
-        ],
-        "full": "I hate his rudeness.",
-        "jp": "私は彼の無礼さが嫌いだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45281,18 +40615,9 @@ const WORD_DATABASE = [
           "Graffiti is a form of",
           "."
         ],
-        "full": "Graffiti is a form of vandalism.",
+        "full": "Graffiti is a form of VANDALISM.",
         "jp": "落書きは器物損壊の一形態だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was arrested for",
-          "."
-        ],
-        "full": "He was arrested for construction.",
-        "jp": "彼は建設のために逮捕された。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45350,18 +40675,9 @@ const WORD_DATABASE = [
           "The magician made the rabbit",
           "."
         ],
-        "full": "The magician made the rabbit vanish.",
+        "full": "The magician made the rabbit VANISH.",
         "jp": "手品師はウサギを消した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The sun will",
-          "in the morning."
-        ],
-        "full": "The sun will appear in the morning.",
-        "jp": "太陽は朝に現れる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45415,18 +40731,9 @@ const WORD_DATABASE = [
           "The Sahara is a",
           "desert."
         ],
-        "full": "The Sahara is a vast desert.",
+        "full": "The Sahara is a VAST desert.",
         "jp": "サハラ砂漠は広大な砂漠だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He has a",
-          "amount of money."
-        ],
-        "full": "He has a small amount of money.",
-        "jp": "彼は少額のお金を持っている。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45488,18 +40795,9 @@ const WORD_DATABASE = [
           "He issued a",
           "denial."
         ],
-        "full": "He issued a vehement denial.",
+        "full": "He issued a VEHEMENT denial.",
         "jp": "彼は猛烈に否定した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She gave a",
-          "smile."
-        ],
-        "full": "She gave a gentle smile.",
-        "jp": "彼女は優しく微笑んだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45560,18 +40858,9 @@ const WORD_DATABASE = [
           "Open the window to",
           "the room."
         ],
-        "full": "Open the window to ventilate the room.",
+        "full": "Open the window to VENTILATE the room.",
         "jp": "部屋を換気するために窓を開けなさい。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "the door."
-        ],
-        "full": "Please close the door.",
-        "jp": "ドアを閉めてください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45628,18 +40917,9 @@ const WORD_DATABASE = [
           "The stadium is a popular",
           "for concerts."
         ],
-        "full": "The stadium is a popular venue for concerts.",
+        "full": "The stadium is a popular VENUE for concerts.",
         "jp": "そのスタジアムはコンサートの人気会場だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "What is the",
-          "of the meeting?"
-        ],
-        "full": "What is the time of the meeting?",
-        "jp": "会議の時間はいつですか？",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45697,18 +40977,9 @@ const WORD_DATABASE = [
           "They made a",
           "agreement."
         ],
-        "full": "They made a verbal agreement.",
+        "full": "They made a VERBAL agreement.",
         "jp": "彼らは口頭で合意した。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please submit a",
-          "report."
-        ],
-        "full": "Please submit a written report.",
-        "jp": "書面での報告書を提出してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45766,18 +41037,9 @@ const WORD_DATABASE = [
           "Tokyo is a",
           "city."
         ],
-        "full": "Tokyo is a vibrant city.",
+        "full": "Tokyo is a VIBRANT city.",
         "jp": "東京は活気に満ちた都市だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The colors were",
-          "."
-        ],
-        "full": "The colors were dull.",
-        "jp": "色はくすんでいた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45843,18 +41105,9 @@ const WORD_DATABASE = [
           "The disease has been",
           "eliminated."
         ],
-        "full": "The disease has been virtually eliminated.",
+        "full": "The disease has been VIRTUALLY eliminated.",
         "jp": "その病気は事実上根絶された。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is",
-          "six feet tall."
-        ],
-        "full": "He is exactly six feet tall.",
-        "jp": "彼はちょうど6フィートの高さだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45916,18 +41169,9 @@ const WORD_DATABASE = [
           "She lived a",
           "life."
         ],
-        "full": "She lived a virtuous life.",
+        "full": "She lived a VIRTUOUS life.",
         "jp": "彼女は高潔な人生を送った。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He is a",
-          "man."
-        ],
-        "full": "He is a wicked man.",
-        "jp": "彼は邪悪な男だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -45988,18 +41232,9 @@ const WORD_DATABASE = [
           "The stars are",
           "tonight."
         ],
-        "full": "The stars are visible tonight.",
+        "full": "The stars are VISIBLE tonight.",
         "jp": "今夜は星が見える。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The germ is",
-          "to the eye."
-        ],
-        "full": "The germ is invisible to the eye.",
-        "jp": "その細菌は目に見えない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46057,18 +41292,9 @@ const WORD_DATABASE = [
           "Water is",
           "for life."
         ],
-        "full": "Water is vital for life.",
+        "full": "Water is VITAL for life.",
         "jp": "水は生命にとって不可欠だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "This is a",
-          "detail."
-        ],
-        "full": "This is a trivial detail.",
-        "jp": "これは些細な詳細だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46126,18 +41352,9 @@ const WORD_DATABASE = [
           "I have",
           "memories of my childhood."
         ],
-        "full": "I have vivid memories of my childhood.",
+        "full": "I have VIVID memories of my childhood.",
         "jp": "私には子供の頃の鮮明な記憶がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The colors are",
-          "."
-        ],
-        "full": "The colors are dull.",
-        "jp": "色はくすんでいる。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46199,18 +41416,9 @@ const WORD_DATABASE = [
           "Teaching is her",
           "."
         ],
-        "full": "Teaching is her vocation.",
+        "full": "Teaching is her VOCATION.",
         "jp": "教えることは彼女の天職だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "I am going on",
-          "."
-        ],
-        "full": "I am going on vacation.",
-        "jp": "私は休暇に出かける。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46264,18 +41472,9 @@ const WORD_DATABASE = [
           "The contract is null and",
           "."
         ],
-        "full": "The contract is null and void.",
+        "full": "The contract is null and VOID.",
         "jp": "その契約は無効だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The glass is",
-          "."
-        ],
-        "full": "The glass is full.",
-        "jp": "グラスはいっぱいだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46341,18 +41540,9 @@ const WORD_DATABASE = [
           "Attendance is",
           "."
         ],
-        "full": "Attendance is voluntary.",
+        "full": "Attendance is VOLUNTARY.",
         "jp": "出席は任意（自発的）だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Taxes are",
-          "."
-        ],
-        "full": "Taxes are mandatory.",
-        "jp": "税金は義務だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46426,18 +41616,9 @@ const WORD_DATABASE = [
           "The system has a security",
           "."
         ],
-        "full": "The system has a security vulnerability.",
+        "full": "The system has a security VULNERABILITY.",
         "jp": "そのシステムにはセキュリティ上の脆弱性がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He showed great",
-          "."
-        ],
-        "full": "He showed great strength.",
-        "jp": "彼は素晴らしい強さを見せた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46503,18 +41684,9 @@ const WORD_DATABASE = [
           "Children are",
           "to infection."
         ],
-        "full": "Children are vulnerable to infection.",
+        "full": "Children are VULNERABLE to infection.",
         "jp": "子供は感染症にかかりやすい（脆弱だ）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The castle is",
-          "."
-        ],
-        "full": "The castle is secure.",
-        "jp": "城は安全だ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46572,18 +41744,9 @@ const WORD_DATABASE = [
           "The police have a search",
           "."
         ],
-        "full": "The police have a search warrant.",
+        "full": "The police have a search WARRANT.",
         "jp": "警察は捜索令状を持っている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "There is no",
-          "for concern."
-        ],
-        "full": "There is no need for concern.",
-        "jp": "心配する必要はない。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46640,18 +41803,9 @@ const WORD_DATABASE = [
           "He is a",
           "businessman."
         ],
-        "full": "He is a wealthy businessman.",
+        "full": "He is a WEALTHY businessman.",
         "jp": "彼は裕福な実業家だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She grew up in a",
-          "family."
-        ],
-        "full": "She grew up in a poor family.",
-        "jp": "彼女は貧しい家庭で育った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46708,18 +41862,9 @@ const WORD_DATABASE = [
           "I am",
           "after a long day."
         ],
-        "full": "I am weary after a long day.",
+        "full": "I am WEARY after a long day.",
         "jp": "長い一日を終えて私は疲れている。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He felt",
-          "and ready to go."
-        ],
-        "full": "He felt fresh and ready to go.",
-        "jp": "彼は気分が爽快で、出かける準備ができていた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46775,18 +41920,9 @@ const WORD_DATABASE = [
           "He likes coffee,",
           "I like tea."
         ],
-        "full": "He likes coffee, whereas I like tea.",
+        "full": "He likes coffee, WHEREAS I like tea.",
         "jp": "彼はコーヒーが好きだが、私はお茶が好きだ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It was raining,",
-          "we stayed home."
-        ],
-        "full": "It was raining, so we stayed home.",
-        "jp": "雨が降っていたので、私たちは家にいた。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46843,18 +41979,9 @@ const WORD_DATABASE = [
           "I am",
           "to help you."
         ],
-        "full": "I am willing to help you.",
+        "full": "I am WILLING to help you.",
         "jp": "喜んであなたを助けます（助けるのをいとわない）。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He was",
-          "to apologize."
-        ],
-        "full": "He was reluctant to apologize.",
-        "jp": "彼は謝るのを渋った。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46912,18 +42039,9 @@ const WORD_DATABASE = [
           "I need to",
           "money from the bank."
         ],
-        "full": "I need to withdraw money from the bank.",
+        "full": "I need to WITHDRAW money from the bank.",
         "jp": "私は銀行からお金を引き出す必要がある。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "Please",
-          "your card."
-        ],
-        "full": "Please insert your card.",
-        "jp": "カードを挿入してください。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -46981,18 +42099,9 @@ const WORD_DATABASE = [
           "The flowers began to",
           "."
         ],
-        "full": "The flowers began to wither.",
+        "full": "The flowers began to WITHER.",
         "jp": "花がしぼみ始めた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "The roses will",
-          "in spring."
-        ],
-        "full": "The roses will bloom in spring.",
-        "jp": "バラは春に咲く。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -47047,18 +42156,9 @@ const WORD_DATABASE = [
           "Please finish",
           "an hour."
         ],
-        "full": "Please finish within an hour.",
+        "full": "Please finish WITHIN an hour.",
         "jp": "1時間以内に終わらせてください。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "It is",
-          "my power."
-        ],
-        "full": "It is beyond my power.",
-        "jp": "それは私の力の及ばないことだ。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -47109,7 +42209,7 @@ const WORD_DATABASE = [
           "This book is",
           "reading."
         ],
-        "full": "This book is worth reading.",
+        "full": "This book is WORTH reading.",
         "jp": "この本は読む価値がある。",
         "is_correct": true
       },
@@ -47118,7 +42218,7 @@ const WORD_DATABASE = [
           "It is",
           "trying."
         ],
-        "full": "It is worth trying.",
+        "full": "It is WORTH trying.",
         "jp": "試してみる価値はある。",
         "is_correct": true
       },
@@ -47174,7 +42274,7 @@ const WORD_DATABASE = [
           "The farm has a high",
           "."
         ],
-        "full": "The farm has a high yield.",
+        "full": "The farm has a high YIELD.",
         "jp": "その農場は収穫量が多い。",
         "is_correct": true
       },
@@ -47183,7 +42283,7 @@ const WORD_DATABASE = [
           "He refused to",
           "."
         ],
-        "full": "He refused to yield.",
+        "full": "He refused to YIELD.",
         "jp": "彼は屈することを拒んだ。",
         "is_correct": true
       },
@@ -47242,18 +42342,9 @@ const WORD_DATABASE = [
           "He is a",
           "supporter."
         ],
-        "full": "He is a zealous supporter.",
+        "full": "He is a ZEALOUS supporter.",
         "jp": "彼は熱心な支持者だ。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "She was",
-          "about the news."
-        ],
-        "full": "She was indifferent about the news.",
-        "jp": "彼女はそのニュースに無関心だった。",
-        "is_correct": false
       },
       {
         "parts": [
@@ -47312,18 +42403,9 @@ const WORD_DATABASE = [
           "They worked",
           "to finish the project."
         ],
-        "full": "They worked zealously to finish the project.",
+        "full": "They worked ZEALOUSLY to finish the project.",
         "jp": "彼らはプロジェクトを終わらせるために熱心に働いた。",
         "is_correct": true
-      },
-      {
-        "parts": [
-          "He listened",
-          "."
-        ],
-        "full": "He listened indifferently.",
-        "jp": "彼は無関心に聞いた。",
-        "is_correct": false
       },
       {
         "parts": [
