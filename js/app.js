@@ -238,6 +238,11 @@ function createVolumeControl() {
 
 // 9. ページ読み込み時の処理 (フェードイン)
 window.addEventListener('DOMContentLoaded', () => {
+    // BGMの状態をチェックして再生/停止 (認証を待たずに実行)
+    manageBgm();
+    // フローティング音量コントロールを生成
+    createVolumeControl();
+
     // 認証状態を監視
     auth.onAuthStateChanged(async (user) => {
         if (user) {
@@ -281,12 +286,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if (typeof initializePage === 'function') {
             initializePage();
         }
-
-        // BGMの状態をチェックして再生/停止
-        manageBgm();
-
-        // フローティング音量コントロールを生成
-        createVolumeControl();
 
         // フェードイン処理
         setTimeout(() => {
