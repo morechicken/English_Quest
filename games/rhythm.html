@@ -259,7 +259,8 @@
         let judgeLineX = 0;
 
         // === サウンドエンジン ===
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        // ★改善: latencyHint: 'interactive' を指定して、モバイルでの音声遅延を最小限に抑える
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)({ latencyHint: 'interactive' });
 
         // === Web Speech API (TTS) ===
         const synth = window.speechSynthesis;
@@ -288,7 +289,7 @@
         }
 
         function playSoftTone(type) {
-            if (audioCtx.state === 'suspended') audioCtx.resume();
+            // 再生時のresumeチェックは遅延の原因になるため削除（startGameで確実に起動させる）
             const t = audioCtx.currentTime;
             const masterGain = audioCtx.createGain();
             masterGain.connect(audioCtx.destination);
@@ -334,8 +335,16 @@
         function startGame() {
             document.getElementById('start-screen').classList.add('hidden');
             
-            // AudioContext再開（念のため）
-            if (audioCtx.state === 'suspended') audioCtx.resume();
+            // ★改善: オーディオコンテキストのウォームアップ（無音再生）
+            // これにより、iOS/Androidで最初の音が遅れるのを防ぎ、ハードウェアをアクティブにする
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            const buffer = audioCtx.createBuffer(1, 1, 22050);
+            const source = audioCtx.createBufferSource();
+            source.buffer = buffer;
+            source.connect(audioCtx.destination);
+            source.start(0);
 
             GAME_DATA = generateLevelData();
             judgeLineX = window.innerWidth * JUDGE_X_PERCENT;
