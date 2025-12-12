@@ -71,16 +71,19 @@
         #judge-zone.hit { transform: translate(-50%, -50%) scale(1.05); border-color: rgba(255,255,255,0.8); }
 
         .note {
-            position: absolute; top: 50%; transform: translate(-50%, -50%);
+            position: absolute; top: 50%; left: 0; /* ★軽量化: 初期位置を固定 */
+            transform: translate(-50%, -50%);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            z-index: 30; will-change: left, transform;
+            z-index: 30; will-change: transform; /* ★軽量化: leftの監視を削除 */
         }
         
         .note-visual {
             display: flex; align-items: center; justify-content: center;
-            border-radius: 50%; backdrop-filter: blur(4px);
-            box-shadow: 0 0 15px currentColor; border: 2px solid currentColor;
-            background: rgba(0,0,0,0.4); transition: all 0.1s;
+            border-radius: 50%; 
+            /* backdrop-filter: blur(4px); */ /* ★軽量化: 負荷の高いぼかし処理を削除 */
+            box-shadow: 0 0 10px currentColor; border: 2px solid currentColor;
+            background: rgba(0,0,0,0.6); /* 代わりに背景を少し濃くする */
+            transition: all 0.1s;
         }
 
         .note.weak { color: var(--weak-color); }
@@ -381,7 +384,9 @@
                     note.missed = true;
                     note.el.style.opacity = 0.2;
                 }
-                note.el.style.left = `${x}px`;
+                // ★軽量化: leftプロパティ(レイアウト再計算)の代わりにtransform(GPU合成)を使用
+                // translate3dでGPUを強制使用。-50%は要素の中心合わせ用
+                note.el.style.transform = `translate3d(${x}px, -50%, 0) translateX(-50%)`;
             });
 
             requestAnimationFrame(gameLoop);

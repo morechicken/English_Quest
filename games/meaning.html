@@ -237,9 +237,9 @@
         // === 3. 初期化関数 ===
         function resize() {
             // ★ 高解像度対応の修正ここから ★
-            
             // 1. デバイスの画素密度を取得（Retinaなら2など）
-            const dpr = window.devicePixelRatio || 1;
+            // ★改善案: DPRに上限を設け、高解像度端末での過剰な描画負荷を抑制します。
+            const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
 
             // 2. 論理的なサイズ（CSS上の見た目のサイズ）を設定
             width = window.innerWidth;
@@ -528,43 +528,64 @@
             }
 
             // プレイヤー描画
-            ctx.shadowBlur = 20;
-            ctx.shadowColor = player.color;
+            // ★美化: ラジアルグラデーションで発光感を表現
+            const pGrad = ctx.createRadialGradient(player.x, player.y, 0, player.x, player.y, player.radius);
+            pGrad.addColorStop(0, 'rgba(0, 242, 255, 0.4)'); // 中心は明るく
+            pGrad.addColorStop(0.8, 'rgba(0, 242, 255, 0.1)');
+            pGrad.addColorStop(1, 'rgba(0, 242, 255, 0)');   // 端は透明に
+            
+            ctx.fillStyle = pGrad;
             ctx.beginPath();
             ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(0, 242, 255, 0.1)';
             ctx.fill();
+
             ctx.strokeStyle = player.color;
-            ctx.lineWidth = 3;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(player.x, player.y, player.radius * 0.9, 0, Math.PI * 2);
             ctx.stroke();
+
             ctx.fillStyle = "white";
             ctx.font = "bold 14px Montserrat";
             ctx.textAlign = "center"; ctx.textBaseline = "middle";
-            ctx.shadowBlur = 0;
+            // ctx.shadowBlur = 0;
             ctx.fillText(player.text, player.x, player.y);
 
             // ターゲット描画
             targets.forEach(t => {
                 if (!t.alive) return;
-                ctx.shadowBlur = 15;
-                ctx.shadowColor = t.color;
+                // ★美化: ターゲットもグラデーション化
+                const tGrad = ctx.createRadialGradient(t.x, t.y, 0, t.x, t.y, t.radius);
+                tGrad.addColorStop(0, 'rgba(189, 0, 255, 0.4)');
+                tGrad.addColorStop(0.8, 'rgba(189, 0, 255, 0.1)');
+                tGrad.addColorStop(1, 'rgba(189, 0, 255, 0)');
+
+                ctx.fillStyle = tGrad;
                 ctx.beginPath();
                 ctx.arc(t.x, t.y, t.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(189, 0, 255, 0.1)';
                 ctx.fill();
+
                 ctx.strokeStyle = t.color;
-                ctx.lineWidth = 3;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.arc(t.x, t.y, t.radius * 0.9, 0, Math.PI * 2);
                 ctx.stroke();
+
                 ctx.fillStyle = "white";
                 ctx.font = t.font;
                 ctx.textAlign = "center"; ctx.textBaseline = "middle";
-                ctx.shadowBlur = 0;
+                // ctx.shadowBlur = 0;
                 ctx.fillText(t.text, t.x, t.y);
             });
 
-            // ボールと障害物の描画
+            // ボールの描画（エネルギー弾のような表現）
             balls.forEach(b => {
-                ctx.fillStyle = b.color;
+                const bGrad = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.radius);
+                bGrad.addColorStop(0, '#ffffff'); // 中心は白（コア）
+                bGrad.addColorStop(0.4, b.color); // 中間は固有色
+                bGrad.addColorStop(1, 'rgba(0,0,0,0)'); // 端は透明
+                
+                ctx.fillStyle = bGrad;
                 ctx.beginPath();
                 ctx.arc(b.x, b.y, b.radius, 0, Math.PI * 2);
                 ctx.fill();
@@ -577,17 +598,17 @@
                 ctx.rotate(obs.angle);
                 
                 const size = obs.size;
+
+                // ★美化: ガラスのような半透明の塗りつぶし
+                ctx.fillStyle = 'rgba(170, 204, 255, 0.15)';
+                ctx.fillRect(-size / 2, -size / 2, size, size);
+
+                // 枠線
                 ctx.strokeStyle = obs.color;
                 ctx.lineWidth = 2;
-                ctx.shadowColor = '#aaccff';
-                ctx.shadowBlur = 15;
+                ctx.strokeRect(-size / 2, -size / 2, size, size);
 
-                // 立方体を描画
-                ctx.beginPath();
-                ctx.rect(-size / 2, -size / 2, size, size);
-                ctx.stroke();
-
-                // 内側の線でガラスっぽさを表現
+                // 内側の装飾線
                 ctx.lineWidth = 1;
                 ctx.strokeStyle = 'rgba(200, 220, 255, 0.5)';
                 ctx.strokeRect(-size/3, -size/3, size*2/3, size*2/3);
