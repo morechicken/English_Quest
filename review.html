@@ -78,7 +78,6 @@
 
     <script>
         let wordData;
-        const FREE_LIMIT = 50; 
 
         // 1. 認証と初期化
         firebase.auth().onAuthStateChanged(async (user) => { 
@@ -98,15 +97,6 @@
                 return;
             }
 
-            // ★★★ セキュリティチェック (app.jsの関数を使用) ★★★
-            const isPremium = await checkPremiumStatus(user.uid); 
-            const isLockedWord = wordId > FREE_LIMIT;
-
-            if (isLockedWord && !isPremium) {
-                alert("この単語はプレミアムコンテンツです。");
-                window.location.href = 'list.html'; 
-                return;
-            }
             
             // データ取得
             // WORD_DATABASEは word_data.js から読み込まれている
