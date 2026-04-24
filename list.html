@@ -110,6 +110,9 @@
     <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
 
     <header class="sticky top-0 bg-[#0f172a]/95 backdrop-blur-md z-20 py-4 mb-4 border-b border-slate-700 flex justify-between items-center">
+        <!-- Tailwind CDN 動的クラス生成用セーフリスト (非表示) -->
+        <div class="hidden w-full relative p-4 rounded-xl border border-slate-700 bg-slate-800 text-white border-cyan-500 bg-cyan-900/20 text-cyan-300 border-slate-600 bg-slate-700/50 cursor-pointer transition-all overflow-hidden group mb-3 flex justify-between items-center z-10 flex-1 min-w-0 pr-2 text-xl font-bold tracking-wide truncate text-sm text-gray-400 mt-1 shrink-0 p-2 mr-2 hover:text-white hover:scale-110 transition rounded-full bg-cyan-900/30 border-cyan-500/30 w-5 h-5 text-right pl-2 border-l border-slate-600/50 ml-2 text-[10px] font-mono text-gray-500 mb-1 tracking-wider text-lg text-gray-600 text-xs absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 duration-1000"></div>
+
         <div class="flex items-center gap-4">
             <button onclick="goTo('index.html')" class="text-gray-400 hover:text-white transition">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -139,21 +142,7 @@
     <div id="list-container" class="w-full space-y-3 max-w-2xl mx-auto pr-10">
     </div>
 
-    <!-- デバッグ用パネル（原因特定用） -->
-    <div id="debug-panel" class="fixed top-20 left-2 z-[9999] bg-black/80 text-lime-400 font-mono text-[10px] p-2 border border-lime-500 pointer-events-none">
-        WAITING FOR DATA...
-    </div>
-
     <script>
-    // デバッグ情報を1秒ごとに更新して表示
-    setInterval(() => {
-        const panel = document.getElementById('debug-panel');
-        const container = document.getElementById('list-container');
-        if(panel && container) {
-            panel.innerHTML = `BODY CLASS: <br>${document.body.className}<br>CONTAINER WIDTH: ${container.clientWidth}px<br>BODY WIDTH: ${document.body.clientWidth}px`;
-        }
-    }, 1000);
-
     // --- 設定値 ---
 window.initializePage = async function() {
     // 常に最新の進捗を読み込んでから処理を開始
