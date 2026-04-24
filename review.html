@@ -42,7 +42,7 @@
         .section-title::before { content: ''; position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: #bd00ff; border-radius: 2px; }
         
         /* カードスタイル (コンパクト & SF) */
-        .word-card { 
+        .review-word-card { 
             background: rgba(0, 242, 255, 0.05); 
             border: 1px solid rgba(0, 242, 255, 0.3); 
             border-radius: 8px; 
@@ -51,10 +51,10 @@
             width: 140px; 
             box-shadow: 0 0 5px rgba(0, 242, 255, 0.1), inset 0 0 3px rgba(0, 242, 255, 0.05);
         }
-        .word-card .word-en { 
+        .review-word-card .word-en { 
             font-weight: 700; color: #00f2ff; font-size: 0.9rem; font-family: 'Montserrat', sans-serif; text-shadow: none;
         }
-        .word-card .word-jp-small { 
+        .review-word-card .word-jp-small { 
             font-size: 0.75rem; color: #aaa; margin-top: 2px; font-family: 'Zen Kaku Gothic New', sans-serif; 
         }
     </style>
@@ -138,7 +138,7 @@
 
             // B. 意味の深掘り (Semantic Fusion) - カード表示
             let meaningsHtml = Object.values(data.meanings_expanded).map(m => `
-                <div class="word-card h-full flex items-center justify-center">
+                <div class="review-word-card h-full flex items-center justify-center">
                     <div class="word-jp-small text-sm text-white">${m}</div>
                 </div>
             `).join('');
@@ -167,7 +167,7 @@
 
             // D. 類義語ネットワーク (Synonym Cyclotron) - カード表示
             let synonymsHtml = Object.entries(data.synonyms).map(([en, jp]) => `
-                <div class="word-card">
+                <div class="review-word-card">
                     <div class="word-en">${en}</div>
                     <div class="word-jp-small">${jp}</div>
                 </div>
