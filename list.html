@@ -8,17 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
+    <meta name="turbo-cache-control" content="no-cache">
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-    <script src="data/word_data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/data/word_data.js"></script>
+    <script src="/js/app.js"></script>
     
 
     <style>
@@ -29,6 +32,8 @@
             font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
             opacity: 0; 
             transition: opacity 0.3s ease-in-out; 
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
         }
         body.loaded {
             opacity: 1; 
@@ -94,15 +99,9 @@
             padding: 1px 0;
         }
     </style>
-    <script type="module">
-      import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
-      inject();
-    </script>
-</head>
-<body class="p-4 pb-20 select-none">
 
     <!-- BGM再生用のaudio要素 -->
-    <audio id="bgm" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
 
     <header class="sticky top-0 bg-[#0f172a]/95 backdrop-blur-md z-20 py-4 mb-4 border-b border-slate-700 flex justify-between items-center">
         <div class="flex items-center gap-4">
@@ -135,7 +134,7 @@
         </div>
     <script>
     // --- 設定値 ---
-async function initializePage() {
+window.initializePage = async function() {
     // 常に最新の進捗を読み込んでから処理を開始
     await loadAllProgress();
 
@@ -218,7 +217,7 @@ async function initializePage() {
                     
                     div.onclick = () => goTo('cockpit.html', word.id);
                     const reviewButtonHtml = isMastered ? `
-                        <button onclick="event.stopPropagation(); window.location.href = 'review.html?id=${word.id}'" 
+                        <button onclick="event.stopPropagation(); goTo('review.html', ${word.id});" 
                                 class="p-2 mr-2 text-cyan-400 hover:text-white hover:scale-110 transition rounded-full bg-cyan-900/30 border border-cyan-500/30" 
                                 title="Review Word">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +253,7 @@ async function initializePage() {
         });
 
         // 全体進捗更新
-        document.getElementById('total-progress').textContent = `${masteredCount} / ${WORD_DATABASE.length} MASTERED`;
+        document.getElementById('total-progress').textContent = `${masteredCount} / 680 MASTERED`;
 
         setupInteractiveNav();
     }

@@ -1,7 +1,7 @@
 // service-worker.js
 
 // キャッシュの名前（バージョンアップ時はここを変える）
-const CACHE_NAME = 'vocsphere-v2';
+const CACHE_NAME = 'vocsphere-v3';
 
 // キャッシュするファイル一覧
 // ※ここにあるファイルはオフラインでも開けるようになります

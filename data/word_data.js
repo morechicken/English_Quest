@@ -42427,4 +42427,438 @@ const WORD_DATABASE = [
       }
     ]
   }
+  ,
+  {
+    "id": 8,
+    "word": "ACHIEVE",
+    "meaning_core": "達成する",
+    "syllables": [
+      { "text": "a", "type": "weak" },
+      { "text": "CHIEVE", "type": "strong" }
+    ],
+    "synonyms": {
+      "ACCOMPLISH": "成し遂げる",
+      "ATTAIN": "到達する",
+      "REACH": "達する"
+    },
+    "distractors": [ "FAIL", "LOSE", "MISS", "GIVE UP" ],
+    "meanings_expanded": [ "達成する", "成し遂げる", "獲得する" ],
+    "contexts": [
+      { "parts": [ "We will ", " our goals." ], "full": "We will ACHIEVE our goals.", "jp": "私たちは目標を達成するだろう。", "is_correct": true },
+      { "parts": [ "Hard work helps you ", " success." ], "full": "Hard work helps you ACHIEVE success.", "jp": "勤勉は成功を達成するのに役立つ。", "is_correct": true },
+      { "parts": [ "She managed to ", " a high score." ], "full": "She managed to ACHIEVE a high score.", "jp": "彼女は高得点を達成することができた。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 50,
+    "word": "ARTICULATE",
+    "meaning_core": "はっきりと述べる",
+    "syllables": [
+      { "text": "ar", "type": "weak" },
+      { "text": "TIC", "type": "strong" },
+      { "text": "u", "type": "weak" },
+      { "text": "late", "type": "weak" }
+    ],
+    "synonyms": {
+      "EXPRESS": "表現する",
+      "STATE": "述べる",
+      "VOICE": "声に出す"
+    },
+    "distractors": [ "MUMBLE", "MUTE", "HIDE", "SILENCE" ],
+    "meanings_expanded": [ "はっきりと述べる", "明瞭に表現する", "理路整然とした" ],
+    "contexts": [
+      { "parts": [ "He could not ", " his thoughts." ], "full": "He could not ARTICULATE his thoughts.", "jp": "彼は自分の考えをはっきりと述べられなかった。", "is_correct": true },
+      { "parts": [ "She is highly ", "." ], "full": "She is highly ARTICULATE.", "jp": "彼女は非常に理路整然としている。", "is_correct": true },
+      { "parts": [ "Please ", " your plan clearly." ], "full": "Please ARTICULATE your plan clearly.", "jp": "あなたの計画をはっきりと説明してください。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 197,
+    "word": "DURATION",
+    "meaning_core": "継続期間",
+    "syllables": [
+      { "text": "du", "type": "weak" },
+      { "text": "RA", "type": "strong" },
+      { "text": "tion", "type": "weak" }
+    ],
+    "synonyms": {
+      "PERIOD": "期間",
+      "LENGTH": "長さ",
+      "TERM": "期間"
+    },
+    "distractors": [ "MOMENT", "INSTANT", "END", "FLASH" ],
+    "meanings_expanded": [ "継続期間", "持続" ],
+    "contexts": [
+      { "parts": [ "The ", " of the flight is ten hours." ], "full": "The DURATION of the flight is ten hours.", "jp": "フライトの所要時間は10時間だ。", "is_correct": true },
+      { "parts": [ "He stayed for the ", " of the war." ], "full": "He stayed for the DURATION of the war.", "jp": "彼は戦争の期間中ずっととどまった。", "is_correct": true },
+      { "parts": [ "Increase the ", " of the exercise." ], "full": "Increase the DURATION of the exercise.", "jp": "運動の継続時間を増やしなさい。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 202,
+    "word": "EFFORT",
+    "meaning_core": "努力",
+    "syllables": [
+      { "text": "EF", "type": "strong" },
+      { "text": "fort", "type": "weak" }
+    ],
+    "synonyms": {
+      "ATTEMPT": "試み",
+      "STRUGGLE": "奮闘",
+      "WORK": "労働"
+    },
+    "distractors": [ "LAZINESS", "EASE", "REST", "IDLENESS" ],
+    "meanings_expanded": [ "努力", "奮闘", "取り組み" ],
+    "contexts": [
+      { "parts": [ "It takes a lot of ", "." ], "full": "It takes a lot of EFFORT.", "jp": "それは多大な努力を要する。", "is_correct": true },
+      { "parts": [ "We made every ", " to win." ], "full": "We made every EFFORT to win.", "jp": "私たちは勝つためにあらゆる努力をした。", "is_correct": true },
+      { "parts": [ "His ", " was rewarded." ], "full": "His EFFORT was rewarded.", "jp": "彼の努力は報われた。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 233,
+    "word": "EVENTUAL",
+    "meaning_core": "最終的な",
+    "syllables": [
+      { "text": "e", "type": "weak" },
+      { "text": "VEN", "type": "strong" },
+      { "text": "tu", "type": "weak" },
+      { "text": "al", "type": "weak" }
+    ],
+    "synonyms": {
+      "FINAL": "最後の",
+      "ULTIMATE": "究極の",
+      "CONCLUDING": "結びの"
+    },
+    "distractors": [ "INITIAL", "FIRST", "BEGINNING", "STARTING" ],
+    "meanings_expanded": [ "最終的な", "結果として起こる" ],
+    "contexts": [
+      { "parts": [ "His ", " success was guaranteed." ], "full": "His EVENTUAL success was guaranteed.", "jp": "彼の最終的な成功は保証されていた。", "is_correct": true },
+      { "parts": [ "We awaited the ", " outcome." ], "full": "We awaited the EVENTUAL outcome.", "jp": "私たちは最終的な結果を待った。", "is_correct": true },
+      { "parts": [ "The ", " cost was very high." ], "full": "The EVENTUAL cost was very high.", "jp": "最終的な費用は非常に高かった。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 234,
+    "word": "EXAMINE",
+    "meaning_core": "調査する",
+    "syllables": [
+      { "text": "ex", "type": "weak" },
+      { "text": "AM", "type": "strong" },
+      { "text": "ine", "type": "weak" }
+    ],
+    "synonyms": {
+      "INSPECT": "検査する",
+      "ANALYZE": "分析する",
+      "INVESTIGATE": "捜査する"
+    },
+    "distractors": [ "IGNORE", "OVERLOOK", "NEGLECT", "MISS" ],
+    "meanings_expanded": [ "調査する", "検査する", "審査する" ],
+    "contexts": [
+      { "parts": [ "The doctor will ", " the patient." ], "full": "The doctor will EXAMINE the patient.", "jp": "医者は患者を診察するだろう。", "is_correct": true },
+      { "parts": [ "We need to ", " the evidence." ], "full": "We need to EXAMINE the evidence.", "jp": "私たちは証拠を調査する必要がある。", "is_correct": true },
+      { "parts": [ "Carefully ", " the document." ], "full": "Carefully EXAMINE the document.", "jp": "その文書を注意深く調べなさい。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 316,
+    "word": "IMPROVE",
+    "meaning_core": "改善する",
+    "syllables": [
+      { "text": "im", "type": "weak" },
+      { "text": "PROVE", "type": "strong" }
+    ],
+    "synonyms": {
+      "BETTER": "より良くする",
+      "UPGRADE": "向上させる",
+      "ENHANCE": "高める"
+    },
+    "distractors": [ "WORSEN", "DAMAGE", "RUIN", "DECREASE" ],
+    "meanings_expanded": [ "改善する", "向上させる", "良くなる" ],
+    "contexts": [
+      { "parts": [ "I want to ", " my English." ], "full": "I want to IMPROVE my English.", "jp": "私は英語を上達させたい。", "is_correct": true },
+      { "parts": [ "The weather will ", " tomorrow." ], "full": "The weather will IMPROVE tomorrow.", "jp": "明日は天気が回復するだろう。", "is_correct": true },
+      { "parts": [ "We must ", " our services." ], "full": "We must IMPROVE our services.", "jp": "私たちはサービスを改善しなければならない。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 317,
+    "word": "INADEQUATE",
+    "meaning_core": "不十分な",
+    "syllables": [
+      { "text": "in", "type": "weak" },
+      { "text": "AD", "type": "strong" },
+      { "text": "e", "type": "weak" },
+      { "text": "quate", "type": "weak" }
+    ],
+    "synonyms": {
+      "INSUFFICIENT": "足りない",
+      "DEFICIENT": "欠陥のある",
+      "POOR": "貧弱な"
+    },
+    "distractors": [ "ADEQUATE", "SUFFICIENT", "ENOUGH", "AMPLE" ],
+    "meanings_expanded": [ "不十分な", "不適切な", "力不足の" ],
+    "contexts": [
+      { "parts": [ "The food supply was ", "." ], "full": "The food supply was INADEQUATE.", "jp": "食糧供給は不十分だった。", "is_correct": true },
+      { "parts": [ "He felt ", " for the task." ], "full": "He felt INADEQUATE for the task.", "jp": "彼はその仕事には力不足だと感じた。", "is_correct": true },
+      { "parts": [ "Their response was totally ", "." ], "full": "Their response was totally INADEQUATE.", "jp": "彼らの対応は全く不十分だった。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 318,
+    "word": "INCIDENT",
+    "meaning_core": "出来事",
+    "syllables": [
+      { "text": "IN", "type": "strong" },
+      { "text": "ci", "type": "weak" },
+      { "text": "dent", "type": "weak" }
+    ],
+    "synonyms": {
+      "EVENT": "事象",
+      "OCCURRENCE": "発生",
+      "EPISODE": "エピソード"
+    },
+    "distractors": [ "PLAN", "INTENTION", "NOTHING", "STILLNESS" ],
+    "meanings_expanded": [ "出来事", "事件", "紛争" ],
+    "contexts": [
+      { "parts": [ "The ", " happened yesterday." ], "full": "The INCIDENT happened yesterday.", "jp": "その事件は昨日起こった。", "is_correct": true },
+      { "parts": [ "Police are investigating the ", "." ], "full": "Police are investigating the INCIDENT.", "jp": "警察はその事件を捜査している。", "is_correct": true },
+      { "parts": [ "It was a minor ", "." ], "full": "It was a minor INCIDENT.", "jp": "それは些細な出来事だった。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 319,
+    "word": "INCLINE",
+    "meaning_core": "傾く",
+    "syllables": [
+      { "text": "in", "type": "weak" },
+      { "text": "CLINE", "type": "strong" }
+    ],
+    "synonyms": {
+      "LEAN": "傾斜する",
+      "TEND": "傾向がある",
+      "SLOPE": "傾斜"
+    },
+    "distractors": [ "STRAIGHTEN", "FLATTEN", "LEVEL", "STAND" ],
+    "meanings_expanded": [ "傾く", "～したい気持ちにさせる", "傾向がある" ],
+    "contexts": [
+      { "parts": [ "I ", " to agree with you." ], "full": "I INCLINE to agree with you.", "jp": "私はあなたに同意したい気がする。", "is_correct": true },
+      { "parts": [ "The road begins to ", " here." ], "full": "The road begins to INCLINE here.", "jp": "道はここから傾斜し始める。", "is_correct": true },
+      { "parts": [ "He is ", "d to be lazy." ], "full": "He is INCLINEd to be lazy.", "jp": "彼は怠けがちだ。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 320,
+    "word": "INCLUSIVE",
+    "meaning_core": "包括的な",
+    "syllables": [
+      { "text": "in", "type": "weak" },
+      { "text": "CLU", "type": "strong" },
+      { "text": "sive", "type": "weak" }
+    ],
+    "synonyms": {
+      "COMPREHENSIVE": "総合的な",
+      "ALL-EMBRACING": "すべてを含む",
+      "BROAD": "広い"
+    },
+    "distractors": [ "EXCLUSIVE", "LIMITED", "NARROW", "RESTRICTED" ],
+    "meanings_expanded": [ "包括的な", "すべてを含んだ" ],
+    "contexts": [
+      { "parts": [ "The price is fully ", "." ], "full": "The price is fully INCLUSIVE.", "jp": "その価格はすべて込みです。", "is_correct": true },
+      { "parts": [ "We aim for an ", " society." ], "full": "We aim for an INCLUSIVE society.", "jp": "私たちは包摂的な社会を目指している。", "is_correct": true },
+      { "parts": [ "From Monday to Friday ", "." ], "full": "From Monday to Friday INCLUSIVE.", "jp": "月曜から金曜まで（両日を含む）。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 321,
+    "word": "INDICATE",
+    "meaning_core": "示す",
+    "syllables": [
+      { "text": "IN", "type": "strong" },
+      { "text": "di", "type": "weak" },
+      { "text": "cate", "type": "weak" }
+    ],
+    "synonyms": {
+      "SHOW": "見せる",
+      "POINT OUT": "指摘する",
+      "SUGGEST": "示唆する"
+    },
+    "distractors": [ "HIDE", "CONCEAL", "DENY", "IGNORE" ],
+    "meanings_expanded": [ "示す", "指摘する", "ほのめかす" ],
+    "contexts": [
+      { "parts": [ "The map will ", " the route." ], "full": "The map will INDICATE the route.", "jp": "地図がルートを示すだろう。", "is_correct": true },
+      { "parts": [ "His silence ", "s agreement." ], "full": "His silence INDICATEs agreement.", "jp": "彼の沈黙は同意を示している。", "is_correct": true },
+      { "parts": [ "Please ", " your choice." ], "full": "Please INDICATE your choice.", "jp": "あなたの選択を示してください。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 322,
+    "word": "INFER",
+    "meaning_core": "推論する",
+    "syllables": [
+      { "text": "in", "type": "weak" },
+      { "text": "FER", "type": "strong" }
+    ],
+    "synonyms": {
+      "DEDUCE": "演繹する",
+      "CONCLUDE": "結論づける",
+      "GUESS": "推測する"
+    },
+    "distractors": [ "STATE", "DECLARE", "PROVE", "EXPRESS" ],
+    "meanings_expanded": [ "推論する", "察する", "暗示する" ],
+    "contexts": [
+      { "parts": [ "What can we ", " from this?" ], "full": "What can we INFER from this?", "jp": "これから何を推論できますか。", "is_correct": true },
+      { "parts": [ "I ", " that you are busy." ], "full": "I INFER that you are busy.", "jp": "あなたが忙しいとお察しします。", "is_correct": true },
+      { "parts": [ "Readers can ", " the meaning." ], "full": "Readers can INFER the meaning.", "jp": "読者はその意味を推測できる。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 392,
+    "word": "NEUTRAL",
+    "meaning_core": "中立の",
+    "syllables": [
+      { "text": "NEU", "type": "strong" },
+      { "text": "tral", "type": "weak" }
+    ],
+    "synonyms": {
+      "IMPARTIAL": "公平な",
+      "UNBIASED": "偏見のない",
+      "OBJECTIVE": "客観的な"
+    },
+    "distractors": [ "BIASED", "PARTIAL", "PREJUDICED", "INVOLVED" ],
+    "meanings_expanded": [ "中立の", "公平な", "はっきりしない" ],
+    "contexts": [
+      { "parts": [ "Switzerland remained ", "." ], "full": "Switzerland remained NEUTRAL.", "jp": "スイスは中立を保った。", "is_correct": true },
+      { "parts": [ "He took a ", " position." ], "full": "He took a NEUTRAL position.", "jp": "彼は中立的な立場をとった。", "is_correct": true },
+      { "parts": [ "The color is very ", "." ], "full": "The color is very NEUTRAL.", "jp": "その色はとても中間的だ。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 397,
+    "word": "NOTABLE",
+    "meaning_core": "注目すべき",
+    "syllables": [
+      { "text": "NO", "type": "strong" },
+      { "text": "ta", "type": "weak" },
+      { "text": "ble", "type": "weak" }
+    ],
+    "synonyms": {
+      "REMARKABLE": "驚くべき",
+      "OUTSTANDING": "傑出した",
+      "SIGNIFICANT": "重要な"
+    },
+    "distractors": [ "ORDINARY", "COMMON", "NORMAL", "UNKNOWN" ],
+    "meanings_expanded": [ "注目すべき", "有名な", "著名人" ],
+    "contexts": [
+      { "parts": [ "It was a ", " achievement." ], "full": "It was a NOTABLE achievement.", "jp": "それは注目すべき業績だった。", "is_correct": true },
+      { "parts": [ "He is a ", " scientist." ], "full": "He is a NOTABLE scientist.", "jp": "彼は著名な科学者だ。", "is_correct": true },
+      { "parts": [ "There is a ", " difference." ], "full": "There is a NOTABLE difference.", "jp": "顕著な違いがある。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 411,
+    "word": "OMIT",
+    "meaning_core": "省略する",
+    "syllables": [
+      { "text": "o", "type": "weak" },
+      { "text": "MIT", "type": "strong" }
+    ],
+    "synonyms": {
+      "LEAVE OUT": "省く",
+      "EXCLUDE": "除外する",
+      "SKIP": "飛ばす"
+    },
+    "distractors": [ "INCLUDE", "ADD", "INSERT", "RETAIN" ],
+    "meanings_expanded": [ "省略する", "除外する", "～し忘れる" ],
+    "contexts": [
+      { "parts": [ "Please ", " this paragraph." ], "full": "Please OMIT this paragraph.", "jp": "この段落は省略してください。", "is_correct": true },
+      { "parts": [ "He ", "ted my name from the list." ], "full": "He OMITted my name from the list.", "jp": "彼はリストから私の名前を省いた。", "is_correct": true },
+      { "parts": [ "Do not ", " any details." ], "full": "Do not OMIT any details.", "jp": "詳細を一切省かないでください。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 412,
+    "word": "ONGOING",
+    "meaning_core": "進行中の",
+    "syllables": [
+      { "text": "ON", "type": "strong" },
+      { "text": "go", "type": "weak" },
+      { "text": "ing", "type": "weak" }
+    ],
+    "synonyms": {
+      "CONTINUING": "続いている",
+      "IN PROGRESS": "進行中で",
+      "CURRENT": "現在の"
+    },
+    "distractors": [ "FINISHED", "COMPLETED", "ENDED", "PAST" ],
+    "meanings_expanded": [ "進行中の", "継続している" ],
+    "contexts": [
+      { "parts": [ "It is an ", " project." ], "full": "It is an ONGOING project.", "jp": "それは進行中のプロジェクトだ。", "is_correct": true },
+      { "parts": [ "The investigation is ", "." ], "full": "The investigation is ONGOING.", "jp": "捜査は進行中だ。", "is_correct": true },
+      { "parts": [ "We have an ", " relationship." ], "full": "We have an ONGOING relationship.", "jp": "私たちは継続的な関係を持っている。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 418,
+    "word": "OUTCOME",
+    "meaning_core": "結果",
+    "syllables": [
+      { "text": "OUT", "type": "strong" },
+      { "text": "come", "type": "weak" }
+    ],
+    "synonyms": {
+      "RESULT": "結果",
+      "CONSEQUENCE": "結末",
+      "EFFECT": "影響"
+    },
+    "distractors": [ "CAUSE", "ORIGIN", "START", "SOURCE" ],
+    "meanings_expanded": [ "結果", "成果", "結末" ],
+    "contexts": [
+      { "parts": [ "What was the ", " of the meeting?" ], "full": "What was the OUTCOME of the meeting?", "jp": "会議の結果はどうでしたか。", "is_correct": true },
+      { "parts": [ "We await the final ", "." ], "full": "We await the final OUTCOME.", "jp": "私たちは最終結果を待っている。", "is_correct": true },
+      { "parts": [ "The ", " was highly successful." ], "full": "The OUTCOME was highly successful.", "jp": "その結果は非常に成功したものだった。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 483,
+    "word": "PROVINCE",
+    "meaning_core": "州",
+    "syllables": [
+      { "text": "PROV", "type": "strong" },
+      { "text": "ince", "type": "weak" }
+    ],
+    "synonyms": {
+      "REGION": "地域",
+      "TERRITORY": "領土",
+      "AREA": "領域"
+    },
+    "distractors": [ "CITY", "CAPITAL", "CENTER", "METROPOLIS" ],
+    "meanings_expanded": [ "（カナダなどの）州", "地方", "分野" ],
+    "contexts": [
+      { "parts": [ "Quebec is a Canadian ", "." ], "full": "Quebec is a Canadian PROVINCE.", "jp": "ケベックはカナダの州だ。", "is_correct": true },
+      { "parts": [ "He grew up in the ", "s." ], "full": "He grew up in the PROVINCEs.", "jp": "彼は地方で育った。", "is_correct": true },
+      { "parts": [ "That is outside my ", "." ], "full": "That is outside my PROVINCE.", "jp": "それは私の専門分野外だ。", "is_correct": true }
+    ]
+  },
+  {
+    "id": 499,
+    "word": "REGIME",
+    "meaning_core": "政権",
+    "syllables": [
+      { "text": "re", "type": "weak" },
+      { "text": "GIME", "type": "strong" }
+    ],
+    "synonyms": {
+      "GOVERNMENT": "政府",
+      "RULE": "支配",
+      "SYSTEM": "体制"
+    },
+    "distractors": [ "ANARCHY", "CHAOS", "CITIZEN", "PEOPLE" ],
+    "meanings_expanded": [ "政権", "体制", "管理体制" ],
+    "contexts": [
+      { "parts": [ "The old ", " was overthrown." ], "full": "The old REGIME was overthrown.", "jp": "旧政権は打倒された。", "is_correct": true },
+      { "parts": [ "They lived under a strict ", "." ], "full": "They lived under a strict REGIME.", "jp": "彼らは厳格な体制の下で暮らした。", "is_correct": true },
+      { "parts": [ "He started a new fitness ", "." ], "full": "He started a new fitness REGIME.", "jp": "彼は新しいフィットネス管理（体制）を始めた。", "is_correct": true }
+    ]
+  }
 ];

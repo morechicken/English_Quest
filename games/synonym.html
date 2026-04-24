@@ -9,20 +9,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="manifest" href="../manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> <meta name="theme-color" content="#0f172a">
+    <meta name="turbo-cache-control" content="no-cache">
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-    <script src="../data/word_data.js"></script>
-    <script src="../js/app.js"></script>
-<script type="module">
+    <script src="/data/word_data.js"></script>
+    <script src="/js/app.js"></script>
+    <script type="module">
       import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
       inject();
     </script>
+</head>
+<body>
     <style>
         body {
             margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
@@ -103,18 +108,14 @@
         .word-en { font-weight: 700; color: #00f2ff; font-size: 0.9rem; }
         .word-jp { font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem; color: #aaa; margin-top: 2px; }
     </style>
-</head>
-<body>
     <header class="fixed w-full top-0 z-50 pointer-events-none p-4 flex justify-end">
-        
         <button onclick="history.back()" class="pointer-events-auto text-xs font-bold text-slate-500 border border-slate-600/50 px-3 py-1 rounded hover:bg-slate-800/90 hover:text-white hover:border-cyan-500 transition backdrop-blur-sm">
             BACK
         </button>
-
     </header>
 
     <!-- BGM再生用のaudio要素 -->
-    <audio id="bgm" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
 
     <canvas id="gameCanvas"></canvas>
     <div id="flash-layer"></div>
@@ -157,39 +158,39 @@
 
     <script>
         // === 1. グローバル変数定義 ===
-        let wordData = null;
-        let TARGET_WORD = "";
-        let SYNONYMS = [];
-        let DISTRACTORS = [];
+        var wordData = null;
+        var TARGET_WORD = "";
+        var SYNONYMS = [];
+        var DISTRACTORS = [];
 
-        const COLOR_CORE = "#ffffff";
-        const COLOR_SYNONYM = "#00f2ff"; 
-        const COLOR_DISTRACTOR = "#ff0055";
+        var COLOR_CORE = "#ffffff";
+        var COLOR_SYNONYM = "#00f2ff"; 
+        var COLOR_DISTRACTOR = "#ff0055";
         
-        const PLAYER_RADIUS = 100;
-        const WORD_SPEED_MIN = 1.5;
-        const WORD_SPEED_MAX = 3.0;
-        const ROTATION_SPEED = 0.12;
+        var PLAYER_RADIUS = 100;
+        var WORD_SPEED_MIN = 1.5;
+        var WORD_SPEED_MAX = 3.0;
+        var ROTATION_SPEED = 0.12;
 
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        let width = window.innerWidth;
-        let height = window.innerHeight;
-        let centerX = width / 2;
-        let centerY = height / 2;
+        var canvas = document.getElementById('gameCanvas');
+        var ctx = canvas.getContext('2d');
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var centerX = width / 2;
+        var centerY = height / 2;
         
-        let gameMode = 'playing'; 
-        let score = 0;
-        let collectedWords = [];
+        var gameMode = 'playing'; 
+        var score = 0;
+        var collectedWords = [];
         
-        let playerAngle = -Math.PI / 2;
-        let inputState = { left: false, right: false };
+        var playerAngle = -Math.PI / 2;
+        var inputState = { left: false, right: false };
 
-        let words = [];
-        let particles = [];
-        let spawnTimer = 0;
-        let spawnInterval = 70;
-        let victoryTimer = 0;
+        var words = [];
+        var particles = [];
+        var spawnTimer = 0;
+        var spawnInterval = 70;
+        var victoryTimer = 0;
 
         // === 2. 基本関数定義 (resizeなど) ===
         function resize() {
@@ -201,7 +202,7 @@
         window.addEventListener('resize', resize);
 
         // === 3. Audio System ===
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
         function playSound(type) {
             if (audioCtx.state === 'suspended') audioCtx.resume();
             const t = audioCtx.currentTime;
@@ -237,10 +238,10 @@
         }
 
         // === 4. Input Handling ===
-        const handleStart = (side) => { if(gameMode === 'playing') inputState[side] = true; };
-        const handleEnd = (side) => { inputState[side] = false; };
-        const lZone = document.getElementById('left-zone');
-        const rZone = document.getElementById('right-zone');
+        var handleStart = (side) => { if(gameMode === 'playing') inputState[side] = true; };
+        var handleEnd = (side) => { inputState[side] = false; };
+        var lZone = document.getElementById('left-zone');
+        var rZone = document.getElementById('right-zone');
 
         ['touchstart', 'mousedown'].forEach(evt => {
             lZone.addEventListener(evt, (e) => { e.preventDefault(); handleStart('left'); });
@@ -252,7 +253,7 @@
         });
 
         // === 5. Classes ===
-        class Word {
+        var Word = window.Word || class Word {
             constructor() {
                 const angle = Math.random() * Math.PI * 2;
                 const radius = Math.max(width, height) * 0.7;
@@ -305,7 +306,7 @@
             }
         }
 
-        class Particle {
+        var Particle = window.Particle || class Particle {
             constructor(x, y, color) {
                 this.x = x; this.y = y; this.color = color;
                 const angle = Math.random() * Math.PI * 2;
@@ -342,8 +343,8 @@
             }
         }
 
-        let shakeDuration = 0;
-        let shakeIntensity = 0;
+        var shakeDuration = 0;
+        var shakeIntensity = 0;
         function shakeScreen(intensity) {
             shakeDuration = 10;
             shakeIntensity = intensity;
@@ -537,17 +538,18 @@
         }
 
         function loop() {
+            if (!document.getElementById('gameCanvas')) return;
             update();
             draw();
         }
 
         // === 8. 初期化と起動 ===
-        function init() {
+        window.init = function() {
             // 1. データ取得
             wordData = getCurrentWordData();
             if (!wordData) {
                 alert("データが見つかりません。リストに戻ります。");
-                window.location.href = "../list.html";
+                goTo('../list.html');
                 return;
             }
 
@@ -580,7 +582,7 @@
         }
 
         // ページ読み込み完了時に初期化
-        window.onload = init;
+        // window.onload = init;
 
     </script>
 </body>

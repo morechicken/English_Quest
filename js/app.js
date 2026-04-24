@@ -126,12 +126,11 @@ function goTo(page, wordId = null) {
 
     // アニメーション時間(300ms)待ってから移動
     setTimeout(() => {
-        if (wordId) {
-            // IDがある場合（詳細画面やゲームへ）
-            window.location.href = `${page}?id=${wordId}`;
+        const url = wordId ? `${page}?id=${wordId}` : page;
+        if (typeof Turbo !== 'undefined') {
+            Turbo.visit(url);
         } else {
-            // 通常の移動
-            window.location.href = page;
+            window.location.href = url;
         }
     }, 300);
 }
@@ -146,9 +145,9 @@ function manageBgm() {
     if (bgmState === 'off') {
         bgm.pause();
     } else {
-        // パス解決
-        const path = window.location.pathname.includes('/games/') ? '../audio/bgm.mp3' : 'audio/bgm.mp3';
-        if (bgm.getAttribute('src') !== path) {
+        // ルート相対パスを使用し、階層が変わってもsrcを書き換えないようにする
+        const path = '/audio/bgm.mp3';
+        if (!bgm.getAttribute('src') || !bgm.getAttribute('src').endsWith('bgm.mp3')) {
              bgm.src = path;
         }
 
@@ -156,23 +155,21 @@ function manageBgm() {
         const volumeLevels = { 'low': 0.1, 'mid': 0.2, 'high': 0.4 };
         bgm.volume = volumeLevels[bgmState] || 0.2;
 
-        // 再生試行
-        const playPromise = bgm.play();
-
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay prevented. Waiting for user interaction.");
-                // 自動再生がブロックされた場合、次のクリックで再生するイベントを仕込む
-                const resumeAudio = () => {
-                    bgm.play();
-                    document.removeEventListener('click', resumeAudio);
-                    document.removeEventListener('touchstart', resumeAudio);
-                    document.removeEventListener('keydown', resumeAudio);
-                };
-                document.addEventListener('click', resumeAudio);
-                document.addEventListener('touchstart', resumeAudio);
-                document.addEventListener('keydown', resumeAudio);
-            });
+        // すでに再生中でなければ再生を試みる
+        if (bgm.paused) {
+            const playPromise = bgm.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log("Autoplay prevented. Waiting for user interaction.");
+                    const resumeAudio = () => {
+                        bgm.play();
+                        document.removeEventListener('click', resumeAudio);
+                        document.removeEventListener('touchstart', resumeAudio);
+                    };
+                    document.addEventListener('click', resumeAudio);
+                    document.addEventListener('touchstart', resumeAudio);
+                });
+            }
         }
     }
 }
@@ -183,6 +180,10 @@ function setBgmState(state) { // state: 'off', 'low', 'mid', 'high'
 }
 
 function createVolumeControl() {
+    // Turbo遷移時に増殖しないよう、古いものがあれば削除
+    const existing = document.getElementById('volume-control');
+    if (existing) existing.remove();
+
     const currentState = localStorage.getItem('eq_bgm_state') || 'off';
 
     const controlContainer = document.createElement('div');
@@ -236,62 +237,80 @@ function createVolumeControl() {
 
 
 
-// 9. ページ読み込み時の処理 (フェードイン)
-window.addEventListener('DOMContentLoaded', () => {
-    // BGMの状態をチェックして再生/停止 (認証を待たずに実行)
+
+// Turboのページ遷移前に古い初期化関数をクリアする（関数重複実行エラーの防止）
+document.addEventListener('turbo:before-render', () => {
+    window.initializePage = undefined;
+    window.init = undefined;
+});
+
+// 9. ページ読み込み時およびTurbo遷移時の処理
+var isAuthResolved = false;
+
+document.addEventListener('turbo:load', () => {
+    // Turbo遷移時に、前のページのスタイル(overflow:hiddenなど)が残る問題を解消
+    // Turboは<head>内の<style>タグを蓄積するため、インラインスタイルでスクロール制御を上書きします
+    const path = window.location.pathname;
+    if (path.includes('/games/') || path.includes('cockpit.html')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+        document.body.style.overflowX = 'hidden';
+    }
+    document.body.style.position = '';
+    document.body.style.height = '';
+
     manageBgm();
-    // フローティング音量コントロールを生成
     createVolumeControl();
 
-    // 認証状態を監視
-    auth.onAuthStateChanged(async (user) => {
-        if (user) {
-            // ユーザーがログインしている
-            currentUser = user;
-            console.log("User is logged in:", currentUser.uid);
-            // Firestoreのデータをまず読み込む
-            await loadAllProgress(); 
-
-            // localStorageにデータがあればマージ処理を行う
-            const localData = getLocalProgressForAllWords();
-            if (Object.keys(localData).length > 0) {
-                console.log("Local data found. Merging with Firestore...");
-
-                // Firestoreのデータとローカルのデータをマージ
-                // 同じ単語・モードについては、より新しい情報（この場合はどちらでも良い）で上書きされる
-                for (const wordId in localData) {
-                    const localWordProgress = localData[wordId];
-                    const firestoreWordProgress = userProgress[wordId] || {};
-                    userProgress[wordId] = { ...firestoreWordProgress, ...localWordProgress };
-                }
-
-                // マージしたデータをFirestoreに保存
-                const userDocRef = db.collection('users').doc(user.uid);
-                await userDocRef.set({ progress: userProgress }, { merge: true });
-                clearLocalProgress(); // ローカルデータを削除
-                console.log("Merge complete. Local data cleared.");
-            }
-        } else {
-            // ユーザーがログインしていない
-            currentUser = null;
-            console.log("User is logged out.");
-
-            // ログイン情報UIを非表示にする
-            const userInfoEl = document.getElementById('user-info');
-            if (userInfoEl) userInfoEl.classList.add('hidden');
-        }
-
-        // ログイン状態が確定した後に、各ページ固有の初期化処理を呼び出す
-        // これにより、常に最新のユーザー情報と進捗でUIが描画される
+    if (isAuthResolved) {
         if (typeof initializePage === 'function') {
             initializePage();
+        } else if (typeof init === 'function') {
+            init();
         }
-
-        // フェードイン処理
         setTimeout(() => {
             document.body.classList.add('loaded');
         }, 50);
-    });
+    }
+});
+
+// 認証状態を監視 (アプリ起動時に1回だけ登録される)
+auth.onAuthStateChanged(async (user) => {
+    if (user) {
+        currentUser = user;
+        console.log("User is logged in:", currentUser.uid);
+        await loadAllProgress(); 
+
+        const localData = getLocalProgressForAllWords();
+        if (Object.keys(localData).length > 0) {
+            console.log("Local data found. Merging with Firestore...");
+            for (const wordId in localData) {
+                const localWordProgress = localData[wordId];
+                const firestoreWordProgress = userProgress[wordId] || {};
+                userProgress[wordId] = { ...firestoreWordProgress, ...localWordProgress };
+            }
+            const userDocRef = db.collection('users').doc(user.uid);
+            await userDocRef.set({ progress: userProgress }, { merge: true });
+            clearLocalProgress();
+            console.log("Merge complete. Local data cleared.");
+        }
+    } else {
+        currentUser = null;
+        console.log("User is logged out.");
+        const userInfoEl = document.getElementById('user-info');
+        if (userInfoEl) userInfoEl.classList.add('hidden');
+    }
+
+    isAuthResolved = true;
+
+    if (typeof initializePage === 'function') {
+        initializePage();
+    }
+
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 50);
 });
 
 // 9b. ログイン状態をUIに反映する

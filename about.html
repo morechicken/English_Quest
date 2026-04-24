@@ -18,15 +18,18 @@
     <meta name="twitter:title" content="VocSphere | 5次元英単語学習">
     <meta name="twitter:description" content="記憶を「定着」から「運用」へ。次世代の語彙インストールシステム。">
     <meta name="twitter:image" content="https://vocsphere.vercel.app/images/ogp_card.png">
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> 
     <meta name="theme-color" content="#0f172a">
+    <meta name="turbo-cache-control" content="no-cache">
     
     <style>
         body { font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif; background: #0f172a; color: white; }
@@ -70,7 +73,7 @@
     </script>
 </head>
 <body class="pb-20">
-    <audio id="bgm" src="audio/bgm.mp3" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
     <header class="fixed w-full top-0 bg-[#0f172a]/90 backdrop-blur z-50 border-b border-slate-700">
         <div class="flex items-center justify-between px-4 py-3">
             <div class="flex items-center gap-2">
@@ -79,7 +82,7 @@
                 </div>
                 <h1 class="font-black text-xl tracking-tighter text-white">VocSphere</h1>
             </div>
-            <a href="list.html" class="text-xs font-bold text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded hover:bg-cyan-500/10 transition">
+            <a href="index.html" class="text-xs font-bold text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded hover:bg-cyan-500/10 transition">
                 CLOSE
             </a>
         </div>

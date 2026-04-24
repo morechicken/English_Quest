@@ -9,8 +9,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> <meta name="theme-color" content="#0f172a"> 
+    <meta name="turbo-cache-control" content="no-cache">
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
     <style>
         body { font-family: 'Shippori Mincho', serif; background: #0f172a; color: #cbd5e1; }
         h1, h2 { font-family: 'Montserrat', sans-serif; }
@@ -28,7 +31,7 @@
     </script>
 </head>
 <body class="p-6 pb-20 max-w-3xl mx-auto leading-relaxed">
-    <audio id="bgm" src="audio/bgm.mp3" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
     <div class="mb-12">
         <a href="about.html" class="inline-flex items-center text-xs font-bold text-cyan-500 hover:text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded transition">
             ← BACK TO ABOUT

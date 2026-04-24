@@ -9,17 +9,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="manifest" href="../manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> <meta name="theme-color" content="#0f172a">
+    <meta name="turbo-cache-control" content="no-cache">
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-    <script src="../data/word_data.js"></script>
-    <script src="../js/app.js"></script>
+    <script src="/data/word_data.js"></script>
+    <script src="/js/app.js"></script>
 
+    <script type="module">
+      import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
+      inject();
+    </script>
+</head>
+<body>
     <style>
         :root {
             --weak-color: #00f2ff;
@@ -159,12 +168,6 @@
             100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; border-width: 0px; }
         }
     </style>
-    <script type="module">
-      import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
-      inject();
-    </script>
-</head>
-<body>
     <header class="fixed w-full top-0 z-50 pointer-events-none p-4 flex justify-end">
         
         <button onclick="history.back()" class="pointer-events-auto text-xs font-bold text-slate-500 border border-slate-600/50 px-3 py-1 rounded hover:bg-slate-800/90 hover:text-white hover:border-cyan-500 transition backdrop-blur-sm">
@@ -174,7 +177,7 @@
     </header>
 
     <!-- BGM再生用のaudio要素 -->
-    <audio id="bgm" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
 
     <div id="waveform-bg"></div>
 
@@ -213,10 +216,10 @@
 
     <script>
         // === 1. データ取得 ===
-        const wordData = getCurrentWordData();
+        var wordData = getCurrentWordData();
         if (!wordData) {
             alert("データが見つかりません。リストに戻ります。");
-            window.location.href = "../list.html";
+            goTo('../list.html');
         }
 
         // 戻るボタンの設定
@@ -250,21 +253,21 @@
         }
 
         // === ゲーム変数 ===
-        let GAME_DATA = [];
-        const SPEED = 0.5; 
-        const JUDGE_X_PERCENT = 0.2;
-        let startTime = 0;
-        let isPlaying = false;
-        let notes = [];
-        let judgeLineX = 0;
+        var GAME_DATA = [];
+        var SPEED = 0.5; 
+        var JUDGE_X_PERCENT = 0.2;
+        var startTime = 0;
+        var isPlaying = false;
+        var notes = [];
+        var judgeLineX = 0;
 
         // === サウンドエンジン ===
         // ★改善: latencyHint: 'interactive' を指定して、モバイルでの音声遅延を最小限に抑える
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)({ latencyHint: 'interactive' });
+        var audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)({ latencyHint: 'interactive' });
 
         // === Web Speech API (TTS) ===
-        const synth = window.speechSynthesis;
-        let voices = [];
+        var synth = window.speechSynthesis;
+        var voices = [];
 
         function populateVoiceList() {
             voices = synth.getVoices().filter(v => v.lang.startsWith('en-'));
@@ -377,6 +380,10 @@
 
         function gameLoop() {
             if (!isPlaying) return;
+            if (!document.getElementById('game-container')) {
+                isPlaying = false;
+                return;
+            }
             const current = Date.now() - startTime;
             
             if (GAME_DATA.length > 0) {
@@ -488,7 +495,7 @@
             // アニメーション終了後に要素を削除（メモリリーク防止）
             setTimeout(() => el.remove(), 600);
         }
-        function init() {
+        window.init = function() {
             // 単語表示更新
             document.getElementById('target-word-disp').textContent = wordData.word;
 
@@ -512,7 +519,7 @@
             }
         }
 
-        window.onload = init;
+        // window.onload = init;
         window.addEventListener('resize', () => judgeLineX = window.innerWidth * JUDGE_X_PERCENT);
 
     </script>

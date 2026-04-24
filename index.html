@@ -21,6 +21,9 @@
     <meta name="twitter:description" content="全680語完全無料。あなたの英語脳を覚醒させるミッションを開始せよ。">
     <meta name="twitter:image" content="https://vocsphere.vercel.app/images/ogp_card.png">
 
+    <!-- Hotwire Turbo -->
+    <script type="module" src="https://esm.sh/@hotwired/turbo"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,16 +31,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="manifest" href="/manifest.json">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icon-192.png"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-192.png"> 
     <meta name="theme-color" content="#0f172a"> 
+    <meta name="turbo-cache-control" content="no-cache">
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-    <script src="data/word_data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/data/word_data.js"></script>
+    <script src="/js/app.js"></script>
 
     <style>
         body {
@@ -101,7 +105,7 @@
 </head>
 <body class="min-h-[100dvh] flex flex-col justify-between items-center overflow-y-auto overflow-x-hidden py-8 px-4 no-scrollbar">
     
-    <audio id="bgm" src="audio/bgm.mp3" loop></audio>
+    <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
 
     <div class="flex-1 flex flex-col justify-center w-full max-w-md min-h-[30vh]">
         <div class="text-center">
@@ -137,18 +141,9 @@
     </div>
 
     <div class="flex-none w-full flex flex-col items-center gap-3 pt-2 pb-safe">
-        <div class="flex flex-wrap justify-center gap-4 text-[10px] text-slate-500">
-            <a href="legal.html" class="hover:text-cyan-400 transition underline decoration-slate-700 underline-offset-4">
-                特定商取引法に基づく表記
-            </a>
-            <a href="legal.html#privacy" class="hover:text-cyan-400 transition underline decoration-slate-700 underline-offset-4">
-                プライバシーポリシー
-            </a>
-        </div>
 
-        <div class="text-[10px] text-slate-700 font-mono tracking-widest mt-1 text-center">
+        <div class="text-[10px] text-slate-700 font-mono tracking-widest mt-1 text-center mb-4">
             <div>SYSTEM ONLINE v1.0</div>
-            <div>Music: MaouDamashii</div>
         </div>
     </div>
 
