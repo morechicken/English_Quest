@@ -213,9 +213,13 @@ window.initializePage = async function() {
                     }
 
                     const div = document.createElement('div');
-                    div.className = `word-card relative p-4 rounded-xl border ${borderClass} ${bgClass} cursor-pointer transition-all overflow-hidden group mb-3`;
+                    div.id = `word-card-${word.id}`;
+                    div.className = `word-card w-full relative p-4 rounded-xl border ${borderClass} ${bgClass} cursor-pointer transition-all overflow-hidden group mb-3`;
                     
-                    div.onclick = () => goTo('cockpit.html', word.id);
+                    div.onclick = () => {
+                        sessionStorage.setItem('lastFocusedWordId', word.id);
+                        goTo('cockpit.html', word.id);
+                    };
                     const reviewButtonHtml = isMastered ? `
                         <button onclick="event.stopPropagation(); goTo('review.html', ${word.id});" 
                                 class="p-2 mr-2 text-cyan-400 hover:text-white hover:scale-110 transition rounded-full bg-cyan-900/30 border border-cyan-500/30" 
@@ -256,6 +260,22 @@ window.initializePage = async function() {
         document.getElementById('total-progress').textContent = `${masteredCount} / 680 MASTERED`;
 
         setupInteractiveNav();
+
+        // リスト描画完了後、直前に見ていた単語があればスクロールしてハイライトする
+        setTimeout(() => {
+            const lastFocusedId = sessionStorage.getItem('lastFocusedWordId');
+            if (lastFocusedId) {
+                const targetEl = document.getElementById(`word-card-${lastFocusedId}`);
+                if (targetEl) {
+                    targetEl.scrollIntoView({ behavior: 'auto', block: 'center' });
+                    targetEl.style.boxShadow = '0 0 20px rgba(34,211,238,0.8)';
+                    setTimeout(() => {
+                        targetEl.style.boxShadow = '';
+                    }, 2000);
+                }
+                sessionStorage.removeItem('lastFocusedWordId');
+            }
+        }, 100);
     }
 
     function setupInteractiveNav() {

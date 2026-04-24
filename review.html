@@ -65,11 +65,11 @@
 </head>
 <body>
     <audio id="bgm" src="/audio/bgm.mp3" loop data-turbo-permanent></audio>
-    <button class="fixed top-6 left-6 z-50 text-xl text-slate-400 hover:text-white transition" onclick="goTo('list.html')">
+    <button class="fixed top-6 left-6 z-50 text-xl text-slate-400 hover:text-white transition" onclick="if(typeof wordData !== 'undefined' && wordData) sessionStorage.setItem('lastFocusedWordId', wordData.id); goTo('list.html')">
         <i class="fas fa-chevron-left"></i>
     </button>
 
-    <div class="pt-16 pb-32 max-w-2xl mx-auto px-4 sm:px-6">
+    <div class="w-full pt-16 pb-32 max-w-2xl mx-auto px-4 sm:px-6">
         <header class="mb-10 text-center">
             <h1 class="word-en" id="disp-word">LOADING...</h1>
             <p class="word-jp-detail text-lg" id="disp-meaning-core"></p>
@@ -181,7 +181,7 @@
 
             // 再挑戦リンク
             document.getElementById('re-challenge-link').innerHTML = `
-                ゲームに再挑戦する ➜ <a href="#" onclick="goTo('cockpit.html', data.id); return false;" class="underline hover:text-white transition">Cockpitへ</a>
+                ゲームに再挑戦する ➜ <a href="javascript:void(0)" onclick="goTo('cockpit.html', ${data.id})" class="underline hover:text-white transition">Cockpitへ</a>
             `;
         }
     </script>
