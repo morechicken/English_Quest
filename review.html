@@ -82,15 +82,8 @@
     <script>
         var wordData;
 
-        // 1. 認証と初期化
-        firebase.auth().onAuthStateChanged(async (user) => { 
-            // ログインチェック
-            if (!user || !user.uid) { 
-                alert("単語レビューにはログインが必要です。");
-                goTo('list.html');
-                return;
-            }
-
+        // 1. 初期化
+        window.initializePage = function() {
             // ID取得
             const urlParams = new URLSearchParams(window.location.search);
             const wordId = parseInt(urlParams.get('id'));
@@ -102,17 +95,14 @@
 
             
             // データ取得
-            // WORD_DATABASEは word_data.js から読み込まれている
             wordData = WORD_DATABASE.find(w => w.id === wordId);
             
             if (wordData) {
                 renderReviewPage(wordData);
-                document.body.classList.add('loaded');
             } else {
                 document.getElementById('disp-word').textContent = 'ERROR';
-                document.body.classList.add('loaded');
             }
-        });
+        };
 
         // 2. レンダリング関数
         function renderReviewPage(data) {
