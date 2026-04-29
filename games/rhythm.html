@@ -415,7 +415,7 @@
         }
 
         // タップイベント
-        const handleInput = (e) => {
+        var handleInput = (e) => {
             if (!isPlaying) return;
             e.preventDefault();
 
@@ -462,9 +462,6 @@
             }
         };
 
-        document.addEventListener('pointerdown', handleInput);
-        document.addEventListener('keydown', handleInput); // キーボード対応
-
         function createParticles(x, y, type) {
             const color = type === 'strong' ? '#bd00ff' : '#00f2ff';
             const num = type === 'strong' ? 12 : 6;
@@ -507,6 +504,13 @@
 
             // スタートボタンイベント
             document.getElementById('start-btn').onclick = startGame;
+            
+            // イベントリスナーの増殖を防ぐため、on... プロパティでの上書き登録に変更
+            const container = document.getElementById('game-container');
+            container.onpointerdown = handleInput;
+            document.onkeydown = (e) => { 
+                if (isPlaying && (e.code === 'Space' || e.key === ' ')) handleInput(e); 
+            };
 
             // 背景生成
             const bg = document.getElementById('waveform-bg');

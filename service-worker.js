@@ -24,8 +24,6 @@ const urlsToCache = [
   '/images/apple-touch-icon.png',
   '/images/context.png',
   '/images/hero_cockpit.png',
-  '/images/icon-192.png',
-  '/images/icon-512.png',
   '/images/meaning.png',
   '/images/ogp_card.png',
   '/images/rhythm.png',

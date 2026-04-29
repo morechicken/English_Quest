@@ -319,10 +319,12 @@
                 checkTiming();
             };
 
-            document.body.addEventListener('pointerdown', handleTap);
-            document.body.addEventListener('keydown', (e) => {
-                if(e.code === 'Space') handleTap(e);
-            });
+            // イベントリスナーの増殖を防ぐため、on... プロパティでの上書き登録に変更
+            const stage = document.getElementById('game-stage');
+            stage.onpointerdown = handleTap;
+            document.onkeydown = (e) => {
+                if (!isGameComplete && (e.code === 'Space' || e.key === ' ')) handleTap(e);
+            };
         }
 
         function updateLoop() {
